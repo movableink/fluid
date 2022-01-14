@@ -1,0 +1,18 @@
+<input
+  type="radio"
+  class="radio-block__radio"
+  value={{this.option}}
+  id={{this.inputId}}
+  checked={{eq this.value this.option}}
+  onclick={{action this.update this.option}}
+/>
+
+<div class="radio-block__circle {{if this.isSelected "radio-block__circle-selected"}}"></div>
+
+<h2 class="radio-block__header">
+  {{@header}}
+</h2>
+
+<section class="radio-block__body">
+  {{yield}}
+</section>

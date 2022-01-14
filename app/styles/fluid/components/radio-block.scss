@@ -1,0 +1,73 @@
+.radio-block-container {
+  @apply gap-4;
+  display: grid;
+  grid-auto-columns: 292px;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.fluid .radio-block {
+  // Because .fluid label is a thing. :(
+  display: flex;
+}
+
+.radio-block {
+  @apply mb-6 border-solid border-2 border-neutral-400 rounded p-2 bg-neutral-100;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  grid-row: 1;
+
+  &.selected {
+    border-color: theme('colors.blue.300');
+  }
+
+  &__circle {
+    @apply rounded-full;
+    @apply mt-4;
+    @apply mb-4;
+    width: 16px;
+    height: 16px;
+    border: 2px solid theme('colors.neutral.600');
+
+    &-selected {
+      border-color: theme('colors.blue.400');
+    }
+
+    &-selected:before {
+      @apply rounded-full;
+      @apply bg-blue-400;
+      content: '';
+      display: block;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &__radio {
+    display: none;
+    position: absolute;
+  }
+
+  &__header {
+    @apply mb-4;
+    @apply mt-0;
+    @apply text-neutral-700;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  &__body {
+    @apply text-neutral-600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

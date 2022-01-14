@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" fill="#000000" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-image-layer</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="inherit" fill-rule="evenodd">
+        <g id="icon-image-layer">
+            <rect id="Rectangle" fill="inherit" x="0" y="4" width="2" height="20"></rect>
+            <rect id="Rectangle" fill="inherit" x="0" y="22" width="20" height="2"></rect>
+            <rect id="Rectangle" fill="inherit" x="3" y="17" width="21" height="4"></rect>
+            <path d="M3,0 L24,0 L24,16 L3,16 L3,0 Z M10,8 C11.1045695,8 12,7.1045695 12,6 C12,4.8954305 11.1045695,4 10,4 C8.8954305,4 8,4.8954305 8,6 C8,7.1045695 8.8954305,8 10,8 Z M11.456604,10.6060791 L13.9517822,13.6646118 L18.1279907,7.40228271 L21.3522949,16 L8.22418213,16 L11.456604,10.6060791 Z"></path>
+        </g>
+    </g>
+</svg>

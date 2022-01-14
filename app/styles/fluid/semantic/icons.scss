@@ -1,0 +1,11 @@
+.fluid {
+  svg.icon {
+    position: relative;
+    top: calc(1em - 1.1rem);
+    width: 1.4rem;
+    height: 1.4rem;
+    min-width: 1.4rem;
+    min-height: 1.4rem;
+    stroke-width: 2px;
+  }
+}

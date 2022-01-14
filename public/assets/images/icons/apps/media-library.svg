@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Media Library / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Media-Library-/-Color">
+            <rect id="Background-Fill" fill="#F35645" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M6,6 L9.27272727,6 L9.27272727,9.27272727 L6,9.27272727 L6,6 Z M10.3636364,6 L13.6363636,6 L13.6363636,9.27272727 L10.3636364,9.27272727 L10.3636364,6 Z M14.7272727,6 L18,6 L18,9.27272727 L14.7272727,9.27272727 L14.7272727,6 Z M6,14.7272727 L9.27272727,14.7272727 L9.27272727,18 L6,18 L6,14.7272727 Z M10.3636364,14.7272727 L13.6363636,14.7272727 L13.6363636,18 L10.3636364,18 L10.3636364,14.7272727 Z M14.7272727,14.7272727 L18,14.7272727 L18,18 L14.7272727,18 L14.7272727,14.7272727 Z M6,10.3636364 L9.27272727,10.3636364 L9.27272727,13.6363636 L6,13.6363636 L6,10.3636364 Z M10.3636364,10.3636364 L13.6363636,10.3636364 L13.6363636,13.6363636 L10.3636364,13.6363636 L10.3636364,10.3636364 Z M14.7272727,10.3636364 L18,10.3636364 L18,13.6363636 L14.7272727,13.6363636 L14.7272727,10.3636364 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

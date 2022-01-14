@@ -1,0 +1,11 @@
+<button
+  class="fluid-button"
+  type="button"
+  ...attributes
+  aria-haspopup="menu"
+  aria-owns="{{@splitButtonId}}-menu"
+  aria-expanded={{if @menuIsOpen "true" "false"}}
+  {{on "click" @closeMenu}}
+>
+  {{yield}}
+</button>

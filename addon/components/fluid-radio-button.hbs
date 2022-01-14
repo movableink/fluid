@@ -1,0 +1,13 @@
+<div ...attributes>
+  <label class="fluid__radio mr-2">
+    <RadioButton
+      @radioClass="radio__radio"
+      @groupValue={{readonly @groupValue}}
+      @value={{readonly @value}}
+      @changed={{@changed}}
+    />
+
+    <div class="radio__circle mr-1"></div>
+    {{@label}}
+  </label>
+</div>

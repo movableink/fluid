@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Local Time / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Local-Time-/-Color">
+            <rect id="Background-Fill" fill="#00C8AD" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <g id="Local-Time" transform="translate(6.000000, 6.000000)" fill="#FFFFFF">
+                <path d="M9.75,0 C8.8575,0 8.0875,0.5235 7.724,1.2785 C9.1535,1.7515 10.3255,2.795 10.967,4.1395 C11.5875,3.7385 12,3.042 12,2.25 C12,1.0095 10.9905,0 9.75,0 Z" id="Shape"></path>
+                <path d="M4.494,1.2115 C4.118,0.492 3.366,0 2.5,0 C1.2595,0 0.25,1.0095 0.25,2.25 C0.25,2.9615 0.583,3.595 1.0995,4.008 C1.7875,2.6605 3.014,1.634 4.494,1.2115 Z" id="Shape"></path>
+                <path d="M6,1.5 C3.243,1.5 1,3.743 1,6.5 C1,9.257 3.243,11.5 6,11.5 C8.757,11.5 11,9.257 11,6.5 C11,3.743 8.757,1.5 6,1.5 Z M6.5,6.75 C6.5,6.888 6.388,7 6.25,7 L4.25,7 C4.112,7 4,6.888 4,6.75 C4,6.612 4.112,6.5 4.25,6.5 L6,6.5 L6,3.75 C6,3.612 6.112,3.5 6.25,3.5 C6.388,3.5 6.5,3.612 6.5,3.75 L6.5,6.75 Z" id="Shape"></path>
+                <path d="M9.4105,10.807 C9.2785,10.912 9.142,11.0115 9.0005,11.104 L9.3235,11.427 C9.421,11.5245 9.5795,11.5245 9.677,11.427 C9.7745,11.3295 9.7745,11.171 9.677,11.0735 L9.4105,10.807 Z" id="Shape"></path>
+                <path d="M2.5895,10.807 L2.323,11.0735 C2.2255,11.171 2.2255,11.3295 2.323,11.427 C2.4205,11.5245 2.579,11.5245 2.6765,11.427 L2.9995,11.104 C2.858,11.011 2.7215,10.912 2.5895,10.807 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

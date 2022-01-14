@@ -1,0 +1,12 @@
+<div
+  class="expanding-list-toggle
+    {{if this.disabled "expanding-list-toggle__disabled"}}
+    {{if this.expanded "expanded"}}
+    {{this.position}}"
+  role="button"
+  data-test-fluid-lab-expanding-list-toggle
+  ...attributes
+  {{on "click" (stop-propagation this.toggle)}}
+>
+  {{svg-jar "icon-dropdown-arrow"}}
+</div>

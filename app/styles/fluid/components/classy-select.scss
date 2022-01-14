@@ -1,0 +1,35 @@
+.fluid .classy-select {
+  &:not(.-is-disabled) {
+    &:hover,
+    select:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.-is-disabled {
+    &:hover,
+    select:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: textfield;
+    padding: 1.5rem 2.5rem 0.5rem 0.7rem;
+    border: 0;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    height: 2rem;
+    color: theme('colors.neutral.800');
+    right: 0.8rem;
+    top: 0.5rem;
+    position: absolute;
+  }
+}

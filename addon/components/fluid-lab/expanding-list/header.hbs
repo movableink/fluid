@@ -1,0 +1,9 @@
+<header
+  class="expanding-list-header {{if this.disabled "expanding-list-header__disabled"}}"
+  role="button"
+  data-test-fluid-lab-expanding-list-header
+  ...attributes
+  {{on "click" (stop-propagation this.toggle)}}
+>
+  {{yield}}
+</header>

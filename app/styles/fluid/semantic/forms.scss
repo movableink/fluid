@@ -1,0 +1,11 @@
+.fluid {
+  form {
+    @apply flex-col;
+    @apply flex;
+
+    fieldset {
+      @apply flex-row;
+      @apply flex;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.fluid {
+  .container {
+    @apply border-neutral-400;
+    @apply border;
+    @apply flex-col;
+    @apply flex;
+    @apply relative;
+    @apply rounded;
+    @apply shadow;
+
+    header,
+    .body,
+    footer {
+      @apply mb-0;
+    }
+
+    header {
+      @apply flex-row;
+      @apply flex;
+      @apply flex-shrink-0;
+      @apply border-b;
+      @apply border-neutral-400;
+      @apply py-0;
+      @apply px-8;
+      @apply leading-3xl;
+
+      height: 3.5rem; // h-16 is 4rem;
+
+      & > * {
+        @apply flex;
+        @apply items-center;
+        @apply flex-1;
+
+        &:last-child {
+          @apply justify-end;
+          @apply text-right;
+
+          & > * {
+            text-align: initial;
+          }
+        }
+
+        &:first-child {
+          @apply justify-start;
+          @apply text-left;
+          @apply max-w-full;
+        }
+      }
+
+      .pop-over {
+        line-height: initial;
+      }
+    }
+
+    .body {
+      @apply py-4;
+      @apply px-8;
+      @apply overflow-y-auto;
+      min-height: 10rem;
+    }
+
+    footer {
+      @apply flex-shrink-0;
+      @apply py-2;
+      @apply px-8;
+      @apply leading-3xl;
+
+      height: 4.5rem; // h-20 is 5rem;
+    }
+  }
+}

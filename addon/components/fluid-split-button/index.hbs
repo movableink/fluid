@@ -1,0 +1,63 @@
+<div
+  class="fluid-button-group inline-flex"
+  ...attributes
+  {{on "focusout" this.closeMenu}}
+  {{key-down "Escape" this.closeMenu}}
+  {{key-down "ArrowDown" this.openMenu altKey=true}}
+  {{key-down "ArrowUp" this.closeMenu altKey=true}}
+  {{key-down "ArrowDown" this.focusNextMenuItem}}
+  {{key-down "ArrowUp" this.focusPreviousMenuItem}}
+  {{key-down "Enter" this.handleKeyboardTriggeredClick}}
+  {{key-down " " this.handleKeyboardTriggeredClick}}
+>
+  {{yield
+    (hash
+      PrimaryButton=(component
+        "fluid-split-button/button"
+        closeMenu=this.closeMenu
+        menuIsOpen=this.menuIsOpen
+        splitButtonId=this.guid
+      )
+      MenuItem=(component
+        "fluid-split-button/menu-item"
+        activeIndex=this.activeMenuItemIndex
+        closeMenu=this.closeMenu
+        menuElementRef=this.menuElementRef
+        registerMenuItem=this.registerMenuItem
+      )
+    )
+  }}
+
+  {{! Note: Menu placed in the "middle" here to avoid CSS issues with button borders within a group }}
+  {{#if this.menuIsOpen}}
+    <div
+      data-test-split-button-menu
+      id="{{this.guid}}-menu"
+      class="flex flex-col bg-white rounded p-2 shadow z-10"
+      role="menu"
+      {{popper-tooltip
+        this.popperAnchorRef
+        (popper-modifier "offset" offset=(array 0 4))
+        placement="bottom-end"
+      }}
+      {{did-insert (set this "menuElementRef")}}
+    ></div>
+  {{/if}}
+
+  <button
+    data-test-split-button-menu-trigger
+    class="fluid-button"
+    type="button"
+    tabindex="-1"
+    aria-haspopup="menu"
+    aria-owns="{{this.guid}}-menu"
+    aria-expanded={{if this.menuIsOpen "true" "false"}}
+    {{on "click" this.toggleMenu}}
+    {{did-insert (set this "popperAnchorRef")}}
+  >
+    <span class="sr-only">
+      Show Menu Items
+    </span>
+    •••
+  </button>
+</div>

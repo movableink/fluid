@@ -1,0 +1,18 @@
+{{#if @menuElementRef}}
+  {{#in-element @menuElementRef insertBefore=null}}
+    {{#let (element this.tagName) as |Element|}}
+      <Element
+        class="fluid-button type:plain {{if this.isActive "appearance:focused"}}"
+        type={{this.typeAttribute}}
+        ...attributes
+        role="menuitem"
+        tabindex="-1"
+        {{did-insert (fn @registerMenuItem this)}}
+        {{did-insert (set this "elementRef")}}
+        {{on "click" @closeMenu}}
+      >
+        {{yield}}
+      </Element>
+    {{/let}}
+  {{/in-element}}
+{{/if}}

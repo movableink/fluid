@@ -1,0 +1,9 @@
+/**
+ * This should be included last so that these styles take priority over other styles
+ */
+
+@tailwind utilities;
+
+.filter-invert {
+  filter: invert(100%);
+}

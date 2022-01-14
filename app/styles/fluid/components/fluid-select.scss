@@ -1,0 +1,157 @@
+.fluid-select {
+  @apply text-neutral-700;
+  display: inline-flex;
+  position: relative;
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: theme('colors.neutral.600');
+    -webkit-box-shadow: 0 0 1px theme('colors.neutral.300');
+  }
+
+  &__wrapper {
+    box-shadow: theme('colors.neutral.300') 2px 2px 2px 0;
+    min-width: 240px;
+
+    &.ember-basic-dropdown-content--above {
+      margin-top: -8px;
+    }
+
+    &.ember-basic-dropdown-content--below {
+      @apply mt-2;
+    }
+
+    &.ember-basic-dropdown-content--dark {
+      box-shadow: 0 8px 16px 0 theme('colors.neutral.700');
+      @apply bg-neutral-800;
+    }
+  }
+
+  &__trigger-label {
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+  }
+
+  &__list,
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    font-size: 14px;
+    list-style: none;
+    max-height: 350px;
+    max-width: 300px;
+    min-width: 200px;
+    overflow-y: auto;
+
+    .fluid-checkbox {
+      flex-shrink: 0;
+    }
+  }
+
+  &__group {
+    flex-shrink: 0;
+  }
+
+  &__option,
+  &__list-item {
+    @apply pl-4;
+    @apply pr-6;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 32px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+
+  &__option {
+    outline: none;
+
+    &:hover,
+    &--highlighted {
+      @apply bg-neutral-300;
+    }
+
+    &:active {
+      @apply bg-neutral-400;
+    }
+
+    &-label {
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &--dark {
+      @apply text-neutral-400;
+
+      &:hover {
+        @apply bg-neutral-900;
+        @apply text-neutral-400;
+      }
+
+      &:active {
+        @apply bg-neutral-700;
+        @apply text-neutral-100;
+      }
+    }
+  }
+
+  &__list-item {
+    cursor: pointer;
+
+    &--selected {
+      @apply text-blue;
+      font-weight: 600;
+    }
+
+    &--selected-dark {
+      @apply text-neutral-100;
+      @apply bg-neutral-700;
+      font-weight: 600;
+    }
+
+    &--placeholder,
+    &--loading {
+      @apply text-neutral-500;
+      cursor: auto;
+      font-style: italic;
+      font-weight: normal;
+
+      &:hover,
+      &:active,
+      & {
+        @apply bg-neutral-100;
+      }
+    }
+  }
+
+  &__group-header {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  &__separator {
+    border-style: none;
+    border-top: 1px solid theme('colors.neutral.400');
+  }
+}
+
+// Handle a `fluid-select` in a button group
+.fluid-button-group > .fluid-select:last-child .fluid-button {
+  @apply rounded-l-none;
+  @apply border-l-0;
+}

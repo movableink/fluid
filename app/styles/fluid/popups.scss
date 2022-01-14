@@ -1,0 +1,87 @@
+/**
+ * The .fluid-popup class offers an easy implementation of a styled popup. It is
+ * positioned absolutely, and can be triggered in two ways- By toggling an
+ * `.is-active` class using JavaScript, or by adding the .on-hover class to the
+ * .fluid-popup-trigger to trigger the popup purely with CSS hover states.
+ *
+ * .fluid-popup-trigger is purely a utility class, and does not affect styling.
+ *
+ * <div>
+ *   <button {{action (mut showPopup) true}}>Show Popup</button>
+ *   <div class='fluid-popup {{if showPopup 'is-active'}}>Here's a popup!</div>
+ * </div>
+ *
+ * <div>
+ *   <div class='fluid-popup-trigger on-hover'>Hover me!</div>
+ *   <div class='fluid-popup'>Here's a popup!</div>
+ * </div>
+ *
+ **/
+.fluid-popup {
+  display: block;
+  padding: 1em 1.5em;
+  background: theme('colors.neutral.100');
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 theme('colors.neutral.400');
+  position: absolute;
+  z-index: 50;
+  line-height: normal;
+
+  transform: scale(0);
+  transition-property: transform;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0, -0.05, 1, -0.2);
+
+  &.fluid-position-over {
+    top: -1em;
+  }
+}
+
+.fluid-popup.is-active,
+.fluid-popup:hover,
+.fluid-popup-trigger.on-hover:hover ~ .fluid-popup {
+  transform: scale(1);
+  transition-property: transform;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0, 1.8, 1, 0.95);
+}
+
+/**
+ * .fluid-text-limiter can be used for a simple implementation of a "hover to reveal all text"
+ *
+ * <div>
+ *   <span class='fluid-text-limiter fluid-popup-trigger on-hover'>This is some very long text</span>
+ *   <span class='fluid-popup'>This is the text that will show up in a popup, typically the same text.</span>
+ * </div>
+ *
+ * Using `text-overflow: ellipsis` will trim the text in the first span if it
+ * overflows. Using .fluid-popup-trigger and .on-hover will show the popup
+ * containing the full text when the first span is hovered over.
+ */
+.fluid-text-limiter {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  white-space: nowrap;
+
+  ~ .fluid-popup.is-active,
+  ~ .fluid-popup:hover,
+  &.on-hover:hover ~ .fluid-popup {
+    transition-delay: 0.3s;
+  }
+
+  ~ .fluid-popup {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    width: 110%;
+    text-align: center;
+
+    &.fluid-position-over {
+      left: -5%;
+    }
+  }
+}

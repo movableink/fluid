@@ -1,0 +1,57 @@
+{{! template-lint-disable no-invalid-interactive }}
+<div
+  class="space-y-2"
+  ...attributes
+  data-power-calendar-id={{or @calendar.calendarUniqueId @calendar.uniqueId}}
+  {{on "click" this.handleClick}}
+>
+  <div class="grid grid-cols-7 gap-2 mb-2">
+    {{#each this.weekdaysNames as |wdn|}}
+      <div class="text-2xs text-center uppercase text-neutral-500">
+        {{wdn}}
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="grid grid-cols-7 gap-2" {{on "keydown" this.handleKeyDown}}>
+    {{#each this.weeks key="id" as |week|}}
+      {{#each week.days key="id" as |day|}}
+        {{#let
+          (if
+            day.isSelected
+            "text-white border-blue bg-blue font-bold"
+            (if
+              day.isToday
+              "border-blue"
+              (if
+                day.isDisabled
+                "border-white opacity-50 cursor-not-allowed"
+                (if
+                  day.isCurrentMonth
+                  "border-white hover:border-blue-300"
+                  "border-white hover:border-neutral-400 text-neutral-500"
+                )
+              )
+            )
+          )
+          as |dynamicButtonClasses|
+        }}
+          <button
+            type="button"
+            data-date="{{day.id}}"
+            data-test-selected={{day.isSelected}}
+            data-test-today={{day.isToday}}
+            data-test-focused={{day.isFocused}}
+            class="w-8 text-2xs rounded-md border focus:outline-none focus:border-blue-300 focus:ring-blue-200
+              {{dynamicButtonClasses}}"
+            disabled={{day.isDisabled}}
+            {{on "focus" this.handleDayFocus}}
+            {{on "blur" this.handleDayBlur}}
+          >
+            {{day.number}}
+          </button>
+        {{/let}}
+      {{/each}}
+    {{/each}}
+  </div>
+</div>

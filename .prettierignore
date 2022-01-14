@@ -1,0 +1,5 @@
+// Ignore non-standard files
+**/blueprints/**
+
+// Dependencies
+.yarn

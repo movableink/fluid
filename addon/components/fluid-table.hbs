@@ -1,0 +1,14 @@
+<table
+  ...attributes
+  class="fluid-table {{if @isCompressed "fluid-table--compressed"}}"
+  id={{this.tableId}}
+>
+  {{yield
+    (hash
+      header=(component "fluid-table/thead")
+      body=(component "fluid-table/tbody")
+      th=(component "fluid-table/th")
+      td=(component "fluid-table/td")
+    )
+  }}
+</table>

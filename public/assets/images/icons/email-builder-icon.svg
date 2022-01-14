@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Icon/Builder</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#C5C5CA" stroke-width="2" x="0" y="0" width="48" height="48" rx="2"></rect>
+        <rect id="Rectangle" stroke="#C5C5CA" x="8" y="8" width="32" height="32" rx="1"></rect>
+        <path d="M9,34.2585641 L14.2458275,34.2585641 L14.2458275,34.2585641 L20.9890771,26.0974698 L25.5424323,30.7171032 L31.7622351,20 L39.8658787,34.0264164 C39.9537414,34.178496 40,34.3510344 40,34.5266705 L40,39 C40,39.5522847 39.5522847,40 39,40 L9,40 C8.44771525,40 8,39.5522847 8,39 L8,35.2585641 C8,34.7062793 8.44771525,34.2585641 9,34.2585641 Z" id="Rectangle-Copy-2" stroke="#C5C5CA" fill="#C5C5CA"></path>
+        <circle id="Oval" fill="#C5C5CA" cx="15" cy="17" r="5"></circle>
+    </g>
+</svg>

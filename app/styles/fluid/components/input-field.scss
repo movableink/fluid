@@ -1,0 +1,152 @@
+.input-field {
+  @apply text-2xs;
+  @apply flex;
+  @apply flex-1;
+  @apply flex-col;
+  @apply justify-center;
+  @apply font-sans;
+  @apply font-normal;
+  @apply text-blue-600;
+  @apply border-none;
+  @apply p-0;
+  @apply m-0;
+  @apply max-w-full;
+
+  textarea {
+    @apply border-none;
+    @apply overflow-auto;
+    @apply shadow-none;
+    @apply bg-neutral-100;
+    @apply resize-y;
+    outline: none;
+  }
+
+  &.flex-2 {
+    flex: 2;
+  }
+  &.flex-3 {
+    flex: 3;
+  }
+
+  &.disabled {
+    @apply pointer-events-none;
+    @apply opacity-50;
+  }
+
+  &.radio {
+    label {
+      @apply cursor-pointer;
+    }
+    input[type='radio'] {
+      @apply mr-2;
+    }
+  }
+
+  input[type='text'],
+  input[type='number'],
+  input[type='password'],
+  textarea,
+  select {
+    @apply flex;
+    @apply flex-1;
+    @apply min-w-0;
+    @apply border;
+    @apply border-neutral-500;
+    @apply rounded-sm;
+    @apply bg-neutral-100;
+    @apply text-xs;
+    min-height: 26px;
+  }
+
+  &-input,
+  input,
+  textarea {
+    @apply pl-1;
+  }
+
+  label {
+    @apply max-w-full;
+    @apply overflow-hidden;
+    @apply text-2xs;
+    @apply text-neutral-700;
+    @apply truncate;
+    @apply whitespace-nowrap;
+
+    img,
+    svg {
+      @apply inline-block;
+    }
+
+    &.sub {
+      @apply capitalize;
+      @apply text-5xs;
+      @apply text-center;
+      @apply leading-2xs;
+    }
+  }
+
+  &-container {
+    @apply relative;
+    @apply flex;
+    @apply items-center;
+
+    > * {
+      @apply w-full;
+    }
+  }
+
+  select {
+    background-image: linear-gradient(theme('colors.neutral.100'), theme('colors.neutral.300'));
+    width: 100%;
+    border: 1px solid theme('colors.neutral.500');
+    cursor: pointer;
+    padding: 2.5px;
+  }
+
+  .monogram {
+    @apply absolute;
+    @apply capitalize;
+    @apply flex;
+    @apply font-normal;
+    @apply justify-center;
+    @apply leading-sm;
+    @apply pointer-events-none;
+    @apply text-2xs;
+    @apply text-blue-400;
+    @apply text-center;
+    @apply w-4;
+
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    z-index: 1;
+
+    svg {
+      @apply cursor-pointer;
+      @apply w-4;
+      margin-left: 1px;
+    }
+
+    & + input[type='text'],
+    & + input[type='number'] {
+      @apply pl-5;
+    }
+
+    & + input[type='checkbox'],
+    & + input[type='radio'] {
+      @apply ml-5;
+    }
+  }
+}
+
+.input-field-input {
+  @apply bg-neutral-100;
+  @apply border-neutral-500;
+  @apply border;
+  @apply flex-1;
+  @apply flex;
+  @apply min-w-0;
+  @apply rounded-sm;
+  @apply text-xs;
+  min-height: 26px;
+}

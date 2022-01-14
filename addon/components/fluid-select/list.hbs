@@ -1,0 +1,50 @@
+<div class="fluid-select__list py-2" ...attributes>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else if (or @loading (is-pending @options))}}
+    <label class="fluid-select__list-item fluid-select__list-item--loading inline-flex">
+      {{svg-jar "loading" class="mr-2 w-4 fill-neutral-500"}}
+      Loading...
+    </label>
+  {{else}}
+    {{#each (await @options) as |option|}}
+      {{#if option.groupOptions}}
+        <div class="fluid-select__group">
+          {{#if (has-previous option @options)}}
+            <hr class="fluid-select__separator mt-2 mx-3" />
+          {{/if}}
+
+          {{#if option.groupLabel}}
+            <h5 class="fluid-select__group-header mx-2 my-0 px-1">
+              {{option.groupLabel}}
+            </h5>
+          {{/if}}
+
+          {{#each option.groupOptions as |groupOption|}}
+            <FluidSelect::Option
+              @dark={{@dark}}
+              @option={{groupOption}}
+              @selected={{@selected}}
+              @multiple={{@multiple}}
+              @labelPath={{@labelPath}}
+              @select={{action @select}}
+            />
+          {{/each}}
+        </div>
+      {{else}}
+        <FluidSelect::Option
+          @dark={{@dark}}
+          @option={{option}}
+          @selected={{@selected}}
+          @multiple={{@multiple}}
+          @labelPath={{@labelPath}}
+          @select={{action @select}}
+        />
+      {{/if}}
+    {{else}}
+      <label class="fluid-select__list-item fluid-select__list-item--placeholder">
+        No options found.
+      </label>
+    {{/each}}
+  {{/if}}
+</div>

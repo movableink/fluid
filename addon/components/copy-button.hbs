@@ -1,0 +1,15 @@
+{{~#if this.copied.isRunning~}}
+  copied!
+{{else}}
+  {{#if this.prompt.isRunning~}}
+    {{#if this.osx}}
+      ⌘
+    {{else}}
+      ctrl
+    {{/if}}
+    +C to copy
+  {{else}}
+    {{yield}}
+  {{~/if~}}
+{{~/if}}
+<input class="hidden" value={{this.text}} tabindex="-1" readonly />

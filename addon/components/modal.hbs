@@ -1,0 +1,15 @@
+<Dialog
+  @isOpen={{true}}
+  @onClose={{@onClose}}
+  class="fixed inset-0 z-10 overflow-y-auto"
+  data-test-modal-dialog
+  as |dialog|
+>
+  <div class="flex items-center justify-center min-h-screen">
+    <dialog.Overlay class="fixed inset-0 bg-black opacity-75" data-test-modal-overlay />
+
+    <div class="bg-white mx-auto z-10" ...attributes>
+      {{yield (hash Title=dialog.Title Description=dialog.Description)}}
+    </div>
+  </div>
+</Dialog>

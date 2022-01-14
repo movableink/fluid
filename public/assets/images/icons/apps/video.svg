@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Video / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Video-/-Color">
+            <rect id="Background-Fill" fill="#F35645" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M13.25,9 L6.75,9 C6.3365,9 6,9.336 6,9.75 L6,15.25 C6,15.663 6.3365,16 6.75,15.9995 L13.25,15.9995 C13.6635,16 14,15.663 14,15.25 L14,9.75 C14,9.336 13.6635,9 13.25,9 Z M17.638,9.526 L14.638,11.026 C14.5535,11.0685 14.5,11.155 14.5,11.25 L14.5,13.75 C14.5,13.844 14.5535,13.9305 14.638,13.9735 L17.638,15.4735 C17.8055,15.5565 18,15.4345 18,15.25 L18,9.75 C18,9.564 17.8045,9.443 17.638,9.526 Z" id="Icon-/-Video" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

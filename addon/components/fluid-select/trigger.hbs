@@ -1,0 +1,41 @@
+{{! This template is mostly the original trigger template, slightly modified for our use-case }}
+<button
+  class="ember-basic-dropdown-trigger
+    {{if @renderInPlace " ember-basic-dropdown-trigger--in-place"}}{{if
+      @hPosition
+      (concat " ember-basic-dropdown-trigger--" @hPosition)
+    }}{{if @vPosition (concat " ember-basic-dropdown-trigger--" @vPosition)}}
+    {{@defaultClass}}"
+  role="button"
+  type="button"
+  tabindex={{unless @dropdown.disabled "0"}}
+  data-ebd-id="{{@dropdown.uniqueId}}-trigger"
+  data-test-fluid-select-trigger
+  aria-owns="ember-basic-dropdown-content-{{@dropdown.uniqueId}}"
+  aria-expanded={{if @dropdown.isOpen "true"}}
+  aria-disabled={{if @dropdown.disabled "true"}}
+  disabled={{@disabled}}
+  ...attributes
+  {{will-destroy this.removeGlobalHandlers}}
+  {{on "mousedown" this.handleMouseDown}}
+  {{on "click" this.handleClick}}
+  {{on "keydown" this.handleKeyDown}}
+  {{on "touchstart" this.handleTouchStart}}
+  {{on "touchend" this.handleTouchEnd}}
+>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    <span class="fluid-select__trigger-label">
+      {{@label}}
+    </span>
+
+    {{#if this.shouldShowBadge}}
+      <span class="flex-shrink-0 fluid-badge ml-2">
+        {{@selected.length}}
+      </span>
+    {{/if}}
+
+    {{svg-jar "fluid-button-caret" class="flex-shrink-0"}}
+  {{/if}}
+</button>

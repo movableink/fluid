@@ -1,0 +1,21 @@
+<div ...attributes data-test-fluid-lab-expanding-list>
+  {{yield
+    (hash
+      Header=(component
+        "fluid-lab/expanding-list/header"
+        expanded=this.expanded
+        disabled=this.disabled
+        ontoggle=(action this.toggle)
+      )
+      Toggle=(component
+        "fluid-lab/expanding-list/toggle"
+        expanded=this.expanded
+        disabled=this.disabled
+        ontoggle=(action this.toggle)
+      )
+      Content=(component "fluid-lab/expanding-list/content" expanded=this.expanded)
+      expanded=this.expanded
+      onChange=(action this.onChange)
+    )
+  }}
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / RSS Feed / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-RSS-Feed-/-Color">
+            <rect id="Background-Fill" fill="#F35645" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M7,10.0800002 L7,11.0400002 C10.4987201,11.0400002 13.2400002,13.8868803 13.2400002,17.5200005 L14.2000003,17.5200005 C14.2000003,13.3483203 11.0368002,10.0800002 7,10.0800002 Z M7,6 L7,6.96000004 C12.9212802,6.96000004 17.5600004,11.5987202 17.5600004,17.5200005 L18.5200005,17.5200005 C18.5200005,11.0601602 13.4593603,6 7,6 Z M8.44000006,17.5200005 C9.23529013,17.5200005 9.88000011,16.8752905 9.88000011,16.0800004 C9.88000011,15.2847103 9.23529013,14.6400003 8.44000006,14.6400003 C7.64470999,14.6400003 7,15.2847103 7,16.0800004 C7,16.8752905 7.64470999,17.5200005 8.44000006,17.5200005 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

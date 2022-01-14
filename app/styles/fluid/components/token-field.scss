@@ -1,0 +1,64 @@
+.token-field {
+  display: flex;
+  flex: 1;
+  cursor: text;
+  overflow: hidden;
+
+  &--textarea {
+    display: block;
+
+    .token-field {
+      &__input {
+        @apply p-1;
+        display: block;
+        white-space: normal;
+      }
+
+      &__display {
+        max-height: 100px;
+      }
+    }
+  }
+
+  &--focus {
+    @apply pl-0;
+  }
+
+  &--placeholder {
+    color: theme('colors.neutral.500');
+  }
+
+  &__input {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+
+    &:focus {
+      outline-style: none;
+    }
+  }
+
+  &__token {
+    @apply rounded-full;
+    @apply bg-blue-400;
+    display: inline-block;
+    margin: 2px 1px;
+    padding: 1px 5px;
+    font-family: 'PT Mono';
+    font-size: 0.9rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    position: relative;
+    color: theme('colors.neutral.100');
+
+    &.locked {
+      background-color: theme('colors.neutral.600');
+    }
+  }
+}

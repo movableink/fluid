@@ -1,0 +1,14 @@
+<input
+  type="text"
+  class="w-full"
+  name={{this.name}}
+  autocomplete="off"
+  onkeydown={{action "handleArrowKeys"}}
+  onkeypress={{action "restrict"}}
+  onpaste={{action "reformat"}}
+  onchange={{action "reformat"}}
+  oninput={{action "reformat"}}
+  onblur={{action "onFocusOut"}}
+  onfocus={{action "onFocusIn"}}
+  disabled={{this.disabled}}
+/>

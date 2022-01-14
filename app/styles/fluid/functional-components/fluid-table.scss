@@ -1,0 +1,36 @@
+.fluid-table {
+  @apply border border-neutral-400;
+  @apply box-border;
+  @apply border-collapse;
+  border-spacing: 0;
+
+  &__label {
+    @apply text-xs;
+    @apply font-bold;
+    @apply leading-md;
+    @apply text-neutral-700;
+  }
+
+  &__th,
+  &__td {
+    @apply border-b border-neutral-400 p-4 text-neutral-700;
+    @apply text-left;
+    @apply align-top;
+    @apply text-sm;
+    @apply leading-sm;
+  }
+
+  &__th {
+    @apply bg-neutral-300;
+    @apply capitalize;
+    @apply font-bold;
+    @apply whitespace-nowrap;
+  }
+
+  &--compressed {
+    .fluid-table__th,
+    .fluid-table__td {
+      @apply p-2;
+    }
+  }
+}

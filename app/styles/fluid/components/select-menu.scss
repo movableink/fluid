@@ -1,0 +1,35 @@
+.select-menu {
+  white-space: nowrap;
+  .pop-over .pop-over-container {
+    padding: 0;
+  }
+
+  ol {
+    max-height: 16em;
+  }
+  li {
+    &:first-child {
+      padding-top: 1em;
+      &.optgroup {
+        padding-top: 0.5em;
+      }
+    }
+    &:last-child {
+      padding-bottom: 1em;
+    }
+    padding: 0 1.5em;
+
+    &:not(.optgroup) {
+      padding-left: 2em;
+    }
+  }
+  .optgroup {
+    line-height: 2.5em;
+    &:not(:last-child) {
+      border-bottom: 1px solid theme('colors.neutral.400');
+    }
+    &:not(:first-child) {
+      border-top: 1px solid theme('colors.neutral.400');
+    }
+  }
+}

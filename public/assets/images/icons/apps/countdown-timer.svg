@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Countdown Timer / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Countdown-Timer-/-Color">
+            <rect id="Background-Fill" fill="#A862CE" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <g id="Countdown-Timer" transform="translate(7.000000, 6.000000)" fill="#FFFFFF">
+                <path d="M3.5,0.5 L4,0.5 L4,1.25 C4,1.388 4.112,1.5 4.25,1.5 L5.75,1.5 C5.888,1.5 6,1.388 6,1.25 L6,0.5 L6.5,0.5 C6.638,0.5 6.75,0.388 6.75,0.25 C6.75,0.112 6.638,0 6.5,0 L3.5,0 C3.362,0 3.25,0.112 3.25,0.25 C3.25,0.388 3.362,0.5 3.5,0.5 Z" id="Shape"></path>
+                <path d="M8.702,3.6515 L9.25,3.1035 L9.323,3.1765 C9.421,3.2745 9.579,3.2745 9.6765,3.1765 C9.774,3.079 9.7745,2.921 9.6765,2.823 L9.1765,2.3235 C9.0785,2.2255 8.9205,2.226 8.823,2.3235 C8.7255,2.421 8.725,2.579 8.823,2.677 L8.8965,2.75 L8.3485,3.298 C7.461,2.494 6.2885,2 5,2 C2.243,2 0,4.243 0,7 C0,9.757 2.243,12 5,12 C7.757,12 10,9.757 10,7 C10,5.7115 9.506,4.539 8.702,3.6515 Z M5.177,7.177 C5.0795,7.2745 4.921,7.2745 4.8235,7.177 L2.5745,4.927 C2.477,4.8295 2.477,4.671 2.5745,4.5735 C2.672,4.476 2.8305,4.476 2.928,4.5735 L5.177,6.8235 C5.2745,6.921 5.2745,7.0795 5.177,7.177 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

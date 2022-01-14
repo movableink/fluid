@@ -1,0 +1,32 @@
+.fluid-tooltip {
+  max-width: 350px;
+}
+
+.fluid-tooltip-arrow::before {
+  content: '';
+  @apply #{absolute transform rotate-45 bg-neutral-900 h-4 w-4};
+}
+
+.fluid-tooltip[data-popper-placement^='top'] .fluid-tooltip-arrow {
+  @apply #{-bottom-2};
+
+  &::before {
+    @apply #{-translate-x-1/2};
+  }
+}
+
+.fluid-tooltip[data-popper-placement^='bottom'] .fluid-tooltip-arrow {
+  @apply #{-top-2};
+
+  &::before {
+    @apply #{-translate-x-1/2};
+  }
+}
+
+.fluid-tooltip[data-popper-placement^='left'] .fluid-tooltip-arrow {
+  @apply #{-right-2};
+}
+
+.fluid-tooltip[data-popper-placement^='right'] .fluid-tooltip-arrow {
+  @apply #{-left-4};
+}

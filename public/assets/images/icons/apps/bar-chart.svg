@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Bar Chart / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Bar-Chart-/-Color">
+            <rect id="Background-Fill" fill="#FFA926" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M17.75,15.5 L17.5,15.5 L17.5,8.25 C17.5,8.112 17.3875,8 17.25,8 L15.75,8 C15.612,8 15.5,8.112 15.5,8.25 L15.5,15.5 L14.5,15.5 L14.5,11.75 C14.5,11.612 14.3875,11.5 14.25,11.5 L12.75,11.5 C12.612,11.5 12.5,11.612 12.5,11.75 L12.5,15.5 L11.5,15.5 L11.5,10.75 C11.5,10.612 11.3875,10.5 11.25,10.5 L9.75,10.5 C9.612,10.5 9.5,10.612 9.5,10.75 L9.5,15.5 L8.5,15.5 L8.5,13.25 C8.5,13.112 8.3875,13 8.25,13 L6.75,13 C6.612,13 6.5,13.112 6.5,13.25 L6.5,15.5 L6.25,15.5 C6.112,15.5 6,15.612 6,15.75 C6,15.8875 6.112,16 6.25,16 L17.75,16 C17.8875,16 18,15.8875 18,15.75 C18,15.612 17.8875,15.5 17.75,15.5 L17.75,15.5 Z" id="Icon-/-Bar-Chart" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

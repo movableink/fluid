@@ -1,0 +1,40 @@
+{{#if (has-block)}}
+  <div
+    role="button"
+    data-test-fluid-select-option={{this.optionLabel}}
+    class="fluid-select__option
+      {{if @dark "fluid-select__option--dark"}}
+      {{if this.isSelected this.selectedClass}}"
+    ...attributes
+    {{action @select @option}}
+  >
+    {{yield}}
+  </div>
+{{else if @multiple}}
+  <FluidCheckbox
+    data-test-fluid-select-option={{this.optionLabel}}
+    class={{concat
+      "pl-4 pr-6 fluid-select__option"
+      (if @dark " fluid-select__option--dark")
+      (if this.isSelected this.selectedClass)
+    }}
+    @label={{this.optionLabel}}
+    @checked={{this.isSelected}}
+    @onchange={{action @select @option}}
+  />
+{{else}}
+  <div
+    role="button"
+    data-test-fluid-select-option={{this.optionLabel}}
+    class="fluid-select__option
+      {{if @dark "fluid-select__option--dark"}}
+      fluid-select__list-item
+      {{if this.isSelected this.selectedClass}}"
+    title={{this.optionLabel}}
+    {{action @select @option}}
+  >
+    <span class="fluid-select__option-label">
+      {{this.optionLabel}}
+    </span>
+  </div>
+{{/if}}

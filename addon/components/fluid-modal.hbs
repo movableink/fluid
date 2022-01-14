@@ -1,0 +1,46 @@
+<ModalDialog
+  @containerClass="visible rounded p-0 fluid-modal-container {{@containerClass}}"
+  @overlayClass="bg-black opacity-75"
+  @overlayPosition="sibling"
+  @renderInPlace={{or @renderInPlace false}}
+  @onClose={{@onClose}}
+>
+  <div
+    role="dialog"
+    class="flex flex-col max-h-modal"
+    aria-labelledby={{this.titleId}}
+    ...attributes
+    {{focus-trap
+      isPaused=@disableFocusTrap
+      focusTrapOptions=(hash clickOutsideDeactivates=true onDeactivate=@onClose)
+    }}
+  >
+    {{#if (or @title (has-block "header"))}}
+      {{#let (component "fluid-modal/header-title" id=this.titleId) as |Title|}}
+        <header class="flex flex-shrink-0 items-center p-4 text-white bg-black rounded-t">
+          {{#if (has-block "header")}}
+            {{yield Title (component "fluid-modal/header-icon") to="header"}}
+          {{else}}
+            <Title>
+              {{@title}}
+            </Title>
+          {{/if}}
+        </header>
+      {{/let}}
+    {{/if}}
+
+    <div class="overflow-y-auto">
+      <div class="flex flex-col m-4">
+        {{yield}}
+      </div>
+    </div>
+
+    {{#if (has-block "footer")}}
+      <footer
+        class="bg-neutral-200 border-t border-neutral-300 rounded-b p-4 flex flex-shrink-0 space-x-4"
+      >
+        {{yield to="footer"}}
+      </footer>
+    {{/if}}
+  </div>
+</ModalDialog>

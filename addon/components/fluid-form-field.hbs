@@ -1,0 +1,84 @@
+<div class="flex flex-col items-stretch {{if @useSmallSize "body-sm" "body-base"}}" ...attributes>
+  {{#if (or @label @isOptional @isRequired)}}
+    <div class="flex items-center {{if @useSmallSize "mb-1" "mb-2"}}">
+      {{#if @label}}
+        <label for={{this.id}} class="font-bold">
+          {{@label}}
+        </label>
+      {{/if}}
+
+      {{#if (or @isOptional @isRequired)}}
+        <span class="lowercase ml-auto {{if @isRequired "text-red-600"}}">
+          {{if @isOptional "Optional" "Required"}}
+        </span>
+      {{/if}}
+    </div>
+  {{/if}}
+
+  <div>
+    {{#if @type}}
+      {{yield
+        (component
+          (concat "fluid-" @type "-input")
+          id=this.id
+          class="w-full"
+          useSmallSize=@useSmallSize
+          hasError=this.hasError
+          hasWarning=this.hasWarning
+        )
+      }}
+    {{else}}
+      {{yield
+        (hash
+          id=this.id
+          Text=(component
+            "fluid-text-input"
+            id=this.id
+            class="w-full"
+            useSmallSize=@useSmallSize
+            hasError=this.hasError
+            hasWarning=this.hasWarning
+          )
+          Date=(component
+            "fluid-date-input"
+            id=this.id
+            class="w-full"
+            useSmallSize=@useSmallSize
+            hasError=this.hasError
+            hasWarning=this.hasWarning
+          )
+        )
+      }}
+    {{/if}}
+  </div>
+
+  {{#if (or @helpText this.hasError this.hasWarning)}}
+    <div class="mt-2" data-test-help-text-for={{this.id}}>
+      {{#if @helpText}}
+        <span class="text-neutral-700">
+          {{@helpText}}
+        </span>
+      {{/if}}
+
+      {{#if this.hasError}}
+        <ul class="text-red-600" data-test-error-messages-for={{this.id}}>
+          {{#each this.errorMessages as |message|}}
+            <li>
+              {{message}}
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+
+      {{#if this.hasWarning}}
+        <ul class="text-orange-600" data-test-warning-messages-for={{this.id}}>
+          {{#each this.warningMessages as |message|}}
+            <li>
+              {{message}}
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,88 @@
+{{#let
+  (if
+    @hasError
+    "border-red-400 focus:ring-red-200"
+    (if
+      @hasWarning
+      "border-orange-400 focus:ring-orange-200"
+      "border-neutral-400 focus:border-blue-300 focus:ring-blue-200"
+    )
+  )
+  as |borderStyle|
+}}
+  <button
+    type="button"
+    class="flex items-center text-base leading-sm bg-white py-1 px-2 rounded border focus:outline-none
+      {{borderStyle}}
+      {{if this.value "text-neutral-800" "text-neutral-600"}}
+      {{@class}}"
+    id={{@id}}
+    ...attributes
+    {{did-insert (set this "buttonElement")}}
+    {{on "click" (set this "calendarIsVisible" true)}}
+    {{on "keydown" this.dismissCalendarOnEscape}}
+    {{click-outside this.dismissCalendarOnClickOutside}}
+  >
+    {{svg-jar "icon-calendar" class="h-4 w-4 mr-2"}}
+    <span>
+      {{if this.value (moment-format this.value "MMM D, YYYY") @placeholder}}
+    </span>
+  </button>
+{{/let}}
+
+{{#if this.calendarIsVisible}}
+  <PowerCalendar
+    class="body-base text-black bg-white shadow p-2 z-10"
+    data-test-fluid-date-input-calendar=""
+    @center={{this.calendarCenter}}
+    @onCenterChange={{pick "date" (set this "calendarCenter")}}
+    @selected={{this.value}}
+    @daysComponent="fluid-date-input/power-calendar-days"
+    @onSelect={{queue
+      (set this "calendarIsVisible" false)
+      (set this "calendarCenter" undefined)
+      (pick "date" this.onSelect)
+    }}
+    {{did-insert (set this "calendarElement")}}
+    {{on "keydown" this.dismissCalendarOnEscape}}
+    {{click-outside this.dismissCalendarOnClickOutside}}
+    {{popper-tooltip
+      this.buttonElement
+      (popper-modifier "offset" offset=(array 0 4))
+      placement="bottom-start"
+    }}
+    as |calendar|
+  >
+    <nav class="flex justify-between items-center mb-2">
+      <button
+        type="button"
+        data-test-calendar-nav-control="previous"
+        class="fluid-button size:xs type:plain text-current"
+        {{on "click" (fn calendar.actions.moveCenter -1 "month")}}
+      >
+        ◀
+        <span class="sr-only">
+          Previous Month
+        </span>
+      </button>
+
+      <span class="body-sm font-bold">
+        {{moment-format calendar.center "MMMM YYYY"}}
+      </span>
+
+      <button
+        type="button"
+        data-test-calendar-nav-control="next"
+        class="fluid-button size:xs type:plain text-current"
+        {{on "click" (fn calendar.actions.moveCenter 1 "month")}}
+      >
+        ▶
+        <span class="sr-only">
+          Next Month
+        </span>
+      </button>
+    </nav>
+
+    <calendar.Days @maxDate={{this.maxDate}} @minDate={{this.minDate}} />
+  </PowerCalendar>
+{{/if}}

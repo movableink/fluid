@@ -1,0 +1,31 @@
+<Switch
+  class="fluid-checkbox
+    {{if @checked "fluid-checkbox--checked"}}
+    {{if @disabled "fluid-checkbox--disabled"}}
+    "
+  @isOn={{@checked}}
+  @onUpdate={{@onchange}}
+  ...attributes
+  as |switch|
+>
+  <switch.Button
+    class="fluid-checkbox__box border-2 {{if @checked "fluid-checkbox__box--checked"}}"
+    disabled={{@disabled}}
+    role="checkbox"
+    @tagName="button"
+  >
+    <div class="fluid-checkbox__inner-box w-full h-full">
+      {{#if @checked}}
+        {{svg-jar "check" class="fluid-checkbox__check"}}
+      {{/if}}
+    </div>
+  </switch.Button>
+
+  {{#if (has-block "default")}}
+    {{yield}}
+  {{else if @label}}
+    <switch.Label class="fluid-checkbox__label flex-grow">
+      {{@label}}
+    </switch.Label>
+  {{/if}}
+</Switch>

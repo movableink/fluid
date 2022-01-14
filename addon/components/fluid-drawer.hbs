@@ -1,0 +1,28 @@
+<Dialog @isOpen={{@isOpen}} @onClose={{@onClose}} as |dialog|>
+  {{! The "overlay" provides the "click-outside-to-dismiss" behavior }}
+  <dialog.Overlay class="absolute inset-0" data-test-drawer-overlay />
+
+  {{! This element is the actual root of the drawer }}
+  <div
+    class="bg-neutral-100 absolute right-0 top-0 h-screen max-h-screen px-4 border-t-8 border-violet-500 fluid-drawer-width shadow-lg overflow-y-scroll z-10"
+    ...attributes
+  >
+    <div class="flex sticky top-0 py-3 bg-neutral-100">
+      <dialog.Title class="heading-xs flex-grow">
+        {{yield to="title"}}
+      </dialog.Title>
+
+      <button
+        class="fluid-button type:plain text-neutral-900 ml-2 -mr-2 -mt-1"
+        type="button"
+        data-test-drawer-close
+        {{on "click" @onClose}}
+      >
+        {{svg-jar "x-line"}}
+        <span class="sr-only">Close Drawer</span>
+      </button>
+    </div>
+
+    {{yield to="content"}}
+  </div>
+</Dialog>

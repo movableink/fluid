@@ -1,0 +1,29 @@
+.fluid-banner {
+  @apply bg-orange-100 border border-orange-400 rounded p-3 mb-6 shadow-sm;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    fill: theme('colors.orange.400');
+  }
+
+  &__header {
+    @apply text-orange-700;
+    font-weight: 600;
+  }
+
+  &__body {
+    @apply text-orange-700;
+  }
+
+  &__icon {
+    @apply pr-3;
+  }
+
+  &__content {
+    flex-grow: 2;
+  }
+}

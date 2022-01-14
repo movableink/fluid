@@ -1,0 +1,88 @@
+.pop-over {
+  z-index: 10;
+  .pop-over {
+    z-index: 20;
+  }
+}
+
+.fluid .pop-over,
+.fluid.pop-over {
+  color: theme('colors.neutral.700');
+  background: theme('colors.neutral.100');
+  border-color: transparent;
+
+  .pop-over-compass,
+  .pop-over-container {
+    border-radius: 3px;
+  }
+
+  .pop-over-pointer {
+    border-width: 4px;
+  }
+
+  .pop-over-container {
+    padding: 1.3em 1.5em;
+    box-shadow: 0 2px 6px color-mod(theme('colors.neutral.100') a(30%));
+  }
+}
+
+.pointer-none > .pop-over,
+.pop-over.pointer-none {
+  border-color: transparent;
+  border-style: none;
+  border-width: 9px 9px 0 0;
+}
+
+.pointer-s > .pop-over,
+.pop-over.pointer-s {
+  border-width: 7px;
+
+  &.orient-above {
+    bottom: -14px;
+  }
+  &.orient-below {
+    top: -14px;
+  }
+  &.orient-left {
+    right: -14px;
+  }
+  &.orient-right {
+    left: -14px;
+  }
+}
+
+.pointer-m > .pop-over,
+.pop-over.pointer-m {
+  border-width: 9px;
+
+  &.orient-above {
+    bottom: -18px;
+  }
+  &.orient-below {
+    top: -18px;
+  }
+  &.orient-left {
+    right: -18px;
+  }
+  &.orient-right {
+    left: -18px;
+  }
+}
+
+.pointer-l > .pop-over,
+.pop-over.pointer-l {
+  border-width: 13px;
+
+  &.orient-above {
+    bottom: -26px;
+  }
+  &.orient-below {
+    top: -26px;
+  }
+  &.orient-left {
+    right: -26px;
+  }
+  &.orient-right {
+    left: -26px;
+  }
+}

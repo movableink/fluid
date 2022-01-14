@@ -1,0 +1,15 @@
+{
+  /**
+    Ember CLI sends analytics information by default. The data is completely
+    anonymous, but there are times when you might want to disable this behavior.
+
+    Setting `disableAnalytics` to true will prevent any data from being sent.
+  */
+  "disableAnalytics": false,
+  "testPort": 7363,
+  "port": 9999,
+
+  /* Default `ember g component` configuration */
+  "componentClass": "@ember/component/template-only",
+  "componentStructure": "flat"
+}

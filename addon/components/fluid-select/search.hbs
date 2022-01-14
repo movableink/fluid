@@ -1,0 +1,26 @@
+<div class="fluid-select__search" ...attributes>
+  <div
+    class="fluid-input__wrapper
+      {{if
+        this.dark
+        "border-neutral-500 ring-1 ring-black ring-opacity-5 bg-neutral-900 text-neutral-400"
+      }}
+      mx-4 mt-2 flex"
+  >
+    {{svg-jar
+      (if this.loading "loading" "search")
+      class=(concat
+        "fluid-input__icon " (if this.loading "loading" "search") (if this.dark "filter-invert")
+      )
+    }}
+    <input
+      class="fluid-input fluid-input--icon fluid-input--full-width"
+      type="text"
+      role="search"
+      value={{this.searchQuery}}
+      placeholder={{@placeholder}}
+      {{on "input" this.handleInput}}
+      {{did-insert this.autoFocusInput}}
+    />
+  </div>
+</div>

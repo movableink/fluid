@@ -1,0 +1,45 @@
+.expanding-list-toggle {
+  text-align: center;
+  transition: transform 0.1s linear;
+  display: flex;
+  transform: rotate(-90deg);
+
+  &__disabled {
+    display: none;
+  }
+
+  &.right {
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.expanded {
+    transform: rotate(0deg);
+  }
+
+  &:first-child {
+    margin-right: 0.75rem;
+  }
+
+  &:last-child {
+    margin-left: 0.75rem;
+  }
+}
+
+.expanding-list-header {
+  &__enabled {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__disabled {
+    cursor: default;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}

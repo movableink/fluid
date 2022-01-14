@@ -1,0 +1,42 @@
+{{#if @label}}
+  <label for={{this.uniqueId}} data-test-input-field-label>
+    {{@label}}
+  </label>
+{{/if}}
+
+<div class="input-field-container">
+  {{#if (or @monogram this.icon)}}
+    <label
+      for={{this.uniqueId}}
+      class="monogram absolute capitalize flex font-normal justify-center leading-sm pointer-events-none text-2xs text-blue-400 text-center w-4 top-1/2 left-1 z-10 -translate-y-1/2"
+    >
+      {{if @monogram @monogram}}
+      {{if this.icon (svg-jar this.icon)}}
+    </label>
+  {{/if}}
+
+  {{#if (has-block)}}
+    {{yield (hash id=this.uniqueId disabled=this.disabled)}}
+  {{else}}
+    <input
+      type={{this.type}}
+      value={{this.value}}
+      id={{this.uniqueId}}
+      min={{this.min}}
+      max={{this.max}}
+      step={{this.step}}
+      disabled={{this.disabled}}
+      placeholder={{this.placeholder}}
+      title={{this.value}}
+      includeBlank={{this.includeBlank}}
+      oninput={{action "update" value="target.value"}}
+      onchange={{action "onchange" value="target.value"}}
+    />
+  {{/if}}
+</div>
+
+{{#if @sublabel}}
+  <label for={{this.uniqueId}} class="sub capitalize text-5xs text-center leading-2xs">
+    {{@sublabel}}
+  </label>
+{{/if}}

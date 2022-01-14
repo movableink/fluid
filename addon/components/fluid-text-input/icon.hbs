@@ -1,0 +1,5 @@
+{{#let (if @useSmallSize "h-3 w-3" "h-4 w-4") as |sizeStyles|}}
+  <div class="text-neutral-600 ml-2" ...attributes>
+    {{svg-jar @name class=(concat sizeStyles " fill-current")}}
+  </div>
+{{/let}}
