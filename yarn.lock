@@ -1600,6 +1600,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/config-conventional@npm:^16.0.0":
+  version: 16.0.0
+  resolution: "@commitlint/config-conventional@npm:16.0.0"
+  dependencies:
+    conventional-changelog-conventionalcommits: ^4.3.1
+  checksum: f7c0063ba8ab439fe36ce41d585edf53435a9c4cb61e9082f3692c641adf06ff4ec2721761be3ecdf6dbc3635a9a35cbe91adf55062fd688c28b29c02d0b5b75
+  languageName: node
+  linkType: hard
+
 "@csstools/convert-colors@npm:^1.4.0":
   version: 1.4.0
   resolution: "@csstools/convert-colors@npm:1.4.0"
@@ -5232,6 +5241,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-ify@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "array-ify@npm:1.0.0"
+  checksum: 1ba3a81a151f8df0eaafa25e47c8493803ebfa6b2f7918038ae52342b5d3d3ebee56fd57886a0c973ad9eb5faa8dee07c7d2716b582f4c741bb89a104b172461
+  languageName: node
+  linkType: hard
+
 "array-includes@npm:^3.0.3":
   version: 3.1.3
   resolution: "array-includes@npm:3.1.3"
@@ -8514,6 +8530,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compare-func@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "compare-func@npm:2.0.0"
+  dependencies:
+    array-ify: ^1.0.0
+    dot-prop: ^5.1.0
+  checksum: 825690b828f028acf270578cd4d9ea0751987b474095cd47093a29ac087a21e5de2db86b83cc0cecb935dfca952ba8bbcd7ead240fe6b3b7ecb1a66a8b109d28
+  languageName: node
+  linkType: hard
+
 "component-emitter@npm:^1.2.1, component-emitter@npm:~1.3.0":
   version: 1.3.0
   resolution: "component-emitter@npm:1.3.0"
@@ -8669,6 +8695,17 @@ __metadata:
   version: 0.3.1
   resolution: "continuable-cache@npm:0.3.1"
   checksum: cf910530ab67b6fc8d570123a93f23fc52d8f84635e5369a3f9f536d421b33dee16c1e4bf41cfe4261d71a0c734864ee799fac41a5e4d087aa33ba8fe28217ad
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^4.3.1":
+  version: 4.6.3
+  resolution: "conventional-changelog-conventionalcommits@npm:4.6.3"
+  dependencies:
+    compare-func: ^2.0.0
+    lodash: ^4.17.15
+    q: ^1.5.1
+  checksum: 6436c2e28dbc012c4412cc5a9aafad618500bd4988a0fe30e50c4ac4c16758e9464d35a3b03d48f3002039ca239df56a1f5fa75bc24b4ee9c9c4ea2b3d6374ef
   languageName: node
   linkType: hard
 
@@ -9682,7 +9719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dot-prop@npm:^5.2.0":
+"dot-prop@npm:^5.1.0, dot-prop@npm:^5.2.0":
   version: 5.3.0
   resolution: "dot-prop@npm:5.3.0"
   dependencies:
@@ -12654,6 +12691,7 @@ __metadata:
   dependencies:
     "@alexlafroscia/postcss-color-mod-function": ^4.0.0
     "@babel/core": ^7.14.6
+    "@commitlint/config-conventional": ^16.0.0
     "@csstools/postcss-sass": ^4.0.0
     "@docfy/ember": ^0.4.4
     "@ember/jquery": ^2.0.0
@@ -19452,7 +19490,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"q@npm:^1.1.2":
+"q@npm:^1.1.2, q@npm:^1.5.1":
   version: 1.5.1
   resolution: "q@npm:1.5.1"
   checksum: f610c1295a4f1b334affbe5333bc8c6160b907d011a62f1c6d05d4ca985535ea271fd8684e1e655b4659cc5b71f5be9ac4ccc84482d869b5a0576955598a7dca
