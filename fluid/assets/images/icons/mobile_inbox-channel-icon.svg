@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Icon/Mobile Inbox</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Mobile-Inbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="48" height="48"></rect>
+        <rect id="Rectangle" fill="#767680" x="12" y="8" width="25.5" height="11"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="12" y="19" width="25.5" height="11"></rect>
+        <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="12" y="30" width="25.5" height="11"></rect>
+        <path d="M32.9067111,0 C35.7380664,0 39,3.12322099 39,5.79168932 L39,5.79168932 L39,42.2083107 C39,44.876779 35.7380664,48 32.9067111,48 L32.9067111,48 L16.0932889,48 C13.2619336,48 10,44.876779 10,42.2083107 L10,42.2083107 L10,5.79168932 C10,3.12322099 13.2619336,0 16.0932889,0 L16.0932889,0 Z M36.609,41 L12.39,41 L12.3907284,42.2083107 C12.3907284,44.0733692 13.9431982,45.5966891 15.8966498,45.6930271 L16.0932889,45.6978641 L32.9067111,45.6978641 C34.9515788,45.6978641 36.6092716,44.1355378 36.6092716,42.2083107 L36.6092716,42.2083107 L36.609,41 Z M36.609,8 L12.39,8 L12.39,39 L36.609,39 L36.609,8 Z M32.9067111,2.30213592 L16.0932889,2.30213592 C14.0484212,2.30213592 12.3907284,3.86446219 12.3907284,5.79168932 L12.3907284,5.79168932 L12.39,6 L36.609,6 L36.6092716,5.79168932 C36.6092716,3.92663081 35.0568018,2.40331088 33.1033502,2.30697292 L32.9067111,2.30213592 Z M27.3430657,4 C27.7058805,4 28,4.22385763 28,4.5 C28,4.75313051 27.7528579,4.96232731 27.4322078,4.99543559 L27.3430657,5 L22.6569343,5 C22.2941195,5 22,4.77614237 22,4.5 C22,4.24686949 22.2471421,4.03767269 22.5677922,4.00456441 L22.6569343,4 L27.3430657,4 Z" id="Combined-Shape" fill="#C5C5CA" fill-rule="nonzero"></path>
+        <path d="M16,11.5 C14.8954305,11.5 14,12.3954305 14,13.5 C14,14.6045695 14.8954305,15.5 16,15.5 C17.1045695,15.5 18,14.6045695 18,13.5 C18,12.3954305 17.1045695,11.5 16,11.5 Z" id="Oval" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <line x1="21.5" y1="13.5" x2="33.5" y2="13.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="15.5" y1="24.5" x2="33.5" y2="24.5" id="Line-Copy-2" stroke="#C5C5CA" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="15.5" y1="33.5" x2="33.5" y2="33.5" id="Line-Copy-3" stroke="#C5C5CA" stroke-width="3" stroke-linecap="round"></line>
+    </g>
+</svg>

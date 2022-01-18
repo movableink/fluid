@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Icon/Email Alt</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Email-Alt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="48" height="48"></rect>
+        <path d="M43.7319123,20 C44.1230116,20 45,20.9805714 45,22.1906857 L45,42.8093143 C45,44.0194286 43.9840136,45 42.7319123,45 L5.26808768,45 C4.01598638,45 3,44.0194286 3,42.8093143 L3,22.1906857 C3,20.9805714 3,20 3.26808768,20" id="Path" stroke="#C5C5CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M44,2 L25.3304123,19.3402165 C24.02154,20.2033075 22.5025064,20.2363926 21.1974974,19.3402165 L3,2" id="Stroke-3" stroke="#C5C5CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(23.500000, 11.000000) scale(1, -1) translate(-23.500000, -11.000000) "></path>
+        <path d="M12,9 L35,9 C36.1045695,9 37,9.8954305 37,11 L37,25.4902001 C37,26.0433896 36.7708767,26.571872 36.3671023,26.9500053 L25.5506535,37.0795705 C24.3970029,38.15996 22.6029971,38.15996 21.4493465,37.0795705 L10.6328977,26.9500053 C10.2291233,26.571872 10,26.0433896 10,25.4902001 L10,11 C10,9.8954305 10.8954305,9 12,9 Z" id="Rectangle" stroke="#767680" stroke-width="1.5" fill="#767680" stroke-linecap="round" stroke-linejoin="round"></path>
+        <line x1="3.46153846" y1="34.5" x2="17.5" y2="21.5" id="Stroke-5" stroke="#C5C5CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.500000, 28.000000) scale(1, -1) translate(-10.500000, -28.000000) "></line>
+        <line x1="44.5" y1="32.5" x2="31" y2="20" id="Stroke-7" stroke="#C5C5CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(38.000000, 26.500000) scale(1, -1) translate(-38.000000, -26.500000) "></line>
+        <path d="M44,28 L25.7857681,43.4135258 C24.5088195,44.1807178 23.0268355,44.2101268 21.753656,43.4135258 L4,28" id="Stroke-3-Copy" stroke="#C5C5CA" stroke-width="1.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(24.000000, 36.000000) scale(1, -1) translate(-24.000000, -36.000000) "></path>
+        <line x1="15" y1="15" x2="31" y2="15" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="15" y1="21" x2="31" y2="21" id="Line-Copy" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></line>
+    </g>
+</svg>

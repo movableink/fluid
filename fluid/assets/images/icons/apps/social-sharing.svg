@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Sharing Sharing / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Sharing-Sharing-/-Color">
+            <rect id="Background-Fill" fill="#7C99B9" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M15.75,13.5 C14.9585,13.5 14.2635,13.9095 13.863,14.5275 L10.3605,12.776 C10.546,12.279 10.548,11.727 10.3605,11.224 L13.863,9.473 C14.2635,10.091 14.9585,10.5 15.75,10.5 C16.992,10.5 18,9.4925 18,8.25 C18,7.0075 16.992,6 15.75,6 C14.195,6 13.0965,7.5475 13.6395,9.0255 L10.133,10.779 C9.7205,10.14 9.0215,9.75 8.25,9.75 C7.0095,9.75 6,10.7595 6,12 C6,13.2405 7.0095,14.25 8.25,14.25 C9.0215,14.25 9.7205,13.8605 10.1335,13.221 L13.64,14.9745 C13.097,16.4535 14.195,18 15.75,18 C16.992,18 18,16.9925 18,15.75 C18,14.5075 16.992,13.5 15.75,13.5 L15.75,13.5 Z" id="Icon-/-Sharing" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

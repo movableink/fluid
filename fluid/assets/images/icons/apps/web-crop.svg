@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Webcrop / Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Webcrop-/-Color">
+            <rect id="Background-Fill" fill="#FFA926" x="0" y="0" width="24" height="24" rx="12"></rect>
+            <path d="M9.13043478,14.8695652 L9.13043478,9.13043478 L14.8695652,9.13043478 L14.8695652,14.8695652 L9.13043478,14.8695652 Z M7.56521739,15.6521739 L7.56521739,9.13043478 L6,9.13043478 L6,7.56521739 L7.56521739,7.56521739 L7.56521739,6 L9.13043478,6 L9.13043478,7.56521739 L15.6521739,7.56521739 L16.4347826,7.56521739 L16.4347826,14.8695652 L18,14.8695652 L18,16.4347826 L16.4347826,16.4347826 L16.4347826,18 L14.8695652,18 L14.8695652,16.4347826 L7.56521739,16.4347826 L7.56521739,15.6521739 Z" id="Icon-/-Webcrop" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
