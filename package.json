@@ -79,6 +79,7 @@
     "qunit-dom": "^2.0.0",
     "rehype-add-classes": "^1.0.0",
     "rehype-highlight": "4.1.0",
+    "release-it": "^14.12.3",
     "sinon": "^10.0.0",
     "tailwindcss": "^2.2.16",
     "testdouble": "^3.16.2",
