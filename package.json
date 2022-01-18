@@ -1,7 +1,8 @@
 {
   "name": "fluid",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.0",
   "description": "Fluid is Movable Ink's design framework for its apps.",
+  "homepage": "https://movableink.github.io/fluid/docs",
   "scripts": {
     "build": "ember build",
     "lint-hbs": "ember-template-lint .",
@@ -10,9 +11,9 @@
     "test": "ember exam",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006 -s dist",
-    "build-storybook": "build-storybook -s dist"
+    "build-storybook": "build-storybook -s dist",
+    "release": "release-it"
   },
-  "private": true,
   "devDependencies": {
     "@alexlafroscia/postcss-color-mod-function": "^4.0.0",
     "@babel/core": "^7.14.6",
@@ -32,6 +33,7 @@
     "@mozaic-ds/postcss-sass": "4.0.0-next.0",
     "@percy/cli": "^1.0.0-beta.68",
     "@percy/ember": "^3.0.0",
+    "@release-it/conventional-changelog": "^4.1.0",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-docs": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
@@ -85,8 +87,8 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "https://github.com/movableink/front-end/tree/master/packages/fluid",
-  "license": "SEE LICENSE IN README.md",
+  "repository": "https://github.com/movableink/fluid",
+  "license": "MIT",
   "author": "Movable Ink",
   "directories": {
     "doc": "doc",
