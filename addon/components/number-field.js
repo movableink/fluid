@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { set, get } from '@ember/object';
-import { l } from 'fluid/helpers/l';
+import { l } from '@movable/fluid/helpers/l';
 
 const UP = 38;
 const DOWN = 40;

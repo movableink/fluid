@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import findTokens from 'fluid/lib/find-tokens';
+import findTokens from '@movable/fluid/lib/find-tokens';
 
 module('lib:find-tokens', function () {
   test('it finds a token in a string', function (assert) {

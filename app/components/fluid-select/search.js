@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-select/search';
+export { default } from '@movable/fluid/components/fluid-select/search';

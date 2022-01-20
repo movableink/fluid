@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/percent-field';
+export { default } from '@movable/fluid/components/percent-field';

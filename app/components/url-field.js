@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/url-field';
+export { default } from '@movable/fluid/components/url-field';

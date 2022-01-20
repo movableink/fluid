@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-lab/expanding-list/content';
+export { default } from '@movable/fluid/components/fluid-lab/expanding-list/content';

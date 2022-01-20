@@ -1,6 +1,6 @@
 import EmberObject from '@ember/object';
 import { module, test } from 'qunit';
-import equals from 'fluid/computed/equals-property';
+import equals from '@movable/fluid/computed/equals-property';
 
 module('computed:equals-property', function (hooks) {
   hooks.beforeEach(function () {

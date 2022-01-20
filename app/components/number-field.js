@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/number-field';
+export { default } from '@movable/fluid/components/number-field';

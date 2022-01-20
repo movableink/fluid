@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/formattable-field';
+export { default } from '@movable/fluid/components/formattable-field';

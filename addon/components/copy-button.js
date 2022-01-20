@@ -5,7 +5,7 @@ import Component from '@ember/component';
 
 import { get } from '@ember/object';
 import RSVP from 'rsvp';
-import copy from 'fluid/system/copy';
+import copy from '@movable/fluid/system/copy';
 import { task, timeout } from 'ember-concurrency';
 import $ from 'jquery';
 

@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-checkbox';
+export { default } from '@movable/fluid/components/fluid-checkbox';

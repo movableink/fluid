@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/modal';
+export { default } from '@movable/fluid/components/modal';

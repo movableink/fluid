@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-date-input/power-calendar-days';
+export { default } from '@movable/fluid/components/fluid-date-input/power-calendar-days';

@@ -1,1 +1,1 @@
-export { default } from 'fluid/helpers/is-active';
+export { default } from '@movable/fluid/helpers/is-active';
