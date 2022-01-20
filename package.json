@@ -1,5 +1,5 @@
 {
-  "name": "fluid",
+  "name": "@movable/fluid",
   "version": "0.0.0",
   "description": "Fluid is Movable Ink's design framework for its apps.",
   "homepage": "https://movableink.github.io/fluid/docs",
@@ -88,7 +88,10 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "https://github.com/movableink/fluid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/movableink/fluid.git"
+  },
   "license": "MIT",
   "author": "Movable Ink",
   "directories": {
