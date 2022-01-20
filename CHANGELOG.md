@@ -1,0 +1,15 @@
+### 0.0.1 (2022-01-20)
+
+### Features
+
+- added commit lint ([a6158aa](https://github.com/movableink/fluid/commit/a6158aa6ace051bddc7b760b7c0c1548d85bc344))
+- added release-it action for manual releases ([f823c42](https://github.com/movableink/fluid/commit/f823c427531d11a8521cc55e4e294a6896ff9b48))
+- adding ignore ([a8a7208](https://github.com/movableink/fluid/commit/a8a7208d858ca437056d60333b806a769bc54ba0))
+- duplication of fluid-private files ([a8f5b60](https://github.com/movableink/fluid/commit/a8f5b6075a3d14c192ab3037b49fbefd55a6603a))
+
+### Bug Fixes
+
+- missing dependency ([2b9ae48](https://github.com/movableink/fluid/commit/2b9ae4824a326fac6aad0a2e3cace0d4ffc6e0d5))
+- removing dedupe error ([2afeb26](https://github.com/movableink/fluid/commit/2afeb2640e657eba11e42a921b7c386c7a111e0c))
+- yarn dedupe ([139a4e9](https://github.com/movableink/fluid/commit/139a4e9ffe156b295f58de6570461a4fdb282676))
+- yarn needed to be re-run ([67b77e5](https://github.com/movableink/fluid/commit/67b77e59cf946537b087393929fc7871bb6ec5e4))
