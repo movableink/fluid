@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-split-button';
+export { default } from '@movable/fluid/components/fluid-split-button';

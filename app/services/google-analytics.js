@@ -1,1 +1,1 @@
-export { default } from 'fluid/services/google-analytics';
+export { default } from '@movable/fluid/services/google-analytics';

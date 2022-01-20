@@ -6,7 +6,7 @@ import { guidFor } from '@ember/object/internals';
 import { run } from '@ember/runloop';
 import { htmlSafe } from '@ember/template';
 import { computed as overridable } from 'ember-overridable-computed';
-import { tokenRegex } from 'fluid/lib/find-tokens';
+import { tokenRegex } from '@movable/fluid/lib/find-tokens';
 import $ from 'jquery';
 
 const {

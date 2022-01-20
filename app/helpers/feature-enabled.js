@@ -1,1 +1,1 @@
-export { default } from 'fluid/helpers/feature-enabled';
+export { default } from '@movable/fluid/helpers/feature-enabled';

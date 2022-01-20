@@ -1,1 +1,1 @@
-export { l, default } from 'fluid/helpers/l';
+export { l, default } from '@movable/fluid/helpers/l';

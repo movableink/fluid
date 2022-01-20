@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-modal/header-icon';
+export { default } from '@movable/fluid/components/fluid-modal/header-icon';

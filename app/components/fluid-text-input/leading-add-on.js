@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-text-input/leading-add-on';
+export { default } from '@movable/fluid/components/fluid-text-input/leading-add-on';

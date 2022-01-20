@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-table/td';
+export { default } from '@movable/fluid/components/fluid-table/td';

@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-select/option';
+export { default } from '@movable/fluid/components/fluid-select/option';

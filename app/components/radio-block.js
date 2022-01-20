@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/radio-block';
+export { default } from '@movable/fluid/components/radio-block';

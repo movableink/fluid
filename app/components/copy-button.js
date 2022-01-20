@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/copy-button';
+export { default } from '@movable/fluid/components/copy-button';

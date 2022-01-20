@@ -1,7 +1,7 @@
 /**
   @module fluid
  */
-import FormattableField from 'fluid/components/formattable-field';
+import FormattableField from '@movable/fluid/components/formattable-field';
 
 /**
   {{url-field}} is a simple text field component

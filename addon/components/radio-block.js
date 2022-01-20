@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { guidFor } from '@ember/object/internals';
 import { get, computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
-import equalsProperty from 'fluid/computed/equals-property';
+import equalsProperty from '@movable/fluid/computed/equals-property';
 
 export default Component.extend({
   tagName: 'label',

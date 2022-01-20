@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { settled, findAll, click, render } from '@ember/test-helpers';
 import { A } from '@ember/array';
 import { hbs } from 'ember-cli-htmlbars';
-import component from 'fluid/test-support/pages/fluid-select';
+import component from '@movable/fluid/test-support/pages/fluid-select';
 import percySnapshot from '@percy/ember';
 
 module('Integration | Component | fluid-select', function (hooks) {

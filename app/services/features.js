@@ -1,1 +1,1 @@
-export { default } from 'fluid/services/features';
+export { default } from '@movable/fluid/services/features';

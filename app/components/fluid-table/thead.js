@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-table/thead';
+export { default } from '@movable/fluid/components/fluid-table/thead';

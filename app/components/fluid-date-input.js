@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-date-input';
+export { default } from '@movable/fluid/components/fluid-date-input';

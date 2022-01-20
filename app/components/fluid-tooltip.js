@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-tooltip';
+export { default } from '@movable/fluid/components/fluid-tooltip';

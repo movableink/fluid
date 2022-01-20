@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/token-field/textarea';
+export { default } from '@movable/fluid/components/token-field/textarea';

@@ -1,1 +1,1 @@
-export { default } from 'fluid/components/fluid-drawer';
+export { default } from '@movable/fluid/components/fluid-drawer';
