@@ -9,7 +9,6 @@ module.exports = {
     {
       files: [
         '.eslintrc.js',
-        '.storybook/main.js',
         '.template-lintrc.js',
         'ember-cli-build.js',
         'index.js',
