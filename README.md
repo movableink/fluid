@@ -10,16 +10,6 @@
 
 ## Local Development
 
-### Storybook
-
-Storybook provides a useful way to develop components and document their usage. It requires that both the Ember CLI _and_ Storybook servers are running at the same time. You can do that by running
-
-```sh
-yarn run-p start storybook
-```
-
-Once the Ember CLI build completes, Storybook should be ready to go!
-
 ### Testing
 
 The tests can be run in an interactive browser

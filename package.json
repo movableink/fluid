@@ -10,8 +10,6 @@
     "start": "ember server",
     "test": "ember exam",
     "postinstall": "husky install",
-    "storybook": "start-storybook -p 6006 -s dist",
-    "build-storybook": "build-storybook -s dist",
     "release": "release-it"
   },
   "devDependencies": {
@@ -34,12 +32,6 @@
     "@percy/cli": "^1.0.0-beta.68",
     "@percy/ember": "^3.0.0",
     "@release-it/conventional-changelog": "^4.1.0",
-    "@storybook/addon-actions": "^6.3.0",
-    "@storybook/addon-docs": "^6.3.0",
-    "@storybook/addon-essentials": "^6.3.0",
-    "@storybook/addon-links": "^6.3.0",
-    "@storybook/ember": "^6.3.0",
-    "@storybook/ember-cli-storybook": "^0.4.0",
     "autoprefixer": "^10.3.6",
     "babel-loader": "^8.2.2",
     "babel-plugin-ember-modules-api-polyfill": "^3.5.0",
