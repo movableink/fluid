@@ -9,7 +9,6 @@
     "lint-js": "eslint .",
     "start": "ember server",
     "test": "ember exam",
-    "postinstall": "husky install",
     "release": "release-it"
   },
   "devDependencies": {
