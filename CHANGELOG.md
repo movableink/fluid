@@ -1,3 +1,10 @@
+### [0.0.2](https://github.com/movableink/fluid/compare/0.0.1...0.0.2) (2022-01-25)
+
+### Bug Fixes
+
+- husky postinstall was causing issues with public repo ([9e2cbe3](https://github.com/movableink/fluid/commit/9e2cbe32d4bcb6cc676751db8b100f2582484012))
+- removed bug with husky script ([6ba5445](https://github.com/movableink/fluid/commit/6ba54455706dd54164a7341100749a5d46852de5))
+
 ### 0.0.1 (2022-01-20)
 
 ### Features
