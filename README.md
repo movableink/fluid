@@ -1,4 +1,4 @@
-# fluid [![CI](https://github.com/movableink/fluid/actions/workflows/ci.yml/badge.svg)](https://github.com/movableink/fluid/actions/workflows/ci.yml)
+# fluid [![CI](https://github.com/movableink/fluid/actions/workflows/ci.yml/badge.svg)](https://github.com/movableink/fluid/actions/workflows/ci.yml) ![Percy](https://percy.io/static/images/percy-badge.svg)
 
 Fluid is [@movableink's](https://github.com/movableink) design system. We use a combination of emberjs, and tailwind to build our design system. The TailwindCss config docs can be found at [@movable/tailwind-config](https://movableink.github.io/tailwind-config)
 
