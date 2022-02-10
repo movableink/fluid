@@ -2,7 +2,7 @@
   @apply mb-8;
 
   &__example {
-    @apply border border-neutral-500 p-4 border-b-0 border-l-8;
+    @apply border border-neutral-500 p-4 mb-4 border-l-8;
   }
 
   &__description {
@@ -20,6 +20,18 @@
           @apply text-blue-600;
         }
       }
+    }
+  }
+
+  &__snippets__tabs {
+    @apply grid gap-x-px auto-cols-max grid-cols-4;
+    &__button {
+      @apply p-2 text-base bg-white text-black rounded-sm;
+
+      &--active {
+        @apply bg-black text-white;
+      }
+
     }
   }
 }

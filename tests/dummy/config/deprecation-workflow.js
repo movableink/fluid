@@ -1,6 +1,6 @@
 window.deprecationWorkflow = window.deprecationWorkflow || {};
 window.deprecationWorkflow.config = {
-  throwOnUnhandled: true,
+  throwOnUnhandled: false,
   workflow: [
     { handler: 'silence', matchId: 'ember-cli-page-object.string-properties-on-definition' },
     { handler: 'silence', matchId: 'implicit-injections' },

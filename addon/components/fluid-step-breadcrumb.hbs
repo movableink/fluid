@@ -1,20 +1,19 @@
-<div class="flex flex-row divide-x-2 divide-white">
+<nav class="fluid-step-breadcrumbs" role="navigation" aria-label="breadcrumbs">
   {{#each @steps as |step idx|}}
-    <button
-      class="p-4 {{if step.completed "bg-blue-500 text-white" "bg-blue-200 text-blue-500"}}"
+    <div
+      class="fluid-step-breadcrumb {{if step.completed "fluid-step-breadcrumb--active"}}"
       data-test-breadcrumb
     >
       <span
         data-test-breadcrumb-badge={{idx}}
         data-test-breadcrumb-badge-completed={{step.completed}}
-        class="fluid-badge fluid-badge--md
-          {{if step.completed "bg-white text-blue-500" "bg-blue-500 text-white"}}"
+        class="fluid-badge fluid-badge--md"
       >
         {{add idx 1}}
       </span>
       <span class="text-2xl">
         {{step.name}}
       </span>
-    </button>
+    </div>
   {{/each}}
-</div>
+</nav>

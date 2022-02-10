@@ -1,0 +1,27 @@
+.fluid-step-breadcrumbs {
+  @apply grid gap-x-px auto-cols-max grid-cols-3;
+
+  .fluid-step-breadcrumb {
+    @apply bg-blue-200 text-blue-500 p-4;
+
+    .fluid-badge {
+      @apply bg-blue-500 text-white
+    }
+
+    &--active {
+      @apply bg-blue-500 text-white p-4;
+
+      .fluid-badge {
+        @apply bg-white text-blue-500;
+      }
+    }
+
+    &:first-child {
+      @apply rounded-l-md;
+    }
+
+    &:last-child {
+      @apply rounded-r-md;
+    }
+  }
+}
