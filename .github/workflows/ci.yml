@@ -51,4 +51,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn install --immutable
-      - run: yarn test
+      - run: yarn ci-test
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

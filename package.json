@@ -9,6 +9,7 @@
     "lint-js": "eslint .",
     "start": "ember server",
     "test": "ember exam",
+    "ci-test": "EMBER_ENV=test QUNIT_CONSOLE_GROUPER=false PERCY_TOKEN=$PERCY_TOKEN percy exec -- ember exam",
     "release": "release-it",
     "prepare": "husky install",
     "postinstall": "husky install",
