@@ -66,6 +66,10 @@
   text-overflow: ellipsis;
   position: relative;
   white-space: nowrap;
+  &::after {
+    content: '';
+    display: block;
+  }
 
   ~ .fluid-popup.is-active,
   ~ .fluid-popup:hover,
