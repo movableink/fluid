@@ -1,3 +1,13 @@
+### [0.0.3](https://github.com/movableink/fluid/compare/0.0.2...0.0.3) (2022-03-09)
+
+### Features
+
+- added percy to ci ([0e631a2](https://github.com/movableink/fluid/commit/0e631a29adbe7298ab7bea83f1ca361283a142f0))
+
+### Bug Fixes
+
+- restoring router ([577041d](https://github.com/movableink/fluid/commit/577041dd4a9ebb5366791de51b20a51a47b2ba64))
+
 ### [0.0.2](https://github.com/movableink/fluid/compare/0.0.1...0.0.2) (2022-01-25)
 
 ### Bug Fixes
