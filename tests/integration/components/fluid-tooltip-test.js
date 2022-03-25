@@ -77,4 +77,32 @@ module('Integration | Component | fluid-tooltip', function (hooks) {
     await triggerEvent('button', 'mouseleave');
     assert.dom('[data-test-tooltip]').doesNotExist('tooltip disappears on mouseleave');
   });
+
+  test('the tooltip has correct z-index when used in modal', async function (assert) {
+    await render(hbs`
+      <FluidModal @title="Header Content">
+        <:default>
+          <FluidTooltip>
+            <:tooltip>
+              template block text
+            </:tooltip>
+            <:default as |attachTooltip|>
+              <button {{attachTooltip}}>
+                Hover me!
+              </button>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna nulla, laoreet eu tempus quis, rutrum a tortor. Proin in dolor non nisi tincidunt ultrices. Praesent sed tincidunt magna. Duis nisl ipsum, posuere non diam vel, feugiat viverra ipsum. Nulla sed libero sollicitudin, rutrum tortor a, luctus tortor. Integer non arcu eu tortor vehicula sollicitudin. Suspendisse nec molestie sapien. Morbi volutpat leo auctor tortor elementum, ac hendrerit nibh imperdiet. Praesent finibus lectus imperdiet lectus tincidunt, sed vestibulum lorem scelerisque. Quisque in tempor nunc, non ornare mauris. Duis condimentum, enim et rhoncus venenatis, tellus odio varius quam, vitae sodales est ligula nec nulla.</p>
+            </:default>
+          </FluidTooltip>
+        </:default>
+        <:footer>
+          <button class="fluid-button size:lg">
+            Close
+          </button>
+        </:footer>
+      </FluidModal>
+    `);
+    await triggerEvent('button', 'mouseenter');
+    await percySnapshot(assert);
+    assert.expect(0);
+  });
 });
