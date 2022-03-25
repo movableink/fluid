@@ -1,3 +1,9 @@
+### [0.0.4](https://github.com/movableink/fluid/compare/0.0.3...0.0.4) (2022-03-25)
+
+### Bug Fixes
+
+- adjusted tooltip z-index ([6efab14](https://github.com/movableink/fluid/commit/6efab147fc5e0560d222918ab0f856e7c7283909))
+
 ### [0.0.3](https://github.com/movableink/fluid/compare/0.0.2...0.0.3) (2022-03-09)
 
 ### Features
