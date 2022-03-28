@@ -1,3 +1,14 @@
+## [1.0.0](https://github.com/movableink/fluid/compare/0.0.4...1.0.0) (2022-03-28)
+
+### ⚠ BREAKING CHANGES
+
+- all master merges will be deployed using
+  conventional commits as log
+
+### Features
+
+- auto deploy on master merge ([44e240f](https://github.com/movableink/fluid/commit/44e240f824f7014fe6ac38e9b4b64bac4b5a4ee7))
+
 ### [0.0.4](https://github.com/movableink/fluid/compare/0.0.3...0.0.4) (2022-03-25)
 
 ### Bug Fixes
