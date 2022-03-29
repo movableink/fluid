@@ -1,0 +1,57 @@
+# Fluid Radio Button
+
+Built with [ember-radio-button](https://github.com/yapplabs/ember-radio-button)
+
+A fluid-radio-button will be in a checked state when the value property matches the groupValue property. value should be unique per fluid-radio-button, while the same groupValue should be provided to each fluid-radio-button in the group.
+
+## Arguments Table
+<dl>
+  <dt>groupValue</dt>
+  <dd>
+    <ul>
+      <li>type: string</li>
+      <li>required: true</li>
+      <li>description: what group does the radio button belong to</li>
+    </ul>
+  </dd>
+  <dt>value</dt>
+  <dd>
+    <ul>
+      <li>type: any</li>
+      <li>require: true</li>
+      <li>description: populates the `value` attribute of the radio button</li>
+    </ul>
+  </dd>
+  <dt>label</dt>
+  <dd>
+    <ul>
+      <li>type: string</li>
+      <li>required: false</li>
+      <li>description: label associated with radio button</li>
+    </ul>
+  </dd>
+  <dt>changed</dt>
+  <dd>
+    <ul>
+      <li>type: function</li>
+      <li>required: true</li>
+      <li>description: what happens when the radio button is changed</li>
+    </ul>
+  </dd>
+</dl>
+
+
+## Example
+
+<Story
+  id="component-fluid-radio-button--default"
+/>
+
+```hbs
+<FluidRadioButton
+  @label='Option 1'
+  @value='foo'
+  @changed={{action (mut this.selectedValue)}}
+  @groupValue={{this.selectedValue}}
+/>
+```

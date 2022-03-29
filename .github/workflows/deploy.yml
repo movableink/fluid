@@ -26,10 +26,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install Dependencies and Build Stylesheets
         run: yarn install
-      - name: Build documentation site
-        run: yarn ember build -prod
-      - name: Generate Fallback Page
-        run: cp dist/index.html dist/404.html
+      - name: Build Ember & Storybook
+        run: yarn build-storybook
       - name: Upload to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:

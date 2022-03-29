@@ -1,0 +1,28 @@
+import { Story } from '@storybook/addon-docs';
+
+# Fluid Drawer
+
+Component used to for adding content to drawers that slides in from the right side of the screen
+
+## Yielded Blocks
+
+Both `<:title>` and `<:content>` are used when populating the drawer.
+
+
+<Story id="compoents-fluid-drawer--default" />
+
+```hbs
+<button class='fluid-button type:primary' {{on 'click' (set this 'isOpen' true)}}>
+  Title Drawer
+</button>
+
+{{#if this.isOpen}}
+  <FluidDrawer @isOpen={{true}} @onClose={{set this 'isOpen' false}}>
+    <:title>Drawer Title</:title>
+
+    <:content>
+      Content!
+    </:content>
+  </FluidDrawer>
+{{/if}}
+```

@@ -1,6 +1,5 @@
 import EmberRouter from '@ember/routing/router';
 import config from 'dummy/config/environment';
-import { addDocfyRoutes } from '@docfy/ember';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -8,7 +7,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-  addDocfyRoutes(this);
   this.route('test', function () {
     this.route('is-active', function () {
       this.route('named');

@@ -22,16 +22,16 @@ ember install @movable/fluid
 
 The documentation server can be run locally by running:
 
-```
-yarn start
+```sh
+yarn storybook-dev
 ```
 
-We use [docfy](https://docfy.dev/docs) for all our documenation. The local server is accessible via http://localhost:9999
+We use [Storybook](https://storybook.js.org/docs/react/get-started/introduction) for all our documenation. The local server is accessible via http://localhost:9999
 
 ### Testing
 
 The tests can be run in an interactive browser
 
 ```sh
-yarn ember test --serve
+yarn test
 ```

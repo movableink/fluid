@@ -1,0 +1,54 @@
+import { Story } from "@storybook/addon-docs";
+
+# Fluid Checkbox
+
+Our checkbox uses [Ember-HeadlessUI Switch Checkbox](https://gavinjoyce.github.io/ember-headlessui/switch/switch-checkbox) as a base. We style it to match our needs.
+
+> Switches are a pleasant interface for toggling a value between two states, and offer the same semantics and keyboard navigation as native checkbox elements.
+
+## When to Use?
+
+This component should be used for single option booleans. The example is to use it like a switch, it's either `on` or `off`. There is no `indeterminate` state that you'd find on a `input[type="checkbox"]`. If you do need multiple sibling booleans or an indeterminate state please use the `input[type=checkbox]` element with TailwindCSS.
+
+#### Default
+
+<Story id="components-fluid-checkbox--default"/>
+
+```hbs
+<FluidCheckbox @label='Default' @checked={{this.default}} @onchange={{action (mut this.default)}} />
+```
+
+#### Disabled
+
+<Story id="fluid-checkbox--disabled"/>
+
+```hbs
+<FluidCheckbox
+  @label='Disabled'
+  @disabled={{true}}
+  @checked={{this.disabled}}
+  @onchange={{action (mut this.disabled)}}
+/>
+```
+
+#### Block
+
+<Story id="fluid-checkbox--block"/>
+
+This option is provided to an escape hatch when needed to pass more than just a title to the component. Please use the [#default](#default) above for most cases.
+
+<div className="fluid-banner">
+  <div className="fluid-banner__header">
+    Warning:
+  </div>
+
+  <div className="fluid-banner__context">
+    `@label` is not accessible in block format.
+  </div>
+</div>
+
+```hbs
+<FluidCheckbox @checked={{this.block}} @onchange={{action (mut this.block)}}>
+  <span>Block</span>
+</FluidCheckbox>
+```

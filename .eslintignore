@@ -6,6 +6,12 @@
 /dist/
 /tmp/
 
+# Storybook Config Files
+!.storybook/
+
+# Storybook Output
+storybook-static/
+
 # dependencies
 /bower_components/
 /node_modules/
