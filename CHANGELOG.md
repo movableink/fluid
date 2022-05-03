@@ -1,3 +1,9 @@
+### [1.1.1](https://github.com/movableink/fluid/compare/1.1.0...1.1.1) (2022-05-03)
+
+### Bug Fixes
+
+- storybook is not building property ([50d82e9](https://github.com/movableink/fluid/commit/50d82e90ac5a952ceb1364a572cf6a475b3b5587))
+
 ## [1.1.0](https://github.com/movableink/fluid/compare/1.0.1...1.1.0) (2022-05-03)
 
 ### Features
