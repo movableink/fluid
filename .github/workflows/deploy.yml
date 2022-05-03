@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies and Build Stylesheets
         run: yarn install
       - name: Build Ember & Storybook
-        run: yarn build-storybook
+        run: yarn build-storybook -s dist
       - name: Upload to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
