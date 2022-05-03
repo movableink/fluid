@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/movableink/fluid/compare/1.0.1...1.1.0) (2022-05-03)
+
+### Features
+
+- storybook documentation ([66e6190](https://github.com/movableink/fluid/commit/66e6190db4ae4bcecaa9e0ec4c2bca4671a05a0e))
+
+### Bug Fixes
+
+- linting issues ([e9f8450](https://github.com/movableink/fluid/commit/e9f8450c147e4da0efc1bc517939cce6bc6b7710))
+
 ### [1.0.1](https://github.com/movableink/fluid/compare/1.0.0...1.0.1) (2022-05-03)
 
 ## [1.0.0](https://github.com/movableink/fluid/compare/0.0.4...1.0.0) (2022-03-28)
