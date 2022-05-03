@@ -1,0 +1,89 @@
+import { Story } from "@storybook/addon-docs";
+
+# Fluid Modal
+
+Our modal uses [Ember HeadlessUI's Dialog](https://gavinjoyce.github.io/ember-headlessui/dialog/dialog-modal) as a base.
+
+The modal closes by default by hitting the `esc` key or by `clicking` outside the modal.
+
+- [Basic](#basic)
+- [Block Mode](#block-mode)
+- [Header and Footer](#header-and-footer)
+
+## Basic
+
+<Story
+  id="components-fluid-modal--basic"
+/>
+
+```hbs template
+<button class='fluid-button type:primary' {{on 'click' (set this 'basic' true)}}>
+  Basic Modal
+</button>
+
+{{#if this.basic}}
+  <FluidModal @onClose={{action (set this 'basic' false)}}>
+    <button>I am a bare modal</button>
+  </FluidModal>
+{{/if}}
+```
+
+## Block Mode
+
+<Story
+  id="components-fluid-modal--block"
+  height="200px"
+/>
+
+
+```hbs
+<button class='fluid-button type:primary' {{on 'click' (set this 'block' true)}}>
+  Block Mode
+</button>
+
+{{#if this.block}}
+  <FluidModal @onClose={{action (set this 'block' false)}}>
+    <:header as |Title Icon|>
+      <Icon @name='alert' @class='text-yellow-400 fill-current' />
+      <Title>Header Content</Title>
+    </:header>
+
+    <:default>
+      Modal Content
+    </:default>
+
+    <:footer>
+      <button class='fluid-button size:lg' {{on 'click' (set this 'block' false)}}>
+        Close
+      </button>
+    </:footer>
+  </FluidModal>
+{{/if}}
+```
+
+## Header And Footer
+
+<Story
+  id="components-fluid-modal--header-and-footer"
+  height="250px"
+/>
+
+```hbs
+<button class='fluid-button type:primary' {{on 'click' (set this 'header' true)}}>
+  With Header & Footer
+</button>
+
+{{#if this.header}}
+  <FluidModal @title='Header Content' @onClose={{action (set this 'header' false)}}>
+    <:default>
+      Modal Content
+    </:default>
+
+    <:footer>
+      <button class='fluid-button size:lg' {{on 'click' (set this 'header' false)}}>
+        Close
+      </button>
+    </:footer>
+  </FluidModal>
+{{/if}}
+```

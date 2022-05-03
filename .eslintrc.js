@@ -1,6 +1,10 @@
 module.exports = {
   root: true,
-  extends: ['@movable/eslint-config', '@movable/eslint-config-ember'],
+  extends: [
+    '@movable/eslint-config',
+    '@movable/eslint-config-ember',
+    'plugin:storybook/recommended',
+  ],
   rules: {
     'ember/no-get-with-default': 'error',
   },
@@ -18,7 +22,6 @@ module.exports = {
         'blueprints/*/index.js',
         'config/**/*.js',
         'tests/dummy/config/**/*.js',
-        '.docfy-config.js',
       ],
       excludedFiles: [
         'addon/**',
@@ -43,6 +46,20 @@ module.exports = {
       files: ['tests/**/*.js'],
       rules: {
         'qunit/require-expect': 'off',
+      },
+    },
+    {
+      files: ['.storybook/manager.js', '.storybook/preview.js', '.storybook/main.js'],
+      parserOptions: {
+        sourceType: 'module',
+      },
+      rules: {
+        'node/no-unsupported-features/es-syntax': 'off',
+      },
+      settings: {
+        node: {
+          allowModules: ['@storybook/addons'],
+        },
       },
     },
   ],

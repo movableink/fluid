@@ -1,0 +1,30 @@
+import { Story } from "@storybook/addon-docs";
+
+# Fluid Badge
+
+This badge is used to indiciate a numerical value within a cirle badge. It comes in 2 size: [`default`](#default) and [`xl`](#xl). You can also pass any tailwind color classes `bg-_color_-_hue_` or `text-_color_-_hue_` to style your badges as needed.
+
+## Default
+
+<Story id="components-fluid-badge--default" name="Fluid Badge" />
+
+
+```hbs
+<div>
+  <span class='fluid-badge mr-2'>5</span>
+  <span class='fluid-badge mr-2 text-white bg-black'>1</span>
+  <span class='fluid-badge mr-2'>100</span>
+</div>
+```
+
+## XL
+
+<Story id="components-fluid-badge--xl" name="Fluid Badge XL" />
+
+```hbs
+<div>
+  <span class='fluid-badge fluid-badge--xl mr-2'>5</span>
+  <span class='fluid-badge fluid-badge--xl mr-2 text-white bg-black'>1</span>
+  <span class='fluid-badge fluid-badge--xl mr-2'>100</span>
+</div>
+```

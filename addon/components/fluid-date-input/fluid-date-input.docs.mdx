@@ -1,0 +1,79 @@
+import { Story } from '@storybook/addon-docs';
+
+export const Arguments = {
+  value: {
+    control: {
+      type: 'text',
+      required: false,
+    },
+    description: 'The value to display in the date picker',
+    defaultValue: '02/02/2022'
+  },
+  maxDate: {
+    control: {
+      type: 'text',
+      required: false,
+    },
+    description: 'The maximum date that can be selected by the picker'
+  },
+  minDate: {
+    control: {
+      type: 'text',
+      required: false,
+    },
+    description: 'The minimum date that can be selected by the user'
+  },
+  onSelect: {
+    control: {
+      type: 'function',
+      required: true,
+    },
+    description: 'The function to invoke when a date is selected',
+  },
+}
+
+
+
+# Fluid Date Input
+
+Fluid defines a custom Glimmer component that is used to render a date picker: `FluidDateInput`. This component comes pre-styled to match our design system and supports a number of different states to indicate potential issues to the user.
+
+The basic usage of the component looks like this:
+
+```hbs
+<FluidDateInput @value={{this.date}} @placeholder='Select a Date' @onSelect={{set this 'date'}} />
+```
+
+The button, when clicked, triggers a date picker pop-up powered by `ember-power-calendar`.
+
+When clicking outside of the popup, or upon selecting a new date, the
+
+
+**States**
+- [Error](#error-state)
+- [Warning](#warning-state)
+
+
+## Error State
+
+A `@hasError` property can be provided to the **FluidDateInput** that signals that the value in the input is incorrect and must be changed.
+
+<Story id="components-inputs-fluid-date-input--error-state" />
+
+```hbs
+  <FluidDateInput @value={{this.date}} @onSelect={{set this 'date'}} @hasError={{true}} />
+```
+
+## Warning State
+
+A `@hasWarning` property can be provided to the **FluidDateInput** that signals that the value in the input is might be incorrect. The value should still be accepted, but we need to draw attention to the input for some reason.
+
+<Story id="components-inputs-fluid-date-input--warning-state" />
+
+```hbs
+<FluidDateInput @value={{this.date}} @onSelect={{set this 'date'}} @hasWarning={{true}} />
+```
+
+
+
+

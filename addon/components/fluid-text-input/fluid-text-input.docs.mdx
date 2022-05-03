@@ -1,0 +1,169 @@
+import { hbs as htmlbars } from 'ember-cli-htmlbars';
+import { Story } from '@storybook/addon-docs';
+
+# Fluid Text Input
+
+Fluid defines a custom Glimmer component that is used to render a text input field: FluidTextInput. This component comes pre-styled to match our design system and supports a number of different states to indicate potential issues to the user.
+
+The basic usage of the component looks like this:
+
+<Story id="components-inputs-fluid-text-input--default" />
+
+```hbs
+<FluidTextInput @value='Some Value' @placeholder='Fill Me In!' />
+```
+
+`@value`, `@placeholder` and `@disabled` are passed as attributes to the underlying input field.
+
+Events can be listened to using the `{{on}}` modifier, the same way you would bind events to a normal `input` element.
+
+```hbs
+<FluidTextInput
+  @value={{this.value}}
+  @placeholder='Fill Me In!'
+  {{on 'input' (pick 'target.value' (set this 'value'))}}
+/>
+<p>Value: <b>{{this.value}}</b></p>
+```
+
+**Templating Styles:**
+
+- [Block Mode](#block-mode)
+- [Button Pairings](#button-pairings)
+- [Icons in Inputs](#icons-in-inputs)
+- [Leading Add-On](#leading-add-on)
+
+**States:**
+
+- [Disabled State](#disabled-state)
+- [Error State](#Error-state)
+- [Warning State](#warning-state)
+
+**Sizes:**
+- [Small Size](#small-size)
+
+## Block Mode
+
+If you need direct access to the inner `input` tag, you can render `FluidTextInput` in block-mode rather than inline-mode. This is more verbose, but allows for more control.
+
+Arguments can be passed to `FluidTextInput` as before, or bound directly to the yielded input component. If you're not sure which to do, provide arguments to the `FluidTextInput` directly!
+
+Note that this should not be used to provide additional styling to the `input` field -- it is already styled correctly!
+
+```hbs
+<FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+  <ft.input />
+</FluidTextInput>
+```
+
+
+## Button Pairings
+
+```hbs
+<div class='flex items-center space-x-2 mb-2'>
+  <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' />
+  <button class='fluid-button size:lg'>
+    Click Me
+  </button>
+</div>
+
+<div class='flex items-center space-x-2'>
+  <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @useSmallSize={{true}} />
+  <button class='fluid-button'>
+    Click Me
+  </button>
+</div>
+```
+## Icons in Inputs
+
+Building on the block-mode rendering of `FluidTextInput`, you are able to render icons within the input field.
+
+The `@name` argument can be any identifier accepted by `ember-svg-jar`.
+
+```hbs
+<div class='flex flex-col items-start space-y-2'>
+  <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+    <ft.icon @name='search' />
+    <ft.input />
+  </FluidTextInput>
+
+  <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+    <ft.icon @name='search' />
+    <ft.input />
+  </FluidTextInput>
+</div>
+```
+## Leading Add-On
+
+The "leading add-on" provides a means for providing a short, one-character label as part of the input field.
+
+The `@letter` argument determines what to display. It will always be rendered upper-case, regardless of what is provided.
+
+```hbs
+<div class='flex flex-col items-start space-y-2'>
+  <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+    <ft.leading @letter='w' />
+    <ft.input />
+  </FluidTextInput>
+
+  <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+    <ft.leading @letter='w' />
+    <ft.input />
+  </FluidTextInput>
+</div>
+```
+# States
+
+## Disabled State
+
+A `@disable` property can be provided to the FluidTextInput that signals that the value in the input cannot be interacted with.
+
+```hbs
+<FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @disabled={{true}} />
+```
+
+## Error State
+
+A `@hasError` property can be provided to the FluidTextInput that signals that the value in the input is incorrect and must be changed.
+
+```hbs
+<FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @hasError={{true}} />
+```
+## Warning State
+
+A `@hasWarning` property can be provided to the FluidTextInput that signals that the value in the input is might be incorrect. The value should still be accepted, but we need to draw attention to the input for some reason.
+
+```hbs
+<FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @hasWarning={{true}} />
+```
+# Sizes
+
+## Small Size
+
+A "small" input can be used for cases where the size constraints of the environment are severely limited.
+
+These should be used very sparingly, as the smaller input size is less accessible for users.
+
+```hbs
+<div class='flex flex-col items-start space-y-2'>
+  <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @useSmallSize={{true}} />
+  <FluidTextInput
+    @value='Some Value'
+    @placeholder='Fill Me In!'
+    @useSmallSize={{true}}
+    @hasError={{true}}
+  />
+  <FluidTextInput
+    @value='Some Value'
+    @placeholder='Fill Me In!'
+    @useSmallSize={{true}}
+    @hasWarning={{true}}
+  />
+  <FluidTextInput
+    @value='Some Value'
+    @placeholder='Fill Me In!'
+    @useSmallSize={{true}}
+    @disabled={{true}}
+  />
+</div>
+```

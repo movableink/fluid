@@ -1,0 +1,26 @@
+import { hbs } from 'ember-cli-htmlbars';
+import { Story } from '@storybook/addon-docs';
+
+# Fluid Tooltip
+
+Used to display tooltip on any element passed to the `:default` hash inside the wrapper.
+
+**WARNING:**
+This ember component is built of of [PopperJS](https://popper.js.org). The tooltip placement is based off its _PARENT_ and if there isn't room above or below it will adjust as needed.
+
+
+<Story id="components-fluid-tooltip--default" name="Fluid Tooltip"/>
+
+```hbs
+<FluidTooltip>
+  <:tooltip>
+    template block text
+  </:tooltip>
+
+  <:default as |attachTooltip|>
+    <button {{attachTooltip}}>
+      Hover me!
+    </button>
+  </:default>
+</FluidTooltip>
+```

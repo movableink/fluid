@@ -3,6 +3,8 @@
 # compiled output
 /dist
 /tmp
+dist
+storybook-static
 
 # dependencies
 /node_modules

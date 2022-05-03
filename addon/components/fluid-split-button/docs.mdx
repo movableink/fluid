@@ -1,0 +1,33 @@
+import { Story } from "@storybook/addon-docs";
+
+# Fluid Split Button
+
+Split button is a button with secondary actions. These could be populated async or lesser used actions
+
+
+<Story
+  id="components-fluid-button-split-button--default"
+  height="200px"
+/>
+
+```hbs
+<FluidSplitButton as |s|>
+  <s.PrimaryButton
+    {{on 'click' this.primaryAction}}
+  >
+    Primary Button
+  </s.PrimaryButton>
+
+  <s.MenuItem
+    {{on 'click' (fn this.secondaryAction 'First Item')}}
+  >
+    First Item
+  </s.MenuItem>
+
+  <s.MenuItem
+    {{on 'click' (fn this.secondaryAction 'Second Item')}}
+  >
+    Second Item
+  </s.MenuItem>
+</FluidSplitButton>
+```
