@@ -1,5 +1,4 @@
 import { hbs } from 'ember-cli-htmlbars';
-import { action } from '@ember/object';
 
 import FluidModalDocs from './docs.mdx';
 
@@ -13,7 +12,7 @@ export default {
       handles: ['click', 'click .btn'],
     },
   },
-}
+};
 
 const BasicTemplate = (args) => ({
   template: hbs`
@@ -55,7 +54,7 @@ const BlockTemplate = (args) => ({
       </FluidModal>
     {{/if}}
   `,
-  context: { ...args }
+  context: { ...args },
 });
 
 const HeaderAndFooterTemplate = (args) => ({
@@ -78,8 +77,8 @@ const HeaderAndFooterTemplate = (args) => ({
       </FluidModal>
     {{/if}}
   `,
-  context: { ...args }
-})
+  context: { ...args },
+});
 
 export const Basic = BasicTemplate.bind({});
 export const Block = BlockTemplate.bind({});

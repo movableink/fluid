@@ -6,14 +6,14 @@ export default {
   argTypes: {
     buttonGroup: {
       name: 'data',
-    }
+    },
   },
   parameters: {
     docs: {
       page: ButtonGroupDocs,
     },
   },
-}
+};
 
 const Template = (args) => ({
   template: hbs`

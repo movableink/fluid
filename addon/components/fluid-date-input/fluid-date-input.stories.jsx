@@ -1,21 +1,21 @@
 import { hbs } from 'ember-cli-htmlbars';
 import { action } from '@ember/object';
-import FluidDateInputDocs, { Arguments } from './fluid-date-input.docs.mdx'
+import FluidDateInputDocs, { Arguments } from './fluid-date-input.docs.mdx';
 
 export default {
   title: 'Components/Inputs/Fluid Date Input',
   argTypes: Arguments,
   parameters: {
     docs: {
-      page: FluidDateInputDocs
+      page: FluidDateInputDocs,
     },
     actions: {
-      handles: ['click', '[data-test-fluid-date-input]']
-    }
+      handles: ['click', '[data-test-fluid-date-input]'],
+    },
   },
-}
+};
 
-const Template = args => ({
+const Template = (args) => ({
   template: hbs`
     <FluidDateInput
       data-test-fluid-date-input
@@ -35,8 +35,8 @@ const Template = args => ({
     value: new Date(args.value),
     maxDate: args.maxDate ? new Date(args.maxDate) : undefined,
     minDate: args.minDate ? new Date(args.minDate) : undefined,
-  }
-})
+  },
+});
 
 export const Default = Template.bind({});
 
@@ -45,10 +45,10 @@ WarningState.args = {
   ...Default.args,
   hasError: false,
   hasWarning: true,
-}
+};
 export const ErrorState = Template.bind({});
 ErrorState.args = {
   ...Default.args,
   hasError: true,
   hasWarning: false,
-}
+};

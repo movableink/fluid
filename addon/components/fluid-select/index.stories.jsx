@@ -8,9 +8,9 @@ export default {
   parameters: {
     docs: {
       page: FluidSelectDocs,
-    }
+    },
   },
-}
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -26,7 +26,7 @@ const Template = (args) => ({
   context: {
     onSelect: action(function (value) {
       if (this.get('multiple')) {
-        console.log("multiple")
+        console.log('multiple');
         this.set('select', (value) => {
           const selected = this.get('selected');
           if (!selected.includes(value)) {
@@ -38,15 +38,14 @@ const Template = (args) => ({
       }
     }),
     ...args,
-  }
+  },
 });
-
 
 export const Default = Template.bind({});
 Default.args = {
   label: 'fruit',
-  options: ['apple', 'banana', 'orange']
-}
+  options: ['apple', 'banana', 'orange'],
+};
 
 export const GroupedOptions = Template.bind({});
 GroupedOptions.args = {
@@ -55,7 +54,7 @@ GroupedOptions.args = {
     { groupLabel: 'Group one', groupOptions: ['one', 'two', 'three'] },
     { groupOptions: ['four', 'five', 'six'] },
     { groupLabel: 'Group three', groupOptions: ['seven', 'eight', 'nine', 'ten'] },
-  ]
+  ],
 };
 
 // TODO:

@@ -13,7 +13,7 @@ export default {
       handles: ['click', 'click .btn'],
     },
   },
-}
+};
 const Template = (args) => ({
   template: hbs`
     {{#unless blockHtml}}
@@ -56,7 +56,7 @@ const Template = (args) => ({
     onchange: action(function (value) {
       this.set('checked', value);
     }),
-  }
+  },
 });
 
 export const Default = Template.bind({});
@@ -64,18 +64,18 @@ Default.args = {
   label: 'Default Checkbox',
   checked: false,
   disabled: false,
-}
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Disabled Checkbox',
   checked: false,
   disabled: true,
-}
+};
 
 export const Block = Template.bind({});
 Block.args = {
   blockHtml: '<span>Block Label</span>',
   checked: false,
   disabled: false,
-}
+};

@@ -1,4 +1,4 @@
-import { hbs } from "ember-cli-htmlbars";
+import { hbs } from 'ember-cli-htmlbars';
 import FluidBannerDocs from './docs.mdx';
 
 export default {
@@ -7,7 +7,7 @@ export default {
     header: {
       name: 'Fluid Banner Header',
       control: { type: 'text' },
-      defaultValue: 'Fluid Banner Header'
+      defaultValue: 'Fluid Banner Header',
     },
     body: {
       name: 'Fluid Banner Body',
@@ -18,16 +18,16 @@ export default {
       name: 'Fluid Banner Icon',
       control: { type: 'boolean' },
       defaultValue: false,
-    }
+    },
   },
   parameters: {
     docs: {
-      page: FluidBannerDocs
-    }
-  }
-}
+      page: FluidBannerDocs,
+    },
+  },
+};
 
-const Template = args => ({
+const Template = (args) => ({
   template: hbs`
   <div class='fluid-banner'>
     {{#if hasIcon}}
@@ -45,12 +45,12 @@ const Template = args => ({
     </div>
   </div>
   `,
-  context: { ...args }
-})
+  context: { ...args },
+});
 
 export const Default = Template.bind({});
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   ...Default.args,
   hasIcon: true,
-}
+};

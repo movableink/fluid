@@ -5,10 +5,10 @@ export default {
   title: 'Components/Fluid Drawer',
   parameters: {
     docs: {
-      page: FluidDrawerDocs
-    }
-  }
-}
+      page: FluidDrawerDocs,
+    },
+  },
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -27,12 +27,12 @@ const Template = (args) => ({
     {{/if}}
   `,
   context: {
-    ...args
-  }
+    ...args,
+  },
 });
 
 export const Default = Template.bind();
 Default.args = {
   title: 'Drawer Title',
   content: 'Content!',
-}
+};

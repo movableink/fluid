@@ -7,15 +7,15 @@ export default {
   parameters: {
     docs: {
       page: FluidTableDocs,
-    }
+    },
   },
   argTypes: {
     isCompressed: {
       control: { type: 'boolean' },
-      defaultValue: false
-    }
-  }
-}
+      defaultValue: false,
+    },
+  },
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -50,11 +50,11 @@ const Template = (args) => ({
       </table.body>
     </FluidTable>
   `,
-  context: { ... args }
+  context: { ...args },
 });
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 export const Compressed = Template.bind({});
 Compressed.args = {
-  isCompressed: true
-}
+  isCompressed: true,
+};

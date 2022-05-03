@@ -8,21 +8,21 @@ export default {
     primaryButtonLabel: {
       name: 'Button Label',
       control: { type: 'text' },
-      defaultValue: 'Primary Button'
+      defaultValue: 'Primary Button',
     },
     options: {
       name: 'Options',
-    }
+    },
   },
   parameters: {
     docs: {
       page: SplitButtonDocs,
     },
     action: {
-      handles: ['click']
-    }
+      handles: ['click'],
+    },
   },
-}
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -42,15 +42,12 @@ const Template = (args) => ({
   `,
   context: {
     ...args,
-    primaryAction: action(function (value) {}),
-    menuItemAction: action(function (value) {}),
+    primaryAction: action(function () {}),
+    menuItemAction: action(function () {}),
   },
 });
 
 export const Default = Template.bind({});
 Default.args = {
-  options: [
-    'First Item',
-    'Second Item',
-  ]
+  options: ['First Item', 'Second Item'],
 };

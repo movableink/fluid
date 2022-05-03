@@ -5,20 +5,20 @@ const Arguments = {
   value: {
     control: {
       type: 'text',
-      required: true
+      required: true,
     },
     description: 'Value the input has',
-    defaultValue: 'Some Value'
+    defaultValue: 'Some Value',
   },
-  placeholder:{
+  placeholder: {
     control: {
       type: 'text',
-      required: false
+      required: false,
     },
     description: 'helper text to display while input has no value',
-    defaultValue: 'Fill Me In!'
+    defaultValue: 'Fill Me In!',
   },
-  disabled:{
+  disabled: {
     control: {
       type: 'boolean',
       required: false,
@@ -29,7 +29,7 @@ const Arguments = {
   hasError: {
     control: {
       type: 'boolean',
-      required: false
+      required: false,
     },
     description: 'used to enable error state for the input',
     defaultValue: false,
@@ -37,20 +37,20 @@ const Arguments = {
   hasWarning: {
     control: {
       type: 'boolean',
-      required: false
+      required: false,
     },
     description: 'used to enable warning state for input',
     defaultValue: false,
   },
-  useSmallSize:{
+  useSmallSize: {
     control: {
       type: 'boolean',
-      required: false
+      required: false,
     },
     description: 'reduces the size of the input box',
     defaultValue: false,
-  }
-}
+  },
+};
 
 export default {
   title: 'Components/Inputs/Fluid Text Input',
@@ -58,11 +58,11 @@ export default {
   parameters: {
     docs: {
       page: Docs,
-    }
-  }
-}
+    },
+  },
+};
 
-const Template = args => ({
+const Template = (args) => ({
   template: hbs`
     <FluidTextInput
       @value={{value}}
@@ -73,12 +73,12 @@ const Template = args => ({
       @useSmallSize={{useSmallSize}}
     />
   `,
-  context: args
+  context: args,
 });
 
 export const Default = Template.bind({});
 Default.args = {
   value: 'Some Value',
-  placeholder: 'Fill Me In!'
-}
-Default.storyName = 'Fluid Text Input'
+  placeholder: 'Fill Me In!',
+};
+Default.storyName = 'Fluid Text Input';

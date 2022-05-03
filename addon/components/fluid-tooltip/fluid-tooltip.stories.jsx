@@ -9,7 +9,7 @@ export default {
     tooltipMessage: {
       description: 'String to be displayed on element hover',
       control: { type: 'text', required: false },
-      defaultValue: 'template block text'
+      defaultValue: 'template block text',
     },
   },
   parameters: {
@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const Template = args => ({
+const Template = (args) => ({
   template: hbs`
     <FluidTooltip>
       <:tooltip>

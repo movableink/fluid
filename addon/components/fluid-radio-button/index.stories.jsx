@@ -8,9 +8,9 @@ export default {
   parameters: {
     docs: {
       page: FluidRadioButtonDocs,
-    }
+    },
   },
-}
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -35,8 +35,8 @@ const Template = (args) => ({
   `,
   context: {
     ...args,
-    changed: action(function (value) {}),
-  }
+    changed: action(function () {}),
+  },
 });
 
 export const Default = Template.bind({});

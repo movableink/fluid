@@ -5,25 +5,25 @@ export default {
   title: 'Components/Fluid Badge',
   argTypes: {
     size: {
-      options:['none', 'xl'],
+      options: ['none', 'xl'],
       control: { type: 'radio' },
     },
     label: {
-      control: { type: 'text' }
+      control: { type: 'text' },
     },
     tailwindClasses: {
       control: { type: 'text' },
       table: {
-        category: 'Additional Attributes'
-      }
-    }
+        category: 'Additional Attributes',
+      },
+    },
   },
   parameters: {
     docs: {
-      page: BadgeDocs
-    }
-  }
-}
+      page: BadgeDocs,
+    },
+  },
+};
 
 const Template = (args) => ({
   template: hbs`
@@ -37,17 +37,16 @@ const Template = (args) => ({
     ...args,
     size: args.size !== 'none' ? `fluid-badge--${args.size}` : '',
   },
-})
-
+});
 
 export const Default = Template.bind({});
 Default.args = {
   size: 'none',
-  label: '5'
-}
+  label: '5',
+};
 
 export const XL = Template.bind({});
 XL.args = {
   size: 'xl',
-  label: '100'
-}
+  label: '100',
+};
