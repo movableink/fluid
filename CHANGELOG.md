@@ -1,3 +1,9 @@
+### [1.1.2](https://github.com/movableink/fluid/compare/1.1.1...1.1.2) (2022-05-04)
+
+### Bug Fixes
+
+- disabling auto docs deploy ([558a595](https://github.com/movableink/fluid/commit/558a595ed1bb08f752ba7a21430a310eb6d1a958))
+
 ### [1.1.1](https://github.com/movableink/fluid/compare/1.1.0...1.1.1) (2022-05-03)
 
 ### Bug Fixes
