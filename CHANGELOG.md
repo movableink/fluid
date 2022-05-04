@@ -1,3 +1,5 @@
+### [1.1.3](https://github.com/movableink/fluid/compare/1.1.2...1.1.3) (2022-05-04)
+
 ### [1.1.2](https://github.com/movableink/fluid/compare/1.1.1...1.1.2) (2022-05-04)
 
 ### Bug Fixes
