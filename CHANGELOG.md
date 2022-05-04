@@ -1,3 +1,9 @@
+### [1.1.4](https://github.com/movableink/fluid/compare/1.1.3...1.1.4) (2022-05-04)
+
+### Bug Fixes
+
+- adjusted the folder for gh-pages ([427ac80](https://github.com/movableink/fluid/commit/427ac80bd4773c8bcb370647365d65e8f850252e))
+
 ### [1.1.3](https://github.com/movableink/fluid/compare/1.1.2...1.1.3) (2022-05-04)
 
 ### [1.1.2](https://github.com/movableink/fluid/compare/1.1.1...1.1.2) (2022-05-04)
