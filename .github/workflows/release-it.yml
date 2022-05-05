@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - master
+      - main
+    paths:
+      - 'addon/**/*.js'
+      - 'addon/**/*.hbs'
+      - 'addon-test-support/*'
+      - 'app/**/*.scss'
+      - 'public/*'
   workflow_dispatch:
     inputs:
       increment:
