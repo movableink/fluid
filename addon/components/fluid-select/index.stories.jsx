@@ -1,5 +1,6 @@
 import { hbs } from 'ember-cli-htmlbars';
 import { action } from '@ember/object';
+import { A } from '@ember/array';
 
 import FluidSelectDocs from './docs.mdx';
 
@@ -26,13 +27,13 @@ const Template = (args) => ({
   context: {
     onSelect: action(function (value) {
       if (this.get('multiple')) {
-        console.log('multiple');
-        this.set('select', (value) => {
-          const selected = this.get('selected');
-          if (!selected.includes(value)) {
-            selected.pushObject(value);
-          }
-        });
+        const selected = this.get('selected') || A([]);
+        if (!selected.includes(value)) {
+          selected.pushObject(value);
+        } else {
+          selected.removeObject(value);
+        }
+        this.set('selected', selected);
       } else {
         this.set('selected', value);
       }
@@ -59,9 +60,9 @@ GroupedOptions.args = {
 
 // TODO:
 // - [ ] Multiple Action do not work with multiple inside of react
-// export const Multiple = Template.bind({});
-// Multiple.args = {
-//   ...Default.args,
-//   multiple: true,
-//   label: 'Multiple Options',
-// }
+export const Multiple = Template.bind({});
+Multiple.args = {
+  ...Default.args,
+  multiple: true,
+  label: 'Multiple Options',
+};
