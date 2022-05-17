@@ -6,3 +6,18 @@
 <script src="./assets/vendor.js"></script>
 <script>runningTests = true; Ember.testing=true;</script>
 <script src="./assets/dummy.js"></script>
+<script>
+            (function() {
+              var srcUrl = null;
+              var host = location.hostname || 'localhost';
+              var defaultPort = location.protocol === 'https:' ? 443 : 80;
+              var port = 9999;
+              var path = '';
+              var prefixURL = '';
+              var src = srcUrl || prefixURL + '/_lr/livereload.js?port=' + port + '&host=' + host + path;
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.src = location.protocol + '//' + host + ':9999' + src;
+              document.getElementsByTagName('head')[0].appendChild(script);
+            }());
+          </script>

@@ -5,13 +5,13 @@ import { hbs } from 'ember-cli-htmlbars';
 import td from 'testdouble';
 import percySnapshot from '@percy/ember';
 
-module('Integration | Component | fluid-checkbox', function (hooks) {
+module('Integration | Component | fluid-switch', function (hooks) {
   setupRenderingTest(hooks);
 
   module('rendering', function () {
     test('with a `@label` argument', async function (assert) {
       await render(hbs`
-        <FluidCheckbox data-test-input @label="The label" />
+        <FluidSwitch data-test-input @label="The label" />
       `);
 
       await percySnapshot(assert);
@@ -26,9 +26,9 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
 
     test('with a block label', async function (assert) {
       await render(hbs`
-        <FluidCheckbox data-test-input>
+        <FluidSwitch data-test-input>
           The block label
-        </FluidCheckbox>
+        </FluidSwitch>
       `);
 
       await percySnapshot(assert);
@@ -38,7 +38,7 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
 
     test('when `@checked` is `true`', async function (assert) {
       await render(hbs`
-        <FluidCheckbox
+        <FluidSwitch
           data-test-input
           @checked={{true}}
         />
@@ -52,7 +52,7 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
 
     test('when `@checked` is `false`', async function (assert) {
       await render(hbs`
-        <FluidCheckbox
+        <FluidSwitch
           data-test-input
           @checked={{false}}
         />
@@ -65,7 +65,7 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
 
     test('when `@disabled` is `true`', async function (assert) {
       await render(hbs`
-        <FluidCheckbox
+        <FluidSwitch
           data-test-input
           @disabled={{true}}
         />
@@ -82,7 +82,7 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
     this.onchange = td.function();
 
     await render(hbs`
-      <FluidCheckbox
+      <FluidSwitch
         data-test-input
         @checked={{this.isChecked}}
         @onchange={{this.onchange}}
@@ -106,7 +106,7 @@ module('Integration | Component | fluid-checkbox', function (hooks) {
     this.onchange = td.function();
 
     await render(hbs`
-      <FluidCheckbox
+      <FluidSwitch
         data-test-input
         @checked={{this.isChecked}}
         @onchange={{this.onchange}}

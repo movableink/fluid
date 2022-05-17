@@ -1,13 +1,13 @@
 import { hbs } from 'ember-cli-htmlbars';
 import { action } from '@ember/object';
 
-import CheckboxDocs from './docs.mdx';
+import SwitchDocs from './docs.mdx';
 
 export default {
-  title: 'Components/Fluid Checkbox',
+  title: 'Components/Fluid Switch',
   parameters: {
     docs: {
-      page: CheckboxDocs,
+      page: SwitchDocs,
     },
     actions: {
       handles: ['click', 'click .btn'],
@@ -17,7 +17,7 @@ export default {
 const Template = (args) => ({
   template: hbs`
     {{#unless blockHtml}}
-      <FluidCheckbox
+      <FluidSwitch
         @label={{label}}
         @disabled={{disabled}}
         @checked={{this.checked}}
@@ -41,13 +41,13 @@ const Template = (args) => ({
       </div>
 
 
-      <FluidCheckbox
+      <FluidSwitch
         @disabled={{disabled}}
         @checked={{this.checked}}
         @onchange={{onchange}}
       >
         {{{blockHtml}}}
-      </FluidCheckbox>
+      </FluidSwitch>
 
     {{/unless}}
   `,
