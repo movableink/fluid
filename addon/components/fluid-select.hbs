@@ -1,8 +1,10 @@
 <div class="fluid-select" ...attributes>
   <BasicDropdown
+    @width="w-full"
     @renderInPlace={{@renderInPlace}}
     @onOpen={{action (optional @onOpen)}}
     @triggerComponent={{component "fluid-select/trigger"}}
+    @matchTriggerWidth={{@matchTriggerWidth}}
     as |dropdown|
   >
     {{#with
