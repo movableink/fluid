@@ -21,7 +21,11 @@ module('Integration | Component | fluid-select', function (hooks) {
     assert.ok(component.trigger.isVisible, 'it renders a trigger button');
     assert.ok(component.popup.isHidden, 'the popup is not visible on render');
 
+    await percySnapshot('trigger');
+
     await component.open();
+
+    await percySnapshot('popup');
 
     assert.ok(component.popup.isVisible, 'the popup renders when the trigger is clicked');
     assert.ok(component.popup.list.isVisible, 'the list is visible inside the popup');
@@ -35,6 +39,9 @@ module('Integration | Component | fluid-select', function (hooks) {
 
     assert.equal(component.trigger.text, 'hello label');
     this.set('label', 'a different label');
+
+    await percySnapshot(assert);
+
     assert.equal(component.trigger.text, 'a different label');
   });
 
@@ -51,6 +58,8 @@ module('Integration | Component | fluid-select', function (hooks) {
 
   test('it can be disabled', async function (assert) {
     await render(hbs`<FluidSelect @disabled={{true}} @options={{options}} @select={{select}} />`);
+
+    await percySnapshot(assert);
 
     assert.ok(component.trigger.isDisabled, 'the trigger is disabled');
     assert.ok(
@@ -159,6 +168,8 @@ module('Integration | Component | fluid-select', function (hooks) {
       `);
       await component.open();
 
+      await percySnapshot(assert);
+
       assert.equal(component.popup.list.groupHeaders.length, 2);
 
       assert.equal(
@@ -217,6 +228,8 @@ module('Integration | Component | fluid-select', function (hooks) {
       `);
       await component.open();
 
+      await percySnapshot(assert);
+
       assert.equal(
         component.popup.list.options.filter((option) => option.hasCheckbox).length,
         this.get('options').length,
@@ -263,6 +276,8 @@ module('Integration | Component | fluid-select', function (hooks) {
         `);
         await component.open();
 
+        await percySnapshot('no search term & results');
+
         assert.ok(
           component.popup.search.isVisible,
           'it renders a search bar if search is passed to the component'
@@ -276,6 +291,8 @@ module('Integration | Component | fluid-select', function (hooks) {
 
         await component.popup.search.fillIn('app');
 
+        await percySnapshot('search term & results');
+
         assert.equal(
           component.popup.list.options.length,
           1,
@@ -283,7 +300,7 @@ module('Integration | Component | fluid-select', function (hooks) {
         );
         assert.ok(
           component.popup.noResultsMessage.isHidden,
-          'it displays a message when a search returns no results'
+          'it does not display a message when a search returns results'
         );
 
         await component.popup.search.fillIn('');
@@ -296,6 +313,8 @@ module('Integration | Component | fluid-select', function (hooks) {
 
         this.set('search', () => []);
         await component.popup.search.fillIn('anything');
+
+        await percySnapshot('no results');
 
         assert.ok(
           component.popup.noResultsMessage.isVisible,
@@ -388,6 +407,8 @@ module('Integration | Component | fluid-select', function (hooks) {
         assert.equal(value, this.get('options.2'), 'it selects the correct value');
         this.set('selected', value);
       });
+
+      await percySnapshot(assert);
 
       await component.popup.list.options[2].click();
       assert.ok(component.popup.isHidden, 'the popup closes when an item is selected');
