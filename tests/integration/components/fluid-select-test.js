@@ -4,7 +4,7 @@ import { settled, findAll, click, render } from '@ember/test-helpers';
 import { A } from '@ember/array';
 import { hbs } from 'ember-cli-htmlbars';
 import component from '@movable/fluid/test-support/pages/fluid-select';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/percy-snapshot';
 
 module('Integration | Component | fluid-select', function (hooks) {
   setupRenderingTest(hooks);
@@ -21,11 +21,11 @@ module('Integration | Component | fluid-select', function (hooks) {
     assert.ok(component.trigger.isVisible, 'it renders a trigger button');
     assert.ok(component.popup.isHidden, 'the popup is not visible on render');
 
-    await percySnapshot('trigger');
+    await percySnapshot(assert, 'trigger');
 
     await component.open();
 
-    await percySnapshot('popup');
+    await percySnapshot(assert, 'popup');
 
     assert.ok(component.popup.isVisible, 'the popup renders when the trigger is clicked');
     assert.ok(component.popup.list.isVisible, 'the list is visible inside the popup');
@@ -276,7 +276,7 @@ module('Integration | Component | fluid-select', function (hooks) {
         `);
         await component.open();
 
-        await percySnapshot('no search term & results');
+        await percySnapshot(assert, 'no search term & results');
 
         assert.ok(
           component.popup.search.isVisible,
@@ -291,7 +291,7 @@ module('Integration | Component | fluid-select', function (hooks) {
 
         await component.popup.search.fillIn('app');
 
-        await percySnapshot('search term & results');
+        await percySnapshot(assert, 'search term & results');
 
         assert.equal(
           component.popup.list.options.length,
@@ -314,7 +314,7 @@ module('Integration | Component | fluid-select', function (hooks) {
         this.set('search', () => []);
         await component.popup.search.fillIn('anything');
 
-        await percySnapshot('no results');
+        await percySnapshot(assert, 'no results');
 
         assert.ok(
           component.popup.noResultsMessage.isVisible,
