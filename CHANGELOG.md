@@ -1,3 +1,11 @@
+## [1.2.0](https://github.com/movableink/fluid/compare/1.1.4...1.2.0) (2022-06-14)
+
+### Features
+
+- add FluidSelect matchTriggerWidth option ([ffc3db7](https://github.com/movableink/fluid/commit/ffc3db70e19150f5a18ba8d662c77bdf96b793b6))
+- add Percy snapshot helper ([57f810c](https://github.com/movableink/fluid/commit/57f810c963b81fe24cb0f20c115866aeefc455db))
+- added multiple story for select ([5b7564e](https://github.com/movableink/fluid/commit/5b7564ebcd3982c989a8ad4f611a97dff68245f4))
+
 ### [1.1.4](https://github.com/movableink/fluid/compare/1.1.3...1.1.4) (2022-05-04)
 
 ### Bug Fixes
