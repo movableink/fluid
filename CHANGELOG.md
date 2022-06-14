@@ -1,3 +1,9 @@
+### [1.2.1](https://github.com/movableink/fluid/compare/1.2.0...1.2.1) (2022-06-14)
+
+### Bug Fixes
+
+- update FluidSelect class attribute ([10c5c94](https://github.com/movableink/fluid/commit/10c5c94b9edf8aab7f89cadd47f6f86d5171498b))
+
 ## [1.2.0](https://github.com/movableink/fluid/compare/1.1.4...1.2.0) (2022-06-14)
 
 ### Features
