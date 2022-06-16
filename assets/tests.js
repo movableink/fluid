@@ -91,6 +91,64 @@ define("dummy/tests/helpers/module-for-acceptance", ["exports", "qunit", "rsvp",
     });
   }
 });
+define("dummy/tests/helpers/percy-snapshot", ["exports", "@percy/ember"], function (_exports, _ember) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.createSnapshotName = createSnapshotName;
+  _exports.default = percySnapshotWithLabel;
+  _exports.nameFromAssert = nameFromAssert;
+
+  /**
+   * @param {Assert|string} assert
+   * @return {string}
+   */
+  function nameFromAssert(assert) {
+    if (assert.test?.module?.name && assert.test?.testName) {
+      return `${assert.test.module.name} | ${assert.test.testName}`;
+    } else {
+      return assert;
+    }
+  }
+  /**
+   * @param {Assert|string} assert
+   * @param {string} label
+   * @return {string}
+   */
+
+
+  function createSnapshotName(assert, label) {
+    if (label) {
+      return `${nameFromAssert(assert)} | ${label}`;
+    }
+
+    return nameFromAssert(assert);
+  }
+  /**
+   * Wrapper for the default `percySnapshot` helper that allows for optionally
+   * providing an extra label for your assertion. This is useful when putting multiple
+   * snapshots in a single test.
+   *
+   * @param {Assert|string} assert
+   * @param {string|object} labelOrOptions
+   * @param {object} optionsOrNothing
+   */
+
+
+  function percySnapshotWithLabel(assert, labelOrOptions, optionsOrNothing) {
+    let label = labelOrOptions;
+    let options = optionsOrNothing; // Handle options provided as second argument w/o additional label
+
+    if (typeof labelOrOptions !== 'string') {
+      options = label;
+      label = undefined;
+    }
+
+    return (0, _ember.default)(createSnapshotName(assert, label), options);
+  }
+});
 define("dummy/tests/helpers/start-app", ["exports", "dummy/app", "dummy/config/environment", "@ember/polyfills", "@ember/runloop", "dummy/tests/helpers/percy/register-helpers"], function (_exports, _app, _environment, _polyfills, _runloop, _registerHelpers) {
   "use strict";
 
@@ -1195,7 +1253,7 @@ define("dummy/tests/integration/components/fluid-radio-button-test", ["@ember/te
     });
   });
 });
-define("dummy/tests/integration/components/fluid-select-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@ember/array", "@movable/fluid/test-support/pages/fluid-select", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _array, _fluidSelect, _ember) {
+define("dummy/tests/integration/components/fluid-select-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@ember/array", "@movable/fluid/test-support/pages/fluid-select", "dummy/tests/helpers/percy-snapshot"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _array, _fluidSelect, _percySnapshot) {
   "use strict";
 
   (0, _qunit.module)('Integration | Component | fluid-select', function (hooks) {
@@ -1218,7 +1276,9 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
       }));
       assert.ok(_fluidSelect.default.trigger.isVisible, 'it renders a trigger button');
       assert.ok(_fluidSelect.default.popup.isHidden, 'the popup is not visible on render');
+      await (0, _percySnapshot.default)(assert, 'trigger');
       await _fluidSelect.default.open();
+      await (0, _percySnapshot.default)(assert, 'popup');
       assert.ok(_fluidSelect.default.popup.isVisible, 'the popup renders when the trigger is clicked');
       assert.ok(_fluidSelect.default.popup.list.isVisible, 'the list is visible inside the popup');
       assert.equal(_fluidSelect.default.popup.list.options.length, this.get('options.length'));
@@ -1238,6 +1298,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
       }));
       assert.equal(_fluidSelect.default.trigger.text, 'hello label');
       this.set('label', 'a different label');
+      await (0, _percySnapshot.default)(assert);
       assert.equal(_fluidSelect.default.trigger.text, 'a different label');
     });
     (0, _qunit.test)('clicking the trigger fires an onOpen action', async function (assert) {
@@ -1269,6 +1330,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
+      await (0, _percySnapshot.default)(assert);
       assert.ok(_fluidSelect.default.trigger.isDisabled, 'the trigger is disabled');
       assert.ok(_fluidSelect.default.popup.isHidden, 'the popup does not open after clicking a disabled trigger');
     });
@@ -1377,6 +1439,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
           "isStrictMode": false
         }));
         await _fluidSelect.default.open();
+        await (0, _percySnapshot.default)(assert);
         assert.equal(_fluidSelect.default.popup.list.groupHeaders.length, 2);
         assert.equal(_fluidSelect.default.popup.list.groupHeaders[0].text, this.get('groups.0.groupLabel'), 'it renders the groups label in upper case');
         assert.equal(_fluidSelect.default.popup.list.groupHeaders[1].text, this.get('groups.2.groupLabel'), 'it renders the groups label in upper case');
@@ -1427,6 +1490,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
           "isStrictMode": false
         }));
         await _fluidSelect.default.open();
+        await (0, _percySnapshot.default)(assert);
         assert.equal(_fluidSelect.default.popup.list.options.filter(option => option.hasCheckbox).length, this.get('options').length, 'it renders a checkbox for each option');
       });
       (0, _qunit.test)('selecting multiple options', async function (assert) {
@@ -1478,6 +1542,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
             "isStrictMode": false
           }));
           await _fluidSelect.default.open();
+          await (0, _percySnapshot.default)(assert, 'no search term & results');
           assert.ok(_fluidSelect.default.popup.search.isVisible, 'it renders a search bar if search is passed to the component');
           this.set('search', searchTerm => {
             assert.ok(true, 'it calls the passed search action');
@@ -1485,12 +1550,14 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
             return this.get('searchByName')(searchTerm);
           });
           await _fluidSelect.default.popup.search.fillIn('app');
+          await (0, _percySnapshot.default)(assert, 'search term & results');
           assert.equal(_fluidSelect.default.popup.list.options.length, 1, 'the list of options changes if the bound collection changes');
-          assert.ok(_fluidSelect.default.popup.noResultsMessage.isHidden, 'it displays a message when a search returns no results');
+          assert.ok(_fluidSelect.default.popup.noResultsMessage.isHidden, 'it does not display a message when a search returns results');
           await _fluidSelect.default.popup.search.fillIn('');
           assert.equal(_fluidSelect.default.popup.list.options.length, this.get('options.length'), 'if the user clears their search, the original list is returned');
           this.set('search', () => []);
           await _fluidSelect.default.popup.search.fillIn('anything');
+          await (0, _percySnapshot.default)(assert, 'no results');
           assert.ok(_fluidSelect.default.popup.noResultsMessage.isVisible, 'it displays a message when a search returns no results');
         });
       });
@@ -1568,6 +1635,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
           assert.equal(value, this.get('options.2'), 'it selects the correct value');
           this.set('selected', value);
         });
+        await (0, _percySnapshot.default)(assert);
         await _fluidSelect.default.popup.list.options[2].click();
         assert.ok(_fluidSelect.default.popup.isHidden, 'the popup closes when an item is selected');
       });
@@ -1681,7 +1749,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
       })); // NOTE:
       // The actual test is the percy test here as there is no real way to assert the `...` has show up.
 
-      await (0, _ember.default)(assert);
+      await (0, _percySnapshot.default)(assert);
       assert.dom('[data-test-overflow-span]').hasClass('overflow-ellipsis');
     });
   });

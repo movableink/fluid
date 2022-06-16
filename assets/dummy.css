@@ -1476,7 +1476,6 @@ input[type=number] {
   font-size: 14px;
   list-style: none;
   max-height: 350px;
-  max-width: 300px;
   min-width: 200px;
   overflow-y: auto;
 }
