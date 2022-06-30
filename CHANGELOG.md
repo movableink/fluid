@@ -1,3 +1,9 @@
+### [1.2.3](https://github.com/movableink/fluid/compare/1.2.2...1.2.3) (2022-06-30)
+
+### Bug Fixes
+
+- **security:** shell-quote has been flagged <1.7.2 ([6098c45](https://github.com/movableink/fluid/commit/6098c453ab2f8badf3133c52cc53471aee9b95c6))
+
 ### [1.2.2](https://github.com/movableink/fluid/compare/1.2.1...1.2.2) (2022-06-16)
 
 ### [1.2.1](https://github.com/movableink/fluid/compare/1.2.0...1.2.1) (2022-06-14)
