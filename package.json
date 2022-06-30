@@ -90,6 +90,9 @@
     "testdouble": "^3.16.5",
     "testdouble-qunit": "^3.0.3"
   },
+  "resolutions": {
+    "shell-quote": "^1.7.3"
+  },
   "keywords": [
     "ember-addon"
   ],
