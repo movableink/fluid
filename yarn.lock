@@ -2044,7 +2044,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/macros@npm:0.33.0":
+"@embroider/macros@npm:0.33.0, @embroider/macros@npm:^0.33.0":
   version: 0.33.0
   resolution: "@embroider/macros@npm:0.33.0"
   dependencies:
@@ -2779,7 +2779,7 @@ __metadata:
     babel-plugin-htmlbars-inline-precompile: ^5.3.1
     broccoli-asset-rev: ^3.0.0
     chalk: ^4.1.2
-    ember-arg-types: ^0.3.0
+    ember-arg-types: ^0.4.0
     ember-auto-import: ^1.12.0
     ember-autoresize-modifier: ^0.3.0
     ember-basic-dropdown: ^3.0.19
@@ -3229,17 +3229,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/logger@npm:1.6.0":
+"@percy/logger@npm:1.6.0, @percy/logger@npm:^1.0.0-beta.54":
   version: 1.6.0
   resolution: "@percy/logger@npm:1.6.0"
   checksum: 96eebc526a0d119a112fb63f83250ea294d1ca8a44c6eb879c3be7a05281cddee2c1facceaef9520dbe4df1480131c56a57e438e0ebf86fb0833015f083db198
-  languageName: node
-  linkType: hard
-
-"@percy/logger@npm:^1.0.0-beta.54":
-  version: 1.1.0
-  resolution: "@percy/logger@npm:1.1.0"
-  checksum: 9a99cbd7a9ddea75fd11177ddf8fd14a846723db3324053030a726e564a541db9ee55cd5b7a58564b93669b46ce9a8a72bdf0ec7a154e0e2536c3a61c7d61826
   languageName: node
   linkType: hard
 
@@ -10613,17 +10606,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-arg-types@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "ember-arg-types@npm:0.3.0"
+"ember-arg-types@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "ember-arg-types@npm:0.4.0"
   dependencies:
+    "@embroider/macros": ^0.33.0
     ember-auto-import: ^1.10.1
     ember-cli-babel: ^7.23.1
     ember-cli-htmlbars: ^5.3.2
     ember-cli-typescript: ^4.0.0
     ember-get-config: ^0.2.4 || ^0.3.0
     prop-types: ^15.7.2
-  checksum: d8ea42d00e3549a2e615baba5df962356a295b4716767f0bdc200e5c42ccf61dc304d99afb649aef9de79cb7ede0d6cf2b918a3d26125b3ef61afdfa3fb95410
+  checksum: 49c8cdc463edb2abcbf8ae6ba851ce958f5e98b5b918f3e5f2f341694d9562711b965a1d67d27875ab6071b52ddce20a3afcefa3a335ed1319b7d56ec5340958
   languageName: node
   linkType: hard
 
