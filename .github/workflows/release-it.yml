@@ -11,6 +11,7 @@ on:
       - 'addon-test-support/*'
       - 'app/**/*.scss'
       - 'public/*'
+      - 'public/**/*'
   workflow_dispatch:
     inputs:
       increment:
