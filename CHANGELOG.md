@@ -1,3 +1,10 @@
+### [1.2.4](https://github.com/movableink/fluid/compare/1.2.3...1.2.4) (2022-07-19)
+
+### Bug Fixes
+
+- **dependency:** upgrading percy cli ([0b4b150](https://github.com/movableink/fluid/commit/0b4b150d8335e71db3b79ad46f5ba46c700f97e5))
+- reformat email-block-icon svg ([d516d92](https://github.com/movableink/fluid/commit/d516d9263bac1e49e607418f7bdcd73fd941f81b))
+
 ### [1.2.3](https://github.com/movableink/fluid/compare/1.2.2...1.2.3) (2022-06-30)
 
 ### Bug Fixes
