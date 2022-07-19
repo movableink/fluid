@@ -4,12 +4,8 @@
     <title>Icon/Block</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="0" width="48" height="48" rx="2"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="48" height="48" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
     </defs>
-    <g id="Icon/Block" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="6,4">
-        <use id="Rectangle" stroke="#C5C5CA" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+    <g id="Icon/Block" stroke="#C5C5CA" stroke-width="6" fill="none" fill-rule="evenodd" stroke-dasharray="6,4">
+        <rect id="path-1" x="0" y="0" width="48" height="48" rx="2"></rect>
     </g>
 </svg>
