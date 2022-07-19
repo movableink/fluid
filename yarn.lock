@@ -3229,17 +3229,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/logger@npm:1.6.0":
+"@percy/logger@npm:1.6.0, @percy/logger@npm:^1.0.0-beta.54":
   version: 1.6.0
   resolution: "@percy/logger@npm:1.6.0"
   checksum: 96eebc526a0d119a112fb63f83250ea294d1ca8a44c6eb879c3be7a05281cddee2c1facceaef9520dbe4df1480131c56a57e438e0ebf86fb0833015f083db198
-  languageName: node
-  linkType: hard
-
-"@percy/logger@npm:^1.0.0-beta.54":
-  version: 1.1.0
-  resolution: "@percy/logger@npm:1.1.0"
-  checksum: 9a99cbd7a9ddea75fd11177ddf8fd14a846723db3324053030a726e564a541db9ee55cd5b7a58564b93669b46ce9a8a72bdf0ec7a154e0e2536c3a61c7d61826
   languageName: node
   linkType: hard
 
