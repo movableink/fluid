@@ -76,9 +76,21 @@ const Template = (args) => ({
   context: args,
 });
 
+const BlockTemplate = (args) => ({
+  template: hbs`
+    <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+      <ft.input />
+    </FluidTextInput>
+  `,
+  context: args,
+});
+
 export const Default = Template.bind({});
 Default.args = {
   value: 'Some Value',
   placeholder: 'Fill Me In!',
 };
 Default.storyName = 'Fluid Text Input';
+
+export const Block = BlockTemplate.bind({});
+Block.storyName = 'Fluid Text Input Block';
