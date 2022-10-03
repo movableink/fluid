@@ -85,6 +85,25 @@ const BlockTemplate = (args) => ({
   context: args,
 });
 
+const PairingsTemplate = (args) => ({
+  template: hbs`
+    <div class='flex items-center space-x-2 mb-2'>
+      <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' />
+      <button class='fluid-button size:lg'>
+        Click Me
+      </button>
+    </div>
+
+    <div class='flex items-center space-x-2'>
+      <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @useSmallSize={{true}} />
+      <button class='fluid-button'>
+        Click Me
+      </button>
+    </div>
+  `,
+  context: args,
+})
+
 export const Default = Template.bind({});
 Default.args = {
   value: 'Some Value',
@@ -93,4 +112,7 @@ Default.args = {
 Default.storyName = 'Fluid Text Input';
 
 export const Block = BlockTemplate.bind({});
+Block.storyName = 'Fluid Text Input Block';
+
+export const Pairings = PairingsTemplate.bind({});
 Block.storyName = 'Fluid Text Input Block';
