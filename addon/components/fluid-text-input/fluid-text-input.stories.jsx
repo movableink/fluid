@@ -102,6 +102,23 @@ const PairingsTemplate = (args) => ({
     </div>
   `,
   context: args,
+});
+
+const IconsTemplate = (args) => ({
+  template: hbs`
+    <div class='flex flex-col items-start space-y-2'>
+      <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.icon @name='search' />
+        <ft.input />
+      </FluidTextInput>
+
+      <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.icon @name='search' />
+        <ft.input />
+      </FluidTextInput>
+    </div>
+  `,
+  context: args,
 })
 
 export const Default = Template.bind({});
@@ -115,4 +132,7 @@ export const Block = BlockTemplate.bind({});
 Block.storyName = 'Fluid Text Input Block';
 
 export const Pairings = PairingsTemplate.bind({});
-Block.storyName = 'Fluid Text Input Block';
+Block.storyName = 'Fluid Text Input Pairings';
+
+export const Icons = IconsTemplate.bind({});
+Block.storyName = 'Fluid Text Input Icons';
