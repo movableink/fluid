@@ -119,7 +119,24 @@ const IconsTemplate = (args) => ({
     </div>
   `,
   context: args,
-})
+});
+
+const LeadingTemplate = (args) => ({
+  template: hbs`
+    <div class='flex flex-col items-start space-y-2'>
+      <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.leading @letter='w' />
+        <ft.input />
+      </FluidTextInput>
+
+      <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.leading @letter='w' />
+        <ft.input />
+      </FluidTextInput>
+    </div>
+  `,
+  context: args,
+});
 
 export const Default = Template.bind({});
 Default.args = {
@@ -136,3 +153,6 @@ Block.storyName = 'Fluid Text Input Pairings';
 
 export const Icons = IconsTemplate.bind({});
 Block.storyName = 'Fluid Text Input Icons';
+
+export const Leading = LeadingTemplate.bind({});
+Leading.storyName = 'Fluid text Input Leading Add-on';
