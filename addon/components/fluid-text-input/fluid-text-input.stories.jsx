@@ -76,9 +76,137 @@ const Template = (args) => ({
   context: args,
 });
 
+const BlockTemplate = (args) => ({
+  template: hbs`
+    <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+      <ft.input />
+    </FluidTextInput>
+  `,
+  context: args,
+});
+
+const PairingsTemplate = (args) => ({
+  template: hbs`
+    <div class='flex items-center space-x-2 mb-2'>
+      <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' />
+      <button class='fluid-button size:lg'>
+        Click Me
+      </button>
+    </div>
+
+    <div class='flex items-center space-x-2'>
+      <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @useSmallSize={{true}} />
+      <button class='fluid-button'>
+        Click Me
+      </button>
+    </div>
+  `,
+  context: args,
+});
+
+const IconsTemplate = (args) => ({
+  template: hbs`
+    <div class='flex flex-col items-start space-y-2'>
+      <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.icon @name='search' />
+        <ft.input />
+      </FluidTextInput>
+
+      <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.icon @name='search' />
+        <ft.input />
+      </FluidTextInput>
+    </div>
+  `,
+  context: args,
+});
+
+const LeadingTemplate = (args) => ({
+  template: hbs`
+    <div class='flex flex-col items-start space-y-2'>
+      <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.leading @letter='w' />
+        <ft.input />
+      </FluidTextInput>
+
+      <FluidTextInput @useSmallSize={{true}} @value='Value' @placeholder='Fill me in!' as |ft|>
+        <ft.leading @letter='w' />
+        <ft.input />
+      </FluidTextInput>
+    </div>
+  `,
+  context: args,
+});
+
+const SizesTemplate = (args) => ({
+  template: hbs`
+    <div class='flex flex-col items-start space-y-2'>
+      <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @useSmallSize={{true}} />
+      <FluidTextInput
+        @value='Some Value'
+        @placeholder='Fill Me In!'
+        @useSmallSize={{true}}
+        @hasError={{true}}
+      />
+      <FluidTextInput
+        @value='Some Value'
+        @placeholder='Fill Me In!'
+        @useSmallSize={{true}}
+        @hasWarning={{true}}
+      />
+      <FluidTextInput
+        @value='Some Value'
+        @placeholder='Fill Me In!'
+        @useSmallSize={{true}}
+        @disabled={{true}}
+      />
+    </div>
+  `,
+  context: args,
+});
+
 export const Default = Template.bind({});
 Default.args = {
   value: 'Some Value',
   placeholder: 'Fill Me In!',
 };
 Default.storyName = 'Fluid Text Input';
+
+export const Block = BlockTemplate.bind({});
+Block.storyName = 'Fluid Text Input Block';
+
+export const Pairings = PairingsTemplate.bind({});
+Block.storyName = 'Fluid Text Input Pairings';
+
+export const Icons = IconsTemplate.bind({});
+Block.storyName = 'Fluid Text Input Icons';
+
+export const Leading = LeadingTemplate.bind({});
+Leading.storyName = 'Fluid text Input Leading Add-on';
+
+export const Disabled = Template.bind({});
+Disabled.storyName = 'Fluid Text Input - Disabled';
+Disabled.args = {
+  disabled: true,
+  value: 'Some Value',
+  placeholder: 'Fill Me In!',
+};
+
+export const HasError = Template.bind({});
+HasError.storyName = 'Fluid Text Input - HasError';
+HasError.args = {
+  hasError: true,
+  value: 'Some Value',
+  placeholder: 'Fill Me In!',
+};
+
+export const Warning = Template.bind({});
+Warning.storyName = 'Fluid Text Input - Warning';
+Warning.args = {
+  hasWarning: true,
+  value: 'Some Value',
+  placeholder: 'Fill Me In!',
+};
+
+export const Sizes = SizesTemplate.bind({});
+Sizes.storyName = 'Fluid Text Input - Sizes';

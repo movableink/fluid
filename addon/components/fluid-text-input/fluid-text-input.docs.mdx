@@ -50,6 +50,8 @@ Arguments can be passed to `FluidTextInput` as before, or bound directly to the 
 
 Note that this should not be used to provide additional styling to the `input` field -- it is already styled correctly!
 
+<Story id="components-inputs-fluid-text-input--block" />
+
 ```hbs
 <FluidTextInput @value='Value' @placeholder='Fill me in!' as |ft|>
   <ft.input />
@@ -58,6 +60,8 @@ Note that this should not be used to provide additional styling to the `input` f
 
 
 ## Button Pairings
+
+<Story id="components-inputs-fluid-text-input--pairings" height="110px"/>
 
 ```hbs
 <div class='flex items-center space-x-2 mb-2'>
@@ -75,6 +79,8 @@ Note that this should not be used to provide additional styling to the `input` f
 </div>
 ```
 ## Icons in Inputs
+
+<Story id="components-inputs-fluid-text-input--icons" height="110px"/>
 
 Building on the block-mode rendering of `FluidTextInput`, you are able to render icons within the input field.
 
@@ -94,6 +100,8 @@ The `@name` argument can be any identifier accepted by `ember-svg-jar`.
 </div>
 ```
 ## Leading Add-On
+
+<Story id="components-inputs-fluid-text-input--leading" height="110px"/>
 
 The "leading add-on" provides a means for providing a short, one-character label as part of the input field.
 
@@ -116,6 +124,8 @@ The `@letter` argument determines what to display. It will always be rendered up
 
 ## Disabled State
 
+<Story id="components-inputs-fluid-text-input--disabled"/>
+
 A `@disable` property can be provided to the FluidTextInput that signals that the value in the input cannot be interacted with.
 
 ```hbs
@@ -124,12 +134,16 @@ A `@disable` property can be provided to the FluidTextInput that signals that th
 
 ## Error State
 
+<Story id="components-inputs-fluid-text-input--has-error"/>
+
 A `@hasError` property can be provided to the FluidTextInput that signals that the value in the input is incorrect and must be changed.
 
 ```hbs
 <FluidTextInput @value='Some Value' @placeholder='Fill Me In!' @hasError={{true}} />
 ```
 ## Warning State
+
+<Story id="components-inputs-fluid-text-input--warning"/>
 
 A `@hasWarning` property can be provided to the FluidTextInput that signals that the value in the input is might be incorrect. The value should still be accepted, but we need to draw attention to the input for some reason.
 
@@ -143,6 +157,8 @@ A `@hasWarning` property can be provided to the FluidTextInput that signals that
 A "small" input can be used for cases where the size constraints of the environment are severely limited.
 
 These should be used very sparingly, as the smaller input size is less accessible for users.
+
+<Story id="components-inputs-fluid-text-input--sizes" height="185px" />
 
 ```hbs
 <div class='flex flex-col items-start space-y-2'>
