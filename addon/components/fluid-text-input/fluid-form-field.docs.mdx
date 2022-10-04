@@ -1,3 +1,4 @@
+import { Story } from '@storybook/addon-docs';
 
 # Fluid Form Field
 
@@ -11,6 +12,8 @@ The **FluidFormField** component yields a number of contextual component that ar
 
 This Text component is a pre-configured instance of [FluidTextInput](./fluid-text-input).
 
+<Story id="components-inputs-fluid-form-field--text-type" height="125px"/>
+
 ```hbs
 <FluidFormField @label='Name' as |f|>
   <f.Text @placeholder='Enter Some Text' />
@@ -18,6 +21,8 @@ This Text component is a pre-configured instance of [FluidTextInput](./fluid-tex
 ```
 
 #### Date
+
+<Story id="components-inputs-fluid-form-field--date-type" height="375px"/>
 
 Date This Date component is a pre-configured instance of [FluidDateInput](./fluid-date-input).
 
@@ -29,6 +34,8 @@ Date This Date component is a pre-configured instance of [FluidDateInput](./flui
 
 #### @label
 
+<Story id="components-inputs-fluid-form-field--text-type" height="125px"/>
+
 Configuration Adding a Label One the core use-cases for the **FluidFormField** is attaching a label to the input with the correct accessibility configuration. Passing a `@label` argument automatically renders the label and connects the right attributes to ensure it describes the rendered input field.
 
 ```hbs
@@ -38,16 +45,19 @@ Configuration Adding a Label One the core use-cases for the **FluidFormField** i
 ```
 
 #### @isRequired
+<Story id="components-inputs-fluid-form-field--is-required" height="125px"/>
 
 An input can be marked as being "required" by setting the @isRequired argument
 
 ```hbs
-<FluidFormField @label='Name' as |f|>
+<FluidFormField @label='Name' @isRequired={{true}}as |f|>
   <f.Text />
 </FluidFormField>
 ```
 
 #### @isOptional
+
+<Story id="components-inputs-fluid-form-field--is-optional" height="125px"/>
 
 Additionally, it can be marked as "optional" using @isOptional
 
@@ -58,6 +68,8 @@ Additionally, it can be marked as "optional" using @isOptional
 ```
 
 #### @helpText
+
+<Story id="components-inputs-fluid-form-field--help-text" height="150px"/>
 
 Help Text Help text can be shown beneath the field by providing the @helpText argument
 
@@ -73,6 +85,8 @@ Errors and Warnings Errors and warnings can be passed as an array of strings to 
 
 #### @errorMessages
 
+<Story id="components-inputs-fluid-form-field--error-messages" height="165px"/>
+
 ```hbs
 <FluidFormField @label='Name' @errorMessages={{array 'First Error' 'Second Error'}} as |f|>
   <f.Text />
@@ -80,6 +94,8 @@ Errors and Warnings Errors and warnings can be passed as an array of strings to 
 ```
 
 #### @warningMessages
+
+<Story id="components-inputs-fluid-form-field--warning-messages" height="165px"/>
 
 ```hbs
 <FluidFormField @label='Name' @warningMessages={{array 'First Warning' 'Second Warning'}} as |f|>
@@ -90,6 +106,8 @@ Errors and Warnings Errors and warnings can be passed as an array of strings to 
 ## Sizes
 
 #### @userSmallSize
+
+<Story id="components-inputs-fluid-form-field--small-size" height="125px"/>
 
 Small Size A `@useSmallSize` argument can be provided to render the whole component as a smaller scale. It automatically renders the smaller size for any yielded input fields as well.
 
