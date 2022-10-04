@@ -32004,3 +32004,31 @@ input[type=number] {
 .filter-invert {
   filter: invert(100%);
 }
+
+/* This is the example box inside of stories*/
+
+div[id*=story--components] {
+  border: 1px solid #e8e8ea;
+  padding: 0.25rem 0;
+  position: relative;
+  display: flex;
+}
+
+div[id*=story--components]::after {
+  content: "Example";
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333333;
+  align-items: center;
+  padding: 4px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: -1px;
+  border-radius: 4px 0 0 0;
+}
