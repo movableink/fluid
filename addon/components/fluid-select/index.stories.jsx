@@ -67,6 +67,33 @@ const SearchTemplate = (args) => ({
   }
 });
 
+const BlockTemplate = (args) => ({
+  template: hbs`
+    <FluidSelect
+      @selected={{this.selected}}
+      @options={{this.options}}
+      @select={{onSelect}}
+      @renderInPlace={{true}}
+    as |select|>
+      <select.trigger @label='Click Me!' />
+
+      <select.popup>
+        <select.list>
+          {{#each options as |option|}}
+            <select.option @option={{option}} />
+          {{/each}}
+        </select.list>
+      </select.popup>
+    </FluidSelect>
+  `,
+  context: {
+    onSelect: action(function (value) {
+        this.set('selected', value);
+    }),
+    ...args,
+  }
+})
+
 export const Default = Template.bind({});
 Default.args = {
   label: 'fruit',
@@ -96,4 +123,9 @@ export const Search = SearchTemplate.bind({});
 Search.args = {
   label: 'fruit',
   options: ['apple', 'banana', 'orange', 'cantaloupe', 'durian'],
+};
+
+export const Block = BlockTemplate.bind({});
+Block.args = {
+  ...Default.args,
 };
