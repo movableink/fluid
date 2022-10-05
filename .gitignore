@@ -37,3 +37,6 @@ MODULE_REPORT.md
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Storybook Auto Generated
+.storybook/preview-head.html
