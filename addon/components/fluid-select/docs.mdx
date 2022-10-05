@@ -6,70 +6,72 @@ This is our select dropdown based off of [Ember Basic Dropdown](https://ember-ba
 
 ## Arguments Table
 
-<dl>
-  <dt>options</dt>
-  <dd>
-    type: array
-    required: true
-    description: array of options to be displayed
-  </dd>
-  <dt>label</dt>
-  <dd>
-    <ul>
-      <li>type: string</li>
-      <li>required: false</li>
-      <li>description: label associated with the select</li>
-    </ul>
-  </dd>
-  <dt>select</dt>
-  <dd>
-    <ul>
-      <li>type: function</li>
-      <li>required: true</li>
-      <li>description: what happens when the select is changed</li>
-    </ul>
-  </dd>
-  <dt>selected</dt>
-  <dd>
-    <ul>
-      <li>type: string | value</li>
-      <li>required: false</li>
-      <li>description: what value is active within the select</li>
-    </ul>
-  </dd>
-  <dt>disabled</dt>
-  <dd>
-    <ul>
-      <li>type: boolean</li>
-      <li>required: false</li>
-      <li>description: disables select</li>
-    </ul>
-  </dd>
-  <dt>labelPath</dt>
-  <dd>
-    <ul>
-      <li>type: string</li>
-      <li>required: false</li>
-      <li>description: when passing option object to select option</li>
-    </ul>
-  </dd>
-  <dt>multiple</dt>
-  <dd>
-    <ul>
-      <li>type: boolean</li>
-      <li>required: false</li>
-      <li>description: enabled multiple selection of options</li>
-    </ul>
-  </dd>
-  <dt>search</dt>
-  <dd>
-    <ul>
-      <li>type: function</li>
-      <li>required: false</li>
-      <li>description: async ability to query on user input</li>
-    </ul>
-  </dd>
-</dl>
+<details>
+  <dl>
+    <dt>options</dt>
+    <dd>
+      type: array
+      required: true
+      description: array of options to be displayed
+    </dd>
+    <dt>label</dt>
+    <dd>
+      <ul>
+        <li>type: string</li>
+        <li>required: false</li>
+        <li>description: label associated with the select</li>
+      </ul>
+    </dd>
+    <dt>select</dt>
+    <dd>
+      <ul>
+        <li>type: function</li>
+        <li>required: true</li>
+        <li>description: what happens when the select is changed</li>
+      </ul>
+    </dd>
+    <dt>selected</dt>
+    <dd>
+      <ul>
+        <li>type: string | value</li>
+        <li>required: false</li>
+        <li>description: what value is active within the select</li>
+      </ul>
+    </dd>
+    <dt>disabled</dt>
+    <dd>
+      <ul>
+        <li>type: boolean</li>
+        <li>required: false</li>
+        <li>description: disables select</li>
+      </ul>
+    </dd>
+    <dt>labelPath</dt>
+    <dd>
+      <ul>
+        <li>type: string</li>
+        <li>required: false</li>
+        <li>description: when passing option object to select option</li>
+      </ul>
+    </dd>
+    <dt>multiple</dt>
+    <dd>
+      <ul>
+        <li>type: boolean</li>
+        <li>required: false</li>
+        <li>description: enabled multiple selection of options</li>
+      </ul>
+    </dd>
+    <dt>search</dt>
+    <dd>
+      <ul>
+        <li>type: function</li>
+        <li>required: false</li>
+        <li>description: async ability to query on user input</li>
+      </ul>
+    </dd>
+  </dl>
+</details>
 
 ## Basic
 
@@ -119,7 +121,9 @@ Can select multiple options
 
 ## Searching
 
-Used to search in listed items
+<Story id="components-fluid-select--search" height="300px"/>
+
+Used to search in listed items.
 
 ```hbs
 <FluidSelect @options={{options}} @search={{search}} @select={{action (mut selected)}} />

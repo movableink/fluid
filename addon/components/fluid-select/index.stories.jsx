@@ -42,6 +42,31 @@ const Template = (args) => ({
   },
 });
 
+
+const SearchTemplate = (args) => ({
+  template: hbs`
+    <FluidSelect
+      @searchQuery={{this.searchQuery}}
+      @label={{this.label}}
+      @selected={{this.selected}}
+      @options={{this.options}}
+      @select={{this.select}}
+      @search={{this.search}}
+      @renderInPlace={{true}}
+    />
+  `,
+  context: {
+    search: action(function (value) {
+      return this.get('options').filter((option) => option.startsWith(value));
+    }),
+    select: action(function (selected) {
+      this.set('searchQuery', '');
+      this.set('selected', selected);
+    }),
+    ...args,
+  }
+});
+
 export const Default = Template.bind({});
 Default.args = {
   label: 'fruit',
@@ -65,4 +90,10 @@ Multiple.args = {
   ...Default.args,
   multiple: true,
   label: 'Multiple Options',
+};
+
+export const Search = SearchTemplate.bind({});
+Search.args = {
+  label: 'fruit',
+  options: ['apple', 'banana', 'orange', 'cantaloupe', 'durian'],
 };
