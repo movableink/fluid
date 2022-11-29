@@ -1,3 +1,31 @@
+## [1.3.0](https://github.com/movableink/fluid/compare/1.2.4...1.3.0) (2022-11-29)
+
+### Features
+
+- added examples for form field ([45b1be8](https://github.com/movableink/fluid/commit/45b1be8c12b47af58d1ca6f1b534bac1cb8ae2e7))
+- **doc:** added block mode example ([e299b73](https://github.com/movableink/fluid/commit/e299b7353c191e706cf4112aadba35000c4073a7))
+- **doc:** added search example ([acf1adb](https://github.com/movableink/fluid/commit/acf1adb353c923bc870c8ad6c3489969a45cf280))
+- **docs:** added button pairings ([61dcee1](https://github.com/movableink/fluid/commit/61dcee1962cd2fe6f33ba95f5470f42126994d78))
+- **docs:** added input with icon ex ([e524b7a](https://github.com/movableink/fluid/commit/e524b7aab4e35e97b70cb6b4f114063ee5466229))
+- **docs:** added leading addon ([940649b](https://github.com/movableink/fluid/commit/940649bf8b450c92173ecce349f4d45f2795a2bc))
+- **docs:** added sizing and state examples ([452e1db](https://github.com/movableink/fluid/commit/452e1dba2352db992be40f5d0d74a10efff9a71f))
+- **docs:** added visual for fluid radio button ([c3212bc](https://github.com/movableink/fluid/commit/c3212bc2a903df233f7e42dee2da0f1c5e997982))
+- **docs:** conventional commits to readme for easier clarification ([7f93164](https://github.com/movableink/fluid/commit/7f93164de8306dd91244495e2132ab9eb3be540d))
+
+### Bug Fixes
+
+- enabled executed commit-msg hook ([d82f9bf](https://github.com/movableink/fluid/commit/d82f9bf11199f03ff9ce5b0df8c340abdcca7557))
+- fixed examples for fluid checkbox ([86c774d](https://github.com/movableink/fluid/commit/86c774d2d334b798caabaa936975424a77c12994))
+- fixed type and added height ([3258f13](https://github.com/movableink/fluid/commit/3258f13643735433d0cbbbbcd60be671bb78dc4d))
+- fixed visual example for fluid button groups ([54b9ad9](https://github.com/movableink/fluid/commit/54b9ad9a7bc9757bf111a983156f28c130b04a2f))
+- renamed file to codeowners ([ed46b0f](https://github.com/movableink/fluid/commit/ed46b0f606efb8292749bad76e4287d4de7aef43))
+- revert storybook html ([c66aa64](https://github.com/movableink/fluid/commit/c66aa64ebf5131e4fbf015cd87b53ffeda5286d6))
+- **security:** [sc-72217] removing xml dom dependency ([30d784c](https://github.com/movableink/fluid/commit/30d784cb7ee676ccb6416d512bc4333f6522b727))
+- **security:** patched loader-util to include latest fixes ([3bd0cf9](https://github.com/movableink/fluid/commit/3bd0cf935146cdf6ef7746478dc28f926c3eed47))
+- **security:** patched socket.io-parser to include latest fixes ([85965e3](https://github.com/movableink/fluid/commit/85965e36dd5b2e1684e8e957235468c2c179ef8e))
+- **style:** added more height to tooltip ([3f79f80](https://github.com/movableink/fluid/commit/3f79f800cccb13a42ae5a0ab02c9fc12de0bdad4))
+- use className outside of codeblock in mdx ([f784020](https://github.com/movableink/fluid/commit/f784020ee6af7d17ffb62c4881edc0f44166d769))
+
 ### [1.2.4](https://github.com/movableink/fluid/compare/1.2.3...1.2.4) (2022-07-19)
 
 ### Bug Fixes
