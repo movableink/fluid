@@ -115,7 +115,7 @@
     "ember-autoresize-modifier": "^0.3.0",
     "ember-basic-dropdown": "^3.0.19",
     "ember-changeset": "2.2.5",
-    "ember-changeset-validations": "2.2.1",
+    "ember-changeset-validations": "4.1.1",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-moment-shim": "^3.8.0",
