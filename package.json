@@ -35,7 +35,7 @@
     "@movable/tailwind-config": "^2.3.4",
     "@movable/template-lint-plugin": "^3.0.2",
     "@mozaic-ds/postcss-sass": "4.0.0-next.0",
-    "@percy/cli": "^1.6.0",
+    "@percy/cli": "^1.16.0",
     "@percy/ember": "^3.0.0",
     "@release-it/conventional-changelog": "^4.3.0",
     "@storybook/addon-actions": "^6.4.20",
