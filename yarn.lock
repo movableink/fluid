@@ -3017,7 +3017,7 @@ __metadata:
     ember-source: ^3.28.1
     ember-svg-jar: ^2.3.3
     ember-template-lint: ^3.8.0
-    ember-template-lint-plugin-prettier: ^3.0.1
+    ember-template-lint-plugin-prettier: ^2.0.1
     ember-test-selectors: ^6.0.0
     ember-truth-helpers: ^3.0.0
     eslint: ^7.32.0
@@ -12216,15 +12216,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-template-lint-plugin-prettier@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "ember-template-lint-plugin-prettier@npm:3.0.1"
+"ember-template-lint-plugin-prettier@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "ember-template-lint-plugin-prettier@npm:2.0.1"
   dependencies:
     prettier-linter-helpers: ^1.0.0
   peerDependencies:
     ember-template-lint: ">=2.10.0"
     prettier: ">=1.18.1"
-  checksum: 82cdd74a699621a7605a04a6f5af8e93cc8b964b910d05e1003c1659f2d2bc0d0132f9eaabfd6e7899ba019d47eeac17411f5a7c691d8108fa996f9ad753b151
+  checksum: a0e49c6bf8a0fcb0fca10d400faa2f0484b5f2a8c8eefb4ad3ca50af633266c28dd53c65c85ae2c4407f2f11c9bd75d5fcd74798459602cbc5405f041794b273
   languageName: node
   linkType: hard
 
