@@ -133,7 +133,7 @@
     "ember-moment": "^9.0.1",
     "ember-overridable-computed": "^1.0.0",
     "ember-popper-modifier": "^1.0.1",
-    "ember-power-calendar": "^0.16.5",
+    "ember-power-calendar": "^0.18.0",
     "ember-power-calendar-moment": "^0.1.7",
     "ember-promise-helpers": "^1.0.9",
     "ember-radio-button": "^2.0.1",
