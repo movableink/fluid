@@ -2984,7 +2984,7 @@ __metadata:
     ember-cli-moment-shim: ^3.8.0
     ember-cli-page-object: ^1.17.7
     ember-cli-postcss: ^7.0.2
-    ember-cli-terser: 4.0.1
+    ember-cli-terser: 4.0.2
     ember-click-outside-modifier: ^2.0.0
     ember-composable-helpers: ^4.5.0
     ember-concurrency: ^2.1.2
@@ -11339,12 +11339,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-terser@npm:4.0.1":
-  version: 4.0.1
-  resolution: "ember-cli-terser@npm:4.0.1"
+"ember-cli-terser@npm:4.0.2":
+  version: 4.0.2
+  resolution: "ember-cli-terser@npm:4.0.2"
   dependencies:
     broccoli-terser-sourcemap: ^4.1.0
-  checksum: 589fe410a1373524f83873cff7a66772e6b291d9f070fabecfa152211c1b69f6162b682a9c0dc1487821d97f4b195345d6711097b087bd39ebb8a35fd9a1a257
+  checksum: ab2209731ae8f5d85c4c85e0496309d4f8fbb44157e6164bbc6a5edc9a5a2754441fbd383c4856e1c3df9462215fa2708cdd77b62b85b52243af4ba4882564ae
   languageName: node
   linkType: hard
 
