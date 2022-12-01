@@ -1184,44 +1184,6 @@ input[type=number] {
   height: 4.5rem;
 }
 
-@-webkit-keyframes fluid-spin {
-  0% {
-    opacity: 1;
-  }
-
-  12.5% {
-    opacity: 0.8;
-  }
-
-  25% {
-    opacity: 0.6;
-  }
-
-  37.5% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.3;
-  }
-
-  62.5% {
-    opacity: 0.2;
-  }
-
-  75% {
-    opacity: 0.2;
-  }
-
-  87.5% {
-    opacity: 0.2;
-  }
-
-  95% {
-    opacity: 0.6;
-  }
-}
-
 @keyframes fluid-spin {
   0% {
     opacity: 1;
@@ -1265,43 +1227,35 @@ input[type=number] {
 }
 
 .fluid .spinner path:nth-child(1) {
-  -webkit-animation: 800ms 0ms infinite fluid-spin;
-          animation: 800ms 0ms infinite fluid-spin;
+  animation: 800ms 0ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(2) {
-  -webkit-animation: 800ms 100ms infinite fluid-spin;
-          animation: 800ms 100ms infinite fluid-spin;
+  animation: 800ms 100ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(3) {
-  -webkit-animation: 800ms 200ms infinite fluid-spin;
-          animation: 800ms 200ms infinite fluid-spin;
+  animation: 800ms 200ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(4) {
-  -webkit-animation: 800ms 300ms infinite fluid-spin;
-          animation: 800ms 300ms infinite fluid-spin;
+  animation: 800ms 300ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(5) {
-  -webkit-animation: 800ms 400ms infinite fluid-spin;
-          animation: 800ms 400ms infinite fluid-spin;
+  animation: 800ms 400ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(6) {
-  -webkit-animation: 800ms 500ms infinite fluid-spin;
-          animation: 800ms 500ms infinite fluid-spin;
+  animation: 800ms 500ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(7) {
-  -webkit-animation: 800ms 600ms infinite fluid-spin;
-          animation: 800ms 600ms infinite fluid-spin;
+  animation: 800ms 600ms infinite fluid-spin;
 }
 
 .fluid .spinner path:nth-child(8) {
-  -webkit-animation: 800ms 700ms infinite fluid-spin;
-          animation: 800ms 700ms infinite fluid-spin;
+  animation: 800ms 700ms infinite fluid-spin;
 }
 
 .fluid .classy-select:not(.-is-disabled):hover,
@@ -2821,7 +2775,6 @@ input[type=number] {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -8925,13 +8878,11 @@ input[type=number] {
 }
 
 .w-min {
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
 
 .w-max {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -8945,13 +8896,11 @@ input[type=number] {
 }
 
 .min-w-min {
-  min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
 }
 
 .min-w-max {
-  min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
 }
@@ -9013,13 +8962,11 @@ input[type=number] {
 }
 
 .max-w-min {
-  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
 }
 
 .max-w-max {
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
 }
@@ -12012,22 +11959,9 @@ input[type=number] {
   --tw-scale-y: 1.5;
 }
 
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
   }
 }
 
@@ -12038,69 +11972,42 @@ input[type=number] {
   }
 }
 
-@-webkit-keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
 @keyframes pulse {
   50% {
     opacity: .5;
   }
 }
 
-@-webkit-keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
   50% {
     transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
 .animate-none {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
 .animate-spin {
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 .animate-ping {
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
 }
 
 .cursor-auto {
@@ -12209,12 +12116,10 @@ input[type=number] {
 }
 
 .auto-cols-min {
-  grid-auto-columns: -webkit-min-content;
   grid-auto-columns: min-content;
 }
 
 .auto-cols-max {
-  grid-auto-columns: -webkit-max-content;
   grid-auto-columns: max-content;
 }
 
@@ -12243,12 +12148,10 @@ input[type=number] {
 }
 
 .auto-rows-min {
-  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
 }
 
 .auto-rows-max {
-  grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
 }
 
