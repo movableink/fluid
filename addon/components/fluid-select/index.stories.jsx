@@ -42,7 +42,6 @@ const Template = (args) => ({
   },
 });
 
-
 const SearchTemplate = (args) => ({
   template: hbs`
     <FluidSelect
@@ -64,7 +63,7 @@ const SearchTemplate = (args) => ({
       this.set('selected', selected);
     }),
     ...args,
-  }
+  },
 });
 
 const BlockTemplate = (args) => ({
@@ -88,11 +87,11 @@ const BlockTemplate = (args) => ({
   `,
   context: {
     onSelect: action(function (value) {
-        this.set('selected', value);
+      this.set('selected', value);
     }),
     ...args,
-  }
-})
+  },
+});
 
 export const Default = Template.bind({});
 Default.args = {

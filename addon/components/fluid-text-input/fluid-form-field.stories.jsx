@@ -136,7 +136,7 @@ export const TextType = TextTemplate.bind({});
 TextType.args = {
   label: 'name',
   isRequired: false,
-}
+};
 TextType.storyName = 'type Text';
 export const DateType = DateTemplate.bind({});
 DateType.storyName = 'type Date';
@@ -163,19 +163,13 @@ export const ErrorMessages = TextTemplate.bind({});
 ErrorMessages.storyName = '@errorMessages';
 ErrorMessages.args = {
   ...TextType.args,
-  errorMessages: [
-    'first error message',
-    'second error message',
-  ]
+  errorMessages: ['first error message', 'second error message'],
 };
 export const WarningMessages = TextTemplate.bind({});
 WarningMessages.storyName = '@warningMessages';
 WarningMessages.args = {
   ...TextType.args,
-  warningMessages: [
-    'first warning message',
-    'second warning message',
-  ]
+  warningMessages: ['first warning message', 'second warning message'],
 };
 
 export const SmallSize = TextTemplate.bind({});
