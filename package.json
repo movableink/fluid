@@ -89,7 +89,8 @@
     "sinon": "^10.0.0",
     "tailwindcss": "^2.2.19",
     "testdouble": "^3.16.5",
-    "testdouble-qunit": "^3.0.3"
+    "testdouble-qunit": "^3.0.3",
+    "webpack": "5"
   },
   "resolutions": {
     "shell-quote": "^1.7.3",
