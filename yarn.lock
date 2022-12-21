@@ -3023,7 +3023,7 @@ __metadata:
     eslint: ^7.32.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-storybook: ^0.5.7
-    husky: ^7.0.4
+    husky: ^8.0.2
     lint-staged: ^11.2.6
     loader.js: ^4.7.0
     lodash: ^4.17.21
@@ -15505,12 +15505,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.4":
-  version: 7.0.4
-  resolution: "husky@npm:7.0.4"
+"husky@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "husky@npm:8.0.2"
   bin:
     husky: lib/bin.js
-  checksum: c6ec4af63da2c9522da8674a20ad9b48362cc92704896cc8a58c6a2a39d797feb2b806f93fbd83a6d653fbdceb2c3b6e0b602c6b2e8565206ffc2882ef7db9e9
+  checksum: e101656fcb56163d610488f186448c78b132626aa427094489d886ce9374955a90274912b0f3a34af3326eaa74977883b032e5f701d7aaf4554daa5a7931be43
   languageName: node
   linkType: hard
 
