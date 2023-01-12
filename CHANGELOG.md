@@ -1,3 +1,14 @@
+## [1.4.0](https://github.com/movableink/fluid/compare/1.3.0...1.4.0) (2023-01-12)
+
+### Features
+
+- **dependencies:** added dependabot monthly interval ([96891fd](https://github.com/movableink/fluid/commit/96891fd3c3d9807b2787f85c9b2bcf607ddbf626))
+
+### Bug Fixes
+
+- adjusted when ci runs against all main ([b40b4ac](https://github.com/movableink/fluid/commit/b40b4ac4ca529c5c01bd8f1edc3801b416977318))
+- **lint:** updated linter errors ([e31b022](https://github.com/movableink/fluid/commit/e31b0220a441b64cfda60fd02db19070f86bea89))
+
 ## [1.3.0](https://github.com/movableink/fluid/compare/1.2.4...1.3.0) (2022-11-29)
 
 ### Features
