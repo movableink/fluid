@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/movableink/fluid/compare/1.4.0...1.5.0) (2023-01-19)
+
+### Features
+
+- add new-tab icon ([df5924f](https://github.com/movableink/fluid/commit/df5924f55beadd1fe7ca8331d9500f1927160e9e))
+
 ## [1.4.0](https://github.com/movableink/fluid/compare/1.3.0...1.4.0) (2023-01-12)
 
 ### Features
