@@ -3087,7 +3087,7 @@ __metadata:
     ember-modal-dialog: ^4.0.1
     ember-moment: ^9.0.1
     ember-overridable-computed: ^1.0.0
-    ember-page-title: 6.2.2
+    ember-page-title: 7.0.0
     ember-popper-modifier: ^1.0.1
     ember-power-calendar: ^0.16.5
     ember-power-calendar-moment: ^0.1.7
@@ -12103,12 +12103,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-page-title@npm:6.2.2":
-  version: 6.2.2
-  resolution: "ember-page-title@npm:6.2.2"
+"ember-page-title@npm:7.0.0":
+  version: 7.0.0
+  resolution: "ember-page-title@npm:7.0.0"
   dependencies:
-    ember-cli-babel: ^7.23.1
-  checksum: 5dccbe76ad07ef2272c93487f2651cf196de8e89827f3d3be633f338a1f082543eee48053cff3c0b7319ca86cf73f88d28a75504c0f0244dee07018ebcd315ca
+    ember-cli-babel: ^7.26.6
+  checksum: 2533d6fa3aaeb37950f44dc8e50ce2e30008106fbded78136fb4bbfc8bc3240b24ccf0cfadb71154744b0483ae06a9d9b557edfbdbe397c0e8096448c76095ed
   languageName: node
   linkType: hard
 
