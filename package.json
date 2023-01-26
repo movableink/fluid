@@ -120,7 +120,7 @@
     "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-moment-shim": "^3.8.0",
     "ember-click-outside-modifier": "^2.0.0",
-    "ember-composable-helpers": "^4.5.0",
+    "ember-composable-helpers": "^5.0.0",
     "ember-concurrency": "^2.1.2",
     "ember-cookies": "^0.5.2",
     "ember-copy": "^2.0.1",
