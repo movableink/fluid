@@ -3126,7 +3126,7 @@ __metadata:
     rsvp: ^4.8.5
     sinon: ^10.0.0
     tailwindcss: ^2.2.19
-    testdouble: ^3.16.5
+    testdouble: ^3.16.8
     testdouble-qunit: ^3.0.3
     tracked-maps-and-sets: ^3.0.1
   languageName: unknown
@@ -20864,13 +20864,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"quibble@npm:^0.6.7":
-  version: 0.6.9
-  resolution: "quibble@npm:0.6.9"
+"quibble@npm:^0.6.14":
+  version: 0.6.15
+  resolution: "quibble@npm:0.6.15"
   dependencies:
     lodash: ^4.17.21
     resolve: ^1.20.0
-  checksum: 1fb1eaf87d2f600c171695e577913337e65f55e78d9457dd94e3eb61648e777469bea44cd8ed65166a7c8c360cbc37fd3b96089c0bbd93b1a48a29874b75cfa9
+  checksum: 422985e33e22795401d44392d30db47d7826223bb99e012a2cacfdf99953df715a3922dea51b054c70401ef3bf9d4c01a38bd1c287c4b9224c2c29c007b3e408
   languageName: node
   linkType: hard
 
@@ -23851,15 +23851,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"testdouble@npm:^3.16.5":
-  version: 3.16.5
-  resolution: "testdouble@npm:3.16.5"
+"testdouble@npm:^3.16.8":
+  version: 3.16.8
+  resolution: "testdouble@npm:3.16.8"
   dependencies:
-    lodash: ^4.17.15
-    quibble: ^0.6.7
+    lodash: ^4.17.21
+    quibble: ^0.6.14
     stringify-object-es5: ^2.5.0
     theredoc: ^1.0.0
-  checksum: 4d7e4fca63bdbfe05038504ae509d1c36fe01c8683562d87d209423ffc993923db717b72dd368ff1e6063ef3f506e54748ac79e9661f36e467b3490d58be7962
+  checksum: df1a168f7ab666aaf28fd891ec1415566c43e8418c7492f3427222e1e95795144a416ccfc4390db8212bdd4c945209bd05d980993f8cdee5bbd4bf9cc2ad02d4
   languageName: node
   linkType: hard
 
