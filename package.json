@@ -81,7 +81,7 @@
     "postcss": "^8.3.8",
     "postcss-scss": "^4.0.1",
     "prettier": "^2.3.1",
-    "qunit": "^2.19.3",
+    "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
     "rehype-add-classes": "^1.0.0",
     "rehype-highlight": "4.1.0",

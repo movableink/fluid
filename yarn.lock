@@ -3118,7 +3118,7 @@ __metadata:
     postcss-scss: ^4.0.1
     prettier: ^2.3.1
     prop-types: ^15.7.2
-    qunit: ^2.19.3
+    qunit: ^2.19.4
     qunit-dom: ^2.0.0
     rehype-add-classes: ^1.0.0
     rehype-highlight: 4.1.0
@@ -20911,16 +20911,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"qunit@npm:^2.16.0, qunit@npm:^2.19.3":
-  version: 2.19.3
-  resolution: "qunit@npm:2.19.3"
+"qunit@npm:^2.16.0, qunit@npm:^2.19.4":
+  version: 2.19.4
+  resolution: "qunit@npm:2.19.4"
   dependencies:
     commander: 7.2.0
     node-watch: 0.7.3
     tiny-glob: 0.2.9
   bin:
     qunit: bin/qunit.js
-  checksum: e88bd1ad36c87cc7e17417caee93801e660873497cfa583baf6c7d639000da4b98be40dfdc72e2c7f14bb5d2a2161a148cdb2c85f270d98d74c55adb81daff14
+  checksum: 626001f82881e91f3bff2688bc55948a570bd8bf7aea7c9e7836285f1ab0a7a3577296f3b37cce21e182dcd724d14ee439fa39961348a603fbe5a6d5ffc144ef
   languageName: node
   linkType: hard
 
