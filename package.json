@@ -143,7 +143,7 @@
     "ember-truth-helpers": "^3.0.0",
     "eslint-plugin-node": "^11.1.0",
     "lodash": "^4.17.21",
-    "moment": "^2.29.3",
+    "moment": "^2.29.4",
     "prop-types": "^15.7.2",
     "rsvp": "^4.8.5",
     "tracked-maps-and-sets": "^3.0.1"
