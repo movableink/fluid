@@ -128,7 +128,7 @@
     "ember-cli-moment-shim": "^3.8.0",
     "ember-click-outside-modifier": "^2.0.0",
     "ember-composable-helpers": "^5.0.0",
-    "ember-concurrency": "^2.1.2",
+    "ember-concurrency": "^2.3.7",
     "ember-cookies": "^0.5.2",
     "ember-copy": "^2.0.1",
     "ember-decorators": "^6.1.1",
