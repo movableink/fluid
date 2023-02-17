@@ -1,3 +1,17 @@
+## [2.0.0](https://github.com/movableink/fluid/compare/1.5.0...2.0.0) (2023-02-17)
+
+### ⚠ BREAKING CHANGES
+
+- ember auto import bumped to 2
+
+### Bug Fixes
+
+- removed unused dependency ([68c36fd](https://github.com/movableink/fluid/commit/68c36fdebf4964844d9bbbd1211951bf5cb27b57))
+
+### chore
+
+- ember auto import bumped to 2 ([224a362](https://github.com/movableink/fluid/commit/224a362211ae1ffe4111d8218c22942d7883623d))
+
 ## [1.5.0](https://github.com/movableink/fluid/compare/1.4.0...1.5.0) (2023-01-19)
 
 ### Features
