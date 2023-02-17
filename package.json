@@ -72,7 +72,6 @@
     "ember-moment": "^10.0.0",
     "ember-page-title": "7.0.0",
     "ember-qunit": "^6.1.1",
-    "ember-qunit-assert-helpers": "^0.2.2",
     "ember-resolver": "^8.1.0",
     "ember-source": "^3.28.1",
     "ember-template-lint": "^3.8.0",

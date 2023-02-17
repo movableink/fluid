@@ -2924,7 +2924,6 @@ __metadata:
     ember-power-calendar-moment: ^0.1.7
     ember-promise-helpers: ^2.0.0
     ember-qunit: ^6.1.1
-    ember-qunit-assert-helpers: ^0.2.2
     ember-radio-button: ^2.0.1
     ember-resolver: ^8.1.0
     ember-set-helper: ^2.0.1
@@ -8069,7 +8068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-filter@npm:^1.0.1, broccoli-filter@npm:^1.2.2, broccoli-filter@npm:^1.2.3":
+"broccoli-filter@npm:^1.2.2, broccoli-filter@npm:^1.2.3":
   version: 1.3.0
   resolution: "broccoli-filter@npm:1.3.0"
   dependencies:
@@ -11379,7 +11378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^6.6.0, ember-cli-babel@npm:^6.9.0, ember-cli-babel@npm:^6.9.2":
+"ember-cli-babel@npm:^6.6.0, ember-cli-babel@npm:^6.9.2":
   version: 6.18.0
   resolution: "ember-cli-babel@npm:6.18.0"
   dependencies:
@@ -12429,16 +12428,6 @@ __metadata:
     ember-cli-babel: ^7.26.6
     ember-cli-htmlbars: ^5.7.1
   checksum: 7c73628bf631f6b08cd457558d66972d8d3b1310146b7ebd053052dda5761b240e88ed3ee6d0e9809f8d45ba6f37f0c97f817e79b00f1a6a1a04d17b264c5251
-  languageName: node
-  linkType: hard
-
-"ember-qunit-assert-helpers@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "ember-qunit-assert-helpers@npm:0.2.2"
-  dependencies:
-    broccoli-filter: ^1.0.1
-    ember-cli-babel: ^6.9.0
-  checksum: 3c5c5acef69d2101ca3d4d70c759e6d1662c2e52f67f23aa0a6ec59cb2478f395520053e6f5bea1fd3418fa7925b5237e7d45d97180ac8ca0a1c352c36ec16cf
   languageName: node
   linkType: hard
 
