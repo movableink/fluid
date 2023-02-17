@@ -3,26 +3,26 @@
 define("dummy/tests/assertions/testdouble", ["qunit", "testdouble", "testdouble-qunit"], function (_qunit, _testdouble, _testdoubleQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"testdouble",0,"testdouble-qunit"eaimeta@70e063a35619d71f
   (0, _testdoubleQunit.default)(_qunit.default, _testdouble.default);
 });
 define("dummy/tests/helpers/assertions", [], function () {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   /* global QUnit */
+
   function intersects(actual, expected) {
     return Object.keys(expected).every(function (key) {
       return QUnit.equiv(actual[key], expected[key]);
     });
   }
-
   QUnit.extend(QUnit.assert, {
     contains(actual, expected, message) {
       this.push(actual.indexOf(expected) !== -1, actual, expected, message);
     },
-
     intersects(actual, expected, message) {
       let ok = true;
-
       if (Array.isArray(expected)) {
         for (let i = 0, len = expected.length; i < len; i++) {
           ok = ok && intersects(actual[i], expected[i]);
@@ -30,10 +30,8 @@ define("dummy/tests/helpers/assertions", [], function () {
       } else {
         ok = intersects(actual, expected);
       }
-
       this.push(ok, actual, expected, message);
     }
-
   });
 });
 define("dummy/tests/helpers/destroy-app", ["exports", "@ember/runloop"], function (_exports, _runloop) {
@@ -43,7 +41,7 @@ define("dummy/tests/helpers/destroy-app", ["exports", "@ember/runloop"], functio
     value: true
   });
   _exports.default = destroyApp;
-
+  0; //eaimeta@70e063a35619d71f0,"@ember/runloop"eaimeta@70e063a35619d71f
   function destroyApp(application) {
     (0, _runloop.run)(application, 'destroy');
   }
@@ -55,7 +53,7 @@ define("dummy/tests/helpers/ember-power-calendar", ["exports", "@ember/test", "e
     value: true
   });
   _exports.default = _default;
-
+  0; //eaimeta@70e063a35619d71f0,"@ember/test",0,"ember-power-calendar/test-support"eaimeta@70e063a35619d71f
   function _default() {
     (0, _test.registerAsyncHelper)('calendarCenter', async function (app, selector, newCenter) {
       return (0, _testSupport.calendarCenter)(selector, newCenter);
@@ -72,22 +70,19 @@ define("dummy/tests/helpers/module-for-acceptance", ["exports", "qunit", "rsvp",
     value: true
   });
   _exports.default = _default;
-
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"rsvp",0,"dummy/tests/helpers/start-app",0,"dummy/tests/helpers/destroy-app"eaimeta@70e063a35619d71f
   function _default(name, options = {}) {
     (0, _qunit.module)(name, {
       beforeEach() {
         this.application = (0, _startApp.default)();
-
         if (options.beforeEach) {
           return options.beforeEach.apply(this, arguments);
         }
       },
-
       afterEach() {
         const afterEach = options.afterEach && options.afterEach.apply(this, arguments);
         return (0, _rsvp.resolve)(afterEach).then(() => (0, _destroyApp.default)(this.application));
       }
-
     });
   }
 });
@@ -100,7 +95,7 @@ define("dummy/tests/helpers/percy-snapshot", ["exports", "@percy/ember"], functi
   _exports.createSnapshotName = createSnapshotName;
   _exports.default = percySnapshotWithLabel;
   _exports.nameFromAssert = nameFromAssert;
-
+  0; //eaimeta@70e063a35619d71f0,"@percy/ember"eaimeta@70e063a35619d71f
   /**
    * @param {Assert|string} assert
    * @return {string}
@@ -112,20 +107,19 @@ define("dummy/tests/helpers/percy-snapshot", ["exports", "@percy/ember"], functi
       return assert;
     }
   }
+
   /**
    * @param {Assert|string} assert
    * @param {string} label
    * @return {string}
    */
-
-
   function createSnapshotName(assert, label) {
     if (label) {
       return `${nameFromAssert(assert)} | ${label}`;
     }
-
     return nameFromAssert(assert);
   }
+
   /**
    * Wrapper for the default `percySnapshot` helper that allows for optionally
    * providing an extra label for your assertion. This is useful when putting multiple
@@ -135,17 +129,15 @@ define("dummy/tests/helpers/percy-snapshot", ["exports", "@percy/ember"], functi
    * @param {string|object} labelOrOptions
    * @param {object} optionsOrNothing
    */
-
-
   function percySnapshotWithLabel(assert, labelOrOptions, optionsOrNothing) {
     let label = labelOrOptions;
-    let options = optionsOrNothing; // Handle options provided as second argument w/o additional label
+    let options = optionsOrNothing;
 
+    // Handle options provided as second argument w/o additional label
     if (typeof labelOrOptions !== 'string') {
       options = label;
       label = undefined;
     }
-
     return (0, _ember.default)(createSnapshotName(assert, label), options);
   }
 });
@@ -156,7 +148,7 @@ define("dummy/tests/helpers/start-app", ["exports", "dummy/app", "dummy/config/e
     value: true
   });
   _exports.default = startApp;
-
+  0; //eaimeta@70e063a35619d71f0,"dummy/app",0,"dummy/config/environment",0,"@ember/polyfills",0,"@ember/runloop",0,"dummy/tests/helpers/percy/register-helpers"eaimeta@70e063a35619d71f
   function startApp(attrs) {
     let attributes = (0, _polyfills.assign)({}, _environment.default.APP);
     attributes.autoboot = true;
@@ -164,7 +156,6 @@ define("dummy/tests/helpers/start-app", ["exports", "dummy/app", "dummy/config/e
 
     return (0, _runloop.run)(() => {
       const application = _app.default.create(attributes);
-
       application.setupForTesting();
       application.injectTestHelpers();
       return application;
@@ -174,6 +165,7 @@ define("dummy/tests/helpers/start-app", ["exports", "dummy/app", "dummy/config/e
 define("dummy/tests/integration/components/expanding-list-test", ["@ember/template-factory", "sinon", "qunit", "ember-qunit", "@percy/ember", "@ember/test-helpers"], function (_templateFactory, _sinon, _qunit, _emberQunit, _ember, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"sinon",0,"qunit",0,"ember-qunit",0,"@percy/ember",0,"@ember/test-helpers",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | component | fluid-lab/expanding-list', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('the header and content subcomponents yield to a block', async function (assert) {
@@ -282,14 +274,11 @@ define("dummy/tests/integration/components/expanding-list-test", ["@ember/templa
     });
     (0, _qunit.test)('the component can be rendered DDAU', async function (assert) {
       this.set('expanded', false);
-
       const callback = _sinon.default.fake();
-
       this.onChange = () => {
         this.set('expanded', !this.expanded);
         callback();
       };
-
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
         
@@ -443,6 +432,7 @@ define("dummy/tests/integration/components/expanding-list-test", ["@ember/templa
 define("dummy/tests/integration/components/fluid-checkbox-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-checkbox', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.module)('rendering', function () {
@@ -561,11 +551,13 @@ define("dummy/tests/integration/components/fluid-checkbox-test", ["@ember/templa
         "block": "[[[1,\"\\n      \"],[8,[39,0],[[24,\"data-test-input\",\"\"]],[[\"@checked\",\"@onchange\"],[[30,0,[\"isChecked\"]],[30,0,[\"onchange\"]]]],null],[1,\"\\n    \"]],[],false,[\"fluid-checkbox\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
-      })); // Click while not checked
+      }));
 
+      // Click while not checked
       await (0, _testHelpers.click)('[data-test-input] [role="checkbox"]');
-      assert.verify(this.onchange(true)); // Click while checked
+      assert.verify(this.onchange(true));
 
+      // Click while checked
       this.set('isChecked', true);
       await (0, _testHelpers.click)('[data-test-input] [role="checkbox"]');
       assert.verify(this.onchange(false));
@@ -588,11 +580,13 @@ define("dummy/tests/integration/components/fluid-checkbox-test", ["@ember/templa
         "block": "[[[1,\"\\n      \"],[8,[39,0],[[24,\"data-test-input\",\"\"]],[[\"@checked\",\"@onchange\"],[[30,0,[\"isChecked\"]],[30,0,[\"onchange\"]]]],null],[1,\"\\n    \"]],[],false,[\"fluid-checkbox\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
-      })); // key press while not checked
+      }));
 
+      // key press while not checked
       await (0, _testHelpers.triggerKeyEvent)('[data-test-input] [role="checkbox"]', 'keyup', 32);
-      assert.verify(this.onchange(true)); // key press while checked
+      assert.verify(this.onchange(true));
 
+      // key press while checked
       this.set('isChecked', true);
       await (0, _testHelpers.triggerKeyEvent)('[data-test-input] [role="checkbox"]', 'keyup', 32);
       assert.verify(this.onchange(false));
@@ -602,6 +596,7 @@ define("dummy/tests/integration/components/fluid-checkbox-test", ["@ember/templa
 define("dummy/tests/integration/components/fluid-date-input-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@percy/ember", "testdouble", "sinon"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _ember, _testdouble, _sinon) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@percy/ember",0,"testdouble",0,"sinon",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-date-input', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     hooks.beforeEach(function () {
@@ -675,8 +670,9 @@ define("dummy/tests/integration/components/fluid-date-input-test", ["@ember/temp
       assert.dom('[data-date="2020-11-20"]').exists('The calendar is centered on the selected date');
       await (0, _testHelpers.click)('[data-test-calendar-nav-control="next"]');
       assert.dom('[data-date="2020-11-20"]').doesNotExist('The selected date is no longer visible');
-      assert.dom('[data-date="2020-12-20"]').exists('The next month is visible'); // Select another date and re-open the calendar
+      assert.dom('[data-date="2020-12-20"]').exists('The next month is visible');
 
+      // Select another date and re-open the calendar
       await (0, _testHelpers.click)('[data-date="2020-12-20"]');
       await (0, _testHelpers.click)('[data-test-date-input]');
       assert.dom('[data-date="2020-11-20"]').exists('The calendar is centered on the selected date again, rather than the previous "center" selection');
@@ -699,8 +695,9 @@ define("dummy/tests/integration/components/fluid-date-input-test", ["@ember/temp
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      await (0, _testHelpers.click)('[data-test-date-input]'); // Snapshot with the date picker open
+      await (0, _testHelpers.click)('[data-test-date-input]');
 
+      // Snapshot with the date picker open
       await (0, _ember.default)(assert);
       await (0, _testHelpers.click)('[data-date="2020-11-21"]');
       assert.verify(this.handleSelect(new Date('11/21/2020')), 'Called the `onSelect` handler with the selected date');
@@ -725,17 +722,21 @@ define("dummy/tests/integration/components/fluid-date-input-test", ["@ember/temp
         "block": "[[[1,\"\\n      \"],[10,\"button\"],[14,\"data-test-some-outside-element\",\"\"],[12],[13],[1,\"\\n\\n      \"],[8,[39,0],[[24,\"data-test-date-input\",\"\"]],[[\"@value\",\"@onSelect\"],[[30,0,[\"date\"]],[30,0,[\"handleSelect\"]]]],null],[1,\"\\n    \"]],[],false,[\"fluid-date-input\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
-      })); // Open the picker
+      }));
 
+      // Open the picker
       await (0, _testHelpers.click)('[data-test-date-input]');
-      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is opened on click'); // Open the picker again while it's already open
+      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is opened on click');
 
+      // Open the picker again while it's already open
       await (0, _testHelpers.click)('[data-test-date-input]');
-      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is still open after clicking the trigger again'); // Click something inside the picker, that is *not* selecting a date
+      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is still open after clicking the trigger again');
 
+      // Click something inside the picker, that is *not* selecting a date
       await (0, _testHelpers.click)('[data-test-calendar-nav-control="next"]');
-      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is still open after clicking something inside the picker'); // Click something outside the picker elements
+      assert.dom('[data-test-fluid-date-input-calendar]').exists('Date picker is still open after clicking something inside the picker');
 
+      // Click something outside the picker elements
       await (0, _testHelpers.click)('[data-test-some-outside-element]');
       assert.dom('[data-test-fluid-date-input-calendar]').doesNotExist('Date picker is closed after clicking on an element outside the element');
     });
@@ -794,6 +795,7 @@ define("dummy/tests/integration/components/fluid-date-input-test", ["@ember/temp
 define("dummy/tests/integration/components/fluid-drawer-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-drawer', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     hooks.beforeEach(function () {
@@ -882,6 +884,7 @@ define("dummy/tests/integration/components/fluid-drawer-test", ["@ember/template
 define("dummy/tests/integration/components/fluid-form-field-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-form-field', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('linking the `label` to the input', async function (assert) {
@@ -1057,6 +1060,7 @@ define("dummy/tests/integration/components/fluid-form-field-test", ["@ember/temp
 define("dummy/tests/integration/components/fluid-modal-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@percy/ember", "testdouble"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _ember, _testdouble) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@percy/ember",0,"testdouble",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | FluidModal', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('rendering with a header and footer', async function (assert) {
@@ -1167,14 +1171,14 @@ define("dummy/tests/integration/components/fluid-modal-test", ["@ember/template-
       assert.verify(this.onClose(), {
         ignoreExtraArgs: true
       }, 'Called the `onClose` callback');
-    }); // WARNING:
-    // This is extremely flakey
+    });
 
+    // WARNING:
+    // This is extremely flakey
     (0, _qunit.skip)('setting the initial focus', async function (assert) {
       this.setButtonElement = element => {
         this.buttonElement = element;
       };
-
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
         
@@ -1202,6 +1206,7 @@ define("dummy/tests/integration/components/fluid-modal-test", ["@ember/template-
 define("dummy/tests/integration/components/fluid-radio-button-test", ["@ember/template-factory", "@ember/test-helpers", "qunit", "ember-qunit", "sinon"], function (_templateFactory, _testHelpers, _qunit, _emberQunit, _sinon) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"@ember/test-helpers",0,"qunit",0,"ember-qunit",0,"sinon",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('component:fluid-radio-button', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     let onSelect;
@@ -1256,6 +1261,7 @@ define("dummy/tests/integration/components/fluid-radio-button-test", ["@ember/te
 define("dummy/tests/integration/components/fluid-select-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@ember/array", "@movable/fluid/test-support/pages/fluid-select", "dummy/tests/helpers/percy-snapshot"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _array, _fluidSelect, _percySnapshot) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@ember/array",0,"@movable/fluid/test-support/pages/fluid-select",0,"dummy/tests/helpers/percy-snapshot",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-select', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     hooks.beforeEach(function () {
@@ -1470,7 +1476,6 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
         this.set('selected', (0, _array.A)([]));
         this.set('select', value => {
           const selected = this.get('selected');
-
           if (!selected.includes(value)) {
             selected.pushObject(value);
           }
@@ -1746,9 +1751,10 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
         "block": "[[[1,\"\\n      \"],[10,\"label\"],[12],[1,\"Fluid Select with Block\"],[13],[1,\"\\n      \"],[10,\"br\"],[12],[13],[1,\"\\n      \"],[8,[39,0],[[24,0,\"w-20\"]],null,[[\"default\"],[[[[1,\"\\n        \"],[8,[30,1,[\"trigger\"]],[[24,0,\"max-w-full\"]],null,[[\"default\"],[[[[1,\"\\n          \"],[10,1],[14,\"data-test-overflow-span\",\"\"],[14,0,\"overflow-hidden overflow-ellipsis\"],[12],[1,\"\\n            \"],[1,[30,0,[\"label\"]]],[1,\"\\n          \"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n      \"]],[1]]]]],[1,\"\\n    \"]],[\"select\"],false,[\"fluid-select\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
-      })); // NOTE:
-      // The actual test is the percy test here as there is no real way to assert the `...` has show up.
+      }));
 
+      // NOTE:
+      // The actual test is the percy test here as there is no real way to assert the `...` has show up.
       await (0, _percySnapshot.default)(assert);
       assert.dom('[data-test-overflow-span]').hasClass('overflow-ellipsis');
     });
@@ -1757,6 +1763,7 @@ define("dummy/tests/integration/components/fluid-select-test", ["@ember/template
 define("dummy/tests/integration/components/fluid-split-button-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-split-button', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders a primary button and menu items', async function (assert) {
@@ -1924,15 +1931,18 @@ define("dummy/tests/integration/components/fluid-split-button-test", ["@ember/te
         await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowUp');
         assert.dom('[data-test-menu-item="second"]').hasClass('appearance:focused', 'Navigating up loops pseudo-focus back to the second menu item');
         await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowUp');
-        assert.dom('[data-test-menu-item="first"]').hasClass('appearance:focused', 'Navigating up pseudo-focuses the first menu item'); // Focus second item to ensure reset correctly takes place
+        assert.dom('[data-test-menu-item="first"]').hasClass('appearance:focused', 'Navigating up pseudo-focuses the first menu item');
 
-        await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowUp'); // Hide the menu
+        // Focus second item to ensure reset correctly takes place
+        await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowUp');
 
+        // Hide the menu
         await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowUp', {
           altKey: true
         });
-        assert.dom('[data-test-split-button-menu]').doesNotExist('The menu is closed'); // Open it again
+        assert.dom('[data-test-split-button-menu]').doesNotExist('The menu is closed');
 
+        // Open it again
         await (0, _testHelpers.triggerKeyEvent)('[data-test-split-button]', 'keydown', 'ArrowDown', {
           altKey: true
         });
@@ -2005,6 +2015,7 @@ define("dummy/tests/integration/components/fluid-split-button-test", ["@ember/te
 define("dummy/tests/integration/components/fluid-table-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers"], function (_templateFactory, _qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-table', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it does not render label without label param', async function (assert) {
@@ -2118,6 +2129,7 @@ define("dummy/tests/integration/components/fluid-table-test", ["@ember/template-
 define("dummy/tests/integration/components/fluid-text-input-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-text-input', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     hooks.beforeEach(function () {
@@ -2266,6 +2278,7 @@ define("dummy/tests/integration/components/fluid-text-input-test", ["@ember/temp
 define("dummy/tests/integration/components/fluid-tooltip-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | fluid-tooltip', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('the tooltip displays the correct text and attachment', async function (assert) {
@@ -2399,6 +2412,7 @@ define("dummy/tests/integration/components/fluid-tooltip-test", ["@ember/templat
 define("dummy/tests/integration/components/modal-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@percy/ember",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | modal', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     hooks.beforeEach(function () {
@@ -2442,6 +2456,7 @@ define("dummy/tests/integration/components/modal-test", ["@ember/template-factor
 define("dummy/tests/integration/modifiers/key-down-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"testdouble",0,"@ember/template-factory"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Modifier | key-down', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it recognizes a key on an input', async function (assert) {
@@ -2501,17 +2516,15 @@ define("dummy/tests/mocks/spy", ["exports"], function (_exports) {
     value: true
   });
   _exports.default = _default;
-
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   function _default(callback) {
     const fn = function (...args) {
       fn.calledWith = args;
       fn.called++;
-
       if (callback) {
         return callback.apply(this, args);
       }
     };
-
     fn.called = 0;
     return fn;
   }
@@ -2685,6 +2698,7 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object/test-suppor
       return _emberCliPageObject.visitable;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-page-object/test-support/-private/deprecate",0,"ember-cli-page-object",0,"ember-cli-page-object"eaimeta@70e063a35619d71f
   var _default = {
     alias: _emberCliPageObject.alias,
     attribute: _emberCliPageObject.attribute,
@@ -2713,10 +2727,11 @@ define("dummy/tests/page-object", ["exports", "ember-cli-page-object/test-suppor
   _exports.default = _default;
   (0, _deprecate.default)('import-from-test-support', `Importing from "test-support" is now deprecated. Please import directly from the "ember-cli-page-object" module instead.`, '1.16.0', '2.0.0');
 });
-define("dummy/tests/test-helper", ["qunit", "dummy/app", "dummy/config/environment", "@ember/test-helpers", "ember-exam/test-support/start", "qunit-dom", "dummy/tests/helpers/assertions", "dummy/tests/assertions/testdouble"], function (QUnit, _app, _environment, _testHelpers, _start, _qunitDom, _assertions, _testdouble) {
+define("dummy/tests/test-helper", ["qunit", "dummy/app", "dummy/config/environment", "@ember/test-helpers", "ember-exam/test-support/start", "qunit-dom", "dummy/tests/helpers/assertions", "dummy/tests/assertions/testdouble"], function (_qunit, _app, _environment, _testHelpers, _start, _qunitDom, _assertions, _testdouble) {
   "use strict";
 
-  (0, _qunitDom.setup)(QUnit.assert);
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"dummy/app",0,"dummy/config/environment",0,"@ember/test-helpers",0,"ember-exam/test-support/start",0,"qunit-dom",0,"dummy/tests/helpers/assertions",0,"dummy/tests/assertions/testdouble"eaimeta@70e063a35619d71f
+  (0, _qunitDom.setup)(_qunit.default.assert);
   (0, _testHelpers.setApplication)(_app.default.create(_environment.default.APP));
   (0, _start.default)();
 });
