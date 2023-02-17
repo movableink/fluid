@@ -1,3 +1,6 @@
-import templateOnly from '@ember/component/template-only';
+// import templateOnly from '@ember/component/template-only';
 
-export default templateOnly();
+// export default templateOnly();
+import Component from '@ember/component';
+
+export default class FluidCheckbox extends Component {}

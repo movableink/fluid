@@ -1,4 +1,6 @@
-{{#if (has-block)}}
+{{#if (and (has-block) @mutliple)}}
+  {{yield (component "fluid-checkbox")}}
+{{else if (has-block)}}
   <div
     role="button"
     data-test-fluid-select-option={{this.optionLabel}}
