@@ -1,5 +1,3 @@
-import Component from '@ember/component';
+import templateOnly from '@ember/component/template-only';
 
-export default Component.extend({
-  tagName: 'thead',
-});
+export default templateOnly();
