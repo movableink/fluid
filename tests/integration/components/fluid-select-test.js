@@ -16,9 +16,10 @@ module('Integration | Component | fluid-select', function (hooks) {
   });
 
   test.only('it renders', async function (assert) {
-    await render(hbs`<FluidSelect @options={{options}} @select={{select}} 
-    @multiple={{true}} as |Fc|>
-      <Fc />
+    await render(hbs`<FluidSelect @options={{options}} @select={{select}}
+    @multiple={{true}} as |fc|>
+      <fc.checkbox @label="oh hi mark"/>
+      <fc.checkbox @label="i did not" />
     </FluidSelect>`);
     await this.pauseTest();
 
