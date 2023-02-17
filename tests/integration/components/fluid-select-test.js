@@ -15,8 +15,12 @@ module('Integration | Component | fluid-select', function (hooks) {
     this.set('select', (value) => this.set('selected', value));
   });
 
-  test('it renders', async function (assert) {
-    await render(hbs`<FluidSelect @options={{options}} @select={{select}} />`);
+  test.only('it renders', async function (assert) {
+    await render(hbs`<FluidSelect @options={{options}} @select={{select}} 
+    @multiple={{true}} as |Fc|>
+      <Fc />
+    </FluidSelect>`);
+    await this.pauseTest();
 
     assert.ok(component.trigger.isVisible, 'it renders a trigger button');
     assert.ok(component.popup.isHidden, 'the popup is not visible on render');
