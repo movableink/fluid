@@ -53,7 +53,6 @@
     "babel-plugin-htmlbars-inline-precompile": "^5.3.1",
     "broccoli-asset-rev": "^3.0.0",
     "chalk": "^4.1.2",
-    "ember-auto-import": "^2.6.0",
     "ember-cli": "~3.28.0",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-deprecation-workflow": "^2.0.0",
@@ -94,8 +93,7 @@
     "sinon": "^10.0.0",
     "tailwindcss": "^2.2.19",
     "testdouble": "^3.16.8",
-    "testdouble-qunit": "^3.0.3",
-    "webpack": "^5.75.0"
+    "testdouble-qunit": "^3.0.3"
   },
   "resolutions": {
     "shell-quote": "^1.7.3",
@@ -119,6 +117,7 @@
   "dependencies": {
     "@ember/render-modifiers": "^1.0.2",
     "ember-arg-types": "^1.0.0",
+    "ember-auto-import": "^2.6.0",
     "ember-autoresize-modifier": "^0.3.0",
     "ember-basic-dropdown": "^3.0.19",
     "ember-changeset": "2.2.5",
@@ -150,7 +149,8 @@
     "moment": "^2.29.3",
     "prop-types": "^15.7.2",
     "rsvp": "^4.8.5",
-    "tracked-maps-and-sets": "^3.0.1"
+    "tracked-maps-and-sets": "^3.0.1",
+    "webpack": "^5.75.0"
   },
   "engines": {
     "node": ">= 14"
