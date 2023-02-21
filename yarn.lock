@@ -2924,7 +2924,7 @@ __metadata:
     ember-power-calendar-moment: ^0.1.7
     ember-promise-helpers: ^2.0.0
     ember-qunit: ^6.1.1
-    ember-radio-button: ^2.0.1
+    ember-radio-button: 3.0.0-beta.1
     ember-resolver: ^8.1.0
     ember-set-helper: ^2.0.1
     ember-source: ^3.28.1
@@ -8280,7 +8280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-persistent-filter@npm:^1.0.3, broccoli-persistent-filter@npm:^1.1.5, broccoli-persistent-filter@npm:^1.1.6, broccoli-persistent-filter@npm:^1.4.3":
+"broccoli-persistent-filter@npm:^1.1.5, broccoli-persistent-filter@npm:^1.1.6, broccoli-persistent-filter@npm:^1.4.3":
   version: 1.4.6
   resolution: "broccoli-persistent-filter@npm:1.4.6"
   dependencies:
@@ -11378,7 +11378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^6.6.0, ember-cli-babel@npm:^6.9.2":
+"ember-cli-babel@npm:^6.6.0":
   version: 6.18.0
   resolution: "ember-cli-babel@npm:6.18.0"
   dependencies:
@@ -11479,19 +11479,6 @@ __metadata:
   version: 1.0.0
   resolution: "ember-cli-get-component-path-option@npm:1.0.0"
   checksum: 4a4d9b2b0cb05c69fad962b1787b65d9bca0c64aa161c2f12d172b9af6ef951d33dd1ac38bfa7468a4a11a08a17dda2912fd47cb92cbfd8795fe2e8008e155e4
-  languageName: node
-  linkType: hard
-
-"ember-cli-htmlbars@npm:^1.1.1":
-  version: 1.3.5
-  resolution: "ember-cli-htmlbars@npm:1.3.5"
-  dependencies:
-    broccoli-persistent-filter: ^1.0.3
-    ember-cli-version-checker: ^1.0.2
-    hash-for-dep: ^1.0.2
-    json-stable-stringify: ^1.0.0
-    strip-bom: ^2.0.0
-  checksum: db42a5e3c6629ddb26694deadff17786720fa98c4fc471d4d53a416331c4ab86c9484ee93cb317b38d8e6048735e702c79bb0d7359997a3f0801efa66f3e0258
   languageName: node
   linkType: hard
 
@@ -11812,15 +11799,6 @@ __metadata:
     stagehand: ^1.0.0
     walk-sync: ^2.2.0
   checksum: b4306b37e9a9e070cc61a67acf404b30636ad2681379589fbc349c7e83158a7b634d792ab5af4cd4dd0770eecb8a901fa84d29a15167826db9c97b664a115df0
-  languageName: node
-  linkType: hard
-
-"ember-cli-version-checker@npm:^1.0.2":
-  version: 1.3.1
-  resolution: "ember-cli-version-checker@npm:1.3.1"
-  dependencies:
-    semver: ^5.3.0
-  checksum: 79a373eba9edc53fcf108162caf662583c0d959a969b3df8c62058042d3743c3eddcd2b571a5fa8d2e1923b9e4691a4880373a18f4c58ddf27d6c5376880124c
   languageName: node
   linkType: hard
 
@@ -12451,13 +12429,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-radio-button@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "ember-radio-button@npm:2.0.1"
+"ember-radio-button@npm:3.0.0-beta.1":
+  version: 3.0.0-beta.1
+  resolution: "ember-radio-button@npm:3.0.0-beta.1"
   dependencies:
-    ember-cli-babel: ^6.9.2
-    ember-cli-htmlbars: ^1.1.1
-  checksum: eb9138322cb50e8c8f34d25666ece391dae7c5c8166843c47475942fa6f9fd55c2e53db320079f41aae886420d7759bdc040d171cd09e9e66b2db226bd423480
+    ember-cli-babel: ^7.26.11
+    ember-cli-htmlbars: ^5.7.1
+    webpack: ^5.72.1
+  checksum: 1c73574d8cd24f0b9d8aaf763870ecc8671e418c5c8abea04a25f82a70781729957fa280d6fe0d07dd0afef7e50605025a41b11a941df55fc37ec0403b11e5dd
   languageName: node
   linkType: hard
 
@@ -16803,13 +16782,6 @@ fsevents@^1.2.7:
   version: 0.1.0
   resolution: "is-unicode-supported@npm:0.1.0"
   checksum: a2aab86ee7712f5c2f999180daaba5f361bdad1efadc9610ff5b8ab5495b86e4f627839d085c6530363c6d6d4ecbde340fb8e54bdb83da4ba8e0865ed5513c52
-  languageName: node
-  linkType: hard
-
-"is-utf8@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "is-utf8@npm:0.2.1"
-  checksum: 167ccd2be869fc228cc62c1a28df4b78c6b5485d15a29027d3b5dceb09b383e86a3522008b56dcac14b592b22f0a224388718c2505027a994fd8471465de54b3
   languageName: node
   linkType: hard
 
@@ -24218,15 +24190,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"strip-bom@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "strip-bom@npm:2.0.0"
-  dependencies:
-    is-utf8: ^0.2.0
-  checksum: 08efb746bc67b10814cd03d79eb31bac633393a782e3f35efbc1b61b5165d3806d03332a97f362822cf0d4dd14ba2e12707fcff44fe1c870c48a063a0c9e4944
-  languageName: node
-  linkType: hard
-
 "strip-bom@npm:^3.0.0":
   version: 3.0.0
   resolution: "strip-bom@npm:3.0.0"
@@ -26203,7 +26166,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.75.0":
+"webpack@npm:^5.72.1, webpack@npm:^5.75.0":
   version: 5.75.0
   resolution: "webpack@npm:5.75.0"
   dependencies:
