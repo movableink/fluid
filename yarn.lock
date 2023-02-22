@@ -2194,7 +2194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/addon-shim@npm:^1.0.0, @embroider/addon-shim@npm:^1.8.0, @embroider/addon-shim@npm:^1.8.4":
+"@embroider/addon-shim@npm:^1.0.0, @embroider/addon-shim@npm:^1.5.0, @embroider/addon-shim@npm:^1.8.0, @embroider/addon-shim@npm:^1.8.4":
   version: 1.8.4
   resolution: "@embroider/addon-shim@npm:1.8.4"
   dependencies:
@@ -2872,7 +2872,7 @@ __metadata:
     ember-cli-page-object: beta
     ember-cli-postcss: ^7.0.2
     ember-cli-terser: 4.0.1
-    ember-click-outside-modifier: ^2.0.0
+    ember-click-outside-modifier: ^4.0.0
     ember-composable-helpers: ^5.0.0
     ember-concurrency: ^2.1.2
     ember-cookies: ^0.5.2
@@ -11018,7 +11018,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-typescript@npm:^5.1.0, ember-cli-typescript@npm:^5.1.1, ember-cli-typescript@npm:^5.2.1":
+"ember-cli-typescript@npm:^5.0.0, ember-cli-typescript@npm:^5.1.0, ember-cli-typescript@npm:^5.1.1, ember-cli-typescript@npm:^5.2.1":
   version: 5.2.1
   resolution: "ember-cli-typescript@npm:5.2.1"
   dependencies:
@@ -11179,14 +11179,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-click-outside-modifier@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "ember-click-outside-modifier@npm:2.0.0"
+"ember-click-outside-modifier@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "ember-click-outside-modifier@npm:4.0.0"
   dependencies:
-    ember-cli-babel: ^7.26.6
-    ember-cli-htmlbars: ^5.7.1
-    ember-modifier: ^2.1.2
-  checksum: 1b9db2388c407708393a11def9acec829a2e8b23d72bcd43e53f879656f13dcde069a3d4ab3632515701360830b80d8216b139df95eb6de1b427eee669dd3d61
+    "@embroider/addon-shim": ^1.5.0
+    ember-modifier: ^3.0.0
+  checksum: cabadc1db3778a0ede23ea78d3083bd133787ceebfed2a9eb5121a7313fbfae539edb623b09653d7730bd2ea26f58c443dd98f441f6b16c11760e58438e7761c
   languageName: node
   linkType: hard
 
@@ -11199,6 +11198,19 @@ __metadata:
     fs-extra: ^9.1.0
     semver: ^5.4.1
   checksum: f220953b2357173486e6d76f76253bce2d8b420d64f2517be41db39612c1becd9e0d078603d5c4445b73df7ff4bf039e777f0bcac8c67e7015abd2409417c819
+  languageName: node
+  linkType: hard
+
+"ember-compatibility-helpers@npm:^1.2.5":
+  version: 1.2.6
+  resolution: "ember-compatibility-helpers@npm:1.2.6"
+  dependencies:
+    babel-plugin-debug-macros: ^0.2.0
+    ember-cli-version-checker: ^5.1.1
+    find-up: ^5.0.0
+    fs-extra: ^9.1.0
+    semver: ^5.4.1
+  checksum: 1ab8ea51c8d010e02f06668820f1a5ee572ffc0d0ca8eb8b740641e736c8ed67f294d3321876eb9d5dc994c789cd9432632dd748b040c256eabe87e3b941fafc
   languageName: node
   linkType: hard
 
@@ -11502,7 +11514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-modifier@npm:^2.0.0, ember-modifier@npm:^2.1.2":
+"ember-modifier@npm:^2.0.0":
   version: 2.1.2
   resolution: "ember-modifier@npm:2.1.2"
   dependencies:
@@ -11514,6 +11526,19 @@ __metadata:
     ember-destroyable-polyfill: ^2.0.2
     ember-modifier-manager-polyfill: ^1.2.0
   checksum: ea7fef8c341ed27530348d626eccb28e9ff5709e69cc2501a4d0ab26ba920a622b2c0f1173dcdb9b57f2938aef6745bdade203bc7a7ff5ecdf29863dc8870e37
+  languageName: node
+  linkType: hard
+
+"ember-modifier@npm:^3.0.0":
+  version: 3.2.7
+  resolution: "ember-modifier@npm:3.2.7"
+  dependencies:
+    ember-cli-babel: ^7.26.6
+    ember-cli-normalize-entity-name: ^1.0.0
+    ember-cli-string-utils: ^1.1.0
+    ember-cli-typescript: ^5.0.0
+    ember-compatibility-helpers: ^1.2.5
+  checksum: 2e96d9ec3939de178a9ce704d5a9360fd73f0276ffa4a9cce9f100a4087fdc8fae4a8b28bf1be22b05a4d1c61e1bb1ab93ca60576810c6556bc4d9323864c66a
   languageName: node
   linkType: hard
 
