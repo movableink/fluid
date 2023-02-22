@@ -2858,7 +2858,7 @@ __metadata:
     chalk: ^4.1.2
     ember-arg-types: ^1.0.0
     ember-auto-import: ^2.6.0
-    ember-autoresize-modifier: ^0.3.0
+    ember-autoresize-modifier: 0.7.0
     ember-basic-dropdown: ^7.0.0
     ember-changeset: 2.2.5
     ember-changeset-validations: ^4.1.1
@@ -10566,14 +10566,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-autoresize-modifier@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "ember-autoresize-modifier@npm:0.3.0"
+"ember-autoresize-modifier@npm:0.7.0":
+  version: 0.7.0
+  resolution: "ember-autoresize-modifier@npm:0.7.0"
   dependencies:
-    ember-cli-babel: ^7.21.0
-    ember-cli-htmlbars: ^5.2.0
-    ember-modifier: ^2.0.0
-  checksum: 543109da4b4e6b0ee9b6f567b3fa5f83d8d0612968f91c91021c4440d6efff0ae0f761cfa97ba26a8f186f05458a0233ec32df623a1be28197a967f0ac4cdd2a
+    ember-auto-import: ^2.5.0
+    ember-cli-babel: ^7.26.6
+    ember-cli-htmlbars: ^6.0.0
+    ember-modifier: ^3.0.0 || ^4.0.0
+  checksum: f7ea14aa2f20787cfaa0b0848a7d90b7da215ca01bb147b1df24900483328e8af7824402fbc9e228dfe73221eec3a3c3d2c217135d3eab3cc7149fc19294de58
   languageName: node
   linkType: hard
 
@@ -10750,7 +10751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-htmlbars@npm:^5.2.0, ember-cli-htmlbars@npm:^5.3.1, ember-cli-htmlbars@npm:^5.3.2, ember-cli-htmlbars@npm:^5.6.3, ember-cli-htmlbars@npm:^5.7.1":
+"ember-cli-htmlbars@npm:^5.3.1, ember-cli-htmlbars@npm:^5.3.2, ember-cli-htmlbars@npm:^5.6.3, ember-cli-htmlbars@npm:^5.7.1":
   version: 5.7.1
   resolution: "ember-cli-htmlbars@npm:5.7.1"
   dependencies:
@@ -10774,7 +10775,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.1, ember-cli-htmlbars@npm:^6.2.0":
+"ember-cli-htmlbars@npm:^6.0.0, ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.1, ember-cli-htmlbars@npm:^6.2.0":
   version: 6.2.0
   resolution: "ember-cli-htmlbars@npm:6.2.0"
   dependencies:
@@ -11189,7 +11190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-compatibility-helpers@npm:^1.1.1, ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0, ember-compatibility-helpers@npm:^1.2.1, ember-compatibility-helpers@npm:^1.2.4":
+"ember-compatibility-helpers@npm:^1.1.1, ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0, ember-compatibility-helpers@npm:^1.2.1":
   version: 1.2.4
   resolution: "ember-compatibility-helpers@npm:1.2.4"
   dependencies:
@@ -11514,21 +11515,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-modifier@npm:^2.0.0":
-  version: 2.1.2
-  resolution: "ember-modifier@npm:2.1.2"
-  dependencies:
-    ember-cli-babel: ^7.22.1
-    ember-cli-normalize-entity-name: ^1.0.0
-    ember-cli-string-utils: ^1.1.0
-    ember-cli-typescript: ^3.1.3
-    ember-compatibility-helpers: ^1.2.4
-    ember-destroyable-polyfill: ^2.0.2
-    ember-modifier-manager-polyfill: ^1.2.0
-  checksum: ea7fef8c341ed27530348d626eccb28e9ff5709e69cc2501a4d0ab26ba920a622b2c0f1173dcdb9b57f2938aef6745bdade203bc7a7ff5ecdf29863dc8870e37
-  languageName: node
-  linkType: hard
-
 "ember-modifier@npm:^3.0.0":
   version: 3.2.7
   resolution: "ember-modifier@npm:3.2.7"
@@ -11542,7 +11528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-modifier@npm:^3.2.0 || ^4.0.0, ember-modifier@npm:^3.2.7 || ^4.0.0, ember-modifier@npm:^4.0.0-beta.1":
+"ember-modifier@npm:^3.0.0 || ^4.0.0, ember-modifier@npm:^3.2.0 || ^4.0.0, ember-modifier@npm:^3.2.7 || ^4.0.0, ember-modifier@npm:^4.0.0-beta.1":
   version: 4.0.0
   resolution: "ember-modifier@npm:4.0.0"
   dependencies:
