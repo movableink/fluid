@@ -2924,7 +2924,7 @@ __metadata:
     ember-power-calendar-moment: ^0.1.7
     ember-promise-helpers: ^2.0.0
     ember-qunit: ^6.1.1
-    ember-radio-button: 3.0.0-beta.1
+    ember-radio-button: ^3.0.0-beta.1
     ember-resolver: ^8.1.0
     ember-set-helper: ^2.0.1
     ember-source: ^3.28.1
@@ -12429,7 +12429,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-radio-button@npm:3.0.0-beta.1":
+"ember-radio-button@npm:^3.0.0-beta.1":
   version: 3.0.0-beta.1
   resolution: "ember-radio-button@npm:3.0.0-beta.1"
   dependencies:
