@@ -2869,7 +2869,7 @@ __metadata:
     ember-cli-htmlbars: ^5.7.1
     ember-cli-inject-live-reload: ^2.1.0
     ember-cli-moment-shim: ^3.8.0
-    ember-cli-page-object: beta
+    ember-cli-page-object: 2.0.0-beta.5
     ember-cli-postcss: ^7.0.2
     ember-cli-terser: 4.0.1
     ember-click-outside-modifier: ^4.0.0
@@ -10856,7 +10856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-page-object@npm:beta":
+"ember-cli-page-object@npm:2.0.0-beta.5":
   version: 2.0.0-beta.5
   resolution: "ember-cli-page-object@npm:2.0.0-beta.5"
   dependencies:
@@ -11190,19 +11190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-compatibility-helpers@npm:^1.1.1, ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0, ember-compatibility-helpers@npm:^1.2.1":
-  version: 1.2.4
-  resolution: "ember-compatibility-helpers@npm:1.2.4"
-  dependencies:
-    babel-plugin-debug-macros: ^0.2.0
-    ember-cli-version-checker: ^5.1.1
-    fs-extra: ^9.1.0
-    semver: ^5.4.1
-  checksum: f220953b2357173486e6d76f76253bce2d8b420d64f2517be41db39612c1becd9e0d078603d5c4445b73df7ff4bf039e777f0bcac8c67e7015abd2409417c819
-  languageName: node
-  linkType: hard
-
-"ember-compatibility-helpers@npm:^1.2.5":
+"ember-compatibility-helpers@npm:^1.1.1, ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0, ember-compatibility-helpers@npm:^1.2.1, ember-compatibility-helpers@npm:^1.2.5":
   version: 1.2.6
   resolution: "ember-compatibility-helpers@npm:1.2.6"
   dependencies:
