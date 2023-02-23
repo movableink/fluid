@@ -222,7 +222,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       });
     });
 
-    test.only('block mode with custom options and checkbox labels', async function (assert) {
+    test('block mode with custom options and checkbox labels', async function (assert) {
       await render(hbs`<FluidSelect
         @options={{this.options}}
         @select={{this.select}}
@@ -267,7 +267,6 @@ module('Integration | Component | fluid-select', function (hooks) {
       const fourthOption = component.popup.list.options[3];
       await fourthOption.click();
 
-      await this.pauseTest();
       assert.equal(component.popup.list.selectedOptions.length, 2);
     });
 
@@ -275,7 +274,6 @@ module('Integration | Component | fluid-select', function (hooks) {
       await render(hbs`
         <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />
       `);
-      await this.pauseTest();
       await component.open();
 
       await percySnapshot(assert);
