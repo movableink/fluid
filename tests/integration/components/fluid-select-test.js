@@ -15,12 +15,8 @@ module('Integration | Component | fluid-select', function (hooks) {
     this.set('select', (value) => this.set('selected', value));
   });
 
-  test.only('it renders', async function (assert) {
-    await render(hbs`<FluidSelect @options={{options}} @select={{select}} 
-    @multiple={{true}} as |Fc|>
-      <Fc />
-    </FluidSelect>`);
-    await this.pauseTest();
+  test('it renders', async function (assert) {
+    await render(hbs`<FluidSelect @options={{options}} @select={{select}} />`);
 
     assert.ok(component.trigger.isVisible, 'it renders a trigger button');
     assert.ok(component.popup.isHidden, 'the popup is not visible on render');
@@ -226,10 +222,60 @@ module('Integration | Component | fluid-select', function (hooks) {
       });
     });
 
+    test.only('block mode with custom options and checkbox labels', async function (assert) {
+      await render(hbs`<FluidSelect
+  @options={{this.options}}
+  @select={{this.select}}
+  @selected={{this.selected}}
+  @multiple={{true}}
+  as |fs|
+>
+  <fs.trigger @label='Fruit' />
+  <fs.popup>
+    <fs.list @multiple={{true}} as |options selectCheckbox|>
+      {{#each options as |option|}}
+        <FluidSelect::Option
+          @dark={{@dark}}
+          @option={{option}}
+          @selected={{this.selected}}
+          @multiple={{true}}
+          @select={{action selectCheckbox}}
+          as |fo|
+        >
+          <fo.checkbox>{{option}}</fo.checkbox>
+        </FluidSelect::Option>
+      {{/each}}
+    </fs.list>
+  </fs.popup>
+</FluidSelect>`);
+
+      assert.ok(component.trigger.isVisible, 'the trigger renders');
+      assert.equal(component.trigger.text, 'Fruit', 'the trigger has the passed label');
+      assert.ok(component.popup.isHidden, 'the popup is hidden');
+
+      await component.open();
+
+      assert.equal(
+        component.popup.list.options.length,
+        this.get('options.length'),
+        'the correct number of options render'
+      );
+
+      const firstOption = component.popup.list.options[0];
+      await firstOption.click();
+
+      const fourthOption = component.popup.list.options[3];
+      await fourthOption.click();
+
+      await this.pauseTest();
+      assert.equal(component.popup.list.selectedOptions.length, 2);
+    });
+
     test('checkboxes', async function (assert) {
       await render(hbs`
         <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />
       `);
+      await this.pauseTest();
       await component.open();
 
       await percySnapshot(assert);

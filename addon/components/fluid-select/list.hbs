@@ -1,6 +1,6 @@
 <div class="fluid-select__list py-2" ...attributes>
   {{#if (has-block)}}
-    {{yield}}
+    {{yield @options @select}}
   {{else if (or @loading (is-pending @options))}}
     <label class="fluid-select__list-item fluid-select__list-item--loading inline-flex">
       {{svg-jar "loading" class="mr-2 w-4 fill-neutral-500"}}

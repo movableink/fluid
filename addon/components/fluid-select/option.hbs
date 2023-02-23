@@ -1,5 +1,19 @@
-{{#if (and (has-block) @mutliple)}}
-  {{yield (component "fluid-checkbox")}}
+{{#if (and (has-block) @multiple)}}
+  {{yield
+    (hash
+      checkbox=(component
+        "fluid-checkbox"
+        class=(concat
+          "pl-4 pr-6 fluid-select__option"
+          (if @dark " fluid-select__option--dark")
+          (if this.isSelected this.selectedClass)
+        )
+        label=this.optionLabel
+        checked=this.isSelected
+        onchange=(action @select @option)
+      )
+    )
+  }}
 {{else if (has-block)}}
   <div
     role="button"
