@@ -224,30 +224,30 @@ module('Integration | Component | fluid-select', function (hooks) {
 
     test.only('block mode with custom options and checkbox labels', async function (assert) {
       await render(hbs`<FluidSelect
-  @options={{this.options}}
-  @select={{this.select}}
-  @selected={{this.selected}}
-  @multiple={{true}}
-  as |fs|
->
-  <fs.trigger @label='Fruit' />
-  <fs.popup>
-    <fs.list @multiple={{true}} as |options selectCheckbox|>
-      {{#each options as |option|}}
-        <FluidSelect::Option
-          @dark={{@dark}}
-          @option={{option}}
-          @selected={{this.selected}}
-          @multiple={{true}}
-          @select={{action selectCheckbox}}
-          as |fo|
-        >
-          <fo.checkbox>{{option}}</fo.checkbox>
-        </FluidSelect::Option>
-      {{/each}}
-    </fs.list>
-  </fs.popup>
-</FluidSelect>`);
+        @options={{this.options}}
+        @select={{this.select}}
+        @selected={{this.selected}}
+        @multiple={{true}}
+        as |fs|
+      >
+        <fs.trigger @label='Fruit' />
+        <fs.popup>
+          <fs.list @multiple={{true}} as |options selectCheckbox|>
+            {{#each options as |option|}}
+              <FluidSelect::Option
+                @dark={{@dark}}
+                @option={{option}}
+                @selected={{this.selected}}
+                @multiple={{true}}
+                @select={{action selectCheckbox}}
+                as |fo|
+              >
+                <fo.checkbox>{{option}}</fo.checkbox>
+              </FluidSelect::Option>
+            {{/each}}
+          </fs.list>
+        </fs.popup>
+      </FluidSelect>`);
 
       assert.ok(component.trigger.isVisible, 'the trigger renders');
       assert.equal(component.trigger.text, 'Fruit', 'the trigger has the passed label');
