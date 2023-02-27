@@ -2148,7 +2148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ember/test-helpers@npm:^2.1.4, @ember/test-helpers@npm:^2.3.0, @ember/test-helpers@npm:^2.7.0":
+"@ember/test-helpers@npm:^2.1.4, @ember/test-helpers@npm:^2.7.0":
   version: 2.7.0
   resolution: "@ember/test-helpers@npm:2.7.0"
   dependencies:
@@ -21667,7 +21667,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"qunit@npm:^2.16.0, qunit@npm:^2.19.3":
+"qunit@npm:^2.19.3":
   version: 2.19.3
   resolution: "qunit@npm:2.19.3"
   dependencies:
@@ -24939,19 +24939,6 @@ fsevents@^1.2.7:
     punycode: ^2.1.1
     universalify: ^0.1.2
   checksum: 0891b37eb7d17faa3479d47f0dce2e3007f2583094ad272f2670d120fbcc3df3b0b0a631ba96ecad49f9e2297d93ff8995ce0d3292d08dd7eabe162f5b224d69
-  languageName: node
-  linkType: hard
-
-"tracked-maps-and-sets@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "tracked-maps-and-sets@npm:3.0.1"
-  dependencies:
-    "@ember/test-helpers": ^2.3.0
-    "@glimmer/tracking": ^1.0.0
-    ember-cli-babel: ^7.26.5
-    ember-tracked-storage-polyfill: 1.0.0
-    qunit: ^2.16.0
-  checksum: 7b2819c301f0772f4f011730f47ab7f31935376aa7ba0c3b7a2fa28a6b144fafbf4b117006a7fcbc222ef8dc1fb5242a823ad92f26e31cce121faf21dd4b3d41
   languageName: node
   linkType: hard
 
