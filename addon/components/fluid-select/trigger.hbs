@@ -1,11 +1,15 @@
 {{! This template is mostly the original trigger template, slightly modified for our use-case }}
 <button
   class="ember-basic-dropdown-trigger
-    {{if @renderInPlace " ember-basic-dropdown-trigger--in-place"}}{{if
-      @hPosition
-      (concat " ember-basic-dropdown-trigger--" @hPosition)
-    }}{{if @vPosition (concat " ember-basic-dropdown-trigger--" @vPosition)}}
+    {{if @renderInPlace " ember-basic-dropdown-trigger--in-place"}}
+    {{if @hPosition (concat " ember-basic-dropdown-trigger--" @hPosition)}}
+    {{if @vPosition (concat " ember-basic-dropdown-trigger--" @vPosition)}}
     {{@defaultClass}}"
+  {{basic-dropdown-trigger
+    dropdown=@dropdown
+    eventType=@eventType
+    stopPropagation=@stopPropagation
+  }}
   role="button"
   type="button"
   tabindex={{unless @dropdown.disabled "0"}}
@@ -16,12 +20,19 @@
   aria-disabled={{if @dropdown.disabled "true"}}
   disabled={{@disabled}}
   ...attributes
-  {{will-destroy this.removeGlobalHandlers}}
-  {{on "mousedown" this.handleMouseDown}}
-  {{on "click" this.handleClick}}
-  {{on "keydown" this.handleKeyDown}}
-  {{on "touchstart" this.handleTouchStart}}
-  {{on "touchend" this.handleTouchEnd}}
+  {{on "mousedown" (fn this.disableDocumentTextSelect true)}}
+  {{on "mouseup" (fn this.disableDocumentTextSelect false)}}
+  {{! V1 compatibility - See #498 }}
+  {{on "keydown" (fn (or @onKeyDown this.noop) @dropdown)}}
+  {{on "mousedown" (fn (or @onMouseDown this.noop) @dropdown)}}
+  {{on "touchend" (fn (or @onTouchEnd this.noop) @dropdown)}}
+  {{on "click" (fn (or @onClick this.noop) @dropdown)}}
+  {{on "mouseenter" (fn (or @onMouseEnter this.noop) @dropdown)}}
+  {{on "mouseleave" (fn (or @onMouseLeave this.noop) @dropdown)}}
+  {{on "focus" (fn (or @onFocus this.noop) @dropdown)}}
+  {{on "blur" (fn (or @onBlur this.noop) @dropdown)}}
+  {{on "focusin" (fn (or @onFocusIn this.noop) @dropdown)}}
+  {{on "focusout" (fn (or @onFocusOut this.noop) @dropdown)}}
 >
   {{#if (has-block)}}
     {{yield}}
