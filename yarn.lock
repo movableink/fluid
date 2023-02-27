@@ -1640,6 +1640,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/types@npm:^7.12.13":
+  version: 7.21.2
+  resolution: "@babel/types@npm:7.21.2"
+  dependencies:
+    "@babel/helper-string-parser": ^7.19.4
+    "@babel/helper-validator-identifier": ^7.19.1
+    to-fast-properties: ^2.0.0
+  checksum: a45a52acde139e575502c6de42c994bdbe262bafcb92ae9381fb54cdf1a3672149086843fda655c7683ce9806e998fd002bbe878fa44984498d0fdc7935ce7ff
+  languageName: node
+  linkType: hard
+
 "@base2/pretty-print-object@npm:1.0.1":
   version: 1.0.1
   resolution: "@base2/pretty-print-object@npm:1.0.1"
@@ -2500,7 +2511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/tracking@npm:^1.0.0, @glimmer/tracking@npm:^1.0.2, @glimmer/tracking@npm:^1.0.4, @glimmer/tracking@npm:^1.1.2":
+"@glimmer/tracking@npm:^1.0.0, @glimmer/tracking@npm:^1.0.4, @glimmer/tracking@npm:^1.1.2":
   version: 1.1.2
   resolution: "@glimmer/tracking@npm:1.1.2"
   dependencies:
@@ -2864,7 +2875,7 @@ __metadata:
     ember-cli-terser: 4.0.1
     ember-click-outside-modifier: ^4.0.0
     ember-composable-helpers: ^5.0.0
-    ember-concurrency: ^2.1.2
+    ember-concurrency: ^2.3.7
     ember-cookies: ^0.5.2
     ember-copy: ^2.0.1
     ember-data: ~3.27.1
@@ -11471,7 +11482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-htmlbars@npm:^5.3.1, ember-cli-htmlbars@npm:^5.3.2, ember-cli-htmlbars@npm:^5.6.3, ember-cli-htmlbars@npm:^5.7.1":
+"ember-cli-htmlbars@npm:^5.3.1, ember-cli-htmlbars@npm:^5.3.2, ember-cli-htmlbars@npm:^5.7.1":
   version: 5.7.1
   resolution: "ember-cli-htmlbars@npm:5.7.1"
   dependencies:
@@ -11977,16 +11988,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-concurrency@npm:^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0 || ^2.0.0-rc.1, ember-concurrency@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "ember-concurrency@npm:2.1.2"
+"ember-concurrency@npm:^2.3.7":
+  version: 2.3.7
+  resolution: "ember-concurrency@npm:2.3.7"
   dependencies:
-    "@glimmer/tracking": ^1.0.2
-    ember-cli-babel: ^7.22.1
-    ember-cli-htmlbars: ^5.6.3
+    "@babel/helper-plugin-utils": ^7.12.13
+    "@babel/types": ^7.12.13
+    "@glimmer/tracking": ^1.0.4
+    ember-cli-babel: ^7.26.11
+    ember-cli-babel-plugin-helpers: ^1.1.1
+    ember-cli-htmlbars: ^5.7.1
     ember-compatibility-helpers: ^1.2.0
     ember-destroyable-polyfill: ^2.0.2
-  checksum: ebe59a162930918745157df1d3f103e29f4abe5ec156f1e87a99a04ab8009c071068e23ba187f71b0b01ff91b35f039a52e24daa74cdabd67229175f8920e6d1
+  checksum: 29fabb073e1f651200f3d6f29266f7316fba41ccae00267e60249ad0e0f7b6abd04e733cc698eb849761bfefd4d43cc42b8dbfaba84cf6ac5f242d9126d90d86
   languageName: node
   linkType: hard
 
