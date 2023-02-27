@@ -2920,7 +2920,7 @@ __metadata:
     tailwindcss: ^2.2.19
     testdouble: ^3.16.8
     testdouble-qunit: ^3.0.3
-    tracked-maps-and-sets: ^3.0.1
+    tracked-maps-and-sets: ^3.0.2
     webpack: ^5.75.0
   languageName: unknown
   linkType: soft
@@ -11748,6 +11748,24 @@ __metadata:
     stagehand: ^1.0.0
     walk-sync: ^2.2.0
   checksum: 2559bb68d35cb466536c0ef8bf135e5729a90a14ef6e83256eef39f63367f809b85ec872fa4c0ef00c6673f0661777ecb9902f96c2903853d85bbe9e8fa13437
+  languageName: node
+  linkType: hard
+
+"ember-cli-typescript@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "ember-cli-typescript@npm:4.2.1"
+  dependencies:
+    ansi-to-html: ^0.6.15
+    broccoli-stew: ^3.0.0
+    debug: ^4.0.0
+    execa: ^4.0.0
+    fs-extra: ^9.0.1
+    resolve: ^1.5.0
+    rsvp: ^4.8.1
+    semver: ^7.3.2
+    stagehand: ^1.0.0
+    walk-sync: ^2.2.0
+  checksum: bd31698536c0df7fc03b47aa1c7d3f9c6f7e34fae1500c88bdbbc4c0b98b2a7e69230dd71a01d7cd7f563484cf895333f559af68f91527d95e198924e3cb2c24
   languageName: node
   linkType: hard
 
@@ -24934,6 +24952,18 @@ fsevents@^1.2.7:
     ember-tracked-storage-polyfill: 1.0.0
     qunit: ^2.16.0
   checksum: 7b2819c301f0772f4f011730f47ab7f31935376aa7ba0c3b7a2fa28a6b144fafbf4b117006a7fcbc222ef8dc1fb5242a823ad92f26e31cce121faf21dd4b3d41
+  languageName: node
+  linkType: hard
+
+"tracked-maps-and-sets@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "tracked-maps-and-sets@npm:3.0.2"
+  dependencies:
+    "@glimmer/tracking": ^1.0.0
+    ember-cli-babel: ^7.26.6
+    ember-cli-typescript: ^4.2.1
+    ember-tracked-storage-polyfill: 1.0.0
+  checksum: 3bcd53d27c751d4d7355457d7639fb6c9cf93f8d3b9a955b04805809b628b2fdb62b1899313c2bc7a92b64817a26d2fc648452d5f662de967767351439b70f11
   languageName: node
   linkType: hard
 

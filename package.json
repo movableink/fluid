@@ -150,7 +150,7 @@
     "moment": "^2.29.3",
     "prop-types": "^15.7.2",
     "rsvp": "^4.8.5",
-    "tracked-maps-and-sets": "^3.0.1"
+    "tracked-maps-and-sets": "^3.0.2"
   },
   "engines": {
     "node": ">= 14"
