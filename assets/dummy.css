@@ -2512,7 +2512,9 @@ input[type=number] {
   position: relative;
 }
 
-.ember-basic-dropdown, .ember-basic-dropdown-content, .ember-basic-dropdown-content * {
+.ember-basic-dropdown,
+.ember-basic-dropdown-content,
+.ember-basic-dropdown-content * {
   box-sizing: border-box;
 }
 
@@ -2520,7 +2522,7 @@ input[type=number] {
   position: absolute;
   width: auto;
   z-index: 1000;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .ember-basic-dropdown-content--left {

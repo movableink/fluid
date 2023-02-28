@@ -91,20 +91,6 @@
   });
   0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/components/basic-dropdown-content"eaimeta@70e063a35619d71f
 });
-;define("dummy/components/basic-dropdown-optional-tag", ["exports", "ember-basic-dropdown/components/basic-dropdown-optional-tag"], function (_exports, _basicDropdownOptionalTag) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(_exports, "default", {
-    enumerable: true,
-    get: function () {
-      return _basicDropdownOptionalTag.default;
-    }
-  });
-  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/components/basic-dropdown-optional-tag"eaimeta@70e063a35619d71f
-});
 ;define("dummy/components/basic-dropdown-trigger", ["exports", "ember-basic-dropdown/components/basic-dropdown-trigger"], function (_exports, _basicDropdownTrigger) {
   "use strict";
 
@@ -3144,7 +3130,21 @@
   });
   0; //eaimeta@70e063a35619d71f0,"ember-autoresize-modifier/modifiers/autoresize"eaimeta@70e063a35619d71f
 });
-;define("dummy/modifiers/click-outside", ["exports", "ember-click-outside-modifier/modifiers/click-outside"], function (_exports, _clickOutside) {
+;define("dummy/modifiers/basic-dropdown-trigger", ["exports", "ember-basic-dropdown/modifiers/basic-dropdown-trigger"], function (_exports, _basicDropdownTrigger) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _basicDropdownTrigger.default;
+    }
+  });
+  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/modifiers/basic-dropdown-trigger"eaimeta@70e063a35619d71f
+});
+;define("dummy/modifiers/click-outside", ["exports", "ember-click-outside-modifier/modifiers/click-outside.js"], function (_exports, _clickOutside) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -3156,7 +3156,7 @@
       return _clickOutside.default;
     }
   });
-  0; //eaimeta@70e063a35619d71f0,"ember-click-outside-modifier/modifiers/click-outside"eaimeta@70e063a35619d71f
+  0; //eaimeta@70e063a35619d71f0,"ember-click-outside-modifier/modifiers/click-outside.js"eaimeta@70e063a35619d71f
 });
 ;define("dummy/modifiers/did-insert", ["exports", "@ember/render-modifiers/modifiers/did-insert"], function (_exports, _didInsert) {
   "use strict";
@@ -3554,62 +3554,6 @@
     "isStrictMode": false
   });
   _exports.default = _default;
-});
-;define("dummy/templates/components/basic-dropdown-content", ["exports", "ember-basic-dropdown/templates/components/basic-dropdown-content"], function (_exports, _basicDropdownContent) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(_exports, "default", {
-    enumerable: true,
-    get: function () {
-      return _basicDropdownContent.default;
-    }
-  });
-  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/templates/components/basic-dropdown-content"eaimeta@70e063a35619d71f
-});
-;define("dummy/templates/components/basic-dropdown-optional-tag", ["exports", "ember-basic-dropdown/templates/components/basic-dropdown-optional-tag"], function (_exports, _basicDropdownOptionalTag) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(_exports, "default", {
-    enumerable: true,
-    get: function () {
-      return _basicDropdownOptionalTag.default;
-    }
-  });
-  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/templates/components/basic-dropdown-optional-tag"eaimeta@70e063a35619d71f
-});
-;define("dummy/templates/components/basic-dropdown-trigger", ["exports", "ember-basic-dropdown/templates/components/basic-dropdown-trigger"], function (_exports, _basicDropdownTrigger) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(_exports, "default", {
-    enumerable: true,
-    get: function () {
-      return _basicDropdownTrigger.default;
-    }
-  });
-  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/templates/components/basic-dropdown-trigger"eaimeta@70e063a35619d71f
-});
-;define("dummy/templates/components/basic-dropdown", ["exports", "ember-basic-dropdown/templates/components/basic-dropdown"], function (_exports, _basicDropdown) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(_exports, "default", {
-    enumerable: true,
-    get: function () {
-      return _basicDropdown.default;
-    }
-  });
-  0; //eaimeta@70e063a35619d71f0,"ember-basic-dropdown/templates/components/basic-dropdown"eaimeta@70e063a35619d71f
 });
 ;define("dummy/test/is-active/model/route", ["exports", "@ember/routing/route"], function (_exports, _route) {
   "use strict";
