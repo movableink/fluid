@@ -3,8 +3,8 @@
     (hash
       checkbox=(component
         "fluid-checkbox"
-        class=(concat
-          "pl-4 pr-6 fluid-select__option fluid-checkbox"
+        defaultClass=(concat
+          "pl-4 pr-6 fluid-select__option"
           (if @dark " fluid-select__option--dark")
           (if this.isSelected this.selectedClass)
         )

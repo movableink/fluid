@@ -242,7 +242,7 @@ module('Integration | Component | fluid-select', function (hooks) {
                 @select={{action selectCheckbox}}
                 as |fo|
               >
-                <fo.checkbox>{{option}}</fo.checkbox>
+                <fo.checkbox @label={{option}} />
               </FluidSelect::Option>
             {{/each}}
           </fs.list>
