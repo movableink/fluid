@@ -3096,7 +3096,7 @@ __metadata:
     ember-cli-inject-live-reload: ^2.1.0
     ember-cli-moment-shim: ^3.8.0
     ember-cli-page-object: ^1.17.7
-    ember-cli-postcss: ^7.0.2
+    ember-cli-postcss: ^8.2.0
     ember-cli-terser: 4.0.1
     ember-click-outside-modifier: ^2.0.0
     ember-composable-helpers: ^4.5.0
@@ -7943,7 +7943,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-merge-trees@npm:^4.0.0, broccoli-merge-trees@npm:^4.2.0":
+"broccoli-merge-trees@npm:^4.2.0":
   version: 4.2.0
   resolution: "broccoli-merge-trees@npm:4.2.0"
   dependencies:
@@ -8122,9 +8122,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-postcss-single@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "broccoli-postcss-single@npm:5.0.0"
+"broccoli-postcss-single@npm:^5.0.1":
+  version: 5.0.2
+  resolution: "broccoli-postcss-single@npm:5.0.2"
   dependencies:
     broccoli-caching-writer: ^3.0.3
     include-path-searcher: ^0.1.0
@@ -8132,20 +8132,20 @@ __metadata:
     mkdirp: ^1.0.3
     object-assign: ^4.1.1
     postcss: ^8.1.4
-  checksum: 7dee68d094129da5270f65c1e54f01664a2c9064b8e8c4bdc441294f7d9869e5e11aadf371ed368e183fd8ac00fe0ed7b4e970735219e381de8f05d0aba81b35
+  checksum: 063d489064e9fbc09db23e224eff0c7b4e4114a0dff7d930e6c3dd274109314db15d057ee26e3a88acab6d2c5082f3e7c3d43c8f1f7188585aeddb9509253f53
   languageName: node
   linkType: hard
 
-"broccoli-postcss@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "broccoli-postcss@npm:6.0.0"
+"broccoli-postcss@npm:^6.0.1":
+  version: 6.1.0
+  resolution: "broccoli-postcss@npm:6.1.0"
   dependencies:
     broccoli-funnel: ^3.0.0
     broccoli-persistent-filter: ^3.1.1
     minimist: ">=1.2.5"
     object-assign: ^4.1.1
     postcss: ^8.1.4
-  checksum: 59a7b2c2bb425a9da860db0307ee46c00afc3cada69580b7b52ef46ee0ed5fcb3935ab1fb70b4601a5b5377e761c74baeb5569d4742e8b3d68c3a8634e008a0f
+  checksum: 1ec1bc75f8750967af2ef94d2b443ae420e1a6db3f177a8bd2e721289b683bcf83a0e9bd60dab0bda85370311e173d94d3502e895b63bf4c992f18eefbe42335
   languageName: node
   linkType: hard
 
@@ -11346,16 +11346,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-postcss@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "ember-cli-postcss@npm:7.0.2"
+"ember-cli-postcss@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "ember-cli-postcss@npm:8.2.0"
   dependencies:
-    broccoli-merge-trees: ^4.0.0
-    broccoli-postcss: ^6.0.0
-    broccoli-postcss-single: ^5.0.0
-    ember-cli-babel: ^7.1.0
+    broccoli-merge-trees: ^4.2.0
+    broccoli-postcss: ^6.0.1
+    broccoli-postcss-single: ^5.0.1
+    ember-cli-babel: ^7.26.11
     merge: ^2.1.1
-  checksum: 616025beb3d3d26a0bd13b96bdcea6c93b1a9c6db6e38496ce662bf655b825804cf4fc2582d686a98437c87249488c6296354909b7ec7d0e589717a234a17948
+  checksum: aa301ef0f06e55bc7f5f7d126b616677c2cd0305fdf75094265137b42d791824105a8f71bc75f7e905234c2ae02c8883dbfd872318fca2a6e93ce59407ce5c9c
   languageName: node
   linkType: hard
 
