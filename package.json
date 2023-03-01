@@ -110,7 +110,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "@ember/render-modifiers": "^1.0.2",
+    "@ember/render-modifiers": "^2.0.5",
     "ember-arg-types": "^0.3.0",
     "ember-autoresize-modifier": "^0.3.0",
     "ember-basic-dropdown": "^3.0.19",
