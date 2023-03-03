@@ -23,7 +23,7 @@ module('Integration | Component | fluid-select', function (hooks) {
 
     await percySnapshot(assert, 'trigger');
 
-    await component.open();
+    await component.toggleOpen();
 
     await percySnapshot(assert, 'popup');
 
@@ -52,7 +52,7 @@ module('Integration | Component | fluid-select', function (hooks) {
     });
 
     await render(hbs`<FluidSelect @onOpen={{action testOnOpen}} />`);
-    await component.open();
+    await component.toggleOpen();
     assert.ok(component.popup.isVisible, 'the popup still opens');
   });
 
@@ -79,7 +79,7 @@ module('Integration | Component | fluid-select', function (hooks) {
     );
 
     await render(hbs`<FluidSelect @options={{promise}} />`);
-    await component.open();
+    await component.toggleOpen();
 
     assert.ok(
       component.popup.loading.isVisible,
@@ -107,7 +107,7 @@ module('Integration | Component | fluid-select', function (hooks) {
     await render(hbs`
       <FluidSelect @select={{select}} @options={{options}} @selected={{selected}} />
     `);
-    await component.open();
+    await component.toggleOpen();
 
     const firstOption = component.popup.list.options[0];
     this.set('select', (value) =>
@@ -117,7 +117,7 @@ module('Integration | Component | fluid-select', function (hooks) {
     await firstOption.click();
 
     assert.ok(component.popup.isHidden, 'the popup closes after selecting an option');
-    await component.open();
+    await component.toggleOpen();
 
     const fourthOption = component.popup.list.options[3];
     this.set('select', (value) =>
@@ -135,7 +135,7 @@ module('Integration | Component | fluid-select', function (hooks) {
     await render(hbs`
       <FluidSelect @options={{options}} @select={{select}} @labelPath={{labelPath}} />
     `);
-    await component.open();
+    await component.toggleOpen();
 
     const firstOption = component.popup.list.options[0];
     assert.equal(firstOption.text, 'one');
@@ -166,7 +166,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       await render(hbs`
         <FluidSelect @options={{groups}} @select={{select}} @selected={{selected}} />
       `);
-      await component.open();
+      await component.toggleOpen();
 
       await percySnapshot(assert);
 
@@ -201,7 +201,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       await render(hbs`
         <FluidSelect @options={{groups}} @select={{select}} @selected={{selected}} />
       `);
-      await component.open();
+      await component.toggleOpen();
 
       assert.equal(
         component.popup.list.options.length,
@@ -253,7 +253,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       assert.equal(component.trigger.text, 'Fruit', 'the trigger has the passed label');
       assert.ok(component.popup.isHidden, 'the popup is hidden');
 
-      await component.open();
+      await component.toggleOpen();
 
       assert.equal(
         component.popup.list.options.length,
@@ -274,7 +274,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       await render(hbs`
         <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />
       `);
-      await component.open();
+      await component.toggleOpen();
 
       await percySnapshot(assert);
 
@@ -290,7 +290,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       await render(hbs`
         <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />
       `);
-      await component.open();
+      await component.toggleOpen();
 
       assert.equal(component.popup.list.selectedOptions.length, 1);
 
@@ -322,7 +322,7 @@ module('Integration | Component | fluid-select', function (hooks) {
         await render(hbs`
           <FluidSelect @options={{options}} @search={{search}} @select={{action (mut selected)}} />
         `);
-        await component.open();
+        await component.toggleOpen();
 
         await percySnapshot(assert, 'no search term & results');
 
@@ -385,7 +385,7 @@ module('Integration | Component | fluid-select', function (hooks) {
         await render(hbs`
           <FluidSelect @options={{options}} @search={{asyncSearch}} @select={{action (mut selected)}} />
         `);
-        await component.open();
+        await component.toggleOpen();
         await component.popup.search.fillIn('anything');
 
         assert.ok(
@@ -441,7 +441,7 @@ module('Integration | Component | fluid-select', function (hooks) {
       assert.equal(component.trigger.text, 'Click Me!', 'the trigger has the passed label');
       assert.ok(component.popup.isHidden, 'the popup is hidden');
 
-      await component.open();
+      await component.toggleOpen();
 
       assert.ok(component.popup.isVisible, 'the popup shows when the custom trigger is clicked');
       assert.equal(
