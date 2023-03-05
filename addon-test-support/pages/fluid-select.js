@@ -14,6 +14,11 @@ import { assert } from '@ember/debug';
 export const FluidSelect = {
   scope: '.fluid-select',
 
+  async open() {
+    await this.trigger.toggle();
+    return settled();
+  },
+
   async toggleOpen() {
     await this.trigger.toggle();
     return settled();
