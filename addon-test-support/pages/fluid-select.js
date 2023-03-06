@@ -14,12 +14,9 @@ import { assert } from '@ember/debug';
 export const FluidSelect = {
   scope: '.fluid-select',
 
+  // TODO: we should rename this because this function both opens and closes multi-select dropdowns
+  // we should just rename it something like 'toggle'
   async open() {
-    await this.trigger.toggle();
-    return settled();
-  },
-
-  async toggleOpen() {
     await this.trigger.toggle();
     return settled();
   },
