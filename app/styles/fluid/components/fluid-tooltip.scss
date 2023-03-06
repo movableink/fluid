@@ -1,6 +1,8 @@
 .fluid-tooltip {
+  // WARN:
+  // This is the base class and the lowest in the tailwind docs for cascading styles [0, 10, 20, 40, 50, auto] So if `z-auto` is used then that cannot be overwritten by any other `z-index` tailwind class.
+  @apply z-0;
   max-width: 350px;
-  z-index: 1;
 }
 
 .fluid-tooltip-arrow::before {
