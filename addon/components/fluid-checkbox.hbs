@@ -2,7 +2,7 @@
   class="fluid-checkbox
     {{if @checked "fluid-checkbox--checked"}}
     {{if @disabled "fluid-checkbox--disabled"}}
-    "
+    {{@defaultClass}}"
   @isOn={{@checked}}
   @onUpdate={{@onchange}}
   ...attributes
