@@ -1,3 +1,19 @@
+## [1.6.0](https://github.com/movableink/fluid/compare/1.5.3...1.6.0) (2023-03-06)
+
+### Features
+
+- allow block mode for multiselect ([5c44c7a](https://github.com/movableink/fluid/commit/5c44c7a538cb40d22c8becf873fb475078885796))
+- allow onClose for fluid-select modal ([dc12a89](https://github.com/movableink/fluid/commit/dc12a89e286d5161a03faac99059cdb47a045ca3))
+- began allowing multiple with block select ([f665274](https://github.com/movableink/fluid/commit/f6652741212f32da636542f2e336cd7e7485703c))
+
+### Bug Fixes
+
+- added back fluid select open function ([ddd06ae](https://github.com/movableink/fluid/commit/ddd06ae2d690fb57a0498965d97c6c08449af85d))
+- added fluid-checkbox css class for block mode ([2b5405f](https://github.com/movableink/fluid/commit/2b5405f959b1b3783842582ac6b2706d3dd0862b))
+- removed function and added todo comment ([f64806f](https://github.com/movableink/fluid/commit/f64806fe7bbb54753e142dd2819d69d094a7df1d))
+- updated code to allow templateOnly select ([a221a7d](https://github.com/movableink/fluid/commit/a221a7d74bbc0547aa44d1e61babcb175e79dfdf))
+- updated fluid-select tests ([86bb6fa](https://github.com/movableink/fluid/commit/86bb6fab405e3b9ff11243c14a4ced58c8c61fc0))
+
 ## [1.5.3](https://github.com/movableink/fluid/compare/1.5.2...1.5.3) (2023-03-06)
 
 ## [1.5.2](https://github.com/movableink/fluid/compare/1.5.1...1.5.2) (2023-03-06)
