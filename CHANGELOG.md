@@ -1,3 +1,5 @@
+## [1.6.1](https://github.com/movableink/fluid/compare/1.6.1-canary.0...1.6.1) (2023-03-09)
+
 ## [1.6.1-canary.0](https://github.com/movableink/fluid/compare/1.6.0...1.6.1-canary.0) (2023-03-09)
 
 ### Features
