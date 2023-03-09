@@ -1,3 +1,9 @@
+## [1.6.1-canary.0](https://github.com/movableink/fluid/compare/1.6.0...1.6.1-canary.0) (2023-03-09)
+
+### Features
+
+- equalityFn arg for FluidSelect ([f32b8e4](https://github.com/movableink/fluid/commit/f32b8e4f6de71a0e5dc5d923155867447a3a3943))
+
 ## [1.6.0](https://github.com/movableink/fluid/compare/1.5.3...1.6.0) (2023-03-06)
 
 ### Features
