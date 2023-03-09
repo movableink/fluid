@@ -2170,8 +2170,8 @@ input[type=number] {
 }
 
 .fluid-tooltip {
+  z-index: 0;
   max-width: 350px;
-  z-index: 1;
 }
 
 .fluid-tooltip-arrow::before {
