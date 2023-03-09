@@ -37,6 +37,8 @@ export default class FluidSelectOption extends Component {
     const option = get(this, 'option');
 
     if (multiple) {
+      const equalityFn = get(this, 'equalityFn');
+      if (equalityFn) return selected && equalityFn(selected, option);
       return selected && selected.includes(option);
     }
 
