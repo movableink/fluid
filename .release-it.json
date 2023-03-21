@@ -19,6 +19,14 @@
             "section": "Features"
           },
           {
+            "type": "security",
+            "section": "Security"
+          },
+          {
+            "type": "chore,refactor",
+            "section": "Enhancments"
+          },
+          {
             "type": "fix",
             "section": "Bug Fixes"
           },
