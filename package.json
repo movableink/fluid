@@ -94,7 +94,8 @@
   "resolutions": {
     "shell-quote": "^1.7.3",
     "testem": "^3.10.0",
-    "socket.io-parser": "^4.2.1"
+    "socket.io-parser": "^4.2.1",
+    "tinycolor2@1.6.0": "patch:tinycolor2@npm:1.6.0#.yarn/patches/tinycolor2-npm-1.6.0-8df41252c6"
   },
   "keywords": [
     "ember-addon"

@@ -1,0 +1,9 @@
+diff --git a/esm/package.json b/esm/package.json
+deleted file mode 100644
+index 3dbc1ca591c0557e35b6004aeba250e6a70b56e3..0000000000000000000000000000000000000000
+--- a/esm/package.json
++++ /dev/null
+@@ -1,3 +0,0 @@
+-{
+-  "type": "module"
+-}
