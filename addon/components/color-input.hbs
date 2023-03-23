@@ -1,0 +1,13 @@
+<div data-test-color-input-container ...attributes>
+  <input
+    data-test-color-input
+    type="color"
+    value={{this.value}}
+    class={{@pickerClass}}
+    {{on "input" (pick "target.value" this.setColor)}}
+  />
+
+  {{#if (lt this.alpha "1")}}
+    <input data-test-color-alpha type="range" min="0" max="1" step="0.1" value={{this.alpha}} />
+  {{/if}}
+</div>
