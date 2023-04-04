@@ -1,0 +1,25 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Using Hero Icons"/>
+
+# Introduction
+
+We use a combination of [ember-svg-jar](https://github.com/voltidev/ember-svg-jar) and [heroicons@2.17.0](https://heroicons.com) this allows ember-svg-jar to render the heroicons into fluid and fluid users.
+
+## How to Use
+
+```handlebars
+{{svg-jar "outline-cog-8-tooth" class="w-4 h-4  text-aqua-400"}}
+```
+
+`outline` is mapped to heroicons type. **NOTE: we don't use the mini icons** as we utilitze tailwind to control size of the icons using `w-4` and `h-4` to get a 16px by 16px icon.
+
+`text-aqua-400` is mapped to the color of the icon. `text-_color_-_hue_` is optional otherwise default is black
+
+
+## Adding new icons
+
+If and or When `heroicons` adds a new icon. Copy the raw svg with its type into the `public/assets/heroicons` directory prepending the type to the name. Resulting in something like this:
+`outline-cog-8-tooth` and `solid-cog-8-tooth`. **Alway us the `24` directory for copying never the mini`
+
+There is also a shell script you can use to do the same thing from a directory [copy-svgs.sh](https://gist.github.com/nicksteffens/b487c54d66bede9f01a743597d9beff1)

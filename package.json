@@ -1,6 +1,6 @@
 {
   "name": "@movable/fluid",
-  "version": "1.6.1",
+  "version": "1.7.0-beta.0",
   "description": "Fluid is Movable Ink's design framework for its apps.",
   "homepage": "https://movableink.github.io/fluid/docs",
   "scripts": {
@@ -142,6 +142,7 @@
     "ember-test-selectors": "^6.0.0",
     "ember-truth-helpers": "^3.0.0",
     "eslint-plugin-node": "^11.1.0",
+    "heroicons": "^2.0.17",
     "lodash": "^4.17.21",
     "moment": "^2.29.3",
     "prop-types": "^15.7.2",

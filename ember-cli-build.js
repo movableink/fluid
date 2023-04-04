@@ -33,7 +33,7 @@ module.exports = function (defaults) {
 
     svgJar: {
       strategy: 'inline',
-      sourceDirs: ['public/assets/images/icons'],
+      sourceDirs: ['public/assets/images/icons', 'public/assets/heroicons'],
       viewer: {
         enabled: true,
       },

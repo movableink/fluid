@@ -3136,6 +3136,7 @@ __metadata:
     eslint: ^7.32.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-storybook: ^0.5.7
+    heroicons: ^2.0.17
     husky: ^7.0.4
     lint-staged: ^11.2.6
     loader.js: ^4.7.0
@@ -10713,9 +10714,9 @@ __metadata:
   linkType: hard
 
 "domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "domelementtype@npm:2.2.0"
-  checksum: 24cb386198640cd58aa36f8c987f2ea61859929106d06ffcc8f547e70cb2ed82a6dc56dcb8252b21fba1f1ea07df6e4356d60bfe57f77114ca1aed6828362629
+  version: 2.3.0
+  resolution: "domelementtype@npm:2.3.0"
+  checksum: ee837a318ff702622f383409d1f5b25dd1024b692ef64d3096ff702e26339f8e345820f29a68bcdcea8cfee3531776b3382651232fbeae95612d6f0a75efb4f6
   languageName: node
   linkType: hard
 
@@ -15159,6 +15160,13 @@ fsevents@^1.2.7:
   dependencies:
     rsvp: ~3.2.1
   checksum: 55b85e33d9e378c1f6d32b15a37472da01e53f9303e42afbab76d252b14b23c5ffe96ab8c33887899240eb23c8f0efeb5ea5c7fac05cd70ede05c0550a7d4add
+  languageName: node
+  linkType: hard
+
+"heroicons@npm:^2.0.17":
+  version: 2.0.17
+  resolution: "heroicons@npm:2.0.17"
+  checksum: 6074759d354f20b2030149fe348bc9d949eb889815753156819b73515362c48c8ce8dd6cf33cdb4656801268e7efd33107de622f57a768211e65ba72a04b97fe
   languageName: node
   linkType: hard
 
