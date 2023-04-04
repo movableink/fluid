@@ -1,3 +1,9 @@
+## [1.7.0-beta.0](https://github.com/movableink/fluid/compare/1.6.1...1.7.0-beta.0) (2023-04-04)
+
+### Features
+
+- added heroicons with test ([d619c1a](https://github.com/movableink/fluid/commit/d619c1ab37a51f6778aa643d266281f15f701a9c))
+
 ## [1.6.1](https://github.com/movableink/fluid/compare/1.6.1-canary.0...1.6.1) (2023-03-09)
 
 ## [1.6.1-canary.0](https://github.com/movableink/fluid/compare/1.6.0...1.6.1-canary.0) (2023-03-09)
