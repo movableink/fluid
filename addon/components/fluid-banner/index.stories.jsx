@@ -1,22 +1,18 @@
 import { hbs } from 'ember-cli-htmlbars';
+import { action } from '@ember/object';
 import FluidBannerDocs from './docs.mdx';
 
 export default {
   title: 'Components/Fluid Banner',
   argTypes: {
     header: {
-      name: 'Fluid Banner Header',
+      name: '@header',
       control: { type: 'text' },
-      defaultValue: 'Fluid Banner Header',
+      defaultValue: 'Default Header',
     },
-    body: {
-      name: 'Fluid Banner Body',
+    icon: {
+      name: '@icon',
       control: { type: 'text' },
-      defaultValue: 'Fluid Banner Body',
-    },
-    hasIcon: {
-      name: 'Fluid Banner Icon',
-      control: { type: 'boolean' },
       defaultValue: false,
     },
   },
@@ -25,32 +21,81 @@ export default {
       page: FluidBannerDocs,
     },
   },
+  actions: {
+    handles: ['click', 'click .fluid-banner--close'],
+  },
 };
 
 const Template = (args) => ({
   template: hbs`
-  <div class='fluid-banner'>
-    {{#if hasIcon}}
-      <div class='fluid-banner__icon'>
-        {{svg-jar 'fallback-icon'}}
-      </div>
-    {{/if}}
-    <div class='fluid-banner__content'>
-      <header class='fluid-banner__header'>
-        <h1>{{header}}</h1>
-      </header>
-      <section class='fluid-banner__body'>
-        <p>{{body}}</p>
-      </section>
-    </div>
-  </div>
+    <FluidBanner @header={{header}} @icon={{icon}} @type={{type}} @onClose={{onClose}}>
+      <p>Body Context</p>
+    </FluidBanner>
   `,
-  context: { ...args },
+  context: {
+    ...args,
+    onClose: args.onClose ? action(function() {
+      console.log('Banner Closed');
+    }) : false,
+   },
 });
 
+export const Destructive = Template.bind({});
+Destructive.args = {
+  header: 'Destructive Header',
+  type: 'destructive',
+  icon: 'fluid-banner-destructive',
+  onClose: true,
+}
+export const Informative = Template.bind({});
+Informative.args = {
+  header: 'Informative Header',
+  type: 'info',
+  icon: 'fluid-banner-info',
+  onClose: true,
+}
+export const Confirmation = Template.bind({});
+Confirmation.args = {
+  header: 'Confirmation Header',
+  type: 'confirm',
+  icon: 'fluid-banner-confirm',
+  onClose: true,
+}
+export const Alert = Template.bind({});
+Alert.args = {
+  header: 'Alert Header',
+  type: 'alert',
+  icon: 'fluid-banner-alert',
+  onClose: true,
+}
 export const Default = Template.bind({});
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  ...Default.args,
-  hasIcon: true,
-};
+Default.args = {
+  header: 'Default Header',
+  type: false,
+  icon: 'fluid-banner-archive',
+  onClose: true,
+}
+
+export const WithoutIcon = Template.bind({});
+WithoutIcon.args = {
+  header: 'Default Header',
+  type: false,
+  icon: false,
+  onClose: true,
+}
+
+export const WithoutClose = Template.bind({});
+WithoutClose.args = {
+  header: 'Default Header',
+  type: false,
+  icon: 'fluid-banner-archive',
+  onClose: false,
+}
+
+export const TextOnly = Template.bind({});
+TextOnly.args = {
+  header: 'Default Header',
+  type: false,
+  icon: false,
+  onClose: false,
+}

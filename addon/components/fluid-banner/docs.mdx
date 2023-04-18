@@ -2,51 +2,155 @@ import { Story } from "@storybook/addon-docs";
 
 # Fluid Banner
 
-This is `css` only component. It is used to callout some description, warning, or error to the user.
+This Ember component is a shortcut for these styles inherited from the [@movable/tailwind-config - banner component](https://movableink.github.io/tailwind-config/?path=/story/components-banners--all-types)
 
 **Sections**
+- [Destructive](#destructive)
+- [Informative](#informative)
+- [Confirmation](#confirmation)
+- [Alert](#alert)
 - [Default](#default)
-- [With Icon](#with-icon)
+- [Icon](#icon)
+- [Closing](#closing)
+- [Text Only](#text-only)
+
+## Destructive
+
+<Story id="components-fluid-banner--destructive" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Destructive Banner"
+  @type="destructive"
+  @icon="fluid-banner-destructive"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+
+## Informative
+
+<Story id="components-fluid-banner--informative" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Informative Banner"
+  @type="info"
+  @icon="fluid-banner-info"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+
+## Confirmation
+
+<Story id="components-fluid-banner--confirmation" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Confirmatin Banner"
+  @type="confirm"
+  @icon="fluid-banner-confirm"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+
+## Alert
+
+<Story id="components-fluid-banner--alert" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Alert Banner"
+  @type="alert"
+  @icon="fluid-banner-alert"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
 
 ## Default
-
-Default color is orange within the [Color Palette](https://movableink.github.io/tailwind-config/?path=/story/guides-color--palette)
-
 
 <Story id="components-fluid-banner--default" name="Fluid Banner" height="150px"/>
 
 
 ```hbs
-<div class='fluid-banner'>
-  <div class='fluid-banner__content'>
-    <header class='fluid-banner__header'>
-      <h1>Fluid banner Header</h1>
-    </header>
-    <section class='fluid-banner__body'>
-      <p>Fluid banner body</p>
-    </section>
-  </div>
-</div>
+<FluidBanner
+  @header="Default Banner"
+  @icon="fluid-banner-archive"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
 ```
 
-## With Icon
+## Icon
 
+When passing the icon argument to the component use the full filename so `svg-jar` can render the icon property
 
-<Story id="components-fluid-banner--with-icon" name="Fluid Badge w/icon" height="150px"/>
+<Story id="components-fluid-banner--without-close" name="Fluid Banner" height="150px"/>
 
 
 ```hbs
-<div class='fluid-banner'>
-  <div class='fluid-banner__icon'>
-    {{svg-jar 'fallback-icon'}}
-  </div>
-  <div class='fluid-banner__content'>
-    <header class='fluid-banner__header'>
-      <h1>Fluid banner Header</h1>
-    </header>
-    <section class='fluid-banner__body'>
-      <p>Fluid banner body</p>
-    </section>
-  </div>
-</div>
+<FluidBanner
+  @header="Default Banner"
+  @icon="fluid-banner-archive"
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+
+## Closing
+
+The `close` icon will automatically appear when passing an `onClose` argument to the component.
+
+<Story id="components-fluid-banner--without-icon" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Default Banner"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+## Text Only
+
+If you don't define `@type` or `@onClose` the component with render as text only.
+
+<Story id="components-fluid-banner--text-only" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Default Banner"
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
 ```
