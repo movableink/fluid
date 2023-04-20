@@ -1,3 +1,14 @@
+## [1.7.0](https://github.com/movableink/fluid/compare/1.6.1...1.7.0) (2023-04-20)
+
+### Features
+
+- **component:** new fluid banner component ([2a07c9f](https://github.com/movableink/fluid/commit/2a07c9fd1a7e9935152b92437f41f8a4be08ae3b))
+
+### Bug Fixes
+
+- **security:** vm2 must be ^3.9.15 ([179aee6](https://github.com/movableink/fluid/commit/179aee6150188796b3794d126976c2442c972dc2))
+- **svg:** colors should inherit ([b721e05](https://github.com/movableink/fluid/commit/b721e050a47e4aea5d23e7d2b05d2a277c0bf0a3))
+
 ## [1.6.1](https://github.com/movableink/fluid/compare/1.6.1-canary.0...1.6.1) (2023-03-09)
 
 ## [1.6.1-canary.0](https://github.com/movableink/fluid/compare/1.6.0...1.6.1-canary.0) (2023-03-09)
