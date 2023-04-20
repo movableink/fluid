@@ -34,10 +34,12 @@ const Template = (args) => ({
   `,
   context: {
     ...args,
-    onClose: args.onClose ? action(function() {
-      console.log('Banner Closed');
-    }) : false,
-   },
+    onClose: args.onClose
+      ? action(function () {
+          console.log('Banner Closed');
+        })
+      : false,
+  },
 });
 
 export const Destructive = Template.bind({});
@@ -46,35 +48,35 @@ Destructive.args = {
   type: 'destructive',
   icon: 'fluid-banner-destructive',
   onClose: true,
-}
+};
 export const Informative = Template.bind({});
 Informative.args = {
   header: 'Informative Header',
   type: 'info',
   icon: 'fluid-banner-info',
   onClose: true,
-}
+};
 export const Confirmation = Template.bind({});
 Confirmation.args = {
   header: 'Confirmation Header',
   type: 'confirm',
   icon: 'fluid-banner-confirm',
   onClose: true,
-}
+};
 export const Alert = Template.bind({});
 Alert.args = {
   header: 'Alert Header',
   type: 'alert',
   icon: 'fluid-banner-alert',
   onClose: true,
-}
+};
 export const Default = Template.bind({});
 Default.args = {
   header: 'Default Header',
   type: false,
   icon: 'fluid-banner-archive',
   onClose: true,
-}
+};
 
 export const WithoutIcon = Template.bind({});
 WithoutIcon.args = {
@@ -82,7 +84,7 @@ WithoutIcon.args = {
   type: false,
   icon: false,
   onClose: true,
-}
+};
 
 export const WithoutClose = Template.bind({});
 WithoutClose.args = {
@@ -90,7 +92,7 @@ WithoutClose.args = {
   type: false,
   icon: 'fluid-banner-archive',
   onClose: false,
-}
+};
 
 export const TextOnly = Template.bind({});
 TextOnly.args = {
@@ -98,4 +100,4 @@ TextOnly.args = {
   type: false,
   icon: false,
   onClose: false,
-}
+};
