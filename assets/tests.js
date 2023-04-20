@@ -421,6 +421,144 @@ define("dummy/tests/integration/components/expanding-list-test", ["@ember/templa
     });
   });
 });
+define("dummy/tests/integration/components/fluid-banner-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "dummy/tests/helpers/percy-snapshot"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _percySnapshot) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | fluid-banner', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    hooks.beforeEach(function () {
+      this.mockAction = () => {};
+    });
+    (0, _qunit.test)('it renders default type', async function (assert) {
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        
+            <div class="flex flex-col gap-4">
+              <FluidBanner
+                @header="Default w/Icon & Close"
+                @icon="fluid-banner-archive"
+                @onClose={{this.mockAction}}
+              >
+                <p>
+                  Body Content
+                </p>
+              </FluidBanner>
+      
+              <FluidBanner
+                @header="Default w/o Icon"
+                @onClose={{this.mockAction}}
+              >
+                <p>
+                  Body Content
+                </p>
+              </FluidBanner>
+      
+              <FluidBanner
+                @header="Default w/o Close"
+                @icon="fluid-banner-archive"
+              >
+                <p>
+                  Body Content
+                </p>
+              </FluidBanner>
+      
+              <FluidBanner
+                @header="Default w/o Icon or Close"
+              >
+                <p>
+                  Body Content
+                </p>
+              </FluidBanner>
+            </div>
+          
+      */
+      {
+        "id": "F1tVHLGe",
+        "block": "[[[1,\"\\n      \"],[10,0],[14,0,\"flex flex-col gap-4\"],[12],[1,\"\\n        \"],[8,[39,0],null,[[\"@header\",\"@icon\",\"@onClose\"],[\"Default w/Icon & Close\",\"fluid-banner-archive\",[30,0,[\"mockAction\"]]]],[[\"default\"],[[[[1,\"\\n          \"],[10,2],[12],[1,\"\\n            Body Content\\n          \"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n\\n        \"],[8,[39,0],null,[[\"@header\",\"@onClose\"],[\"Default w/o Icon\",[30,0,[\"mockAction\"]]]],[[\"default\"],[[[[1,\"\\n          \"],[10,2],[12],[1,\"\\n            Body Content\\n          \"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n\\n        \"],[8,[39,0],null,[[\"@header\",\"@icon\"],[\"Default w/o Close\",\"fluid-banner-archive\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,2],[12],[1,\"\\n            Body Content\\n          \"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n\\n        \"],[8,[39,0],null,[[\"@header\"],[\"Default w/o Icon or Close\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,2],[12],[1,\"\\n            Body Content\\n          \"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n      \"],[13],[1,\"\\n    \"]],[],false,[\"fluid-banner\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      await (0, _percySnapshot.default)(assert);
+      assert.dom('.fluid-banner').exists({
+        count: 4
+      });
+      assert.dom('.fluid-banner--icon').exists({
+        count: 2
+      });
+      assert.dom('.fluid-banner--close').exists({
+        count: 2
+      });
+    });
+    ['destructive', 'info', 'confirm', 'alert'].forEach(type => {
+      (0, _qunit.test)(`it renders ${type} type`, async function (assert) {
+        this.type = type;
+        await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+        /*
+          
+                <div class="flex flex-col gap-4">
+                  <FluidBanner
+                    @type={{this.type}}
+                    @header={{concat this.type " w/Icon & Close"}}
+                    @icon={{concat "fluid-banner-" this.type}}
+                    @onClose={{this.mockAction}}
+                  >
+                    <p>
+                      Body Content
+                    </p>
+                  </FluidBanner>
+        
+                  <FluidBanner
+                    @type={{this.type}}
+                    @header={{concat this.type " w/o Icon"}}
+                    @onClose={{this.mockAction}}
+                  >
+                    <p>
+                      Body Content
+                    </p>
+                  </FluidBanner>
+        
+                  <FluidBanner
+                    @type={{this.type}}
+                    @header={{concat this.type " w/o Close"}}
+                    @icon={{concat "fluid-banner-" this.type}}
+                  >
+                    <p>
+                      Body Content
+                    </p>
+                  </FluidBanner>
+        
+                  <FluidBanner
+                    @type={{this.type}}
+                    @header={{concat this.type " w/o Icon or Close"}}
+                  >
+                    <p>
+                      Body Content
+                    </p>
+                  </FluidBanner>
+                </div>
+              
+        */
+        {
+          "id": "3yHksrzT",
+          "block": "[[[1,\"\\n        \"],[10,0],[14,0,\"flex flex-col gap-4\"],[12],[1,\"\\n          \"],[8,[39,0],null,[[\"@type\",\"@header\",\"@icon\",\"@onClose\"],[[30,0,[\"type\"]],[28,[37,1],[[30,0,[\"type\"]],\" w/Icon & Close\"],null],[28,[37,1],[\"fluid-banner-\",[30,0,[\"type\"]]],null],[30,0,[\"mockAction\"]]]],[[\"default\"],[[[[1,\"\\n            \"],[10,2],[12],[1,\"\\n              Body Content\\n            \"],[13],[1,\"\\n          \"]],[]]]]],[1,\"\\n\\n          \"],[8,[39,0],null,[[\"@type\",\"@header\",\"@onClose\"],[[30,0,[\"type\"]],[28,[37,1],[[30,0,[\"type\"]],\" w/o Icon\"],null],[30,0,[\"mockAction\"]]]],[[\"default\"],[[[[1,\"\\n            \"],[10,2],[12],[1,\"\\n              Body Content\\n            \"],[13],[1,\"\\n          \"]],[]]]]],[1,\"\\n\\n          \"],[8,[39,0],null,[[\"@type\",\"@header\",\"@icon\"],[[30,0,[\"type\"]],[28,[37,1],[[30,0,[\"type\"]],\" w/o Close\"],null],[28,[37,1],[\"fluid-banner-\",[30,0,[\"type\"]]],null]]],[[\"default\"],[[[[1,\"\\n            \"],[10,2],[12],[1,\"\\n              Body Content\\n            \"],[13],[1,\"\\n          \"]],[]]]]],[1,\"\\n\\n          \"],[8,[39,0],null,[[\"@type\",\"@header\"],[[30,0,[\"type\"]],[28,[37,1],[[30,0,[\"type\"]],\" w/o Icon or Close\"],null]]],[[\"default\"],[[[[1,\"\\n            \"],[10,2],[12],[1,\"\\n              Body Content\\n            \"],[13],[1,\"\\n          \"]],[]]]]],[1,\"\\n        \"],[13],[1,\"\\n      \"]],[],false,[\"fluid-banner\",\"concat\"]]",
+          "moduleName": "(unknown template module)",
+          "isStrictMode": false
+        }));
+        await (0, _percySnapshot.default)(assert);
+        assert.dom('.fluid-banner').exists({
+          count: 4
+        });
+        assert.dom('.fluid-banner').hasClass(`type:${this.type}`);
+        assert.dom('.fluid-banner--icon').exists({
+          count: 2
+        });
+        assert.dom('.fluid-banner--close').exists({
+          count: 2
+        });
+      });
+    });
+  });
+});
 define("dummy/tests/integration/components/fluid-checkbox-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers", "testdouble", "@percy/ember"], function (_templateFactory, _qunit, _emberQunit, _testHelpers, _testdouble, _ember) {
   "use strict";
 

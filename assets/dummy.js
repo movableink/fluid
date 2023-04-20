@@ -252,6 +252,19 @@
     }
   });
 });
+;define("dummy/components/fluid-banner", ["exports", "@movable/fluid/components/fluid-banner"], function (_exports, _fluidBanner) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _fluidBanner.default;
+    }
+  });
+});
 ;define("dummy/components/fluid-checkbox", ["exports", "@movable/fluid/components/fluid-checkbox"], function (_exports, _fluidCheckbox) {
   "use strict";
 
