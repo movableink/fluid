@@ -4,17 +4,46 @@ import { Story } from "@storybook/addon-docs";
 
 This Ember component is a shortcut for these styles inherited from the [@movable/tailwind-config - banner component](https://movableink.github.io/tailwind-config/?path=/story/components-banners--all-types)
 
-**Sections**
+**Types**
+- [Default](#default)
 - [Destructive](#destructive)
 - [Informative](#informative)
 - [Confirmation](#confirmation)
 - [Alert](#alert)
-- [Default](#default)
-- [Icon](#icon)
-- [Closing](#closing)
-- [Text Only](#text-only)
 
-## Destructive
+**Arguments**
+- [Icon _optional_](#icon)
+- [Header _optional_](#header)
+- [Closing  _optional_](#closing)
+- [Yield](#yield)
+
+
+
+
+## Banner Types
+
+See each type for specifics
+
+### Default
+
+This type is rendered when on `type:` argument is passed with `.fluid-banner`
+
+<Story id="components-fluid-banner--default" name="Fluid Banner" height="150px"/>
+
+
+```hbs
+<FluidBanner
+  @header="Default Banner"
+  @icon="fluid-banner-archive"
+  @onClose={{this.mockAction}}
+>
+  <p>
+    Body Content
+  </p>
+</FluidBanner>
+```
+
+### Destructive
 
 <Story id="components-fluid-banner--destructive" name="Fluid Banner" height="150px"/>
 
@@ -32,7 +61,7 @@ This Ember component is a shortcut for these styles inherited from the [@movable
 </FluidBanner>
 ```
 
-## Informative
+### Informative
 
 <Story id="components-fluid-banner--informative" name="Fluid Banner" height="150px"/>
 
@@ -50,7 +79,7 @@ This Ember component is a shortcut for these styles inherited from the [@movable
 </FluidBanner>
 ```
 
-## Confirmation
+### Confirmation
 
 <Story id="components-fluid-banner--confirmation" name="Fluid Banner" height="150px"/>
 
@@ -68,7 +97,7 @@ This Ember component is a shortcut for these styles inherited from the [@movable
 </FluidBanner>
 ```
 
-## Alert
+### Alert
 
 <Story id="components-fluid-banner--alert" name="Fluid Banner" height="150px"/>
 
@@ -86,24 +115,10 @@ This Ember component is a shortcut for these styles inherited from the [@movable
 </FluidBanner>
 ```
 
-## Default
-
-<Story id="components-fluid-banner--default" name="Fluid Banner" height="150px"/>
+## Arugments
 
 
-```hbs
-<FluidBanner
-  @header="Default Banner"
-  @icon="fluid-banner-archive"
-  @onClose={{this.mockAction}}
->
-  <p>
-    Body Content
-  </p>
-</FluidBanner>
-```
-
-## Icon
+### Icon
 
 When passing the icon argument to the component use the full filename so `svg-jar` can render the icon property
 
@@ -121,7 +136,47 @@ When passing the icon argument to the component use the full filename so `svg-ja
 </FluidBanner>
 ```
 
-## Closing
+### Header
+
+This will be the `h4` rendered to the banner and is Optional. Use this to maintain color contrast ratios important for accessiblity.
+
+
+### Yield
+
+All elements passed to the block part of the component will be yielded inside of the `.fluid-banner--content` and can be used to style `h4` or `p` with inherited color contrast.
+
+```hbs
+<FluidBanner>
+  <h4>Default Banner</h4>
+  <p>Some banner content</p>
+</FluidBanner>
+```
+
+Otherwise you'll need to use the proper contrast associated with each type listed here:
+
+https://github.com/movableink/tailwind-config/blob/master/plugins/components/banners.js#L49
+
+
+<div className="flex flex-col gap-2">
+  <strong className="text-neutral-700">
+    Default <code>text-neutral-700</code>
+  </strong>
+  <strong className="text-red-600">
+    Destructive <code>text-red-600</code>
+  </strong>
+  <strong className="text-blue-600">
+    Info <code>text-blue-600</code>
+  </strong>
+  <strong className="text-green-600">
+    Confirm <code>text-green-600</code>
+  </strong>
+  <strong className="text-orange-700">
+    Alert <code>text-orange-700</code>
+  </strong>
+</div>
+
+
+### Closing
 
 The `close` icon will automatically appear when passing an `onClose` argument to the component.
 
@@ -132,22 +187,6 @@ The `close` icon will automatically appear when passing an `onClose` argument to
 <FluidBanner
   @header="Default Banner"
   @onClose={{this.mockAction}}
->
-  <p>
-    Body Content
-  </p>
-</FluidBanner>
-```
-## Text Only
-
-If you don't define `@type` or `@onClose` the component with render as text only.
-
-<Story id="components-fluid-banner--text-only" name="Fluid Banner" height="150px"/>
-
-
-```hbs
-<FluidBanner
-  @header="Default Banner"
 >
   <p>
     Body Content

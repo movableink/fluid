@@ -4,15 +4,17 @@
   {{/if}}
 
   <div class="fluid-banner--content">
-    <h4>
-      {{@header}}
-    </h4>
+    {{#if @header}}
+      <h4>
+        {{@header}}
+      </h4>
+    {{/if}}
 
     {{yield}}
   </div>
 
   {{#if @onClose}}
-    <button type="button" class="w-4 h-4" data-test-drawer-close {{on "click" @onClose}}>
+    <button type="button" class="w-4 h-4" data-test-fluid-banner-close {{on "click" @onClose}}>
       {{svg-jar "x-line" class="fluid-banner--close"}}
       <span class="sr-only">Close Banner</span>
     </button>
