@@ -93,11 +93,3 @@ WithoutClose.args = {
   icon: 'fluid-banner-archive',
   onClose: false,
 };
-
-export const TextOnly = Template.bind({});
-TextOnly.args = {
-  header: 'Default Header',
-  type: false,
-  icon: false,
-  onClose: false,
-};
