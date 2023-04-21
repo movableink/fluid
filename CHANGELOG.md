@@ -1,3 +1,9 @@
+## [1.7.1](https://github.com/movableink/fluid/compare/1.7.0...1.7.1) (2023-04-21)
+
+### Bug Fixes
+
+- **docs:** updated some documentation ([e014523](https://github.com/movableink/fluid/commit/e01452397d00da20032e599eb99d8cae0541fc2f))
+
 ## [1.7.0](https://github.com/movableink/fluid/compare/1.6.1...1.7.0) (2023-04-20)
 
 ### Features
