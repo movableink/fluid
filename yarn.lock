@@ -2168,6 +2168,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/addon-shim@npm:^1.0.0":
+  version: 1.8.4
+  resolution: "@embroider/addon-shim@npm:1.8.4"
+  dependencies:
+    "@embroider/shared-internals": ^2.0.0
+    broccoli-funnel: ^3.0.8
+    semver: ^7.3.8
+  checksum: 107220e97bbd46ead81dfbbfc6cf7daa61731096a6e81b989659a9a0b29b48b3c97ebdd446b6dc0636c4be369f3744e514b7f5e5c0fdc54c1c0e026f54404cc2
+  languageName: node
+  linkType: hard
+
 "@embroider/core@npm:0.36.0":
   version: 0.36.0
   resolution: "@embroider/core@npm:0.36.0"
@@ -2330,7 +2341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/shared-internals@npm:2.0.0":
+"@embroider/shared-internals@npm:2.0.0, @embroider/shared-internals@npm:^2.0.0":
   version: 2.0.0
   resolution: "@embroider/shared-internals@npm:2.0.0"
   dependencies:
@@ -3110,7 +3121,7 @@ __metadata:
     ember-event-helpers: ^0.1.1
     ember-exam: ^6.1.0
     ember-export-application-global: ^2.0.1
-    ember-focus-trap: ^0.7.0
+    ember-focus-trap: ^1.0.2
     ember-headlessui: ^0.9.0
     ember-load-initializers: ^2.1.2
     ember-maybe-import-regenerator: ^1.0.0
@@ -11868,6 +11879,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-focus-trap@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "ember-focus-trap@npm:1.0.2"
+  dependencies:
+    "@embroider/addon-shim": ^1.0.0
+    focus-trap: ^6.7.1
+  checksum: 1940405edcbff3997eb3d9f15314ded20f676e25a07adee5e306c0816ed0743849798c5bd69c1e7e35a5b32c44d0b4995a2d46cc14adc97eab899167fc51a968
+  languageName: node
+  linkType: hard
+
 "ember-get-config@npm:":
   version: 2.1.1
   resolution: "ember-get-config@npm:2.1.1"
@@ -13780,7 +13801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap@npm:^6.4.0":
+"focus-trap@npm:^6.4.0, focus-trap@npm:^6.7.1":
   version: 6.9.4
   resolution: "focus-trap@npm:6.9.4"
   dependencies:
@@ -22194,6 +22215,17 @@ fsevents@^1.2.7:
   bin:
     semver: bin/semver.js
   checksum: ba9c7cbbf2b7884696523450a61fee1a09930d888b7a8d7579025ad93d459b2d1949ee5bbfeb188b2be5f4ac163544c5e98491ad6152df34154feebc2cc337c1
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.3.8":
+  version: 7.5.0
+  resolution: "semver@npm:7.5.0"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 2d266937756689a76f124ffb4c1ea3e1bbb2b263219f90ada8a11aebebe1280b13bb76cca2ca96bdee3dbc554cbc0b24752eb895b2a51577aa644427e9229f2b
   languageName: node
   linkType: hard
 
