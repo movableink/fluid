@@ -33,7 +33,7 @@
     "@movable/eslint-config-ember": "^1.0.1",
     "@movable/prettier-config": "^1.0.0",
     "@movable/tailwind-config": "^2.6.3",
-    "@movable/template-lint-plugin": "^3.0.2",
+    "@movable/template-lint-plugin": "^4.0.0",
     "@mozaic-ds/postcss-sass": "4.0.0-next.0",
     "@percy/cli": "^1.16.0",
     "@percy/ember": "^3.0.0",

@@ -1584,6 +1584,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.21.0":
+  version: 7.22.5
+  resolution: "@babel/runtime@npm:7.22.5"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 12a50b7de2531beef38840d17af50c55a094253697600cee255311222390c68eed704829308d4fd305e1b3dfbce113272e428e9d9d45b1730e0fede997eaceb1
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.7, @babel/template@npm:^7.18.10, @babel/template@npm:^7.20.7":
   version: 7.20.7
   resolution: "@babel/template@npm:7.20.7"
@@ -3065,7 +3074,7 @@ __metadata:
     "@movable/eslint-config-ember": ^1.0.1
     "@movable/prettier-config": ^1.0.0
     "@movable/tailwind-config": ^2.6.3
-    "@movable/template-lint-plugin": ^3.0.2
+    "@movable/template-lint-plugin": ^4.0.0
     "@mozaic-ds/postcss-sass": 4.0.0-next.0
     "@percy/cli": ^1.16.0
     "@percy/ember": ^3.0.0
@@ -3177,12 +3186,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@movable/template-lint-plugin@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@movable/template-lint-plugin@npm:3.0.2"
+"@movable/template-lint-plugin@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@movable/template-lint-plugin@npm:4.0.0"
   dependencies:
-    ember-template-lint: ^3.1.1
-  checksum: 207f0899d1d7f718d9576dfb37eb67846ad20b6f92e368f82332474663896740630aa625980911c8db88039a9a490f1ad9316293636be88b489dd1780e6057d3
+    ember-template-lint: ^3.16.0
+  checksum: 5019f482fbeae921016011ecec90d509309ccb43ade55bfb11c19226e7d902df5796801079319d720df4b9ea461344c3d43daf8a76fa28c38cd2d2a47d2fa21c
   languageName: node
   linkType: hard
 
@@ -8948,6 +8957,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ci-info@npm:^3.3.0":
+  version: 3.8.0
+  resolution: "ci-info@npm:3.8.0"
+  checksum: d0a4d3160497cae54294974a7246202244fff031b0a6ea20dd57b10ec510aa17399c41a1b0982142c105f3255aff2173e5c0dd7302ee1b2f28ba3debda375098
+  languageName: node
+  linkType: hard
+
 "cipher-base@npm:^1.0.0, cipher-base@npm:^1.0.1, cipher-base@npm:^1.0.3":
   version: 1.0.4
   resolution: "cipher-base@npm:1.0.4"
@@ -10265,6 +10281,15 @@ __metadata:
   version: 2.25.0
   resolution: "date-fns@npm:2.25.0"
   checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.28.0":
+  version: 2.30.0
+  resolution: "date-fns@npm:2.30.0"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+  checksum: f7be01523282e9bb06c0cd2693d34f245247a29098527d4420628966a2d9aad154bd0e90a6b1cf66d37adcb769cd108cf8a7bd49d76db0fb119af5cdd13644f4
   languageName: node
   linkType: hard
 
@@ -12297,7 +12322,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-template-lint@npm:^3.1.1, ember-template-lint@npm:^3.8.0":
+"ember-template-lint@npm:^3.16.0":
+  version: 3.16.0
+  resolution: "ember-template-lint@npm:3.16.0"
+  dependencies:
+    "@ember-template-lint/todo-utils": ^10.0.0
+    chalk: ^4.1.2
+    ci-info: ^3.3.0
+    date-fns: ^2.28.0
+    ember-template-recast: ^5.0.3
+    find-up: ^5.0.0
+    fuse.js: ^6.5.3
+    get-stdin: ^8.0.0
+    globby: ^11.0.4
+    is-glob: ^4.0.3
+    micromatch: ^4.0.4
+    requireindex: ^1.2.0
+    resolve: ^1.20.0
+    v8-compile-cache: ^2.3.0
+    yargs: ^16.2.0
+  bin:
+    ember-template-lint: bin/ember-template-lint.js
+  checksum: 928ddd13d6e72eb8c30831612463d529990509e839ded6dea54b4babf0929b67e1adde42dc62d7b894b20b42f697dc0cd3ee0277a7a56227e4d953a728ada515
+  languageName: node
+  linkType: hard
+
+"ember-template-lint@npm:^3.8.0":
   version: 3.10.0
   resolution: "ember-template-lint@npm:3.10.0"
   dependencies:
@@ -14238,6 +14288,13 @@ fsevents@^1.2.7:
   version: 6.4.6
   resolution: "fuse.js@npm:6.4.6"
   checksum: 012dfacdc9a3c065d05d031b4eaaad7dd460f66dca100fcef182ed4e70a6b763b6753071702589d0b28def34b48ad077f01426d4ac1d75ef374564f6baa943fd
+  languageName: node
+  linkType: hard
+
+"fuse.js@npm:^6.5.3":
+  version: 6.6.2
+  resolution: "fuse.js@npm:6.6.2"
+  checksum: 17ae758ce205276ebd88bd9c9f088a100be0b4896abac9f6b09847151269d1690f41d7f98ff5813d4a58973162dbd99d0072ce807020fee6f9de60170f6b08eb
   languageName: node
   linkType: hard
 
@@ -21257,6 +21314,13 @@ fsevents@^1.2.7:
   version: 0.11.1
   resolution: "regenerator-runtime@npm:0.11.1"
   checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
