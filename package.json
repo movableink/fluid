@@ -118,7 +118,7 @@
     "ember-changeset": "2.2.5",
     "ember-changeset-validations": "2.2.1",
     "ember-cli-babel": "^7.26.6",
-    "ember-cli-htmlbars": "^5.7.1",
+    "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-moment-shim": "^3.8.0",
     "ember-click-outside-modifier": "^2.0.0",
     "ember-composable-helpers": "^4.5.0",

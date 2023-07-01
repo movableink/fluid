@@ -3092,7 +3092,7 @@ __metadata:
     ember-cli-babel: ^7.26.6
     ember-cli-dependency-checker: ^3.2.0
     ember-cli-deprecation-workflow: ^2.0.0
-    ember-cli-htmlbars: ^5.7.1
+    ember-cli-htmlbars: ^6.2.0
     ember-cli-inject-live-reload: ^2.1.0
     ember-cli-moment-shim: ^3.8.0
     ember-cli-page-object: ^1.17.7
@@ -11228,7 +11228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-htmlbars@npm:^6.0.0, ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.1":
+"ember-cli-htmlbars@npm:^6.0.0, ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.1, ember-cli-htmlbars@npm:^6.2.0":
   version: 6.2.0
   resolution: "ember-cli-htmlbars@npm:6.2.0"
   dependencies:
