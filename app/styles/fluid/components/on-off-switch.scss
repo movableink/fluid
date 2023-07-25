@@ -58,14 +58,14 @@
   }
 
   &.on {
-    background: theme('colors.aqua.400');
-    border-color: theme('colors.aqua.500');
+    background: theme('colors.lightblue.400');
+    border-color: theme('colors.lightblue.500');
     span {
       left: calc(2.5rem - 0.1rem);
-      border-color: theme('colors.aqua.500');
+      border-color: theme('colors.lightblue.500');
     }
     &.pressed {
-      background: theme('colors.aqua.500');
+      background: theme('colors.lightblue.500');
     }
     .liquid-child:nth-child(1) {
       color: theme('colors.neutral.100');
