@@ -1,3 +1,17 @@
+## [2.1.0](https://github.com/movableink/fluid/compare/1.7.1...2.1.0) (2023-07-25)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** bumping tailwind-config to 3.1
+- **deps:** bumping tailwind version
+- **deps:** bumped tailwind-config to 3
+
+### chore
+
+- **deps:** bumped tailwind-config to 3 ([0964246](https://github.com/movableink/fluid/commit/09642465060689d7b644732811e011a8ed771e77))
+- **deps:** bumping tailwind version ([71b127a](https://github.com/movableink/fluid/commit/71b127ac067134bbb5f7eea5a4c259ea45f6af9f))
+- **deps:** bumping tailwind-config to 3.1 ([45c8fc2](https://github.com/movableink/fluid/commit/45c8fc27077cf3c7d234f353cb99e4176f07b3a0))
+
 ## [1.7.1](https://github.com/movableink/fluid/compare/1.7.0...1.7.1) (2023-04-21)
 
 ### Bug Fixes
