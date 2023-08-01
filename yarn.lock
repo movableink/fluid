@@ -3144,7 +3144,7 @@ __metadata:
     npm-run-all: ^4.1.5
     pinst: ^2.1.6
     postcss: ^8.3.8
-    postcss-scss: ^4.0.1
+    postcss-scss: ^4.0.6
     prettier: ^2.3.1
     prop-types: ^15.7.2
     qunit: ^2.19.3
@@ -20265,12 +20265,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-scss@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "postcss-scss@npm:4.0.1"
+"postcss-scss@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "postcss-scss@npm:4.0.6"
   peerDependencies:
-    postcss: ^8.3.3
-  checksum: af85bdd4af17344703c9d1404e96295c5d25683bd0356ea1ddc0ce2fe9d893dd88808143376c13ebacb61b549333afc4c7d88967f383f84936f3052ce2cf0d9c
+    postcss: ^8.4.19
+  checksum: 133a1cba31e2e167f4e841e66ec6a798eaf44c7911f9182ade0b5b1e71a8198814aa390b8c9d5db6b01358115232e5b15b1a4f8c5198acfccfb1f3fdbd328cdf
   languageName: node
   linkType: hard
 
