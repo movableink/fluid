@@ -115,9 +115,9 @@ module('Integration | component | fluid-lab/expanding-list', function (hooks) {
           <FluidLab::ExpandingList as |list|>
             <list.Header>
               {{list.Toggle}}
-              <h5>
+              <h6>
                 Expanded w/toggle
-              </h5>
+              </h6>
             </list.Header>
             <list.Content>
               <section data-test-expanded-with-toggle-content>
@@ -141,9 +141,9 @@ module('Integration | component | fluid-lab/expanding-list', function (hooks) {
           <FluidLab::ExpandingList @expanded={{false}} as |list|>
             <list.Header>
               {{list.Toggle}}
-              <h5>
+              <h6>
                 Collapsed w/toggle
-              </h5>
+              </h6>
             </list.Header>
             <list.Content>
               <section data-test-collapsed-with-toggle-content>
@@ -166,9 +166,9 @@ module('Integration | component | fluid-lab/expanding-list', function (hooks) {
           </FluidLab::ExpandingList>
           <FluidLab::ExpandingList @disabled={{true}} as |list|>
             <list.Header>
-              <h5>
+              <h6>
                 Expanded w/o toggle
-              </h5>
+              </h6>
             </list.Header>
             <list.Content>
               <section data-test-expanded-without-toggle-content>
@@ -192,9 +192,9 @@ module('Integration | component | fluid-lab/expanding-list', function (hooks) {
           <FluidLab::ExpandingList @disabled={{true}} as |list|>
             <list.Header>
               {{list.Toggle}}
-              <h5>
+              <h6>
                 Disabled w/toggle
-              </h5>
+              </h6>
             </list.Header>
             <list.Content>
               <section data-test-disabled-with-toggle-content>

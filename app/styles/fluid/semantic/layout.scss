@@ -1,6 +1,6 @@
 .fluid {
   .container {
-    @apply border-neutral-400;
+    @apply border-neutral-300;
     @apply border;
     @apply flex-col;
     @apply flex;
@@ -19,7 +19,7 @@
       @apply flex;
       @apply flex-shrink-0;
       @apply border-b;
-      @apply border-neutral-400;
+      @apply border-neutral-300;
       @apply py-0;
       @apply px-8;
       @apply leading-3xl;
