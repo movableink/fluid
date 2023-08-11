@@ -24,7 +24,9 @@
           )
           trigger=(component
             dropdown.Trigger
-            defaultClass=(concat "fluid-button" (if @dark " type:outline text-white"))
+            defaultClass=(concat
+              "fluid-button" (if @dark " type:outline text-white hover:bg-neutral-600")
+            )
             dark=@dark
             multiple=@multiple
             selected=@selected
