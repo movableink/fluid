@@ -19,7 +19,6 @@
   }
 
   &--dark {
-    background: theme('colors.neutral.800');
-    color: theme('colors.neutral.400');
+    @apply bg-neutral-900 text-neutral-400;
   }
 }
