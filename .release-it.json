@@ -23,7 +23,7 @@
             "section": "Security"
           },
           {
-            "type": "chore,refactor",
+            "type": "chore,refactor,style,ci,test",
             "section": "Enhancments"
           },
           {
