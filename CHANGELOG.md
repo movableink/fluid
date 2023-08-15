@@ -1,3 +1,5 @@
+## [2.1.7](https://github.com/movableink/fluid/compare/2.1.6...2.1.7) (2023-08-15)
+
 ## [2.1.6](https://github.com/movableink/fluid/compare/2.1.5...2.1.6) (2023-08-14)
 
 ## [2.1.5](https://github.com/movableink/fluid/compare/2.1.4...2.1.5) (2023-08-14)
