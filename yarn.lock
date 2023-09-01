@@ -2168,6 +2168,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/addon-shim@npm:^1.5.0, @embroider/addon-shim@npm:^1.8.4":
+  version: 1.8.6
+  resolution: "@embroider/addon-shim@npm:1.8.6"
+  dependencies:
+    "@embroider/shared-internals": ^2.2.3
+    broccoli-funnel: ^3.0.8
+    semver: ^7.3.8
+  checksum: 63214fbc1b3f333b052791cdfc0c278c348dd6ca4ec2b53c96183150e3d5fe9882cdd3065853e3d6a2c964c962d718b87f2fd8a17414b53fc3a3997d5eedb30e
+  languageName: node
+  linkType: hard
+
 "@embroider/core@npm:0.36.0":
   version: 0.36.0
   resolution: "@embroider/core@npm:0.36.0"
@@ -2359,6 +2370,23 @@ __metadata:
     semver: ^7.3.5
     typescript-memoize: ^1.0.1
   checksum: de636225b3e85379caad5bf4cb3c4f8cc8d95d1c9fab05668faf55654ae2cfe1ca2632c5cc4b81f0b52781d4fc5b80879e6cd143801976de46c591430957040f
+  languageName: node
+  linkType: hard
+
+"@embroider/shared-internals@npm:^2.2.3":
+  version: 2.4.0
+  resolution: "@embroider/shared-internals@npm:2.4.0"
+  dependencies:
+    babel-import-util: ^2.0.0
+    debug: ^4.3.2
+    ember-rfc176-data: ^0.3.17
+    fs-extra: ^9.1.0
+    js-string-escape: ^1.0.1
+    lodash: ^4.17.21
+    resolve-package-path: ^4.0.1
+    semver: ^7.3.5
+    typescript-memoize: ^1.0.1
+  checksum: 9254dd1bdb98a3087564adf3d194e32213a6948f9ab4c2714ac3e6152af8bfb66f9d2d8b1e814b312253c5fdc84a10f918786a2cfeafe4018a68e35253a62aa7
   languageName: node
   linkType: hard
 
@@ -3098,7 +3126,7 @@ __metadata:
     ember-cli-page-object: ^1.17.7
     ember-cli-postcss: ^7.0.2
     ember-cli-terser: 4.0.1
-    ember-click-outside-modifier: ^2.0.0
+    ember-click-outside-modifier: ^4.1.0
     ember-composable-helpers: ^4.5.0
     ember-concurrency: ^2.1.2
     ember-cookies: ^0.5.2
@@ -6634,6 +6662,13 @@ __metadata:
   version: 1.3.0
   resolution: "babel-import-util@npm:1.3.0"
   checksum: 41c6b4276ceefd2263f59be97a99bf8d948899c76587b273d115e91fa9067b0d9cc80ba727a795732052e078c30a3665649c725aed966826bf7c0a258a5fcf03
+  languageName: node
+  linkType: hard
+
+"babel-import-util@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "babel-import-util@npm:2.0.0"
+  checksum: 8d9f62dcf522634ac340fb1380f45382d782f7202c98f7b0a6ad9e1aba50edef1f31f1e61e487953e35bcda98759aed7236398a9bb9798b68b6def697925293d
   languageName: node
   linkType: hard
 
@@ -11697,6 +11732,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-click-outside-modifier@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "ember-click-outside-modifier@npm:4.1.0"
+  dependencies:
+    "@embroider/addon-shim": ^1.5.0
+    ember-modifier: ^3.0.0 || ^4.0.0
+  checksum: a00663d0e75ba074399b308f185799bf6f82ca75cd54ab6aeb2be9fae770f180f076ed55a9d126cb4e9ec0e91fd95390c467267245a83e864b331c798b30f995
+  languageName: node
+  linkType: hard
+
 "ember-compatibility-helpers@npm:^1.1.1, ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0, ember-compatibility-helpers@npm:^1.2.1, ember-compatibility-helpers@npm:^1.2.4, ember-compatibility-helpers@npm:^1.2.5":
   version: 1.2.6
   resolution: "ember-compatibility-helpers@npm:1.2.6"
@@ -12056,6 +12101,22 @@ __metadata:
     ember-cli-typescript: ^5.0.0
     ember-compatibility-helpers: ^1.2.5
   checksum: 2e96d9ec3939de178a9ce704d5a9360fd73f0276ffa4a9cce9f100a4087fdc8fae4a8b28bf1be22b05a4d1c61e1bb1ab93ca60576810c6556bc4d9323864c66a
+  languageName: node
+  linkType: hard
+
+"ember-modifier@npm:^3.0.0 || ^4.0.0":
+  version: 4.1.0
+  resolution: "ember-modifier@npm:4.1.0"
+  dependencies:
+    "@embroider/addon-shim": ^1.8.4
+    ember-cli-normalize-entity-name: ^1.0.0
+    ember-cli-string-utils: ^1.1.0
+  peerDependencies:
+    ember-source: "*"
+  peerDependenciesMeta:
+    ember-source:
+      optional: true
+  checksum: 5e14a864de2184c07e59fb9bc76a09ae25d1bd37722a94751a3cef6165df22027007696c4dda03e1862cb3bbeefb046772810dda3104d05c7fe8476389c34a77
   languageName: node
   linkType: hard
 
@@ -22309,7 +22370,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5":
+"semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.8":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
