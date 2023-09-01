@@ -132,7 +132,7 @@
     "ember-element-helper": "^0.5.5",
     "ember-event-helpers": "^0.1.1",
     "ember-focus-trap": "^0.7.0",
-    "ember-headlessui": "^0.9.0",
+    "ember-headlessui": "^0.14.0",
     "ember-modal-dialog": "^4.0.1",
     "ember-moment": "^9.0.1",
     "ember-overridable-computed": "^1.0.0",
