@@ -117,7 +117,7 @@
     "@ember/render-modifiers": "^1.0.2",
     "ember-arg-types": "^0.3.0",
     "ember-autoresize-modifier": "^0.3.0",
-    "ember-basic-dropdown": "^3.0.19",
+    "ember-basic-dropdown": "^7.2.2",
     "ember-changeset": "2.2.5",
     "ember-changeset-validations": "2.2.1",
     "ember-cli-babel": "^7.26.6",
