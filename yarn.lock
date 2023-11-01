@@ -2168,6 +2168,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/addon-shim@npm:^1.8.0":
+  version: 1.8.6
+  resolution: "@embroider/addon-shim@npm:1.8.6"
+  dependencies:
+    "@embroider/shared-internals": ^2.2.3
+    broccoli-funnel: ^3.0.8
+    semver: ^7.3.8
+  checksum: 63214fbc1b3f333b052791cdfc0c278c348dd6ca4ec2b53c96183150e3d5fe9882cdd3065853e3d6a2c964c962d718b87f2fd8a17414b53fc3a3997d5eedb30e
+  languageName: node
+  linkType: hard
+
 "@embroider/core@npm:0.36.0":
   version: 0.36.0
   resolution: "@embroider/core@npm:0.36.0"
@@ -2359,6 +2370,23 @@ __metadata:
     semver: ^7.3.5
     typescript-memoize: ^1.0.1
   checksum: de636225b3e85379caad5bf4cb3c4f8cc8d95d1c9fab05668faf55654ae2cfe1ca2632c5cc4b81f0b52781d4fc5b80879e6cd143801976de46c591430957040f
+  languageName: node
+  linkType: hard
+
+"@embroider/shared-internals@npm:^2.2.3":
+  version: 2.5.0
+  resolution: "@embroider/shared-internals@npm:2.5.0"
+  dependencies:
+    babel-import-util: ^2.0.0
+    debug: ^4.3.2
+    ember-rfc176-data: ^0.3.17
+    fs-extra: ^9.1.0
+    js-string-escape: ^1.0.1
+    lodash: ^4.17.21
+    resolve-package-path: ^4.0.1
+    semver: ^7.3.5
+    typescript-memoize: ^1.0.1
+  checksum: 4e887156a88638cacf2a1538f12e2055a65f28063081eb6fbc7075f5f7725fe317264dadbf05907734eba21086c217641865d9b473acf6015a76255c48a213e3
   languageName: node
   linkType: hard
 
@@ -3095,7 +3123,7 @@ __metadata:
     ember-cli-htmlbars: ^5.7.1
     ember-cli-inject-live-reload: ^2.1.0
     ember-cli-moment-shim: ^3.8.0
-    ember-cli-page-object: ^1.17.7
+    ember-cli-page-object: ^2.1.3
     ember-cli-postcss: ^7.0.2
     ember-cli-terser: 4.0.1
     ember-click-outside-modifier: ^2.0.0
@@ -3574,6 +3602,13 @@ __metadata:
   peerDependencies:
     release-it: ^14.12.1
   checksum: 57823757b4f6262551c1fa219cb8319aadec46f835192dbd619ef61e1a64321f43367a78d4d16f95a700056676a725d72d81f8b407693dc41d5ddf32decd6b1b
+  languageName: node
+  linkType: hard
+
+"@ro0gr/ceibo@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@ro0gr/ceibo@npm:2.2.0"
+  checksum: 74f143b75b970acde9278c45f91a2ae82f8de44dd42c2817d225a1896fdb909b958a30cd6e95689f5ae99949be98a93c2f47568b584f068b51057fc56ee0133a
   languageName: node
   linkType: hard
 
@@ -4999,6 +5034,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jquery@npm:^3.5.14":
+  version: 3.5.25
+  resolution: "@types/jquery@npm:3.5.25"
+  dependencies:
+    "@types/sizzle": "*"
+  checksum: 912ce4212447a7c640147345c6b46bde5b12bafc2c97e1abc76939174c3109e3dbb361a534af717be2da4e907bc257558a6bc631971fcc47f7e5f044d315183e
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:*, @types/json-schema@npm:^7.0.4, @types/json-schema@npm:^7.0.5, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
@@ -5192,6 +5236,13 @@ __metadata:
     "@types/mime": ^1
     "@types/node": "*"
   checksum: 5c5f3b64e9fe7c51fb428ef70f1f2365b897fc3c8400be6d6afc8db0f152639182b360361ebd3d0cbaeb607b125dee03bf0c50bf7e08642ff150028f05bb7381
+  languageName: node
+  linkType: hard
+
+"@types/sizzle@npm:*":
+  version: 2.3.5
+  resolution: "@types/sizzle@npm:2.3.5"
+  checksum: 1c2609a9bed3a30d8142ac7a2a63aa6dfe7bec28542f5bfe51407a2a3684b103cc3f5ef1eda781037c76e508501734d16fd6a8c1142dda66acb2d5457fb83757
   languageName: node
   linkType: hard
 
@@ -6637,6 +6688,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-import-util@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "babel-import-util@npm:2.0.1"
+  checksum: ca4070648b562d56b31287911aef962aae08f505678038c4fa51f1c11ef7106ebf985a449f83c83b9a3f928dc66fca2f6157861420a1c309dfb17edd18f7c42e
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.0.0, babel-loader@npm:^8.0.6, babel-loader@npm:^8.2.2":
   version: 8.2.4
   resolution: "babel-loader@npm:8.2.4"
@@ -7870,28 +7928,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-funnel@npm:^1.0.1, broccoli-funnel@npm:^1.1.0":
-  version: 1.2.0
-  resolution: "broccoli-funnel@npm:1.2.0"
-  dependencies:
-    array-equal: ^1.0.0
-    blank-object: ^1.0.1
-    broccoli-plugin: ^1.3.0
-    debug: ^2.2.0
-    exists-sync: 0.0.4
-    fast-ordered-set: ^1.0.0
-    fs-tree-diff: ^0.5.3
-    heimdalljs: ^0.2.0
-    minimatch: ^3.0.0
-    mkdirp: ^0.5.0
-    path-posix: ^1.0.0
-    rimraf: ^2.4.3
-    symlink-or-copy: ^1.0.0
-    walk-sync: ^0.3.1
-  checksum: dacd261a6ddbdd9ffa3bc6d6dd7653eace0896e1b7e281ed9cead4c5b5a4e04b0f1be5b9b09ccd576288d3a15a2dbace1920c7de17a9bba9e5564f7580f8f19a
-  languageName: node
-  linkType: hard
-
 "broccoli-funnel@npm:^2.0.0, broccoli-funnel@npm:^2.0.1, broccoli-funnel@npm:^2.0.2":
   version: 2.0.2
   resolution: "broccoli-funnel@npm:2.0.2"
@@ -7935,22 +7971,6 @@ __metadata:
     glob: ^5.0.10
     mkdirp: ^0.5.1
   checksum: c3af1f4a902ab69fa6e576430c2829cceaa2c34e6f6ff68eb5f6305c10835123b4644bfcb036452c7222d6853c720bf83ec1e5e125db7915d849c7968d0e652e
-  languageName: node
-  linkType: hard
-
-"broccoli-merge-trees@npm:^1.1.1":
-  version: 1.2.4
-  resolution: "broccoli-merge-trees@npm:1.2.4"
-  dependencies:
-    broccoli-plugin: ^1.3.0
-    can-symlink: ^1.0.0
-    fast-ordered-set: ^1.0.2
-    fs-tree-diff: ^0.5.4
-    heimdalljs: ^0.2.1
-    heimdalljs-logger: ^0.1.7
-    rimraf: ^2.4.3
-    symlink-or-copy: ^1.0.0
-  checksum: 7d5ae0c12582bcca4c6a697bd768b45f38b19d3b89f580ded973bf1c4ee2d581c2a50d1914eeab96d2c3502ccb792eb806298ce99bf0bcd9bf98f87c916390a5
   languageName: node
   linkType: hard
 
@@ -8767,13 +8787,6 @@ __metadata:
   version: 1.1.0
   resolution: "ccount@npm:1.1.0"
   checksum: b335a79d0aa4308919cf7507babcfa04ac63d389ebed49dbf26990d4607c8a4713cde93cc83e707d84571ddfe1e7615dad248be9bc422ae4c188210f71b08b78
-  languageName: node
-  linkType: hard
-
-"ceibo@npm:~2.0.0":
-  version: 2.0.0
-  resolution: "ceibo@npm:2.0.0"
-  checksum: 5b61580221b8b145442b5076fe2d9389104899e712dce21bfabe907276e86cfc36f8aae68a4af592300db6eeedc53e885019475f0ffb41cf9c9217f500d9c9cf
   languageName: node
   linkType: hard
 
@@ -11085,7 +11098,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^6.16.0, ember-cli-babel@npm:^6.3.0, ember-cli-babel@npm:^6.6.0, ember-cli-babel@npm:^6.9.0, ember-cli-babel@npm:^6.9.2":
+"ember-cli-babel@npm:^6.16.0, ember-cli-babel@npm:^6.3.0, ember-cli-babel@npm:^6.9.0, ember-cli-babel@npm:^6.9.2":
   version: 6.18.0
   resolution: "ember-cli-babel@npm:6.18.0"
   dependencies:
@@ -11106,7 +11119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^7.0.0, ember-cli-babel@npm:^7.1.0, ember-cli-babel@npm:^7.1.2, ember-cli-babel@npm:^7.1.3, ember-cli-babel@npm:^7.10.0, ember-cli-babel@npm:^7.13.0, ember-cli-babel@npm:^7.13.2, ember-cli-babel@npm:^7.17.2, ember-cli-babel@npm:^7.18.0, ember-cli-babel@npm:^7.19.0, ember-cli-babel@npm:^7.21.0, ember-cli-babel@npm:^7.22.1, ember-cli-babel@npm:^7.23.0, ember-cli-babel@npm:^7.23.1, ember-cli-babel@npm:^7.26.1, ember-cli-babel@npm:^7.26.11, ember-cli-babel@npm:^7.26.3, ember-cli-babel@npm:^7.26.4, ember-cli-babel@npm:^7.26.5, ember-cli-babel@npm:^7.26.6, ember-cli-babel@npm:^7.26.8, ember-cli-babel@npm:^7.4.0, ember-cli-babel@npm:^7.4.1, ember-cli-babel@npm:^7.7.3":
+"ember-cli-babel@npm:^7.0.0, ember-cli-babel@npm:^7.1.0, ember-cli-babel@npm:^7.1.2, ember-cli-babel@npm:^7.1.3, ember-cli-babel@npm:^7.10.0, ember-cli-babel@npm:^7.13.0, ember-cli-babel@npm:^7.13.2, ember-cli-babel@npm:^7.17.2, ember-cli-babel@npm:^7.18.0, ember-cli-babel@npm:^7.19.0, ember-cli-babel@npm:^7.21.0, ember-cli-babel@npm:^7.22.1, ember-cli-babel@npm:^7.23.0, ember-cli-babel@npm:^7.23.1, ember-cli-babel@npm:^7.26.11, ember-cli-babel@npm:^7.26.3, ember-cli-babel@npm:^7.26.4, ember-cli-babel@npm:^7.26.5, ember-cli-babel@npm:^7.26.6, ember-cli-babel@npm:^7.26.8, ember-cli-babel@npm:^7.4.0, ember-cli-babel@npm:^7.4.1, ember-cli-babel@npm:^7.7.3":
   version: 7.26.11
   resolution: "ember-cli-babel@npm:7.26.11"
   dependencies:
@@ -11332,20 +11345,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-node-assets@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "ember-cli-node-assets@npm:0.2.2"
-  dependencies:
-    broccoli-funnel: ^1.0.1
-    broccoli-merge-trees: ^1.1.1
-    broccoli-source: ^1.1.0
-    debug: ^2.2.0
-    lodash: ^4.5.1
-    resolve: ^1.1.7
-  checksum: 860abfe536ad951286b86f04d1700529b371396d4e742ba6cbdd371144ff018b91907e2997e8486423bbe1e086f2ab97169e648c5360cd0949d70050e84919be
-  languageName: node
-  linkType: hard
-
 "ember-cli-normalize-entity-name@npm:^1.0.0":
   version: 1.0.0
   resolution: "ember-cli-normalize-entity-name@npm:1.0.0"
@@ -11355,19 +11354,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-page-object@npm:^1.17.7":
-  version: 1.17.12
-  resolution: "ember-cli-page-object@npm:1.17.12"
+"ember-cli-page-object@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "ember-cli-page-object@npm:2.1.3"
   dependencies:
-    broccoli-file-creator: ^2.1.1
-    broccoli-merge-trees: ^2.0.0
-    ceibo: ~2.0.0
-    ember-cli-babel: ^7.26.1
-    ember-cli-node-assets: ^0.2.2
-    ember-native-dom-helpers: ^0.7.0
-    jquery: ^3.4.1
-    rsvp: ^4.7.0
-  checksum: e4d8d0e69a93e824653fe4917fd376dafac30fc314ba06887dc6925ef8f7a6e5d3f080261a1e956f06313f36d2eb19edaee7127198917f0ccd6a798668bd8f39
+    "@embroider/addon-shim": ^1.8.0
+    "@ro0gr/ceibo": ^2.2.0
+    "@types/jquery": ^3.5.14
+    jquery: ^3.5.1
+  peerDependencies:
+    "@ember/jquery": "*"
+    "@ember/test-helpers": ">= 2.5.0"
+  peerDependenciesMeta:
+    "@ember/jquery":
+      optional: true
+  checksum: fcbe04e4ef625c48e41e9cbd28bb921e6b2e44c3f810775c2cbc2dce9bb3409afb4cf1bd571c284dd0645e09224beace0ec50aef575b59635d4511333cd9f26c
   languageName: node
   linkType: hard
 
@@ -12069,16 +12070,6 @@ __metadata:
     moment: ^2.29.1
     moment-timezone: ^0.5.33
   checksum: 902a509c00383f798fa96b49c986d84d164c411861749561655627e1cd74c882b6776e8fa75efdd376ad1460234244fc8dcb7a58b694fad7340108b5d768dde0
-  languageName: node
-  linkType: hard
-
-"ember-native-dom-helpers@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "ember-native-dom-helpers@npm:0.7.0"
-  dependencies:
-    broccoli-funnel: ^1.1.0
-    ember-cli-babel: ^6.6.0
-  checksum: 958ed8ff1b1d31c598ba73dfb53d551448fcb377a02ed224e93360d39369c0937063fce1da72f1c2329d85b77701fc84646b248fb2bee83e0b8535566a9fa436
   languageName: node
   linkType: hard
 
@@ -13199,13 +13190,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exists-sync@npm:0.0.4":
-  version: 0.0.4
-  resolution: "exists-sync@npm:0.0.4"
-  checksum: bb80d4570253bd1f932f3d62adada3acd7df9dddeba1c19181ed2f77111cad48e02913c341cac5079ad97e03b718f92a69b8e427946d7939c9487299a62035b4
-  languageName: node
-  linkType: hard
-
 "exit@npm:^0.1.2":
   version: 0.1.2
   resolution: "exit@npm:0.1.2"
@@ -13407,7 +13391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-ordered-set@npm:^1.0.0, fast-ordered-set@npm:^1.0.2":
+"fast-ordered-set@npm:^1.0.0":
   version: 1.0.3
   resolution: "fast-ordered-set@npm:1.0.3"
   dependencies:
@@ -16787,7 +16771,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jquery@npm:^3.4.1, jquery@npm:^3.5.0, jquery@npm:^3.5.1":
+"jquery@npm:^3.5.0, jquery@npm:^3.5.1":
   version: 3.6.0
   resolution: "jquery@npm:3.6.0"
   checksum: 8fd5fef4aa48fd374ec716dd1c1df1af407814a228e15c1260ca140de3a697c2a77c30c54ff1d238b6a3ab4ddc445ddeef9adce6c6d28e4869d85eb9d3951c0e
@@ -17680,7 +17664,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.12, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.5.1, lodash@npm:^4.7.0":
+"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.12, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -21853,7 +21837,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.15.1, resolve@^1.17.0, resolve@^1.20.0, resolve@^1.3.3, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1, resolve@npm:^1.12.0, resolve@npm:^1.19.0, resolve@npm:^1.3.2":
+"resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.15.1, resolve@^1.17.0, resolve@^1.20.0, resolve@^1.3.3, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1, resolve@npm:^1.12.0, resolve@npm:^1.19.0, resolve@npm:^1.3.2":
   version: 1.22.0
   resolution: "resolve@npm:1.22.0"
   dependencies:
@@ -21866,7 +21850,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.11.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.3#~builtin<compat/resolve>, resolve@patch:resolve@^1.4.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.5.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.8.1#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.11.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.3#~builtin<compat/resolve>, resolve@patch:resolve@^1.4.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.5.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.8.1#~builtin<compat/resolve>":
   version: 1.22.0
   resolution: "resolve@patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"
   dependencies:
@@ -22309,7 +22293,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5":
+"semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.8":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
