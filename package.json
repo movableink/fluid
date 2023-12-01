@@ -37,7 +37,7 @@
     "@mozaic-ds/postcss-sass": "4.0.0-next.0",
     "@percy/cli": "^1.16.0",
     "@percy/ember": "^3.0.0",
-    "@release-it/conventional-changelog": "^4.3.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@storybook/addon-actions": "^6.4.20",
     "@storybook/addon-docs": "^6.4.20",
     "@storybook/addon-essentials": "^6.4.20",
