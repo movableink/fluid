@@ -1,14 +1,14 @@
 {{#let
   (if
     @disabled
-    "border-neutral-500 bg-neutral-300 text-neutral-600"
+    "bg-neutral-300 border-transparent text-text-disabled"
     (if
       @hasError
-      "border-red-400 focus-within:ring-red-200"
+      "border-red-400 focus-within:border-red-200"
       (if
         @hasWarning
-        "border-orange-400 focus-within:ring-orange-200"
-        "border-neutral-300 focus-within:border-blue-300 focus-within:ring-blue-200"
+        "border-orange-400 focus-within:border-orange-200"
+        "border-transparent focus-within:border-primary-dark bg-neutral-100 focus-within:bg-neutral-00"
       )
     )
   )
@@ -16,7 +16,7 @@
   as |borderStyle fontStyle|
 }}
   <div
-    class="font-sans inline-flex items-center border rounded focus:outline-none
+    class="font-inter inline-flex items-center rounded-lg border
       {{borderStyle}}
       {{fontStyle}}
       {{@class}}"
@@ -54,20 +54,6 @@
         @disabled={{@disabled}}
         @type={{@type}}
       />
-    {{/if}}
-
-    {{#if (or @hasError @hasWarning)}}
-      {{#let (if @useSmallSize "h-4 w-4" "h-5 w-5") as |iconSizingStyles|}}
-        <div class="mr-2">
-          {{#if @hasError}}
-            {{svg-jar "failure" class=(concat "fill-current text-red-500 " iconSizingStyles)}}
-          {{/if}}
-
-          {{#if @hasWarning}}
-            {{svg-jar "alert" class=(concat "fill-current text-orange-400 " iconSizingStyles)}}
-          {{/if}}
-        </div>
-      {{/let}}
     {{/if}}
   </div>
 {{/let}}
