@@ -12,7 +12,7 @@
 
     &:focus .fluid-checkbox__box,
     &:hover .fluid-checkbox__box {
-      border-color: theme('colors.neutral.700');
+      border-color: theme('colors.text.secondary');
     }
 
     .fluid-checkbox__label {
@@ -21,12 +21,12 @@
   }
 
   &__box {
-    @apply bg-neutral-100;
-    border-color: theme('colors.neutral.500');
+    border-color: theme('colors.text.secondary');
     border-style: solid;
+    border-radius: 2px;
     flex-shrink: 0;
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.25em;
+    width: 1.25em;
     display: inline-flex;
 
     &:not(:only-child) {
@@ -34,27 +34,42 @@
     }
   }
 
+  &:focus {
+    border-color: theme('colors.primary.main');
+  }
+
   &--disabled {
     cursor: not-allowed;
+    border-color: theme('colors.text.disabled');
+
+    label {
+      cursor: not-allowed;
+      color: theme('colors.text.disabled');
+    }
   }
 
   &--disabled &__box {
-    @apply bg-neutral-300;
+    cursor: not-allowed;
+    border-color: theme('colors.text.disabled');
   }
 
-  &--checked &__box {
-    @apply bg-blue-400;
-    border-color: theme('colors.blue.400');
+  &--disabled#{&}--checked &__box {
+    @apply bg-text-disabled;
+  }
+
+  &--checked:not(&--disabled) &__box {
+    @apply bg-primary-main;
+    border-color: theme('colors.primary.main');
   }
 
   &--checked:focus:not(&--disabled) &__box,
   &--checked:hover:not(&--disabled) &__box {
-    border-color: theme('colors.blue.500');
+    border-color: theme('colors.primary.main');
   }
 
   &:active:not(&--disabled) &__box {
-    @apply bg-blue-500;
-    border-color: theme('colors.blue.500');
+    @apply bg-primary-main;
+    border-color: theme('colors.primary.main');
   }
 
   &__inner-box {
