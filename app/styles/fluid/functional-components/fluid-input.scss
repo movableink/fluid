@@ -1,7 +1,8 @@
 .fluid-input {
-  @apply border border-neutral-300 rounded-sm inline-block py-1 px-2 shadow-sm text-neutral-700;
+  @apply border border-neutral-300;
+  @apply rounded-sm inline-block py-1 px-2 shadow-sm;
+  @apply text-neutral-700 font-inter;
   font-size: 16px;
-  font-family: 'Open Sans';
 
   &--full-width {
     width: 100%;
