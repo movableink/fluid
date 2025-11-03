@@ -1,3 +1,18 @@
+## [2.2.0](https://github.com/movableink/fluid/compare/2.1.10...2.2.0) (2025-11-03)
+
+### Features
+
+- inkux-ify badge ([b365b86](https://github.com/movableink/fluid/commit/b365b86bed121de2dab8e6cd27ffda27a3ed006b))
+- inkux-ify checkbox ([48159dd](https://github.com/movableink/fluid/commit/48159dd4ab6759c8b6c00c4fdde1b114b964556a))
+- inkux-ify fluid panel ([a2540e6](https://github.com/movableink/fluid/commit/a2540e6861bf17a951d696956c1b37315680ede6))
+- inkux-ify form fields (date, text + label) ([aab144d](https://github.com/movableink/fluid/commit/aab144d37e52ad55883435878ad347e241f9ffd8))
+- inkux-ify select ([10da303](https://github.com/movableink/fluid/commit/10da3034fdcd604175fa80aa2f7237949d7d88c7))
+- update text input colors ([4254630](https://github.com/movableink/fluid/commit/4254630542e80929600ecc77c8beb8379d5ab713))
+
+### Bug Fixes
+
+- remove hardcoded fill from drag icon ([b229e4a](https://github.com/movableink/fluid/commit/b229e4a005924f60d7d4f77a7d521279248901ce))
+
 ## [2.1.10](https://github.com/movableink/fluid/compare/2.1.9...2.1.10) (2025-04-15)
 
 ## [2.1.9](https://github.com/movableink/fluid/compare/2.1.8...2.1.9) (2023-08-17)
