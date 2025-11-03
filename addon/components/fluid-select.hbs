@@ -17,15 +17,14 @@
           popup=(component
             dropdown.Content
             defaultClass=(concat
-              "fluid-select__wrapper"
-              (if @dark " ember-basic-dropdown-content--dark")
-              " rounded border border-neutral-300"
+              "fluid-select__wrapper" (if @dark " ember-basic-dropdown-content--dark") " rounded"
             )
           )
           trigger=(component
             dropdown.Trigger
             defaultClass=(concat
-              "fluid-button" (if @dark " type:outline text-white hover:bg-neutral-600")
+              "fluid-button rounded-lg font-normal tracking-md"
+              (if @dark " type:outline text-white hover:bg-neutral-600")
             )
             dark=@dark
             multiple=@multiple

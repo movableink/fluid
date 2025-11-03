@@ -1,15 +1,17 @@
 <div class="flex flex-col items-stretch {{if @useSmallSize "body-sm" "body-base"}}" ...attributes>
   {{#if (or @label @isOptional @isRequired)}}
-    <div class="flex items-center {{if @useSmallSize "mb-1" "mb-2"}}">
+    <div class="flex items-center">
       {{#if @label}}
-        <label for={{this.id}} class="font-bold">
-          {{@label}}
-        </label>
+        {{#let (if this.hasError "text-error-main") as |fontStyle|}}
+          <label for={{this.id}} class="text-text-secondary text-xs tracking-md {{fontStyle}}">
+            {{@label}}
+          </label>
+        {{/let}}
       {{/if}}
 
       {{#if (or @isOptional @isRequired)}}
-        <span class="lowercase ml-auto {{if @isRequired "text-red-600"}}">
-          {{if @isOptional "Optional" "Required"}}
+        <span class="lowercase {{if @isRequired "text-red-600"}}">
+          {{if @isOptional "" "*"}}
         </span>
       {{/if}}
     </div>
@@ -53,7 +55,7 @@
   </div>
 
   {{#if (or @helpText this.hasError this.hasWarning)}}
-    <div class="mt-2" data-test-help-text-for={{this.id}}>
+    <div class="text-xs tracking-md" data-test-help-text-for={{this.id}}>
       {{#if @helpText}}
         <span class="text-neutral-700">
           {{@helpText}}
@@ -61,7 +63,7 @@
       {{/if}}
 
       {{#if this.hasError}}
-        <ul class="text-red-600" data-test-error-messages-for={{this.id}}>
+        <ul class="text-error-main" data-test-error-messages-for={{this.id}}>
           {{#each this.errorMessages as |message|}}
             <li>
               {{message}}

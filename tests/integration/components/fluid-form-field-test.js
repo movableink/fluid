@@ -34,18 +34,7 @@ module('Integration | Component | fluid-form-field', function (hooks) {
     `);
     await percySnapshot(assert);
 
-    assert.dom().hasText('Required', 'Has the `Required` text');
-  });
-
-  test('displaying the `optional` corner hint', async function (assert) {
-    await render(hbs`
-      <FluidFormField @isOptional={{true}} as |field|>
-        <field.Text />
-      </FluidFormField>
-    `);
-    await percySnapshot(assert);
-
-    assert.dom().hasText('Optional', 'Has the `Optional` text');
+    assert.dom().hasText('*', 'Has the `Required` text');
   });
 
   test('displaying error messages', async function (assert) {

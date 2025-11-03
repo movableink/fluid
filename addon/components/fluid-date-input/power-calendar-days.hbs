@@ -19,16 +19,16 @@
         {{#let
           (if
             day.isSelected
-            "text-white border-blue bg-blue font-bold"
+            "text-white border-primary-main bg-primary-main font-bold"
             (if
               day.isToday
-              "border-blue"
+              "border-primary-main"
               (if
                 day.isDisabled
                 "border-white opacity-50 cursor-not-allowed"
                 (if
                   day.isCurrentMonth
-                  "border-white hover:border-blue-300"
+                  "border-white hover:border-border-primary-main"
                   "border-white hover:border-neutral-300 text-neutral-500"
                 )
               )
@@ -42,7 +42,7 @@
             data-test-selected={{day.isSelected}}
             data-test-today={{day.isToday}}
             data-test-focused={{day.isFocused}}
-            class="w-8 text-2xs rounded-md border focus:outline-none focus:border-blue-300 focus:ring-blue-200
+            class="w-8 text-2xs rounded-md border focus:outline-none focus:border-primary-main rounded-full
               {{dynamicButtonClasses}}"
             disabled={{day.isDisabled}}
             {{on "focus" this.handleDayFocus}}
