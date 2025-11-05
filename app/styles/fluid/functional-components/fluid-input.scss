@@ -1,8 +1,17 @@
 .fluid-input {
-  @apply border border-neutral-300;
-  @apply rounded-sm inline-block py-1 px-2 shadow-sm;
-  @apply text-neutral-700 font-inter;
+  @apply border border-transparent outline-none bg-neutral-100 ;
+  @apply text-text-primary font-inter;
+  @apply rounded-lg;
+  border-width: 1px;
   font-size: 16px;
+
+  &:focus {
+    @apply border-primary-dark bg-neutral-00;
+  }
+
+  &:disabled {
+    @apply bg-neutral-300 border-transparent text-text-disabled;
+  }
 
   &--full-width {
     width: 100%;
@@ -11,13 +20,8 @@
 
   &--icon {
     @apply pl-8;
-    background: none;
     position: relative;
     z-index: 0;
-  }
-
-  &:disabled {
-    @apply text-neutral-600;
   }
 
   &__wrapper {
@@ -35,7 +39,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 0;
+    z-index: 100;
   }
 
   &--error {
