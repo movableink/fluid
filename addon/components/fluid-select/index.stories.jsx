@@ -16,6 +16,10 @@ export default {
       control: { type: 'boolean' },
       defaultValue: false,
     },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
   },
 };
 
@@ -29,6 +33,7 @@ const Template = (args) => ({
       @multiple={{this.multiple}}
       @renderInPlace={{true}}
       @small={{this.small}}
+      @disabled={{this.disabled}}
     />
   `,
   context: {
