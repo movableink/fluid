@@ -1,3 +1,10 @@
+## [2.2.1-alpha.3](https://github.com/movableink/fluid/compare/2.2.0...2.2.1-alpha.3) (2025-11-05)
+
+### Features
+
+- add small variant to fluid-select ([f3e57b7](https://github.com/movableink/fluid/commit/f3e57b722f373643a7418913074c8e5a72c8df24))
+- update fluid-input class to ink ux styles ([3109bc8](https://github.com/movableink/fluid/commit/3109bc85cf6ce8674e82c5def292e35b8cdaa642))
+
 ## [2.2.0](https://github.com/movableink/fluid/compare/2.1.10...2.2.0) (2025-11-03)
 
 ### Features
