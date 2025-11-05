@@ -1051,25 +1051,7 @@ define("dummy/tests/integration/components/fluid-form-field-test", ["@ember/temp
         "isStrictMode": false
       }));
       await (0, _ember.default)(assert);
-      assert.dom().hasText('Required', 'Has the `Required` text');
-    });
-    (0, _qunit.test)('displaying the `optional` corner hint', async function (assert) {
-      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
-      /*
-        
-            <FluidFormField @isOptional={{true}} as |field|>
-              <field.Text />
-            </FluidFormField>
-          
-      */
-      {
-        "id": "cJQ2BHBk",
-        "block": "[[[1,\"\\n      \"],[8,[39,0],null,[[\"@isOptional\"],[true]],[[\"default\"],[[[[1,\"\\n        \"],[8,[30,1,[\"Text\"]],null,null,null],[1,\"\\n      \"]],[1]]]]],[1,\"\\n    \"]],[\"field\"],false,[\"fluid-form-field\"]]",
-        "moduleName": "(unknown template module)",
-        "isStrictMode": false
-      }));
-      await (0, _ember.default)(assert);
-      assert.dom().hasText('Optional', 'Has the `Optional` text');
+      assert.dom().hasText('*', 'Has the `Required` text');
     });
     (0, _qunit.test)('displaying error messages', async function (assert) {
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
