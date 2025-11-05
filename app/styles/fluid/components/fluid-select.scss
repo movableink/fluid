@@ -29,6 +29,10 @@
     }
   }
 
+  &__trigger.size\:sm {
+    @apply text-base leading-sm py-1.5 px-2;
+  }
+
   &__trigger-label {
     flex-grow: 1;
     overflow: hidden;
