@@ -11,6 +11,12 @@ export default {
       page: FluidSelectDocs,
     },
   },
+  argTypes: {
+    small: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
+  },
 };
 
 const Template = (args) => ({
@@ -22,6 +28,7 @@ const Template = (args) => ({
       @select={{onSelect}}
       @multiple={{this.multiple}}
       @renderInPlace={{true}}
+      @small={{this.small}}
     />
   `,
   context: {
@@ -97,10 +104,19 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'fruit',
   options: ['apple', 'banana', 'orange'],
+  small: false,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  label: 'fruit',
+  options: ['apple', 'banana', 'orange'],
+  small: true,
 };
 
 export const GroupedOptions = Template.bind({});
 GroupedOptions.args = {
+  ...Default.args,
   label: 'Grouped Options',
   options: [
     { groupLabel: 'Group one', groupOptions: ['one', 'two', 'three'] },
@@ -120,6 +136,7 @@ Multiple.args = {
 
 export const Search = SearchTemplate.bind({});
 Search.args = {
+  ...Default.args,
   label: 'fruit',
   options: ['apple', 'banana', 'orange', 'cantaloupe', 'durian'],
 };

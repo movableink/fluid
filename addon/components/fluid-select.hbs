@@ -23,8 +23,9 @@
           trigger=(component
             dropdown.Trigger
             defaultClass=(concat
-              "fluid-button rounded-lg font-normal tracking-md"
+              "fluid-button font-normal tracking-md"
               (if @dark " type:outline text-white hover:bg-neutral-600")
+              (if @small " size:sm text-base leading-sm")
             )
             dark=@dark
             multiple=@multiple
