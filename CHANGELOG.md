@@ -1,3 +1,5 @@
+## [2.2.1-alpha.4](https://github.com/movableink/fluid/compare/2.2.1-alpha.3...2.2.1-alpha.4) (2025-11-06)
+
 ## [2.2.1-alpha.3](https://github.com/movableink/fluid/compare/2.2.0...2.2.1-alpha.3) (2025-11-05)
 
 ### Features
