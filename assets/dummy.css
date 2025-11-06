@@ -800,9 +800,10 @@ input[type=number] {
   color: var(--fluid-button-color);
   align-items: center;
   display: inline-flex;
-  border-radius: 4px;
+  border-radius: 8px;
   border-width: 1px;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -957,9 +958,40 @@ input[type=number] {
   border-color: #448aff;
 }
 
+.fluid-button.type\:plain.type\:destructive {
+  --fluid-button-color: #d50000;
+  border-color: transparent;
+}
+
+.fluid-button.type\:plain.type\:destructive:not([class*="bg-"]) {
+  background-color: transparent;
+}
+
+.fluid-button.type\:plain.type\:destructive:disabled, .fluid-button.type\:plain.type\:destructive.appearance\:disabled {
+  --fluid-button-color: #9e9e9e;
+}
+
+.fluid-button.type\:plain.type\:destructive:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:plain.type\:destructive.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
+  --fluid-button-color: #d50000;
+  border-color: transparent;
+  background-color: rgba(211, 47, 47, 0.04);
+}
+
+.fluid-button.type\:plain.type\:destructive:focus, .fluid-button.type\:plain.type\:destructive.appearance\:focused {
+  box-shadow: none;
+  border-color: #448aff;
+  background-color: rgba(211, 47, 47, 0.04);
+}
+
+.fluid-button.type\:plain.type\:destructive:active:not(.appearance\:disabled), .fluid-button.type\:plain.type\:destructive.appearance\:active:not(.appearance\:disabled) {
+  box-shadow: none;
+  border-color: #448aff;
+  background-color: rgba(211, 47, 47, 0.04);
+}
+
 .fluid-button:not([class*="size\:"]) {
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -999,7 +1031,7 @@ input[type=number] {
 
 .fluid-button.size\:sm {
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1019,7 +1051,7 @@ input[type=number] {
 
 .fluid-button.size\:lg {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.75rem;
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1574,6 +1606,15 @@ h6 {
   background-color: rgba(66, 66, 66, var(--tw-bg-opacity));
 }
 
+.fluid-select__trigger.size\:sm {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .fluid-select__trigger-label {
   flex-grow: 1;
   overflow: hidden;
@@ -1632,19 +1673,19 @@ h6 {
   white-space: nowrap;
 }
 
-.fluid-select__option--dark {
+.fluid-select__option--dark.fluid-select__list-item {
   --tw-text-opacity: 1;
   color: rgba(189, 189, 189, var(--tw-text-opacity));
 }
 
-.fluid-select__option--dark:hover {
+.fluid-select__option--dark.fluid-select__list-item:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(33, 33, 33, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(189, 189, 189, var(--tw-text-opacity));
 }
 
-.fluid-select__option--dark:active {
+.fluid-select__option--dark.fluid-select__list-item:active {
   --tw-bg-opacity: 1;
   background-color: rgba(97, 97, 97, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -2427,20 +2468,38 @@ h6 {
 
 .fluid-input {
   border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(224, 224, 224, var(--tw-border-opacity));
-  display: inline-block;
-  border-radius: 0.125rem;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgba(245, 245, 245, var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(33, 33, 33, var(--tw-text-opacity));
+  border-radius: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  font-family: "Inter", sans-serif;
-  --tw-text-opacity: 1;
-  color: rgba(97, 97, 97, var(--tw-text-opacity));
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  border-width: 1px;
   font-size: 16px;
+}
+
+.fluid-input:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(40, 90, 230, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.fluid-input:disabled {
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgba(224, 224, 224, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(158, 158, 158, var(--tw-text-opacity));
 }
 
 .fluid-input--full-width {
@@ -2450,14 +2509,8 @@ h6 {
 
 .fluid-input--icon {
   padding-left: 2rem;
-  background: none;
   position: relative;
   z-index: 0;
-}
-
-.fluid-input:disabled {
-  --tw-text-opacity: 1;
-  color: rgba(117, 117, 117, var(--tw-text-opacity));
 }
 
 .fluid-input__wrapper {
@@ -2476,7 +2529,7 @@ h6 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 0;
+  z-index: 100;
 }
 
 .fluid-input--error {
@@ -34482,6 +34535,10 @@ h6 {
   font-weight: 400;
 }
 
+.font-semibold {
+  font-weight: 500;
+}
+
 .font-bold {
   font-weight: 600;
 }
@@ -34613,6 +34670,10 @@ h6 {
 
 .tracking-md {
   letter-spacing: 0.025em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.03rem;
 }
 
 .text-neutral-50 {
