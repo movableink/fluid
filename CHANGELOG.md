@@ -1,3 +1,14 @@
+## [2.3.0](https://github.com/movableink/fluid/compare/2.2.0...2.3.0) (2025-11-06)
+
+### Features
+
+- add small variant to fluid-select ([f3e57b7](https://github.com/movableink/fluid/commit/f3e57b722f373643a7418913074c8e5a72c8df24))
+- update fluid-input class to ink ux styles ([3109bc8](https://github.com/movableink/fluid/commit/3109bc85cf6ce8674e82c5def292e35b8cdaa642))
+
+### Bug Fixes
+
+- select dark styles and story ([67d2538](https://github.com/movableink/fluid/commit/67d25387fc09aaeb8c7b2be9552b9ecdc73d73b2))
+
 ## [2.2.0](https://github.com/movableink/fluid/compare/2.1.10...2.2.0) (2025-11-03)
 
 ### Features
