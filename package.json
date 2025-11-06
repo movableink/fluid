@@ -1,6 +1,6 @@
 {
   "name": "@movable/fluid",
-  "version": "2.2.0",
+  "version": "2.2.1-alpha.5",
   "description": "Fluid is Movable Ink's design framework for its apps.",
   "homepage": "https://movableink.github.io/fluid/docs",
   "scripts": {
