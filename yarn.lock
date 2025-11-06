@@ -3064,7 +3064,7 @@ __metadata:
     "@movable/eslint-config": ^2.0.0
     "@movable/eslint-config-ember": ^1.0.1
     "@movable/prettier-config": ^1.0.0
-    "@movable/tailwind-config": ^3.5.1
+    "@movable/tailwind-config": ^3.5.2
     "@movable/template-lint-plugin": ^3.0.2
     "@mozaic-ds/postcss-sass": 4.0.0-next.0
     "@percy/cli": ^1.16.0
@@ -3170,10 +3170,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@movable/tailwind-config@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "@movable/tailwind-config@npm:3.5.1"
-  checksum: 6af3a2950a0be335de16e4f6830c758a68d907c398dff1ec16eb7274316749d3352e1fedda49a1d6c59cac54994eb4e75e9b5f3991f154533dd24f4d2a83ff3f
+"@movable/tailwind-config@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "@movable/tailwind-config@npm:3.5.2"
+  checksum: dbe36e43ee8b8db7eb09a230a33f325696beebf9fbef3365c45fa9cfb8d86cf45622dc54047dd245a1bd7da2788b6b6b1084af3d06d3e0158a5dcba9e7838db9
   languageName: node
   linkType: hard
 
