@@ -9,7 +9,7 @@ export default {
   title: 'Components/Fluid Button',
   argTypes: {
     type: {
-      options: ['none', 'primary', 'destructive', 'outline', 'plain', 'plain'],
+      options: ['none', 'primary', 'destructive', 'outline', 'plain', 'plain destructive'],
       control: { type: 'select' },
       table: {
         category: null,
@@ -56,7 +56,13 @@ const Template = (args) => ({
   `,
   context: {
     ...args,
-    type: args.type !== 'none' ? `type:${args.type}` : '',
+    type:
+      args.type !== 'none'
+        ? args.type
+            .split(' ')
+            .map((type) => `type:${type}`)
+            .join(' ')
+        : '',
     size: args.size !== 'none' ? `size:${args.size}` : 'size',
   },
 });
@@ -94,6 +100,13 @@ Plain.args = {
   ...Default.args,
   label: 'Plain',
   type: 'plain',
+};
+
+export const PlainDestructive = Template.bind({});
+PlainDestructive.args = {
+  ...Default.args,
+  label: 'Plain Destructive',
+  type: 'plain destructive',
 };
 
 export const Customization = Template.bind({});

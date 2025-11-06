@@ -11,18 +11,37 @@ export default {
       page: FluidSelectDocs,
     },
   },
+  argTypes: {
+    dark: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
+    small: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
+  },
 };
 
 const Template = (args) => ({
   template: hbs`
-    <FluidSelect
-      @label={{this.label}}
-      @selected={{this.selected}}
-      @options={{this.options}}
-      @select={{onSelect}}
-      @multiple={{this.multiple}}
-      @renderInPlace={{true}}
-    />
+    <div class={{backgroundClass}}>
+      <FluidSelect
+        @label={{this.label}}
+        @selected={{this.selected}}
+        @options={{this.options}}
+        @select={{onSelect}}
+        @multiple={{this.multiple}}
+        @renderInPlace={{true}}
+        @small={{this.small}}
+        @disabled={{this.disabled}}
+        @dark={{this.dark}}
+      />
+    </div>
   `,
   context: {
     onSelect: action(function (value) {
@@ -38,6 +57,7 @@ const Template = (args) => ({
         this.set('selected', value);
       }
     }),
+    backgroundClass: `p-4 h-64 rounded-lg ${args.dark ? 'bg-neutral-800' : 'bg-white'}`,
     ...args,
   },
 });
@@ -97,10 +117,19 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'fruit',
   options: ['apple', 'banana', 'orange'],
+  small: false,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  label: 'fruit',
+  options: ['apple', 'banana', 'orange'],
+  small: true,
 };
 
 export const GroupedOptions = Template.bind({});
 GroupedOptions.args = {
+  ...Default.args,
   label: 'Grouped Options',
   options: [
     { groupLabel: 'Group one', groupOptions: ['one', 'two', 'three'] },
@@ -120,6 +149,7 @@ Multiple.args = {
 
 export const Search = SearchTemplate.bind({});
 Search.args = {
+  ...Default.args,
   label: 'fruit',
   options: ['apple', 'banana', 'orange', 'cantaloupe', 'durian'],
 };
