@@ -12,6 +12,10 @@ export default {
     },
   },
   argTypes: {
+    dark: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
     small: {
       control: { type: 'boolean' },
       defaultValue: false,
@@ -25,16 +29,19 @@ export default {
 
 const Template = (args) => ({
   template: hbs`
-    <FluidSelect
-      @label={{this.label}}
-      @selected={{this.selected}}
-      @options={{this.options}}
-      @select={{onSelect}}
-      @multiple={{this.multiple}}
-      @renderInPlace={{true}}
-      @small={{this.small}}
-      @disabled={{this.disabled}}
-    />
+    <div class={{backgroundClass}}>
+      <FluidSelect
+        @label={{this.label}}
+        @selected={{this.selected}}
+        @options={{this.options}}
+        @select={{onSelect}}
+        @multiple={{this.multiple}}
+        @renderInPlace={{true}}
+        @small={{this.small}}
+        @disabled={{this.disabled}}
+        @dark={{this.dark}}
+      />
+    </div>
   `,
   context: {
     onSelect: action(function (value) {
@@ -50,6 +57,7 @@ const Template = (args) => ({
         this.set('selected', value);
       }
     }),
+    backgroundClass: `p-4 h-64 rounded-lg ${args.dark ? 'bg-neutral-800' : 'bg-white'}`,
     ...args,
   },
 });

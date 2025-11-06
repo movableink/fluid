@@ -93,7 +93,7 @@
       white-space: nowrap;
     }
 
-    &--dark {
+    &--dark.fluid-select__list-item {
       @apply text-neutral-400;
 
       &:hover {
