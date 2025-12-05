@@ -1,3 +1,11 @@
+## [2.3.2-oidc.3](https://github.com/movableink/fluid/compare/2.3.2-oidc.2...2.3.2-oidc.3) (2025-12-05)
+
+## [2.3.2-oidc.2](https://github.com/movableink/fluid/compare/2.3.2-oidc.1...2.3.2-oidc.2) (2025-12-05)
+
+## [2.3.2-oidc.1](https://github.com/movableink/fluid/compare/2.3.2-oidc.0...2.3.2-oidc.1) (2025-12-05)
+
+## [2.3.2-oidc.0](https://github.com/movableink/fluid/compare/2.3.1...2.3.2-oidc.0) (2025-12-05)
+
 ## [2.3.1](https://github.com/movableink/fluid/compare/2.3.0...2.3.1) (2025-11-06)
 
 ## [2.3.0](https://github.com/movableink/fluid/compare/2.2.0...2.3.0) (2025-11-06)
