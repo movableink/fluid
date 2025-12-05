@@ -71,9 +71,9 @@ jobs:
       - name: Run release-it
         run: |
           if [ "${{ inputs.release_type }}" == "prerelease" ]; then
-            yarn release --ci ${{ inputs.increment }} --preRelease=${{ inputs.dist_tag }} --github.preRelease
+            npx release-it --ci ${{ inputs.increment }} --preRelease=${{ inputs.dist_tag }} --github.preRelease
           else
-            yarn release --ci ${{ inputs.increment }}
+            npx release-it --ci ${{ inputs.increment }}
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
