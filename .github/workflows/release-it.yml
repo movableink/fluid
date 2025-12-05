@@ -1,6 +1,15 @@
 name: Release
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'addon/**/*.js'
+      - 'addon/**/*.hbs'
+      - 'addon-test-support/*'
+      - 'app/**/*.scss'
+      - 'public/*'
   workflow_dispatch:
     inputs:
       release_type:
