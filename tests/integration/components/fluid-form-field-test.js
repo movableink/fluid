@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { find, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | fluid-form-field', function (hooks) {
   setupRenderingTest(hooks);

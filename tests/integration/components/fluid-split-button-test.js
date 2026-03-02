@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { click, find, render, triggerKeyEvent } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import td from 'testdouble';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | fluid-split-button', function (hooks) {
   setupRenderingTest(hooks);

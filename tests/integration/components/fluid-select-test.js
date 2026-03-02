@@ -4,7 +4,7 @@ import { settled, findAll, click, render } from '@ember/test-helpers';
 import { A } from '@ember/array';
 import { hbs } from 'ember-cli-htmlbars';
 import component from '@movable/fluid/test-support/pages/fluid-select';
-import percySnapshot from '../../helpers/percy-snapshot';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | fluid-select', function (hooks) {
   setupRenderingTest(hooks);

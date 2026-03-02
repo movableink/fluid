@@ -2,7 +2,7 @@ import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, find, render, settled } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 import td from 'testdouble';
 
 module('Integration | Component | FluidModal', function (hooks) {

@@ -10,6 +10,8 @@
     "start": "ember server",
     "test": "ember exam",
     "ci-test": "EMBER_ENV=test QUNIT_CONSOLE_GROUPER=false PERCY_TOKEN=$PERCY_TOKEN percy exec -- ember exam",
+    "vizzly:test": "EMBER_ENV=test QUNIT_CONSOLE_GROUPER=false vizzly run \"ember exam\"",
+    "vizzly:tdd": "EMBER_ENV=test QUNIT_CONSOLE_GROUPER=false vizzly tdd run \"ember exam\"",
     "release": "release-it",
     "prepare": "husky install",
     "postinstall": "husky install",
@@ -44,6 +46,8 @@
     "@storybook/addon-links": "^6.4.20",
     "@storybook/ember": "^6.4.20",
     "@storybook/ember-cli-storybook": "^0.5.0",
+    "@vizzly-testing/cli": "^0.29.6",
+    "@vizzly-testing/ember": "^0.0.3",
     "autoprefixer": "^10.3.6",
     "babel-loader": "^8.2.2",
     "babel-plugin-ember-modules-api-polyfill": "^3.5.0",
@@ -166,7 +170,7 @@
     "*.{hbs,json,md,yml}": "prettier --write"
   },
   "volta": {
-    "node": "14.17.1",
+    "node": "22.14.0",
     "yarn": "1.22.10"
   },
   "packageManager": "yarn@3.1.1"

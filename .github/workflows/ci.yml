@@ -51,6 +51,8 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn install --immutable
-      - run: yarn ci-test
+      - name: Install Playwright Chromium
+        run: node_modules/.bin/playwright-core install chromium --with-deps
+      - run: yarn vizzly:test
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          VIZZLY_TOKEN: ${{ secrets.VIZZLY_TOKEN }}

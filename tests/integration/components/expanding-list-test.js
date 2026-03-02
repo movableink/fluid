@@ -2,7 +2,7 @@ import { hbs } from 'ember-cli-htmlbars';
 import sinon from 'sinon';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 import { render, click } from '@ember/test-helpers';
 
 module('Integration | component | fluid-lab/expanding-list', function (hooks) {

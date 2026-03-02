@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
-import percySnapshot from '../../helpers/percy-snapshot';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | fluid-banner', function (hooks) {
   setupRenderingTest(hooks);

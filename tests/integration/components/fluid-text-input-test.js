@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { fillIn, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import td from 'testdouble';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | fluid-text-input', function (hooks) {
   setupRenderingTest(hooks);

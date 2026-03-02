@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { click, find, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import td from 'testdouble';
-import percySnapshot from '@percy/ember';
+import percySnapshot from '../../helpers/vizzly-snapshot';
 
 module('Integration | Component | modal', function (hooks) {
   setupRenderingTest(hooks);

@@ -1,8 +1,10 @@
 'use strict';
 
+const { configure } = require('@vizzly-testing/ember');
+
 const parallel = process.env.EMBER_EXAM_SPLIT_COUNT || 1;
 
-module.exports = {
+module.exports = configure({
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
   parallel,
@@ -23,4 +25,4 @@ module.exports = {
       ].filter(Boolean),
     },
   },
-};
+});
