@@ -26,7 +26,7 @@
     "@babel/core": "^7.14.6",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@csstools/postcss-sass": "^4.0.0",
+    "@csstools/postcss-sass": "^5.1.1",
     "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.7.0",
@@ -36,7 +36,6 @@
     "@movable/prettier-config": "^1.0.0",
     "@movable/tailwind-config": "^3.5.2",
     "@movable/template-lint-plugin": "^3.0.2",
-    "@mozaic-ds/postcss-sass": "4.0.0-next.0",
     "@percy/cli": "^1.16.0",
     "@percy/ember": "^3.0.0",
     "@release-it/conventional-changelog": "^4.3.0",
@@ -54,7 +53,7 @@
     "babel-plugin-htmlbars-inline-precompile": "^5.3.1",
     "broccoli-asset-rev": "^3.0.0",
     "chalk": "^4.1.2",
-    "ember-auto-import": "^1.12.0",
+    "ember-auto-import": "^2.12.1",
     "ember-cli": "~3.28.0",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-deprecation-workflow": "^2.0.0",
@@ -93,7 +92,8 @@
     "sinon": "^10.0.0",
     "tailwindcss": "^2.2.19",
     "testdouble": "^3.16.5",
-    "testdouble-qunit": "^3.0.3"
+    "testdouble-qunit": "^3.0.3",
+    "webpack": "^5.105.3"
   },
   "resolutions": {
     "shell-quote": "^1.7.3",
@@ -170,7 +170,7 @@
     "*.{hbs,json,md,yml}": "prettier --write"
   },
   "volta": {
-    "node": "22.14.0",
+    "node": "20.19.5",
     "yarn": "1.22.10"
   },
   "packageManager": "yarn@3.1.1"

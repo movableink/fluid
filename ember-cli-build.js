@@ -3,7 +3,7 @@ const { resolve } = require('path');
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const postcssParser = require('postcss-scss');
 const tailwind = require('tailwindcss');
-const sass = require('@mozaic-ds/postcss-sass');
+const sass = require('@csstools/postcss-sass');
 const autoprefixer = require('autoprefixer');
 const colorModFunctions = require('@alexlafroscia/postcss-color-mod-function');
 

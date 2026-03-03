@@ -40,3 +40,6 @@ MODULE_REPORT.md
 
 # Storybook Auto Generated
 .storybook/preview-head.html
+
+# Vizzly local TDD baselines
+.vizzly/
