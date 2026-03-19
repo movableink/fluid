@@ -167,7 +167,7 @@
     "*.{hbs,json,md,yml}": "prettier --write"
   },
   "volta": {
-    "node": "22.21.1",
+    "node": "24.14.0",
     "yarn": "1.22.10"
   },
   "packageManager": "yarn@3.1.1"
