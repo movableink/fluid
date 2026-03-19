@@ -153,7 +153,7 @@
     "tracked-maps-and-sets": "^3.0.1"
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 20"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
@@ -166,7 +166,7 @@
     "*.{hbs,json,md,yml}": "prettier --write"
   },
   "volta": {
-    "node": "14.17.1",
+    "node": "22.21.1",
     "yarn": "1.22.10"
   },
   "packageManager": "yarn@3.1.1"
