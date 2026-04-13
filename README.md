@@ -14,9 +14,10 @@ ember install @movable/fluid
 
 ### Installation
 
-1. Ensure you have [`volta`](https://volta.sh) installed on your computer
+1. Install [`mise`](https://mise.jdx.dev/) for tool version management
 2. Clone the repo
-3. `yarn install`
+3. `mise trust && mise install`
+4. `yarn install`
 
 ### Server
 
