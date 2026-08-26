@@ -7,8 +7,9 @@
 >
   <div
     role="dialog"
+    aria-modal="true"
     class="flex flex-col max-h-modal"
-    aria-labelledby={{this.titleId}}
+    aria-labelledby={{if (or @title (has-block "header")) this.titleId}}
     ...attributes
     {{focus-trap
       isPaused=@disableFocusTrap

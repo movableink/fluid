@@ -30,6 +30,7 @@ module('Integration | Component | FluidModal', function (hooks) {
 
     const { id } = find('h1');
     assert.dom('[role="dialog"]').hasAria('labelledby', id, 'Dialog is labeled by title element');
+    assert.dom('[role="dialog"]').hasAria('modal', 'true', 'Dialog is marked as modal');
   });
 
   test('rendering without a header or footer', async function (assert) {
@@ -42,6 +43,19 @@ module('Integration | Component | FluidModal', function (hooks) {
     await percySnapshot(assert);
 
     assert.dom('button').hasText('I am a bare modal');
+    assert
+      .dom('[role="dialog"]')
+      .doesNotHaveAttribute('aria-labelledby', 'Does not point at a title that was never rendered');
+  });
+
+  test('labelling a titleless modal from the outside', async function (assert) {
+    await render(hbs`
+      <FluidModal aria-label="Confirm deletion">
+        <button>I am a bare modal</button>
+      </FluidModal>
+    `);
+
+    assert.dom('[role="dialog"]').hasAria('label', 'Confirm deletion');
   });
 
   test('rendering the header in block mode', async function (assert) {
