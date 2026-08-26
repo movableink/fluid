@@ -75,7 +75,9 @@
   }
 
   &__option {
-    outline: none;
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
 
     &:hover,
     &--highlighted {

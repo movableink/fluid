@@ -18,11 +18,14 @@
     -webkit-appearance: textfield;
     padding: 1.5rem 2.5rem 0.5rem 0.7rem;
     border: 0;
-    outline: none;
     width: 100%;
     background: transparent;
     position: relative;
     z-index: 1;
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   svg {

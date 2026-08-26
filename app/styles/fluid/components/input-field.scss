@@ -18,7 +18,10 @@
     @apply shadow-none;
     @apply bg-neutral-100;
     @apply resize-y;
-    outline: none;
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &.flex-2 {
