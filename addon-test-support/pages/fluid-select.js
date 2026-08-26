@@ -1,9 +1,11 @@
 import {
   findElementWithAssert,
+  attribute,
   create,
   collection,
   fillable,
   hasClass,
+  isVisible,
   property,
   text,
 } from 'ember-cli-page-object';
@@ -79,21 +81,16 @@ export const FluidSelect = {
 
     list: {
       scope: '.fluid-select__list',
+      activeDescendant: attribute('aria-activedescendant'),
+
       options: collection('.fluid-select__option', {
-        hasCheckbox: hasClass('fluid-checkbox'),
+        hasCheckbox: isVisible('.fluid-checkbox'),
         isSelected: hasClass('fluid-select__option--selected'),
+        ariaSelected: attribute('aria-selected'),
+        id: attribute('id'),
 
         click() {
-          // If the list option is a `FluidCheckbox`, then we actually want to click the checkbox within the option
-          // Otherwise, click the option's element itself
-          if (this.hasCheckbox) {
-            const checkbox = findOne(this, '[role="checkbox"]');
-            checkbox.click();
-          } else {
-            const self = findOne(this);
-            self.click();
-          }
-
+          findOne(this).click();
           return settled();
         },
       }),

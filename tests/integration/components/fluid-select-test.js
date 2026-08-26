@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { settled, findAll, click, render } from '@ember/test-helpers';
+import { settled, findAll, find, click, render, triggerKeyEvent } from '@ember/test-helpers';
 import { A } from '@ember/array';
 import { hbs } from 'ember-cli-htmlbars';
 import component from '@movable/fluid/test-support/pages/fluid-select';
@@ -542,6 +542,191 @@ module('Integration | Component | fluid-select', function (hooks) {
         component.popup.isHidden,
         'the popup closes if the yielded option is clicked and multiple is false'
       );
+    });
+  });
+
+  module('keyboard navigation', function () {
+    const LISTBOX = '[role="listbox"]';
+
+    test('the popup exposes listbox semantics', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      assert.dom(LISTBOX).exists('the list is a listbox');
+      assert
+        .dom('[data-test-fluid-select-trigger]')
+        .hasAria('haspopup', 'listbox', 'the trigger advertises the popup');
+      assert.strictEqual(
+        component.popup.list.options.length,
+        findAll('[role="option"]').length,
+        'every option carries role="option"'
+      );
+      assert.strictEqual(
+        component.popup.list.options[0].ariaSelected,
+        'false',
+        'unselected options report aria-selected="false"'
+      );
+    });
+
+    test('the listbox takes focus on open and points at the first option', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      assert.dom(LISTBOX).isFocused('focus moves into the popup');
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        component.popup.list.options[0].id,
+        'the first option is active'
+      );
+    });
+
+    test('the arrow keys move the active option and wrap', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      const { options } = component.popup.list;
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowDown');
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        options[1].id,
+        'down moves forward'
+      );
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowUp');
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowUp');
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        options[options.length - 1].id,
+        'up from the first option wraps to the last'
+      );
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'Home');
+      assert.strictEqual(component.popup.list.activeDescendant, options[0].id, 'Home goes first');
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'End');
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        options[options.length - 1].id,
+        'End goes last'
+      );
+    });
+
+    test('the active option is visibly highlighted', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowDown');
+
+      const active = find(`#${component.popup.list.activeDescendant}`);
+      assert.dom(active).hasClass('fluid-select__option--highlighted');
+      assert.notEqual(
+        window.getComputedStyle(active).backgroundColor,
+        window.getComputedStyle(active.previousElementSibling).backgroundColor,
+        'the highlight is actually rendered, not just a class name'
+      );
+    });
+
+    test('Enter selects the active option and closes', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowDown');
+      await triggerKeyEvent(LISTBOX, 'keydown', 'Enter');
+
+      assert.strictEqual(this.get('selected'), 'banana', 'the active option was selected');
+      assert.ok(component.popup.isHidden, 'the popup closed');
+    });
+
+    test('Escape closes without selecting and restores focus to the trigger', async function (assert) {
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowDown');
+      await triggerKeyEvent(LISTBOX, 'keydown', 'Escape');
+
+      assert.strictEqual(this.get('selected'), null, 'nothing was selected');
+      assert.ok(component.popup.isHidden, 'the popup closed');
+      assert.dom('[data-test-fluid-select-trigger]').isFocused('focus returned to the trigger');
+    });
+
+    test('the already-selected option starts active', async function (assert) {
+      this.set('selected', 'orange');
+      await render(
+        hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
+      );
+      await component.open();
+
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        component.popup.list.options[2].id,
+        'the active option is the selected one, not the first'
+      );
+      assert.strictEqual(component.popup.list.options[2].ariaSelected, 'true');
+    });
+
+    test('multi-select toggles with Space and stays open', async function (assert) {
+      this.set('selected', A([]));
+      this.set('select', (value) => this.set('selected', A([...this.get('selected'), value])));
+
+      await render(hbs`
+        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />
+      `);
+      await component.open();
+
+      assert.dom(LISTBOX).hasAria('multiselectable', 'true');
+
+      await triggerKeyEvent(LISTBOX, 'keydown', ' ');
+      assert.deepEqual(this.get('selected').slice(), ['apple'], 'Space selected the active option');
+      assert.ok(component.popup.isVisible, 'the popup stayed open');
+
+      await triggerKeyEvent(LISTBOX, 'keydown', 'ArrowDown');
+      await triggerKeyEvent(LISTBOX, 'keydown', ' ');
+      assert.deepEqual(
+        this.get('selected').slice(),
+        ['apple', 'banana'],
+        'a second option selected'
+      );
+    });
+
+    test('the search input is a labelled combobox that drives the listbox', async function (assert) {
+      this.set('search', (term) => this.get('options').filter((o) => o.includes(term)));
+
+      await render(hbs`
+        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @search={{search}} />
+      `);
+      await component.open();
+
+      const input = find('.fluid-select__search input');
+
+      assert.dom(input).hasAria('label', 'Search options', 'the input has an accessible name');
+      assert
+        .dom(input)
+        .hasAttribute('role', 'combobox', 'role="search", invalid on an input, is gone');
+      assert.dom(input).hasAria('controls', find(LISTBOX).id, 'the combobox owns the listbox');
+      assert.dom(input).isFocused('the search input takes focus, not the listbox');
+
+      await triggerKeyEvent(input, 'keydown', 'ArrowDown');
+      assert.strictEqual(
+        component.popup.list.activeDescendant,
+        component.popup.list.options[1].id,
+        'arrow keys forwarded from the input move the active option'
+      );
+
+      await triggerKeyEvent(input, 'keydown', 'Enter');
+      assert.strictEqual(this.get('selected'), 'banana', 'Enter from the input selects');
     });
   });
 

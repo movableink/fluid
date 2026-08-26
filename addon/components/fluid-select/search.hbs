@@ -17,10 +17,15 @@
     <input
       class="fluid-input fluid-input--icon fluid-input--full-width"
       type="text"
-      role="search"
+      role="combobox"
+      aria-label={{or @label "Search options"}}
+      aria-expanded="true"
+      aria-controls={{this.listId}}
+      aria-autocomplete="list"
       value={{this.searchQuery}}
       placeholder={{@placeholder}}
       {{on "input" this.handleInput}}
+      {{on "keydown" this.onKeyDown}}
       {{did-insert this.autoFocusInput}}
     />
   </div>

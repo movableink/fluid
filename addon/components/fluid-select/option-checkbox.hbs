@@ -1,0 +1,18 @@
+{{! Deliberately not a FluidCheckbox: the enclosing `[role="option"]` owns the semantics,
+    and a real checkbox inside it would be a second focus stop with a conflicting role. }}
+<span class="fluid-checkbox {{if @checked "fluid-checkbox--checked"}} {{@class}}">
+  <span
+    class="fluid-checkbox__box border-2 {{if @checked "fluid-checkbox__box--checked"}}"
+    aria-hidden="true"
+  >
+    <span class="fluid-checkbox__inner-box w-full h-full">
+      {{#if @checked}}
+        {{svg-jar "check" class="fluid-checkbox__check"}}
+      {{/if}}
+    </span>
+  </span>
+
+  <span class="fluid-checkbox__label flex-grow">
+    {{@label}}
+  </span>
+</span>
