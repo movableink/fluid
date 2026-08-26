@@ -15,7 +15,7 @@ import { action } from '@ember/object';
  * <FluidLab::ExpandingList as |list| >
  *   <list.Header>
  *     <h1>Ice Cream Flavors</h1>
- *     <list.Toggle />
+ *     <list.Toggle @label="Ice cream flavors" />
  *   </list.Header>
  *
  *   <list.Content>
@@ -27,6 +27,16 @@ import { action } from '@ember/object';
  *   </list.Content>
  * </FluidLab::ExpandingList>
  * ```
+ *
+ * ## Accessibility
+ *
+ * `list.Toggle` is the keyboard-operable control — it renders a `<button>` carrying
+ * `aria-expanded`. Always render one; `list.Header`'s own click handler is a mouse
+ * convenience and is not reachable by keyboard, so a header without a toggle gives
+ * keyboard and screen-reader users no way to expand the list.
+ *
+ * The chevron is decorative, so pass `@label` to name the button whenever a page has
+ * more than one list. It falls back to a generic "Toggle section".
  *
  * For more advanced usage, the `expanded` property and `onChange`
  * actions are also yielded out of the component to be made available to
