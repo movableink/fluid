@@ -1,0 +1,21 @@
+package.json
+  s_0c9b322469e24c::t_6b49572a3cb3e0 102
+yarn.lock
+  s_0c9b322469e24c::t_7c8b71566cdeaf 6987,7268,7291,7308,8705,9156,10932,11162,12268,15100,20647,21583,22226
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "982cb262128f2c26e8cbb3c699c8597b41367288",
+  "prompts": {},
+  "sessions": {
+    "s_0c9b322469e24c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "96dfd00b-decb-449b-8c65-3280cda0f9ea",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}
