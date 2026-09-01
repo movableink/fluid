@@ -270,6 +270,52 @@ module('Integration | Component | fluid-select', function (hooks) {
       assert.equal(component.popup.list.selectedOptions.length, 2);
     });
 
+    test('the yielded checkbox renders its own block', async function (assert) {
+      // The checkbox this used to yield was a real FluidCheckbox, and consumers name
+      // their options with a block instead of @label. Dropping the block leaves the
+      // option with no accessible name and nothing for a page object to match on.
+      await render(hbs`<FluidSelect
+        @options={{this.options}}
+        @select={{this.select}}
+        @selected={{this.selected}}
+        @multiple={{true}}
+        as |fs|
+      >
+        <fs.trigger @label='Fruit' />
+        <fs.popup>
+          <fs.list as |options selectOption|>
+            {{#each options as |option|}}
+              <FluidSelect::Option
+                @option={{option}}
+                @selected={{this.selected}}
+                @multiple={{true}}
+                @select={{action selectOption}}
+                as |fo|
+              >
+                <fo.checkbox class='consumer-class'>
+                  <span class='consumer-block'>{{option}}</span>
+                </fo.checkbox>
+              </FluidSelect::Option>
+            {{/each}}
+          </fs.list>
+        </fs.popup>
+      </FluidSelect>`);
+
+      await component.open();
+
+      assert.equal(
+        component.popup.list.options[0].text,
+        this.get('options')[0],
+        'the option is named by the block, with no @label passed'
+      );
+      assert
+        .dom('.fluid-select__option .consumer-block')
+        .exists({ count: this.get('options').length }, 'every option renders its block');
+      assert
+        .dom('.fluid-select__option .fluid-checkbox.consumer-class')
+        .exists({ count: this.get('options').length }, 'attributes reach the checkbox');
+    });
+
     test('checkboxes', async function (assert) {
       await render(hbs`
         <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @multiple={{true}} />

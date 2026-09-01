@@ -1,6 +1,6 @@
 {{! Deliberately not a FluidCheckbox: the enclosing `[role="option"]` owns the semantics,
     and a real checkbox inside it would be a second focus stop with a conflicting role. }}
-<span class="fluid-checkbox {{if @checked "fluid-checkbox--checked"}} {{@class}}">
+<span class="fluid-checkbox {{if @checked "fluid-checkbox--checked"}} {{@class}}" ...attributes>
   <span
     class="fluid-checkbox__box border-2 {{if @checked "fluid-checkbox__box--checked"}}"
     aria-hidden="true"
@@ -12,7 +12,13 @@
     </span>
   </span>
 
+  {{! The checkbox FluidSelect used to yield was a real FluidCheckbox, which rendered a
+      block. Consumers pass their own markup and no @label, so keep honouring the block. }}
   <span class="fluid-checkbox__label flex-grow">
-    {{@label}}
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      {{@label}}
+    {{/if}}
   </span>
 </span>
