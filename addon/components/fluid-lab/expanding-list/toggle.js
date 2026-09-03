@@ -6,6 +6,8 @@ export default class FluidLabExpandingListToggle extends Component {
   disabled = false;
   position = 'left';
 
+  label = null;
+
   @action
   toggle() {
     this.ontoggle();

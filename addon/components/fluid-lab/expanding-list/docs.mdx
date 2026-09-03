@@ -1,0 +1,91 @@
+import { Story } from "@storybook/addon-docs";
+
+# Expanding List
+
+A contextual accordion. It yields three subcomponents — `list.Header`, `list.Toggle`
+and `list.Content` — plus the `expanded` property and an `onChange` action for DDAU use.
+
+#### Default
+
+<Story id="components-fluid-lab-expanding-list--default" height="150px"/>
+
+```hbs
+<FluidLab::ExpandingList as |list|>
+  <list.Header class='flex items-center'>
+    <list.Toggle @label='Ice cream flavors' />
+
+    <h6>Ice Cream Flavors</h6>
+  </list.Header>
+
+  <list.Content>
+    <ul>
+      <li>Chocolate</li>
+      <li>Vanilla</li>
+      <li>Mango</li>
+    </ul>
+  </list.Content>
+</FluidLab::ExpandingList>
+```
+
+#### Collapsed
+
+<Story id="components-fluid-lab-expanding-list--collapsed" height="75px"/>
+
+```hbs
+<FluidLab::ExpandingList @expanded={{false}} as |list|>
+  {{! ... }}
+</FluidLab::ExpandingList>
+```
+
+#### Disabled
+
+`@disabled` hides the toggle and stops the header from expanding the list.
+
+<Story id="components-fluid-lab-expanding-list--disabled" height="150px"/>
+
+```hbs
+<FluidLab::ExpandingList @disabled={{true}} as |list|>
+  {{! ... }}
+</FluidLab::ExpandingList>
+```
+
+#### Toggle outside the header
+
+The toggle does not have to be nested in the header — position it as a sibling when the
+layout calls for it.
+
+<Story id="components-fluid-lab-expanding-list--toggle-outside-header" height="75px"/>
+
+```hbs
+<FluidLab::ExpandingList @expanded={{false}} as |list|>
+  <list.Toggle @label='Pizza toppings' class='absolute' />
+
+  <list.Header>
+    <h6 class='pl-8'>Pizza Toppings</h6>
+  </list.Header>
+
+  {{! ... }}
+</FluidLab::ExpandingList>
+```
+
+## Accessibility
+
+**Always render a `list.Toggle`.** It is the only keyboard-operable control — it renders
+a `<button>` carrying `aria-expanded`. `list.Header` has a click handler too, but that is
+a mouse convenience: a header is not focusable, so a list without a toggle cannot be
+expanded by keyboard or reported to a screen reader.
+
+The header is deliberately *not* a button. Because the toggle is usually nested inside it,
+making both interactive would nest a button in a button.
+
+**Pass `@label` whenever a page has more than one list.** The chevron is decorative
+(`aria-hidden`), so the button's accessible name comes from a visually-hidden label that
+falls back to a generic "Toggle section". Below, the first toggle is labelled and the
+second is not — turn on a screen reader and tab between them to hear the difference.
+
+<Story id="components-fluid-lab-expanding-list--labelled-and-unlabelled" height="100px"/>
+
+```hbs
+<list.Toggle @label='Ice cream flavors' />  {{! announces "Ice cream flavors" }}
+<list.Toggle />                             {{! announces "Toggle section" }}
+```

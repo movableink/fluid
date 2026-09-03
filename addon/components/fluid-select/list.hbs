@@ -1,4 +1,13 @@
-<div class="fluid-select__list py-2" ...attributes>
+<div
+  class="fluid-select__list py-2"
+  role="listbox"
+  id={{@listId}}
+  tabindex="-1"
+  aria-multiselectable={{if @multiple "true"}}
+  ...attributes
+  {{did-insert @onRegister}}
+  {{on "keydown" @onKeyDown}}
+>
   {{#if (has-block)}}
     {{yield @options @select}}
   {{else if (or @loading (is-pending @options))}}
@@ -27,6 +36,7 @@
               @selected={{@selected}}
               @multiple={{@multiple}}
               @labelPath={{@labelPath}}
+              @onRegister={{@onOptionRegister}}
               @select={{action @select}}
             />
           {{/each}}
@@ -38,6 +48,7 @@
           @selected={{@selected}}
           @multiple={{@multiple}}
           @labelPath={{@labelPath}}
+          @onRegister={{@onOptionRegister}}
           @select={{action @select}}
         />
       {{/if}}

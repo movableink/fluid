@@ -1,6 +1,9 @@
+{{! Mouse-only convenience. `<list.Toggle>` is the keyboard path, and it usually
+    renders inside this header — making the header interactive too would nest a
+    button in a button. }}
+{{! template-lint-disable no-invalid-interactive }}
 <header
   class="expanding-list-header {{if this.disabled "expanding-list-header__disabled"}}"
-  role="button"
   data-test-fluid-lab-expanding-list-header
   ...attributes
   {{on "click" (stop-propagation this.toggle)}}

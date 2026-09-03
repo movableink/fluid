@@ -39,7 +39,7 @@
     line-height: inherit;
     white-space: nowrap;
 
-    &:focus {
+    &:focus:not(:focus-visible) {
       outline-style: none;
     }
   }

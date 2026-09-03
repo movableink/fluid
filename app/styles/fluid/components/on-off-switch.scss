@@ -6,7 +6,10 @@
   border-radius: 0.9rem;
   border: 0.1rem solid theme('colors.neutral.500');
   transition: all 120ms;
-  outline: none;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 
   * {
     pointer-events: none;

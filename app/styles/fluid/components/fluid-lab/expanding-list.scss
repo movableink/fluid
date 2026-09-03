@@ -1,4 +1,10 @@
 .expanding-list-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+
   text-align: center;
   transition: transform 0.1s linear;
   display: flex;

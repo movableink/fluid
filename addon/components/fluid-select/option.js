@@ -1,8 +1,11 @@
 import Component from '@ember/component';
 import { computed, get } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 
 export default class FluidSelectOption extends Component {
   tagName = '';
+
+  optionId = `${guidFor(this)}-option`;
 
   @computed('option', 'labelPath')
   get optionLabel() {

@@ -1,57 +1,38 @@
-{{#if (and (has-block) @multiple)}}
-  {{yield
-    (hash
-      checkbox=(component
-        "fluid-checkbox"
-        defaultClass=(concat
-          "pl-4 pr-6 fluid-select__option"
-          (if @dark " fluid-select__option--dark")
-          (if this.isSelected this.selectedClass)
+{{#let (and (not (has-block)) (not @multiple)) as |isPlainOption|}}
+  <div
+    role="option"
+    id={{this.optionId}}
+    aria-selected={{if this.isSelected "true" "false"}}
+    data-test-fluid-select-option={{this.optionLabel}}
+    title={{if isPlainOption this.optionLabel}}
+    class="fluid-select__option
+      {{if @dark "fluid-select__option--dark"}}
+      {{if isPlainOption "fluid-select__list-item"}}
+      {{if this.isSelected this.selectedClass}}"
+    ...attributes
+    {{action @select @option}}
+    {{did-insert (optional @onRegister)}}
+  >
+    {{#if (and (has-block) @multiple)}}
+      {{yield
+        (hash
+          checkbox=(component
+            "fluid-select/option-checkbox" label=this.optionLabel checked=this.isSelected
+          )
         )
-        label=this.optionLabel
-        checked=this.isSelected
-        onchange=(action @select @option)
-      )
-    )
-  }}
-{{else if (has-block)}}
-  <div
-    role="button"
-    data-test-fluid-select-option={{this.optionLabel}}
-    class="fluid-select__option
-      {{if @dark "fluid-select__option--dark"}}
-      {{if this.isSelected this.selectedClass}}"
-    ...attributes
-    {{action @select @option}}
-  >
-    {{yield}}
+      }}
+    {{else if (has-block)}}
+      {{yield}}
+    {{else if @multiple}}
+      <FluidSelect::OptionCheckbox
+        class="flex-grow"
+        @label={{this.optionLabel}}
+        @checked={{this.isSelected}}
+      />
+    {{else}}
+      <span class="fluid-select__option-label">
+        {{this.optionLabel}}
+      </span>
+    {{/if}}
   </div>
-{{else if @multiple}}
-  <FluidCheckbox
-    data-test-fluid-select-option={{this.optionLabel}}
-    class={{concat
-      "pl-4 pr-6 fluid-select__option"
-      (if @dark " fluid-select__option--dark")
-      (if this.isSelected this.selectedClass)
-    }}
-    @label={{this.optionLabel}}
-    @checked={{this.isSelected}}
-    @onchange={{action @select @option}}
-  />
-{{else}}
-  <div
-    role="button"
-    data-test-fluid-select-option={{this.optionLabel}}
-    class="fluid-select__option
-      {{if @dark "fluid-select__option--dark"}}
-      fluid-select__list-item
-      {{if this.isSelected this.selectedClass}}"
-    title={{this.optionLabel}}
-    {{action @select @option}}
-    ...attributes
-  >
-    <span class="fluid-select__option-label">
-      {{this.optionLabel}}
-    </span>
-  </div>
-{{/if}}
+{{/let}}

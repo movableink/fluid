@@ -1,12 +1,18 @@
-<div
+<button
+  type="button"
   class="expanding-list-toggle
     {{if this.disabled "expanding-list-toggle__disabled"}}
     {{if this.expanded "expanded"}}
     {{this.position}}"
-  role="button"
+  disabled={{this.disabled}}
+  aria-expanded={{if this.expanded "true" "false"}}
   data-test-fluid-lab-expanding-list-toggle
   ...attributes
   {{on "click" (stop-propagation this.toggle)}}
 >
-  {{svg-jar "icon-dropdown-arrow"}}
-</div>
+  {{svg-jar "icon-dropdown-arrow" aria-hidden="true"}}
+
+  <span class="sr-only">
+    {{or this.label "Toggle section"}}
+  </span>
+</button>

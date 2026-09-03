@@ -2,8 +2,8 @@
   <BasicDropdown
     class="w-full"
     @renderInPlace={{@renderInPlace}}
-    @onOpen={{action (optional @onOpen)}}
-    @onClose={{action (optional @onClose)}}
+    @onOpen={{this.handleOpen}}
+    @onClose={{this.handleClose}}
     @triggerComponent={{component "fluid-select/trigger"}}
     @matchTriggerWidth={{@matchTriggerWidth}}
     as |dropdown|
@@ -34,12 +34,15 @@
             selected=@selected
             disabled=@disabled
             label=@label
+            listId=this.listId
           )
           search=(component
             "fluid-select/search"
             searchQuery=this.searchQuery
             dark=@dark
             loading=this.searchLoading
+            listId=this.listId
+            onKeyDown=this.handleKeyDown
             search=(queue (action this.updateSearchQuery) (action (perform this.searchTask)))
           )
           list=(component
@@ -49,6 +52,10 @@
             loading=@loading
             multiple=@multiple
             labelPath=@labelPath
+            listId=this.listId
+            onRegister=this.registerList
+            onOptionRegister=this.registerOption
+            onKeyDown=this.handleKeyDown
             options=(if (and this.lastSearch this.searchQuery) this.lastSearch.value @options)
             select=(if @multiple (action this.updateSelected) (action selectAndClose))
           )
@@ -58,6 +65,7 @@
             dark=@dark
             labelPath=@labelPath
             selected=@selected
+            onRegister=this.registerOption
             select=(if @multiple (action this.updateSelected) (action selectAndClose))
           )
           open=(action dropdown.actions.open)

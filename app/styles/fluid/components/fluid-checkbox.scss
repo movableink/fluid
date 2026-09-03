@@ -3,7 +3,8 @@
   box-sizing: border-box;
   display: inline-flex;
 
-  &:focus {
+  // Inert today: the focusable element is the inner `__box` button, not this wrapper.
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 

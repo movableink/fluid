@@ -65,6 +65,38 @@ module('Integration | component | fluid-lab/expanding-list', function (hooks) {
     assert.dom('[data-test-toggle-content]').exists();
   });
 
+  test('the toggle is a labelled button reporting its expanded state', async function (assert) {
+    await render(hbs`
+      <FluidLab::ExpandingList @expanded={{false}} as |list|>
+        <list.Toggle @label="Ice cream flavors" />
+        <list.Content>
+          <div data-test-toggle-content>
+            Content
+          </div>
+        </list.Content>
+      </FluidLab::ExpandingList>
+    `);
+
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasTagName('button');
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasAttribute('type', 'button');
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasText('Ice cream flavors');
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasAria('expanded', 'false');
+
+    await click('[data-test-fluid-lab-expanding-list-toggle]');
+
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasAria('expanded', 'true');
+  });
+
+  test('the toggle falls back to a generic accessible name', async function (assert) {
+    await render(hbs`
+      <FluidLab::ExpandingList as |list|>
+        <list.Toggle />
+      </FluidLab::ExpandingList>
+    `);
+
+    assert.dom('[data-test-fluid-lab-expanding-list-toggle]').hasText('Toggle section');
+  });
+
   test('the toggle expands the content on click when nested inside the header', async function (assert) {
     await render(hbs`
       <FluidLab::ExpandingList @expanded={{false}} as |list|>
