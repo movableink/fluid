@@ -6,6 +6,8 @@
   value={{@value}}
   placeholder={{@placeholder}}
   disabled={{@disabled}}
+  aria-describedby={{@describedBy}}
+  aria-invalid={{if @hasError "true"}}
   ...attributes
   {{did-insert @onInsert}}
 />
