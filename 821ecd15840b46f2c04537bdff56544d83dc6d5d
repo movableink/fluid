@@ -1,0 +1,35 @@
+addon/components/fluid-lab/expanding-list/header.hbs
+  s_0752b87e1a5c2c::t_6437e361288618 1-3
+  s_0752b87e1a5c2c::t_bf6d7b353a3c73 4
+app/styles/fluid/components/fluid-lab/expanding-list.scss
+  s_0752b87e1a5c2c::t_37015c90337572 2-7
+addon/components/fluid-lab/expanding-list.js
+  s_0752b87e1a5c2c::t_be0dfb43acf369 18,31-40
+tests/integration/components/expanding-list-test.js
+  s_0752b87e1a5c2c::t_34b65ae5d5c4f8 68-99
+addon/components/fluid-lab/expanding-list/index.stories.jsx
+  s_0752b87e1a5c2c::t_2a918f347d7f45 1-119
+addon/components/fluid-lab/expanding-list/docs.mdx
+  s_0752b87e1a5c2c::t_baf654acd90819 1-91
+addon/components/fluid-lab/expanding-list/toggle.hbs
+  s_0752b87e1a5c2c::t_e0071cce266b90 1-2,7-8,13-17
+  s_0752b87e1a5c2c::t_871f01bdd1b814 18
+addon/components/fluid-lab/expanding-list/toggle.js
+  s_0752b87e1a5c2c::t_e17006fb2bfe50 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "821ecd15840b46f2c04537bdff56544d83dc6d5d",
+  "prompts": {},
+  "sessions": {
+    "s_0752b87e1a5c2c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e226c8fa-1c3d-4b78-8118-f8dcef2a594c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}

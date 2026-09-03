@@ -1,0 +1,28 @@
+.github/workflows/ci.yml
+  77e24a9460a4cd31 17,40
+.github/workflows/deploy.yml
+  77e24a9460a4cd31 20
+README.md
+  77e24a9460a4cd31 17,19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "a454a545605348ebb47aa2ae41b157e564fa6c34",
+  "prompts": {
+    "77e24a9460a4cd31": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a198ab43-8908-40ad-8ac9-cf43aecad5b8",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Nicklas Steffens",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 5,
+      "accepted_lines": 6,
+      "overriden_lines": 0,
+      "messages_url": "https://git-ai.k8s.misrv.net/cas/491b8382387b01b0975026d09d718efddd1e302733aab56014ca571d5da75f9d"
+    }
+  }
+}
