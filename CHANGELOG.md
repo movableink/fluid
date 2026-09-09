@@ -1,3 +1,24 @@
+## [3.0.0](https://github.com/movableink/fluid/compare/2.3.2-oidc.3...3.0.0) (2026-09-09)
+
+### ⚠ BREAKING CHANGES
+
+- **fluid-select:** multi-select options are no longer a FluidCheckbox. The
+  checkbox is now presentational markup inside the role=option element, which
+  owns the click handler, so no `[role="checkbox"]` element exists in the list.
+  The bundled page object is updated to match: every option is clicked the same
+  way and `hasCheckbox` matches a descendant. Consuming tests that reach for
+  `[role="checkbox"]` inside a FluidSelect option need updating.
+
+### Bug Fixes
+
+- **expanding-list:** make the toggle a keyboard-operable button ([821ecd1](https://github.com/movableink/fluid/commit/821ecd15840b46f2c04537bdff56544d83dc6d5d))
+- **fluid-form-field:** associate errors and help text with the input ([3003fa5](https://github.com/movableink/fluid/commit/3003fa53b890355e14cb09ad5fb3ee4ee5c93e38))
+- **fluid-modal:** add aria-modal and stop dangling aria-labelledby ([caa7253](https://github.com/movableink/fluid/commit/caa725302322bbd2e0d224c8592c14f0d4af4321))
+- **fluid-select:** keep the yielded checkbox's block ([837511b](https://github.com/movableink/fluid/commit/837511b68261a0b3b3a11ae090c31055018b3194))
+- **fluid-select:** make options operable by keyboard ([56da301](https://github.com/movableink/fluid/commit/56da301f99555c9582810c004816d17a81d8d08b))
+- patch broccoli and swap postcss-sass for node 22 compat ([c853a27](https://github.com/movableink/fluid/commit/c853a271012109b4759377aa101f1b32cfa8ffcf)), closes [#531](https://github.com/movableink/fluid/issues/531)
+- **styles:** keep the focus ring for keyboard users ([cdecd8b](https://github.com/movableink/fluid/commit/cdecd8b6b575d3300a1463f3a8a437bc31ffca14))
+
 ## [2.3.2-oidc.3](https://github.com/movableink/fluid/compare/2.3.2-oidc.2...2.3.2-oidc.3) (2025-12-05)
 
 ## [2.3.2-oidc.2](https://github.com/movableink/fluid/compare/2.3.2-oidc.1...2.3.2-oidc.2) (2025-12-05)
