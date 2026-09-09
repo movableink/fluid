@@ -17,6 +17,8 @@
       {{if this.value "text-neutral-800" "text-neutral-600"}}
       {{@class}}"
     id={{@id}}
+    aria-describedby={{@describedBy}}
+    aria-invalid={{if @hasError "true"}}
     ...attributes
     {{did-insert (set this "buttonElement")}}
     {{on "click" (set this "calendarIsVisible" true)}}

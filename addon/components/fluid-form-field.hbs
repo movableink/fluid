@@ -27,6 +27,7 @@
           useSmallSize=@useSmallSize
           hasError=this.hasError
           hasWarning=this.hasWarning
+          describedBy=this.describedBy
         )
       }}
     {{else}}
@@ -40,6 +41,7 @@
             useSmallSize=@useSmallSize
             hasError=this.hasError
             hasWarning=this.hasWarning
+            describedBy=this.describedBy
           )
           Date=(component
             "fluid-date-input"
@@ -48,6 +50,7 @@
             useSmallSize=@useSmallSize
             hasError=this.hasError
             hasWarning=this.hasWarning
+            describedBy=this.describedBy
           )
         )
       }}
@@ -57,13 +60,17 @@
   {{#if (or @helpText this.hasError this.hasWarning)}}
     <div class="text-xs tracking-md" data-test-help-text-for={{this.id}}>
       {{#if @helpText}}
-        <span class="text-neutral-700">
+        <span id={{this.helpTextId}} class="text-neutral-700">
           {{@helpText}}
         </span>
       {{/if}}
 
       {{#if this.hasError}}
-        <ul class="text-error-main" data-test-error-messages-for={{this.id}}>
+        <ul
+          id={{this.errorMessagesId}}
+          class="text-error-main"
+          data-test-error-messages-for={{this.id}}
+        >
           {{#each this.errorMessages as |message|}}
             <li>
               {{message}}
@@ -73,7 +80,11 @@
       {{/if}}
 
       {{#if this.hasWarning}}
-        <ul class="text-orange-600" data-test-warning-messages-for={{this.id}}>
+        <ul
+          id={{this.warningMessagesId}}
+          class="text-orange-600"
+          data-test-warning-messages-for={{this.id}}
+        >
           {{#each this.warningMessages as |message|}}
             <li>
               {{message}}

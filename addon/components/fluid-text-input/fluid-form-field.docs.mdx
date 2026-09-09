@@ -103,6 +103,10 @@ Errors and Warnings Errors and warnings can be passed as an array of strings to 
 </FluidFormField>
 ```
 
+#### Accessibility
+
+Alongside the visual state, **FluidFormField** wires these messages up for assistive technology. The help text, errors and warnings each get an `id`; the rendered input is pointed at whichever of them exist with `aria-describedby`, and an input with errors is marked `aria-invalid="true"`. A screen reader user therefore hears *why* a field was rejected when they reach it, rather than the rejection being conveyed by color alone ([WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)). Nothing is referenced when there is nothing to describe, so `aria-describedby` is never left dangling.
+
 ## Sizes
 
 #### @userSmallSize
