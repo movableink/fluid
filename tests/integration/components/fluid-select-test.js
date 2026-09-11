@@ -616,6 +616,29 @@ module('Integration | Component | fluid-select', function (hooks) {
       );
     });
 
+    test('the listbox is named from @label', async function (assert) {
+      await render(hbs`
+        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @label="Fruit" />
+      `);
+      await component.open();
+
+      assert.dom(LISTBOX).hasAria('label', 'Fruit', 'the element focus lands on has a name');
+    });
+
+    test('a caller can override the listbox name', async function (assert) {
+      await render(hbs`
+        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @label="Fruit" as |select|>
+          <select.trigger />
+          <select.popup>
+            <select.list aria-label="Pick a fruit" />
+          </select.popup>
+        </FluidSelect>
+      `);
+      await component.open();
+
+      assert.dom(LISTBOX).hasAria('label', 'Pick a fruit', '...attributes wins over @label');
+    });
+
     test('the listbox takes focus on open and points at the first option', async function (assert) {
       await render(
         hbs`<FluidSelect @options={{options}} @selected={{selected}} @select={{select}} />`
@@ -751,13 +774,13 @@ module('Integration | Component | fluid-select', function (hooks) {
       this.set('search', (term) => this.get('options').filter((o) => o.includes(term)));
 
       await render(hbs`
-        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @search={{search}} />
+        <FluidSelect @options={{options}} @selected={{selected}} @select={{select}} @search={{search}} @label="Fruit" />
       `);
       await component.open();
 
       const input = find('.fluid-select__search input');
 
-      assert.dom(input).hasAria('label', 'Search options', 'the input has an accessible name');
+      assert.dom(input).hasAria('label', 'Fruit', 'the input is named from @label');
       assert
         .dom(input)
         .hasAttribute('role', 'combobox', 'role="search", invalid on an input, is gone');
