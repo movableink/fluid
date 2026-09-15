@@ -3,6 +3,7 @@
   role="listbox"
   id={{@listId}}
   tabindex="-1"
+  aria-label={{@label}}
   aria-multiselectable={{if @multiple "true"}}
   ...attributes
   {{did-insert @onRegister}}
