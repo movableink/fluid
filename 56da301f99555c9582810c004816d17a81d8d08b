@@ -1,0 +1,66 @@
+addon-test-support/pages/fluid-select.js
+  s_0752b87e1a5c2c::t_2314b89800f935 84-85,87,89-90,93
+  s_0752b87e1a5c2c::t_f81571c273e680 3,8
+addon/components/fluid-select/trigger.hbs
+  s_0752b87e1a5c2c::t_6b5fe48ffd6221 14-15
+addon/components/fluid-select/search.hbs
+  s_0752b87e1a5c2c::t_6b5fe48ffd6221 20-24,28
+addon/components/fluid-select.js
+  s_0752b87e1a5c2c::t_250f3b0574e283 41,50
+  s_0752b87e1a5c2c::t_efe4918595919e 56
+  s_0752b87e1a5c2c::t_a353daad9bbb8e 4,8,10,19-23,37-40,42-49,53-54,73-76,79-86,90-91,93-102,108,129,143-144,150-154,156-177,179-185,187-191
+  s_0752b87e1a5c2c::t_34f3e0205e41f4 9,109,127
+  s_0752b87e1a5c2c::t_3057825f805807 55,78,89,92,112-120,122
+  s_0752b87e1a5c2c::t_f4ca5592973748 58,63
+  s_0752b87e1a5c2c::t_d08dc2be1c0c55 88,103,107,110-111,121,123-125,130-131,137-138,141
+  s_0752b87e1a5c2c::t_98c58faabec6b6 192
+  s_0752b87e1a5c2c::t_2cff82bee2e6f1 24,51-52,57,59-62,64-72,104-106,126,128,132-136,139-140,142,145-149,178
+  s_0752b87e1a5c2c::t_c828eabb802c7d 25
+  s_0752b87e1a5c2c::t_b54290a0ff2408 77
+  s_0752b87e1a5c2c::t_a73eefda7c07c3 87,155,186
+addon/components/fluid-select/option-checkbox.hbs
+  s_0752b87e1a5c2c::t_b53f93ccfb1543 18
+  s_0752b87e1a5c2c::t_6ad6ffa2cad0a3 1-2
+  s_0752b87e1a5c2c::t_3e2bafdc98200a 3-17
+tests/integration/components/fluid-select-test.js
+  s_0752b87e1a5c2c::t_7f3171f8c4d470 552-554,574-576,588-590,596-600,639-641,652-654,667-669,697-701
+  s_0752b87e1a5c2c::t_22b78ec7ccfa25 715-717
+  s_0752b87e1a5c2c::t_a0369fa9a776e8 548-551,555-573,577-587,591-595,601-620,638,642-651,655-666,670-696,702-714,718-732
+  s_0752b87e1a5c2c::t_a7edb2ab7da6c7 621-637
+  s_0752b87e1a5c2c::t_ecbce9eab47b8f 3
+addon/components/fluid-select.hbs
+  s_0752b87e1a5c2c::t_a73eefda7c07c3 45,58
+  s_0752b87e1a5c2c::t_57b365f47ea4c3 37,44,55-56
+  s_0752b87e1a5c2c::t_bf6955ae001239 57,68
+  s_0752b87e1a5c2c::t_29edb7707ff898 5-6
+addon/components/fluid-select/option.hbs
+  s_0752b87e1a5c2c::t_2d956f0332ac04 38
+  s_0752b87e1a5c2c::t_ce598984c5d51e 1,3-5,7,10,14,16-36
+app/components/fluid-select/option-checkbox.js
+  s_0752b87e1a5c2c::t_f8a4b17aff21a2 1
+addon/components/fluid-select/option-checkbox.js
+  s_0752b87e1a5c2c::t_e25c09be3e52b3 1-3
+addon/components/fluid-select/list.hbs
+  s_0752b87e1a5c2c::t_86b7ee70e6ed88 1-7,10
+  s_0752b87e1a5c2c::t_bf6955ae001239 39,51
+  s_0752b87e1a5c2c::t_6b5fe48ffd6221 9
+  s_0752b87e1a5c2c::t_fe098c364984ed 8
+addon/components/fluid-select/option.js
+  s_0752b87e1a5c2c::t_6b5fe48ffd6221 3,8-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "56da301f99555c9582810c004816d17a81d8d08b",
+  "prompts": {},
+  "sessions": {
+    "s_0752b87e1a5c2c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e226c8fa-1c3d-4b78-8118-f8dcef2a594c",
+        "model": "claude-opus-5"
+      },
+      "human_author": null
+    }
+  }
+}
