@@ -1,0 +1,27 @@
+addon/components/fluid-select/list.hbs
+  s_9ec473175c1dd1::t_4d7b176b5404a0 6
+addon/components/fluid-select/trigger.hbs
+  s_9ec473175c1dd1::t_d9ae756decf6b5 40
+addon/components/fluid-select.hbs
+  s_9ec473175c1dd1::t_469b0bbb11514b 55
+  s_9ec473175c1dd1::t_020b40d0491179 42
+tests/integration/components/fluid-select-test.js
+  s_9ec473175c1dd1::t_433ed6a5dff4e5 777,783
+  s_9ec473175c1dd1::t_55c75fdf2a7c82 619-641
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "4d7169e66667fd2d591709607fb462844b43736b",
+  "prompts": {},
+  "sessions": {
+    "s_9ec473175c1dd1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "684ed360-77ca-4e90-afcf-6ae7a957820d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}
