@@ -1,3 +1,9 @@
+## [3.0.1](https://github.com/movableink/fluid/compare/3.0.0...3.0.1) (2026-09-15)
+
+### Bug Fixes
+
+- **fluid-select:** name the listbox from [@label](https://github.com/label) ([4d7169e](https://github.com/movableink/fluid/commit/4d7169e66667fd2d591709607fb462844b43736b))
+
 ## [3.0.0](https://github.com/movableink/fluid/compare/2.3.2-oidc.3...3.0.0) (2026-09-09)
 
 ### ⚠ BREAKING CHANGES
